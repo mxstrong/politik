@@ -1,6 +1,6 @@
 import Header from '@module/Header';
 
-const BasicLayout: React.FC = ({ children }) => {
+const DefaultLayout: React.FC = ({ children }) => {
   return (
     <div>
       <Header />
@@ -9,4 +9,4 @@ const BasicLayout: React.FC = ({ children }) => {
   );
 };
 
-export default BasicLayout;
+export default DefaultLayout;

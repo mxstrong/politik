@@ -2,7 +2,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { BsList, BsX } from 'react-icons/bs';
-import cx from 'classnames';
+
+import PrimaryMenuItem from './PrimaryMenuItem';
 
 export const HEADER_PRIMARY_MENU_ITEMS = [
   { path: '/', label: 'Naujausi pranešimai' },
@@ -36,21 +37,12 @@ const Header = () => {
             </div>
             <nav className="hidden md:flex items-center space-x-1">
               {HEADER_PRIMARY_MENU_ITEMS.map(({ path, label }) => {
-                const active = isItemActive(path);
-                const linkClassNames = cx('py-4', 'px-2', 'font-semibold', {
-                  'text-indigo-800': active,
-                  'border-b-4': active,
-                  'border-indigo-800': active,
-                  transition: active,
-                  'duration-300': active,
-                  'text-gray-500': !active,
-                  'hover:text-indigo-800': !active,
-                });
-
                 return (
-                  <Link key={`menu-item-${path}`} href={path}>
-                    <a className={linkClassNames}>{label}</a>
-                  </Link>
+                  <PrimaryMenuItem
+                    path={path}
+                    label={label}
+                    active={isItemActive(path)}
+                  />
                 );
               })}
             </nav>
@@ -74,22 +66,14 @@ const Header = () => {
         <div className="md:hidden">
           <nav>
             {HEADER_PRIMARY_MENU_ITEMS.map(({ path, label }) => {
-              const active = isItemActive(path);
-              const linkClassNames = cx('block', 'text-sm', 'px-2', 'py-4', {
-                'text-white': active,
-                'bg-indigo-800': active,
-                'font-semibold': active,
-                'hover:bg-indigo-800': !active,
-                transition: !active,
-                'duration-300': !active,
-              });
-
               return (
-                <Link key={`menu-item-${path}`} href={path}>
-                  <a className={linkClassNames} onClick={toggleMenu}>
-                    {label}
-                  </a>
-                </Link>
+                <PrimaryMenuItem
+                  path={path}
+                  label={label}
+                  active={isItemActive(path)}
+                  mobile
+                  onClick={toggleMenu}
+                />
               );
             })}
           </nav>

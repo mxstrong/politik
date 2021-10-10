@@ -3,19 +3,19 @@ import Head from 'next/head';
 
 import DefaultLayout from '@layout/DefaultLayout';
 
-const Index = () => {
+const Politicians = () => {
   return (
     <div>
       <Head>
-        <title>Naujausi pareiškimai</title>
+        <title>Politikai</title>
       </Head>
-      <h1>Naujausi pareiškimai</h1>
+      <h1>Politikai</h1>
     </div>
   );
 };
 
-Index.getLayout = (page: ReactElement) => {
+Politicians.getLayout = (page: ReactElement) => {
   return <DefaultLayout>{page}</DefaultLayout>;
 };
 
-export default Index;
+export default Politicians;

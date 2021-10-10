@@ -3,7 +3,10 @@ const IconButton: React.FC<React.HTMLAttributes<HTMLButtonElement>> = ({
   ...rest
 }) => {
   return (
-    <button className="outline-none flex items-center" {...rest}>
+    <button
+      className="outline-none flex items-center text-primary-dark"
+      {...rest}
+    >
       {children}
     </button>
   );

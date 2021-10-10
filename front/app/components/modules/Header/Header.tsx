@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { BsList, BsX } from 'react-icons/bs';
 
 import PrimaryMenuItem from './PrimaryMenuItem';
+import IconButton from '@element/IconButton';
 
 export const HEADER_PRIMARY_MENU_ITEMS = [
   { path: '/', label: 'Naujausi pranešimai' },
@@ -39,6 +40,7 @@ const Header = () => {
               {HEADER_PRIMARY_MENU_ITEMS.map(({ path, label }) => {
                 return (
                   <PrimaryMenuItem
+                    key={`header-primary-menu-item-${path}`}
                     path={path}
                     label={label}
                     active={isItemActive(path)}
@@ -48,16 +50,13 @@ const Header = () => {
             </nav>
           </div>
           <div className="md:hidden flex items-center">
-            <button
-              className="outline-none mobile-menu-button flex items-center"
-              onClick={toggleMenu}
-            >
+            <IconButton onClick={toggleMenu}>
               {mobileMenuOpen ? (
                 <BsX className="w-6 h-6" />
               ) : (
                 <BsList className="w-6 h-6" />
               )}
-            </button>
+            </IconButton>
           </div>
         </div>
       </div>
@@ -68,6 +67,7 @@ const Header = () => {
             {HEADER_PRIMARY_MENU_ITEMS.map(({ path, label }) => {
               return (
                 <PrimaryMenuItem
+                  key={`header-primary-menu-item-${path}`}
                   path={path}
                   label={label}
                   active={isItemActive(path)}

@@ -3,19 +3,20 @@ import Head from 'next/head';
 
 import DefaultLayout from '@layout/DefaultLayout';
 
+const PAGE_TITLE = 'Naujausi pareiškimai';
+
 const Index = () => {
   return (
     <div>
       <Head>
-        <title>Naujausi pareiškimai</title>
+        <title>{PAGE_TITLE}</title>
       </Head>
-      <h1>Naujausi pareiškimai</h1>
     </div>
   );
 };
 
 Index.getLayout = (page: ReactElement) => {
-  return <DefaultLayout>{page}</DefaultLayout>;
+  return <DefaultLayout title={PAGE_TITLE}>{page}</DefaultLayout>;
 };
 
 export default Index;

@@ -23,8 +23,8 @@ const Header = () => {
   const isItemActive = (path: string) => path === router.pathname;
 
   return (
-    <header className="bg-background shadow-lg">
-      <div className="max-w-6xl mx-auto px-4">
+    <header className="shadow-lg bg-white">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>
@@ -62,7 +62,7 @@ const Header = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden absolute w-screen bg-background shadow-lg">
+        <div className="md:hidden absolute w-screen bg-white shadow-lg">
           <nav>
             {HEADER_PRIMARY_MENU_ITEMS.map(({ path, label }) => {
               return (

@@ -16,7 +16,7 @@ const PrimaryMenuItem: React.FC<IPrimaryMenuItem> = ({
   ...rest
 }) => {
   const classNames = mobile
-    ? cx('block', 'text-xl', 'p-5', 'font-medium', 'hover:text-cyan-600', {
+    ? cx('block', 'text-xl', 'p-5', 'font-medium', 'hover:text-primary', {
         'text-primary': active,
         'font-extrabold': active,
         'text-primary-dark': !active,

@@ -5,7 +5,8 @@
     "paths": {
       "@layout/*": ["components/layouts/*"],
       "@module/*": ["components/modules/*"],
-      "@element/*": ["components/elements/*"]
+      "@element/*": ["components/elements/*"],
+      "@template/*": ["components/templates/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

@@ -1,13 +1,13 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Politics.Data;
+using Politics.Mapping;
+using Politics.Model;
 
 namespace Politics
 {
@@ -19,11 +19,24 @@ namespace Politics
     }
 
     public IConfiguration Configuration { get; }
-
-    // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddRazorPages();
+      // Other DI initializations
+
+      services.AddDbContext<PoliticsDbContext>(options =>
+              options.UseNpgsql(Configuration.GetConnectionString("PoliticsDatabase")));
+
+      var mapperConfig = new MapperConfiguration(config =>
+      {
+        config.AddProfile(new MappingProfile());
+      });
+
+      IMapper mapper = mapperConfig.CreateMapper();
+      services.AddSingleton(mapper);
+      services.AddScoped<IPoliticiansRepository, PoliticiansRepository>();
+
+      services.AddControllers();
+      services.AddSwaggerGen();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +59,19 @@ namespace Politics
       app.UseRouting();
 
       app.UseAuthorization();
+
+      app.UseSwagger();
+
+      app.UseSwaggerUI(c =>
+      {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Politics API");
+        c.RoutePrefix = string.Empty;
+      });
+
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapControllers();
+      });
     }
   }
 }

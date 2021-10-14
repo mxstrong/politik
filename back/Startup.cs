@@ -65,6 +65,7 @@ namespace Politics
       app.UseSwaggerUI(c =>
       {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Politics API");
+        c.RoutePrefix = string.Empty;
       });
 
       app.UseEndpoints(endpoints =>

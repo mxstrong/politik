@@ -39,16 +39,27 @@ namespace Politics.Data
           return null;
         }
       }
-      var createdPolitician = (await _context.Politicians.AddAsync(politician)).Entity;
+      await _context.Politicians.AddAsync(politician);
       await _context.SaveChangesAsync();
+
+      var createdPolitician = await _context.Politicians.FindAsync(politician.PoliticianId);
+      if (createdPolitician is null)
+      {
+        return null;
+      }
       return _mapper.Map<Politician, PoliticianOutDto>(createdPolitician);
     }
 
-    public async Task DeletePolitician(string id)
+    public async Task<PoliticianOutDto> DeletePolitician(string id)
     {
       var politician = await _context.Politicians.FindAsync(id);
+      if (politician is null)
+      {
+        return null;
+      }
       _context.Politicians.Remove(politician);
       await _context.SaveChangesAsync();
+      return _mapper.Map<Politician, PoliticianOutDto>(politician);
     }
   }
 }

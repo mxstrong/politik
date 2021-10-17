@@ -34,7 +34,7 @@ namespace Politics
       IMapper mapper = mapperConfig.CreateMapper();
       services.AddSingleton(mapper);
       services.AddScoped<IPoliticiansRepository, PoliticiansRepository>();
-
+      services.AddScoped<IPartiesRepository, PartiesRepository>();
       services.AddControllers();
       services.AddSwaggerGen();
     }

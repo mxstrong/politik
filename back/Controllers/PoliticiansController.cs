@@ -32,14 +32,18 @@ namespace Politics.Controllers
       var createdPolitician = await _repo.AddPolitician(politicianDto);
       if (createdPolitician is null)
       {
-        return ValidationProblem("Nurodyta partija sistemoje neegzistuoja");
+        return ValidationProblem("Politiko pridėti nepavyko");
       }
       return Ok(createdPolitician);
     }
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePolitician(string id)
     {
-      await _repo.DeletePolitician(id);
+      var politician = await _repo.DeletePolitician(id);
+      if (politician is null)
+      {
+        return ValidationProblem("Politikas nerastas");
+      }
       return Ok();
     }
   }

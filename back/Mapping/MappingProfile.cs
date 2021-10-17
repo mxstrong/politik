@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Politics.Data;
+using Politics.Dtos;
 using Politics.Model;
 
 namespace Politics.Mapping
@@ -8,7 +8,7 @@ namespace Politics.Mapping
   {
     public MappingProfile()
     {
-      CreateMap<Politician, PoliticianDto>()
+      CreateMap<Politician, PoliticianOutDto>()
         .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.PoliticianId))
         .ForMember(dest => dest.Party, opt => opt.MapFrom(src => src.Party.Name));
       CreateMap<PoliticianDto, Politician>();

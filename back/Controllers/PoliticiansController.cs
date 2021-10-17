@@ -2,6 +2,7 @@
 using Politics.Data;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Politics.Dtos;
 
 namespace Politics.Controllers
 {
@@ -16,7 +17,7 @@ namespace Politics.Controllers
       _repo = repo;
     }
     [HttpGet]
-    public async Task<ActionResult<List<PoliticianDto>>> GetAllPoliticians()
+    public async Task<ActionResult<List<PoliticianOutDto>>> GetAllPoliticians()
     {
       var politicians = await _repo.GetAllPoliticians();
       return Ok(politicians);
@@ -24,8 +25,22 @@ namespace Politics.Controllers
     [HttpPost]
     public async Task<ActionResult> AddPolitician(PoliticianDto politicianDto)
     {
+      if (politicianDto.FullName is null)
+      {
+        return ValidationProblem("Nenurodėte politiko vardo ir pavardės");
+      }
       var createdPolitician = await _repo.AddPolitician(politicianDto);
+      if (createdPolitician is null)
+      {
+        return ValidationProblem("Nurodyta partija sistemoje neegzistuoja");
+      }
       return Ok(createdPolitician);
+    }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeletePolitician(string id)
+    {
+      await _repo.DeletePolitician(id);
+      return Ok();
     }
   }
 }

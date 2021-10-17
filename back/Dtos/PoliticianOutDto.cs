@@ -1,6 +1,6 @@
-﻿namespace Politics.Data
+﻿namespace Politics.Dtos
 {
-  public class PoliticianDto
+  public class PoliticianOutDto
   {
     public string Id { get; set; }
     public string Party { get; set; }

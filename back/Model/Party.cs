@@ -6,7 +6,7 @@ namespace Politics.Model
   public class Party
   {
     [Required]
-    public string Partyid { get; set; }
+    public string PartyId { get; set; }
     [Required]
     public string Name { get; set; }
     [Required]

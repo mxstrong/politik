@@ -1,5 +1,5 @@
+import { ReactNode } from 'react';
 import cx from 'classnames';
-import { ReactComponentElement, ReactElement, ReactNode } from 'react';
 
 interface IButton {
   icon?: ReactNode;

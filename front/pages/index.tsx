@@ -1,5 +1,5 @@
-import type { ReactElement } from 'react';
 import Head from 'next/head';
+import { NextPage } from 'next';
 
 import DefaultLayout from '@layout/DefaultLayout';
 
@@ -15,7 +15,7 @@ const Index = () => {
   );
 };
 
-Index.getLayout = (page: ReactElement) => {
+Index.getLayout = (page: NextPage) => {
   return <DefaultLayout title={PAGE_TITLE}>{page}</DefaultLayout>;
 };
 

@@ -1,15 +1,18 @@
 import { ReactNode } from 'react';
 import cx from 'classnames';
 
-interface IButton {
+interface IButton extends React.HTMLAttributes<HTMLElement> {
   icon?: ReactNode;
   variant?: 'contained' | 'outlined';
+  type?: 'submit' | 'button';
+  form?: string;
 }
 
 const Button: React.FC<IButton> = ({
   icon,
   variant = 'contained',
   children,
+  type = 'button',
   ...rest
 }) => {
   const classNames = cx(
@@ -37,7 +40,7 @@ const Button: React.FC<IButton> = ({
   );
 
   return (
-    <button className={classNames} {...rest}>
+    <button className={classNames} type={type} {...rest}>
       {!!icon && <span className="mr-2">{icon}</span>}
       {children}
     </button>

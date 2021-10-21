@@ -1,10 +1,19 @@
+import cx from 'classnames';
+
 const IconButton: React.FC<React.HTMLAttributes<HTMLButtonElement>> = ({
   children,
+  className,
   ...rest
 }) => {
   return (
     <button
-      className="outline-none flex items-center text-primary-dark"
+      className={cx(
+        'outline-none',
+        'flex',
+        'items-center',
+        'text-primary-dark',
+        className
+      )}
       {...rest}
     >
       {children}

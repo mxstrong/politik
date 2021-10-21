@@ -1,7 +1,7 @@
 import { ReactElement, useEffect } from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import RestClient from '@api/RestClient';
+import { fetch } from '@api/RestClient';
 
 import DefaultLayout from '@layout/DefaultLayout';
 import PoliticiansPage from '@template/PoliticiansPage';
@@ -27,7 +27,7 @@ Politicians.getLayout = (page: ReactElement) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await RestClient.get('Politicians');
+  const res = await fetch({ url: 'Politicians' });
 
   if (!res.data) {
     return {

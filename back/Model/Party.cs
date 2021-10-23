@@ -6,9 +6,11 @@ namespace Politics.Model
   public class Party
   {
     [Required]
-    public string Partyid { get; set; }
+    public string PartyId { get; set; }
     [Required]
-    public string Name { get; set; }
+    public string LongName { get; set; }
+    [Required]
+    public string ShortName { get; set; }
     [Required]
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }

@@ -10,7 +10,10 @@ namespace Politics.Model
     public string PartyId { get; set; }
     public Party Party { get; set; }
     [Required]
-    public string FullName { get; set; }
+    public string FirstName { get; set; }
+    [Required]
+    public string LastName { get; set; }
+    [Required]
     public string Description { get; set; }
     [Required]
     public DateTime CreatedAt { get; set; }

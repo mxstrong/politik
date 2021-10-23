@@ -52,7 +52,7 @@ namespace Politics.Controllers
       {
         return ValidationProblem("Partija nerasta");
       }
-      return Ok(party);
+      return NoContent();
     }
   }
 }

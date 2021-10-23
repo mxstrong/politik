@@ -5,7 +5,10 @@
     "paths": {
       "@layout/*": ["components/layouts/*"],
       "@module/*": ["components/modules/*"],
-      "@element/*": ["components/elements/*"]
+      "@element/*": ["components/elements/*"],
+      "@template/*": ["components/templates/*"],
+      "@type/*": ["types/*"],
+      "@api/*": ["api/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

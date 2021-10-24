@@ -23,7 +23,7 @@ namespace Politics.Data
       var party = _mapper.Map<PartyDto, Party>(partyDto);
       party.PartyId = Guid.NewGuid().ToString();
       party.CreatedAt = DateTime.Now;
-      party.CreatedBy = "test";
+      party.CreatedById = "test";
       await _context.AddAsync(party);
       await _context.SaveChangesAsync();
       var addedParty = await _context.Parties.FindAsync(party.PartyId);

@@ -15,7 +15,9 @@ namespace Politics.Model
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
     [Required]
-    public string CreatedBy { get; set; }
-    public string UpdatedBy { get; set; }
+    public string CreatedById { get; set; }
+    public string UpdatedById { get; set; }
+    public User CreatedBy { get; set; }
+    public User UpdatedBy { get; set; }
   }
 }

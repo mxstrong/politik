@@ -30,7 +30,7 @@ namespace Politics.Data
       var politician = _mapper.Map<PoliticianDto, Politician>(politicianDto);
       politician.PoliticianId = Guid.NewGuid().ToString();
       politician.CreatedAt = DateTime.Now;
-      politician.CreatedBy = "test";
+      politician.CreatedById = "test";
       if (politician.PartyId is not null)
       {
         var party = await _context.Parties.FindAsync(politician.PartyId);

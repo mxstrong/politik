@@ -62,6 +62,8 @@ namespace Politics
         app.UseHsts();
       }
 
+      app.UseCors("PoliticsCORSPolicy");
+
       app.UseHttpsRedirection();
       app.UseStaticFiles();
 

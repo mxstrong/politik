@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { NextPageWithLayout } from '@type/elements/app';
+import '../app/styles/app.scss';
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;

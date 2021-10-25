@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Formik, Form, FormikValues } from 'formik';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
@@ -7,10 +8,14 @@ import Input from '@element/Input';
 import Modal from '@element/Modal';
 import TextArea from '@element/TextArea';
 import { fetch } from '@api/RestClient';
+import Select from '@element/Select';
+import { ISelectOption } from '@type/elements/SelectOption';
+import { IParty } from '@type/api/parties';
 
 const VALIDATION_SCHEMA = yup.object({
   firstName: yup.string().min(1).required(),
   lastName: yup.string().min(1).required(),
+  party: yup.object({ value: yup.string() }).required(),
   description: yup.string().min(1).required(),
 });
 
@@ -20,10 +25,30 @@ interface IAddNewPolitician {
 }
 
 const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
+  const [partyOptions, setPartyOptions] = useState<ISelectOption[]>([]);
+
+  useEffect(() => {
+    const fetchParties = async () => {
+      const res = await fetch({ url: 'Parties' });
+      if (res.data) {
+        const newPartyOptions = res.data.map((party: IParty) => ({
+          label: `${party.longName} (${party.shortName})`,
+          value: party.id,
+        }));
+        setPartyOptions(newPartyOptions);
+      }
+    };
+
+    if (isOpen) {
+      fetchParties();
+    }
+  }, [isOpen]);
+
   const getInitialValues = () => {
     return {
       firstName: '',
       lastName: '',
+      party: null,
       description: '',
     };
   };
@@ -31,14 +56,15 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
   const handleSubmit = async ({
     firstName,
     lastName,
+    party,
     description,
   }: FormikValues) => {
     const data = {
-      party: null,
-      fullName: `${firstName} ${lastName}`,
+      firstName,
+      lastName,
+      partyId: party.value,
       description,
     };
-
     const res = await fetch({ url: 'Politicians', method: 'POST', data });
 
     if (!res.error) {
@@ -59,7 +85,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
         validateOnBlur={false}
         validateOnChange={false}
       >
-        {({ values, handleChange, errors, isSubmitting }) => {
+        {({ values, handleChange, errors, isSubmitting, setFieldValue }) => {
           return (
             <Form className="space-y-6" id="add-politician-form">
               <div className="flex flex-wrap space-y-6 md:space-y-0 flex-col md:space-x-4 md:flex-row justify-between">
@@ -80,6 +106,13 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
                   error={!!errors.lastName}
                 />
               </div>
+              <Select
+                options={partyOptions}
+                label="Partija"
+                value={values.party}
+                onChange={(value) => setFieldValue('party', value)}
+                error={!!errors.party}
+              />
               <TextArea
                 label="Aprašymas"
                 minRows={6}

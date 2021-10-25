@@ -6,6 +6,7 @@ interface IButton extends React.HTMLAttributes<HTMLElement> {
   variant?: 'contained' | 'outlined';
   type?: 'submit' | 'button';
   form?: string;
+  disabled?: boolean;
 }
 
 const Button: React.FC<IButton> = ({
@@ -13,6 +14,7 @@ const Button: React.FC<IButton> = ({
   variant = 'contained',
   children,
   type = 'button',
+  disabled,
   ...rest
 }) => {
   const classNames = cx(
@@ -36,11 +38,14 @@ const Button: React.FC<IButton> = ({
       'hover:bg-primary-background': variant === 'outlined',
       'hover:text-white': variant === 'contained',
       border: variant === 'outlined',
+      'bg-primary-light': disabled,
+      'hover:bg-primary-light': disabled,
+      'cursor-not-allowed': disabled,
     }
   );
 
   return (
-    <button className={classNames} type={type} {...rest}>
+    <button className={classNames} type={type} disabled={disabled} {...rest}>
       {!!icon && <span className="mr-2">{icon}</span>}
       {children}
     </button>

@@ -17,6 +17,7 @@ module.exports = {
       secondary: '#e63946',
       white: '#fff',
       black: '#000',
+      danger: '#f56565',
     },
   },
   variants: {

@@ -1,0 +1,15 @@
+.react-select {
+  &__control {
+    @apply appearance-none bg-gray-200 border border-gray-200 py-1 px-2 rounded focus:outline-none focus:bg-white focus:border-gray-500 #{!important};
+  }
+
+  &--danger {
+    &__control {
+      @apply appearance-none bg-gray-200 border border-danger py-1 px-2 rounded focus:outline-none focus:bg-white focus:border-gray-500 #{!important};
+    }
+  }
+
+  &__placeholder {
+    @apply text-gray-400 #{!important};
+  }
+}

@@ -1,44 +1,21 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { AxiosRequestHeaders, AxiosResponse } from 'axios';
 
-axios.defaults.headers.common.Accept = 'application/json';
-axios.defaults.timeout = 12000;
+interface IParams extends AxiosRequestHeaders {
+  url: string;
+  [key: string]: any;
+}
 
-const getHttpHeaders = (isAuthenticated = false): AxiosRequestConfig => {
-  // @TODO: add along with auth
-  //   if (isAuthenticated) {
-  //     return {
-  //       headers: {
-  //         Authorization: 'Bearer YOUR_TOKEN',
-  //       },
-  //     };
-  //   }
+interface IAxiosResponse extends AxiosResponse {
+  error: any;
+}
 
-  return {};
-};
-
-const getURL = (path: string) => {
-  return `${process.env.NEXT_PUBLIC_API_URL}/${path}`;
-};
-
-const get = (path: string): Promise<AxiosResponse> =>
-  axios.get(getURL(path), getHttpHeaders());
-
-const del = (path: string): Promise<AxiosResponse> =>
-  axios.delete(getURL(path), getHttpHeaders());
-
-const post = (path: string, data: any): Promise<AxiosResponse> =>
-  axios.post(getURL(path), data, getHttpHeaders());
-
-const put = (path: string, data: any): Promise<AxiosResponse> =>
-  axios.post(getURL(path), data, getHttpHeaders());
-
-const patch = (path: string, data: any): Promise<AxiosResponse> =>
-  axios.post(getURL(path), data, getHttpHeaders());
-
-export default {
-  get,
-  del,
-  post,
-  put,
-  patch,
+export const fetch = async (
+  params: IParams = { url: '' }
+): Promise<IAxiosResponse | { [key: string]: any }> => {
+  return await axios({
+    ...params,
+    url: `${process.env.NEXT_PUBLIC_API_URL}/${params.url}`,
+  }).catch((error) => {
+    return { error };
+  });
 };

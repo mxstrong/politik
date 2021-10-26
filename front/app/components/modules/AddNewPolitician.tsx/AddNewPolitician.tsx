@@ -35,7 +35,9 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
           label: `${party.longName} (${party.shortName})`,
           value: party.id,
         }));
-        setPartyOptions(newPartyOptions);
+        const withoutPartyOption = { label: '— (nepartinis)', value: null };
+
+        setPartyOptions([withoutPartyOption, ...newPartyOptions]);
       }
     };
 
@@ -65,6 +67,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
       partyId: party.value,
       description,
     };
+
     const res = await fetch({ url: 'Politicians', method: 'POST', data });
 
     if (!res.error) {

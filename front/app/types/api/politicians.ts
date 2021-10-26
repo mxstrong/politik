@@ -1,5 +1,5 @@
 export interface IPoliticiansListItem {
-  id: number;
+  id: string;
   party: string;
   fullName: string;
   description: string;
@@ -7,4 +7,11 @@ export interface IPoliticiansListItem {
 
 export interface IPoliticians {
   politicians: IPoliticiansListItem[];
+}
+
+export interface IPolitician {
+  id: string | string[] | undefined;
+  party: string;
+  fullName: string;
+  description: string;
 }

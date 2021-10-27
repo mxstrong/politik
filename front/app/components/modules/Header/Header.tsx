@@ -18,7 +18,7 @@ const Header = () => {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+  const toggleMenu = () => setMobileMenuOpen((value) => !value);
 
   const isItemActive = (path: string) => path === router.pathname;
 

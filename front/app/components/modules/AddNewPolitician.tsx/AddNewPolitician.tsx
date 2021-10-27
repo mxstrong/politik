@@ -7,7 +7,7 @@ import Button from '@element/Button';
 import Input from '@element/Input';
 import Modal from '@element/Modal';
 import TextArea from '@element/TextArea';
-import { fetch } from '@api/RestClient';
+import { _fetch } from '@api/RestClient';
 import Select from '@element/Select';
 import { ISelectOption } from '@type/elements/SelectOption';
 import { IParty } from '@type/api/parties';
@@ -15,7 +15,7 @@ import { IParty } from '@type/api/parties';
 const VALIDATION_SCHEMA = yup.object({
   firstName: yup.string().min(1).required(),
   lastName: yup.string().min(1).required(),
-  party: yup.object({ value: yup.string() }).required(),
+  party: yup.object({ value: yup.string() }).nullable(),
   description: yup.string().min(1).required(),
 });
 
@@ -29,7 +29,8 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     const fetchParties = async () => {
-      const res = await fetch({ url: 'Parties' });
+      const res = await _fetch({ url: 'Parties' });
+
       if (res.data) {
         const newPartyOptions = res.data.map((party: IParty) => ({
           label: `${party.longName} (${party.shortName})`,
@@ -64,11 +65,11 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
     const data = {
       firstName,
       lastName,
-      partyId: party.value,
+      partyId: party.value || null,
       description,
     };
 
-    const res = await fetch({ url: 'Politicians', method: 'POST', data });
+    const res = await _fetch({ url: 'Politicians', method: 'POST', data });
 
     if (!res.error) {
       toast.success('Informacija išsiųsta.');

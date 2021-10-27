@@ -10,8 +10,9 @@ export interface IPoliticians {
 }
 
 export interface IPolitician {
-  id: string | string[] | undefined;
+  id: string;
   party: string;
+  partyShort: string;
   fullName: string;
   description: string;
 }

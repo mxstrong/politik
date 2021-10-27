@@ -87,7 +87,32 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
     };
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = async ({
+    politician,
+    link,
+    description,
+    tags,
+  }: FormikValues) => {
+    const data = {
+      politician,
+      link,
+      description,
+      tags: tags.map(({ value, label }: ISelectOption) => ({
+        tagId: value,
+        name: label,
+      })),
+    };
+
+    const res = await _fetch({ url: 'Politicians', method: 'POST', data });
+
+    if (!res.error) {
+      toast.success('Informacija išsiųsta.');
+      onClose();
+      return;
+    }
+
+    toast.error('Įvyko klaida.');
+  };
 
   return (
     <Modal
@@ -125,7 +150,9 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
                 label="Žymos"
                 value={values.tags}
                 onChange={(value) => setFieldValue('tags', value)}
-                onCreateOption={(value) => console.log(value)}
+                onCreateOption={(value) =>
+                  setFieldValue('tags', { label: value, value: null })
+                }
                 error={!!errors.tags}
                 isMulti
                 formatCreateLabel={(input) => `Sukurti naują žymą "${input}"`}

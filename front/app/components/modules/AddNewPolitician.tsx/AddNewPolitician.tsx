@@ -15,7 +15,7 @@ import { IParty } from '@type/api/parties';
 const VALIDATION_SCHEMA = yup.object({
   firstName: yup.string().min(1).required(),
   lastName: yup.string().min(1).required(),
-  party: yup.object({ value: yup.string() }).nullable(),
+  party: yup.object({ value: yup.string().nullable() }).nullable(),
   description: yup.string().min(1).required(),
 });
 
@@ -56,6 +56,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
     };
   };
 
+  // @TODO: update politicians list on successful submit (probably with redux)
   const handleSubmit = async ({
     firstName,
     lastName,
@@ -65,7 +66,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
     const data = {
       firstName,
       lastName,
-      partyId: party.value || null,
+      partyId: party?.value || null,
       description,
     };
 
@@ -74,6 +75,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
     if (!res.error) {
       toast.success('Informacija išsiųsta.');
       onClose();
+
       return;
     }
 

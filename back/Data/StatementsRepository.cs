@@ -41,9 +41,10 @@ namespace Politics.Data
       return _mapper.Map<Statement, StatementOutDto>(createdStatement);
     }
 
-    public Task<List<StatementOutDto>> GetAllStatements()
+    public async Task<List<StatementOutDto>> GetAllStatements()
     {
-      throw new NotImplementedException();
+      var statements = await _context.Statements.ToListAsync();
+      return _mapper.Map<List<Statement>, List<StatementOutDto>>(statements);
     }
   }
 }

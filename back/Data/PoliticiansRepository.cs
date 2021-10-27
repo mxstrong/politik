@@ -25,6 +25,12 @@ namespace Politics.Data
       return _mapper.Map<List<Politician>, List<PoliticianOutDto>>(politicians);
     }
 
+    public async Task<PoliticianOutDto> GetPoliticianById(string id)
+    {
+      var politician = await _context.Politicians.FindAsync(id);
+      return _mapper.Map<Politician, PoliticianOutDto>(politician);
+    }
+
     public async Task<PoliticianOutDto> AddPolitician(PoliticianDto politicianDto)
     {
       var politician = _mapper.Map<PoliticianDto, Politician>(politicianDto);
@@ -38,6 +44,7 @@ namespace Politics.Data
         {
           return null;
         }
+        politician.Party = party;
       }
       await _context.Politicians.AddAsync(politician);
       await _context.SaveChangesAsync();

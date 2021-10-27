@@ -9,5 +9,6 @@ namespace Politics.Data
     Task<PoliticianOutDto> AddPolitician(PoliticianDto politicianDto);
     Task<List<PoliticianOutDto>> GetAllPoliticians();
     Task<PoliticianOutDto> DeletePolitician(string id);
+    Task<PoliticianOutDto> GetPoliticianById(string id);
   }
 }

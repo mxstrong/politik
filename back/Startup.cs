@@ -35,6 +35,8 @@ namespace Politics
       services.AddSingleton(mapper);
       services.AddScoped<IPoliticiansRepository, PoliticiansRepository>();
       services.AddScoped<IPartiesRepository, PartiesRepository>();
+      services.AddScoped<IStatementsRepository, StatementsRepository>();
+      services.AddScoped<ITagsRepository, TagsRepository>();
 
       services.AddCors(options => options.AddPolicy(
         "PoliticsCORSPolicy",

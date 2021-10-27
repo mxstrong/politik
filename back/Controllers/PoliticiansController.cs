@@ -22,6 +22,11 @@ namespace Politics.Controllers
       var politicians = await _repo.GetAllPoliticians();
       return Ok(politicians);
     }
+    [HttpGet("{id}")]
+    public async Task<ActionResult<PoliticianOutDto>> GetPoliticianById(string id)
+    {
+      return await _repo.GetPoliticianById(id);
+    }
     [HttpPost]
     public async Task<ActionResult> AddPolitician(PoliticianDto politicianDto)
     {

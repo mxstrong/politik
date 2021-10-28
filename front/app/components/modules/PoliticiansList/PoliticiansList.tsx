@@ -1,30 +1,24 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { _fetch } from '@api/RestClient';
 import Spin from '@element/Spin';
+import { fetchPoliticians } from '@redux/actions/politicians';
+import { IPoliticiansListItem } from '@type/api/politicians';
+import { AppState } from '@redux/reducers';
 
 const PoliticiansList: React.FC = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
 
-  const [politicians, setPoliticians] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const { politicians, loading } = useSelector(
+    ({ politicians }: AppState) => politicians
+  );
 
   useEffect(() => {
-    const fetchPoliticians = async () => {
-      setLoading(true);
-
-      const res = await _fetch({ url: 'Politicians' });
-
-      if (res.data) {
-        setPoliticians(res.data);
-      }
-
-      setLoading(false);
-    };
-
-    fetchPoliticians();
+    dispatch(fetchPoliticians());
   }, []);
 
   if (loading) {
@@ -33,7 +27,7 @@ const PoliticiansList: React.FC = () => {
 
   return (
     <ul className="rounded shadow-lg divide-y">
-      {politicians.map(({ id, fullName, party }) => {
+      {politicians.map(({ id, fullName, party }: IPoliticiansListItem) => {
         return (
           <Link href={`${router.pathname}/${id}`} key={`politician-${id}`}>
             <li className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">

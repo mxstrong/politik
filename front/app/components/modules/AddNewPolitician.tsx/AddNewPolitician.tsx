@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Formik, Form, FormikValues } from 'formik';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
+import { useDispatch } from 'react-redux';
 
 import Button from '@element/Button';
 import Input from '@element/Input';
@@ -11,6 +12,7 @@ import { _fetch } from '@api/RestClient';
 import Select from '@element/Select';
 import { ISelectOption } from '@type/elements/SelectOption';
 import { IParty } from '@type/api/parties';
+import { fetchPoliticians } from '@redux/actions/politicians';
 
 const VALIDATION_SCHEMA = yup.object({
   firstName: yup.string().min(1).required(),
@@ -26,6 +28,8 @@ interface IAddNewPolitician {
 
 const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
   const [partyOptions, setPartyOptions] = useState<ISelectOption[]>([]);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchParties = async () => {
@@ -56,7 +60,6 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
     };
   };
 
-  // @TODO: update politicians list on successful submit (probably with redux)
   const handleSubmit = async ({
     firstName,
     lastName,
@@ -74,6 +77,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
 
     if (!res.error) {
       toast.success('Informacija išsiųsta.');
+      dispatch(fetchPoliticians());
       onClose();
 
       return;

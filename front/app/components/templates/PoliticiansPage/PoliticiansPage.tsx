@@ -1,12 +1,11 @@
 import { useState } from 'react';
+import { BsPlusLg } from 'react-icons/bs';
 
 import Button from '@element/Button';
-import { BsPlusLg } from 'react-icons/bs';
 import PoliticiansList from '@module/PoliticiansList';
-import { IPoliticians } from '@type/api/politicians';
 import AddNewPolitician from '@module/AddNewPolitician.tsx/AddNewPolitician';
 
-const PoliticiansPage: React.FC<IPoliticians> = ({ politicians }) => {
+const PoliticiansPage: React.FC = () => {
   const [isAddPoliticianOpen, setIsAddPoliticianOpen] = useState(false);
 
   return (
@@ -17,10 +16,10 @@ const PoliticiansPage: React.FC<IPoliticians> = ({ politicians }) => {
           variant="outlined"
           onClick={() => setIsAddPoliticianOpen(true)}
         >
-          Pridėti naują
+          Pridėti naują politiką
         </Button>
         <div className="my-6 md:my-12">
-          <PoliticiansList politicians={politicians} />
+          <PoliticiansList />
         </div>
       </div>
 

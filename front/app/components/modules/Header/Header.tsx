@@ -18,13 +18,13 @@ const Header = () => {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+  const toggleMenu = () => setMobileMenuOpen((value) => !value);
 
   const isItemActive = (path: string) => path === router.pathname;
 
   return (
     <header className="shadow-lg bg-white">
-      <div className="max-w-6xl mx-auto px-4 md:px-6">
+      <div className="max-w-3xl mx-auto px-4 md:px-6">
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>

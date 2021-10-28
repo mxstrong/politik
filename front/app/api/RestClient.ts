@@ -1,4 +1,4 @@
-import axios, { AxiosRequestHeaders, AxiosResponse } from 'axios';
+import axios, { AxiosRequestHeaders, AxiosResponse, AxiosStatic } from 'axios';
 
 interface IParams extends AxiosRequestHeaders {
   url: string;
@@ -9,7 +9,7 @@ interface IAxiosResponse extends AxiosResponse {
   error: any;
 }
 
-export const fetch = async (
+export const _fetch = async (
   params: IParams = { url: '' }
 ): Promise<IAxiosResponse | { [key: string]: any }> => {
   return await axios({
@@ -18,4 +18,10 @@ export const fetch = async (
   }).catch((error) => {
     return { error };
   });
+};
+
+export const fetchAll = (
+  requests: Promise<IAxiosResponse | { [key: string]: any }>[]
+) => {
+  return Promise.all(requests).then((response) => response);
 };

@@ -1,12 +1,15 @@
-import ReactSelect, { GroupBase, Props as SelectProps } from 'react-select';
+import { ISelectOption } from '@type/elements/SelectOption';
+import { GroupBase } from 'react-select';
+import ReactCreatableSelect, { CreatableProps } from 'react-select/creatable';
 
-interface ISelect extends SelectProps {
+interface ICreatableSelect
+  extends CreatableProps<ISelectOption, true, GroupBase<ISelectOption>> {
   label?: string;
   error?: boolean;
   errorMessage?: string;
 }
 
-const Select: React.FC<ISelect> = ({
+const CreatableSelect: React.FC<ICreatableSelect> = ({
   options,
   label,
   error,
@@ -20,7 +23,7 @@ const Select: React.FC<ISelect> = ({
           {label}
         </label>
       )}
-      <ReactSelect
+      <ReactCreatableSelect
         options={options}
         classNamePrefix={error ? 'react-select--danger' : 'react-select'}
         noOptionsMessage={() => 'Nėra pasirinkimų'}
@@ -35,4 +38,4 @@ const Select: React.FC<ISelect> = ({
   );
 };
 
-export default Select;
+export default CreatableSelect;

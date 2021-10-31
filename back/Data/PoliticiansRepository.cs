@@ -21,13 +21,13 @@ namespace Politics.Data
 
     public async Task<List<PoliticianOutDto>> GetAllPoliticians()
     {
-      var politicians = await _context.Politicians.ToListAsync();
+      var politicians = await _context.Politicians.Include(politician => politician.Party).ToListAsync();
       return _mapper.Map<List<Politician>, List<PoliticianOutDto>>(politicians);
     }
 
     public async Task<PoliticianOutDto> GetPoliticianById(string id)
     {
-      var politician = await _context.Politicians.FindAsync(id);
+      var politician = await _context.Politicians.Include(politician => politician.Party).SingleAsync(p => p.PoliticianId == id);
       return _mapper.Map<Politician, PoliticianOutDto>(politician);
     }
 

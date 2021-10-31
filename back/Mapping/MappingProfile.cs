@@ -18,8 +18,9 @@ namespace Politics.Mapping
         .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.PartyId));
       CreateMap<PartyDto, Party>();
       CreateMap<TagDto, Tag>();
-      CreateMap<Tag, TagDto>();
-      CreateMap<StatementDto, Statement>();
+      CreateMap<Tag, TagOutDto>();
+      CreateMap<TagOutDto, TagDto>();
+      CreateMap<StatementDto, Statement>().ForMember(dest => dest.Tags, opt => opt.Ignore());
       CreateMap<Tag, string>().ConvertUsing(src => src.Name);
       CreateMap<Statement, StatementOutDto>()
         .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy.DisplayName))

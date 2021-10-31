@@ -10,6 +10,6 @@ namespace Politics.Dtos
     public string PoliticianId { get; set; }
     public string Link { get; set; }
     public string Description { get; set; }
-    public List<string> TagIds { get; set; }
+    public List<TagOutDto> Tags { get; set; }
   }
 }

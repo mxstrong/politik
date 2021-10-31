@@ -12,4 +12,12 @@
   &__placeholder {
     @apply text-gray-400 #{!important};
   }
+
+  &__multi-value {
+    @apply bg-primary text-white #{!important};
+
+    &__label {
+      @apply text-white #{!important};
+    }
+  }
 }

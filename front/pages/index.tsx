@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { NextPage } from 'next';
 
 import DefaultLayout from '@layout/DefaultLayout';
+import NewestStatementsPage from '@template/NewestStatementsPage';
 
 const PAGE_TITLE = 'Naujausi pareiškimai';
 
@@ -11,6 +12,8 @@ const Index = () => {
       <Head>
         <title>{PAGE_TITLE}</title>
       </Head>
+
+      <NewestStatementsPage />
     </div>
   );
 };

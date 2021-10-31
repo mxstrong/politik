@@ -2,20 +2,22 @@ import { useEffect, useState } from 'react';
 import { Formik, Form, FormikValues } from 'formik';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
+import { useDispatch } from 'react-redux';
 
 import Button from '@element/Button';
 import Input from '@element/Input';
 import Modal from '@element/Modal';
 import TextArea from '@element/TextArea';
-import { fetch } from '@api/RestClient';
+import { _fetch } from '@api/RestClient';
 import Select from '@element/Select';
 import { ISelectOption } from '@type/elements/SelectOption';
 import { IParty } from '@type/api/parties';
+import { fetchPoliticians } from '@redux/actions/politicians';
 
 const VALIDATION_SCHEMA = yup.object({
   firstName: yup.string().min(1).required(),
   lastName: yup.string().min(1).required(),
-  party: yup.object({ value: yup.string() }).required(),
+  party: yup.object({ value: yup.string().nullable() }).nullable(),
   description: yup.string().min(1).required(),
 });
 
@@ -27,15 +29,20 @@ interface IAddNewPolitician {
 const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
   const [partyOptions, setPartyOptions] = useState<ISelectOption[]>([]);
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const fetchParties = async () => {
-      const res = await fetch({ url: 'Parties' });
+      const res = await _fetch({ url: 'Parties' });
+
       if (res.data) {
         const newPartyOptions = res.data.map((party: IParty) => ({
           label: `${party.longName} (${party.shortName})`,
           value: party.id,
         }));
-        setPartyOptions(newPartyOptions);
+        const withoutPartyOption = { label: '— (nepartinis)', value: null };
+
+        setPartyOptions([withoutPartyOption, ...newPartyOptions]);
       }
     };
 
@@ -62,14 +69,17 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
     const data = {
       firstName,
       lastName,
-      partyId: party.value,
+      partyId: party?.value || null,
       description,
     };
-    const res = await fetch({ url: 'Politicians', method: 'POST', data });
+
+    const res = await _fetch({ url: 'Politicians', method: 'POST', data });
 
     if (!res.error) {
       toast.success('Informacija išsiųsta.');
+      dispatch(fetchPoliticians());
       onClose();
+
       return;
     }
 

@@ -1,31 +1,50 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { IPoliticians } from '@type/api/politicians';
+import { _fetch } from '@api/RestClient';
+import Spin from '@element/Spin';
+import { fetchPoliticians } from '@redux/actions/politicians';
+import { IPoliticiansListItem } from '@type/api/politicians';
+import { AppState } from '@redux/reducers';
 
-const PoliticiansList: React.FC<IPoliticians> = ({ politicians }) => {
+const PoliticiansList: React.FC = () => {
+  const router = useRouter();
+  const dispatch = useDispatch();
+
+  const { politicians, loading } = useSelector(
+    ({ politicians }: AppState) => politicians
+  );
+
+  useEffect(() => {
+    dispatch(fetchPoliticians());
+  }, []);
+
+  if (loading) {
+    return <Spin />;
+  }
+
   return (
     <ul className="rounded shadow-lg divide-y">
-      {politicians.map(({ id, fullName, party }) => {
+      {politicians.map(({ id, fullName, party }: IPoliticiansListItem) => {
         return (
-          <li
-            key={`politician-${id}`}
-            className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer"
-          >
-            <Link href="#">
+          <Link href={`${router.pathname}/${id}`} key={`politician-${id}`}>
+            <li className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">
               <a className="font-bold text-lg text-black hover:underline">
                 {fullName}
               </a>
-            </Link>
-            <div className="flex justify-between font-semibold text-sm text-coolGray-500 mt-2">
-              <Link href="#">
-                <a className="font-normal hover:underline">{party}</a>
-              </Link>
+              <div className="flex justify-between font-semibold text-sm text-coolGray-500 mt-2">
+                <div className="font-normal">
+                  {party ? party : 'Nepartinis'}
+                </div>
 
-              {/* <div className="font-normal">
-                Pareiškimų: <strong>{ @TODO: add statements count }</strong>
-              </div> */}
-            </div>
-          </li>
+                {/* <div className="font-normal">
+                          Pareiškimų: <strong>{ @TODO: add statements count }</strong>
+                        </div> */}
+              </div>
+            </li>
+          </Link>
         );
       })}
     </ul>

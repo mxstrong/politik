@@ -22,6 +22,11 @@ namespace Politics.Data
 
     public async Task<TagOutDto> AddTag(TagDto tagDto)
     {
+      var existingTag = await _context.Tags.FirstOrDefaultAsync(tag => tag.Name == tagDto.Name);
+      if (existingTag is not null)
+      {
+        return _mapper.Map<Tag, TagOutDto>(existingTag);
+      }
       var tag = _mapper.Map<TagDto, Tag>(tagDto);
       tag.TagId = Guid.NewGuid().ToString();
       tag.CreatedAt = DateTime.Now;

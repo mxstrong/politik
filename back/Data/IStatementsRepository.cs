@@ -9,6 +9,7 @@ namespace Politics.Data
   public interface IStatementsRepository
   {
     Task<List<StatementOutDto>> GetAllStatements();
+    Task<StatementOutDto> GetStatementById(string id);
     Task<StatementOutDto> AddStatement(StatementDto statementDto);
   }
 }

@@ -25,11 +25,16 @@ namespace Politics.Controllers
     {
       return Ok(await _repo.GetAllStatements());
     }
+    [HttpGet("{id}")]
+    public async Task<ActionResult<StatementOutDto>> GetStatetementById(string id)
+    {
+      return Ok(await _repo.GetStatementById(id));
+    }
     [HttpPost]
     public async Task<ActionResult<StatementOutDto>> AddStatement(StatementDto statementDto)
     {
       var createdStatement = await _repo.AddStatement(statementDto);
-      return CreatedAtRoute(nameof(AddStatement), createdStatement);
+      return CreatedAtAction(nameof(GetStatetementById), new { id = createdStatement.StatementId }, createdStatement);
     }
   }
 }

@@ -103,7 +103,7 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
       })),
     };
 
-    const res = await _fetch({ url: 'Politicians', method: 'POST', data });
+    const res = await _fetch({ url: 'Statements', method: 'POST', data });
 
     if (!res.error) {
       toast.success('Informacija išsiųsta.');

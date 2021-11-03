@@ -30,13 +30,17 @@ namespace Politics.Controllers
     [HttpPost]
     public async Task<ActionResult> AddPolitician(PoliticianDto politicianDto)
     {
-      if (politicianDto.FirstName is null) 
+      if (politicianDto.FirstName is null || politicianDto.FirstName.Length < 1) 
       {
         return ValidationProblem("Nenurodėte politiko vardo");
       } 
-      if (politicianDto.LastName is null)
+      if (politicianDto.LastName is null || politicianDto.LastName.Length < 1)
       {
         return ValidationProblem("Nenurodėte politiko pavardės");
+      }
+      if (politicianDto.Description is null || politicianDto.Description.Length < 1)
+      {
+        return ValidationProblem("Nepateikėte politiko aprašymo");
       }
       var createdPolitician = await _repo.AddPolitician(politicianDto);
       if (createdPolitician is null)

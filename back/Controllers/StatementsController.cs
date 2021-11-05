@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Politics.Data;
 using Politics.Dtos;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Politics.Controllers
@@ -23,9 +20,9 @@ namespace Politics.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<StatementOutDto>>> GetAllStatements()
+    public async Task<ActionResult<List<StatementOutDto>>> GetAllStatements([FromQuery] StatementsFilters filters)
     {
-      return Ok(await _statementsRepo.GetAllStatements());
+      return Ok(await _statementsRepo.GetAllStatements(filters.politician, filters.tags));
     }
     [HttpGet("{id}")]
     public async Task<ActionResult<StatementOutDto>> GetStatetementById(string id)
@@ -55,5 +52,21 @@ namespace Politics.Controllers
       var createdStatement = await _statementsRepo.AddStatement(statementDto);
       return CreatedAtAction(nameof(GetStatetementById), new { id = createdStatement.StatementId }, createdStatement);
     }
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<StatementOutDto>> DeleteStatement(string id)
+    {
+      var deletedStatement =  await _statementsRepo.DeleteStatementById(id);
+      if (deletedStatement is null)
+      {
+        return ValidationProblem("Nurodytas pasisakymas nerastas");
+      }
+      return deletedStatement;
+    }
+  }
+
+  public class StatementsFilters
+  {
+    public string? politician { get; set; }
+    public List<string> tags { get; set; }
   }
 }

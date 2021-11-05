@@ -21,7 +21,7 @@ const VALIDATION_SCHEMA = yup.object({
   tags: yup
     .array()
     .min(1)
-    .of(yup.object({ tagId: yup.string() }))
+    .of(yup.object({ value: yup.string().nullable() }))
     .required(),
 });
 
@@ -94,7 +94,7 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
     tags,
   }: FormikValues) => {
     const data = {
-      politician,
+      politicianId: politician.value,
       link,
       description,
       tags: tags.map(({ value, label }: ISelectOption) => ({
@@ -103,7 +103,7 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
       })),
     };
 
-    const res = await _fetch({ url: 'Politicians', method: 'POST', data });
+    const res = await _fetch({ url: 'Statements', method: 'POST', data });
 
     if (!res.error) {
       toast.success('Informacija išsiųsta.');
@@ -151,7 +151,10 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
                 value={values.tags}
                 onChange={(value) => setFieldValue('tags', value)}
                 onCreateOption={(value) =>
-                  setFieldValue('tags', { label: value, value: null })
+                  setFieldValue('tags', [
+                    ...values.tags,
+                    { label: value, value: null },
+                  ])
                 }
                 error={!!errors.tags}
                 isMulti

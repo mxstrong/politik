@@ -1,15 +1,14 @@
 ﻿using Politics.Dtos;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Politics.Data
 {
   public interface IStatementsRepository
   {
-    Task<List<StatementOutDto>> GetAllStatements();
+    Task<List<StatementOutDto>> GetAllStatements(string? politicianId, List<string>? tagIds);
     Task<StatementOutDto> GetStatementById(string id);
     Task<StatementOutDto> AddStatement(StatementDto statementDto);
+    Task<StatementOutDto> DeleteStatementById(string id);
   }
 }

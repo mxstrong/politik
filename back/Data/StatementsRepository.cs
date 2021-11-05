@@ -61,15 +61,33 @@ namespace Politics.Data
       return _mapper.Map<Statement, StatementOutDto>(createdStatement);
     }
 
-    public async Task<List<StatementOutDto>> GetAllStatements()
+    public async Task<List<StatementOutDto>> GetAllStatements(string? politicianId, List<string>? tags)
     {
-      var statements = await _context.Statements
+      var statements = new List<Statement>();
+      if (politicianId is not null)
+      {
+        statements = await _context.Statements
+        .Where(statement => statement.PoliticianId == politicianId)
         .Include(statement => statement.CreatedBy)
         .Include(statement => statement.Politician)
         .Include(statement => statement.StatementTags)
         .ThenInclude(statementTag => statementTag.Tag)
         .ToListAsync();
-      return _mapper.Map<List<Statement>, List<StatementOutDto>>(statements);
+      } else
+      {
+        statements = await _context.Statements
+        .Include(statement => statement.CreatedBy)
+        .Include(statement => statement.Politician)
+        .Include(statement => statement.StatementTags)
+        .ThenInclude(statementTag => statementTag.Tag)
+        .ToListAsync();
+      }
+      if (tags is not null && tags.Count > 0)
+      {
+        statements = statements.Where(statement => statement.StatementTags.Any(tag => tags.Contains(tag.TagId))).ToList();
+      }
+      var sortedStatements = statements.OrderByDescending(statement => statement.CreatedAt).ToList();
+      return _mapper.Map<List<Statement>, List<StatementOutDto>>(sortedStatements);
     }
 
     public async Task<StatementOutDto> GetStatementById(string id)
@@ -82,6 +100,18 @@ namespace Politics.Data
         .SingleAsync(statement => statement.StatementId == id);
 
       return _mapper.Map<Statement, StatementOutDto>(statement);
+    }
+
+    public async Task<StatementOutDto> DeleteStatementById(string id)
+    {
+      var statementToDelete = await _context.Statements.FindAsync(id);
+      if (statementToDelete is null)
+      {
+        return null;
+      }
+      _context.Statements.Remove(statementToDelete);
+      await _context.SaveChangesAsync();
+      return _mapper.Map<Statement, StatementOutDto>(statementToDelete);
     }
   }
 }

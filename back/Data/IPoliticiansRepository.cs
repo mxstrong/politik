@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Politics.Dtos;
+using Politics.Helpers;
 
 namespace Politics.Data
 {
   public interface IPoliticiansRepository
   {
     Task<PoliticianOutDto> AddPolitician(PoliticianDto politicianDto);
-    Task<List<PoliticianOutDto>> GetAllPoliticians();
+    Task<PaginatedList<PoliticianOutDto>> GetAllPoliticians(int? pageNumber, int? pageSize);
     Task<PoliticianOutDto> DeletePolitician(string id);
     Task<PoliticianOutDto> GetPoliticianById(string id);
   }

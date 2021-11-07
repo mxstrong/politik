@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Politics.Data;
 using Politics.Dtos;
+using Politics.Helpers;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace Politics.Controllers
 {
@@ -20,9 +22,21 @@ namespace Politics.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<StatementOutDto>>> GetAllStatements([FromQuery] StatementsFilters filters)
+    public async Task<ActionResult<PaginatedList<StatementOutDto>>> GetAllStatements([FromQuery] StatementsParams parameters)
     {
-      return Ok(await _statementsRepo.GetAllStatements(filters.politician, filters.tags));
+      var statements = await _statementsRepo.GetAllStatements(parameters.politician, parameters.tags, parameters.pageNumber, parameters.pageSize);
+      var paginationMetadata = new
+      {
+        statements.Count,
+        statements.PageSize,
+        statements.PageIndex,
+        statements.TotalPages,
+        statements.HasNextPage,
+        statements.HasPreviousPage
+      };
+      Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(paginationMetadata));
+
+      return Ok(statements);
     }
     [HttpGet("{id}")]
     public async Task<ActionResult<StatementOutDto>> GetStatetementById(string id)
@@ -39,6 +53,10 @@ namespace Politics.Controllers
       if (statementDto.Link is null || statementDto.Link.Length < 1)
       {
         return ValidationProblem("Nenurodėte pasisakymo nuorodos");
+      }
+      if (statementDto.Link.Length > 250)
+      {
+        return ValidationProblem("Nurodyta nuoroda per ilga (maksimalus ilgis 250 simbolių)");
       }
       if (statementDto.Tags is null || statementDto.Tags.Count < 1)
       {
@@ -64,9 +82,9 @@ namespace Politics.Controllers
     }
   }
 
-  public class StatementsFilters
+  public class StatementsParams : PaginationParams
   {
     public string? politician { get; set; }
-    public List<string> tags { get; set; }
+    public List<string>? tags { get; set; }
   }
 }

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Politics.Dtos;
+using Politics.Helpers;
 using Politics.Model;
+using System.Collections.Generic;
 
 namespace Politics.Mapping
 {
@@ -26,6 +28,17 @@ namespace Politics.Mapping
         .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy.DisplayName))
         .ForMember(dest => dest.Politician, opt => opt.MapFrom(src => src.Politician.FirstName + ' ' + src.Politician.LastName))
         .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.Tags));
+      CreateMap(typeof(PaginatedList<>), typeof(PaginatedList<>)).ConvertUsing(typeof(Converter<,>));
+    }
+    private class Converter<TSource, TDestination>
+    : ITypeConverter<PaginatedList<TSource>, PaginatedList<TDestination>>
+    {
+      public PaginatedList<TDestination> Convert(
+          PaginatedList<TSource> source,
+          PaginatedList<TDestination> destination,
+          ResolutionContext context) => 
+          new PaginatedList<TDestination>(
+              context.Mapper.Map<List<TSource>, List<TDestination>>(source), source.Count, source.PageIndex, source.PageSize);
     }
   }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Politics.Dtos;
+using Politics.Helpers;
 using Politics.Model;
 using System;
 using System.Collections.Generic;
@@ -61,33 +62,32 @@ namespace Politics.Data
       return _mapper.Map<Statement, StatementOutDto>(createdStatement);
     }
 
-    public async Task<List<StatementOutDto>> GetAllStatements(string? politicianId, List<string>? tags)
+    public async Task<PaginatedList<StatementOutDto>> GetAllStatements(string? politicianId, List<string>? tags, int? pageNumber, int? pageSize)
     {
-      var statements = new List<Statement>();
+      IQueryable<Statement> statements;
       if (politicianId is not null)
       {
-        statements = await _context.Statements
+        statements = _context.Statements
         .Where(statement => statement.PoliticianId == politicianId)
         .Include(statement => statement.CreatedBy)
         .Include(statement => statement.Politician)
         .Include(statement => statement.StatementTags)
-        .ThenInclude(statementTag => statementTag.Tag)
-        .ToListAsync();
+        .ThenInclude(statementTag => statementTag.Tag);
       } else
       {
-        statements = await _context.Statements
+        statements = _context.Statements
         .Include(statement => statement.CreatedBy)
         .Include(statement => statement.Politician)
         .Include(statement => statement.StatementTags)
-        .ThenInclude(statementTag => statementTag.Tag)
-        .ToListAsync();
+        .ThenInclude(statementTag => statementTag.Tag);
       }
       if (tags is not null && tags.Count > 0)
       {
-        statements = statements.Where(statement => statement.StatementTags.Any(tag => tags.Contains(tag.TagId))).ToList();
+        statements = statements.Where(statement => statement.StatementTags.Any(tag => tags.Contains(tag.TagId)));
       }
-      var sortedStatements = statements.OrderByDescending(statement => statement.CreatedAt).ToList();
-      return _mapper.Map<List<Statement>, List<StatementOutDto>>(sortedStatements);
+      var sortedStatements = statements.OrderByDescending(statement => statement.CreatedAt);
+      var paginatedStatements = await PaginatedList<Statement>.CreateAsync(sortedStatements, pageNumber ?? 1, pageSize ?? 10);
+      return _mapper.Map<PaginatedList<Statement>, PaginatedList<StatementOutDto>>(paginatedStatements);
     }
 
     public async Task<StatementOutDto> GetStatementById(string id)

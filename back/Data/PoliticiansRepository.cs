@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Politics.Model;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Politics.Dtos;
+using Politics.Helpers;
 
 namespace Politics.Data
 {
@@ -19,10 +19,10 @@ namespace Politics.Data
       _mapper = mapper;
     }
 
-    public async Task<List<PoliticianOutDto>> GetAllPoliticians()
+    public async Task<PaginatedList<PoliticianOutDto>> GetAllPoliticians(int? pageNumber, int? pageSize)
     {
-      var politicians = await _context.Politicians.Include(politician => politician.Party).ToListAsync();
-      return _mapper.Map<List<Politician>, List<PoliticianOutDto>>(politicians);
+      var politicians = await PaginatedList<Politician>.CreateAsync(_context.Politicians.Include(politician => politician.Party), pageNumber ?? 1, pageSize ?? 10);
+      return _mapper.Map<PaginatedList<Politician>, PaginatedList<PoliticianOutDto>>(politicians);
     }
 
     public async Task<PoliticianOutDto> GetPoliticianById(string id)

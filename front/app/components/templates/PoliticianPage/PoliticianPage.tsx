@@ -5,6 +5,7 @@ import BackButton from '@element/BackButton';
 import Button from '@element/Button';
 import { IPolitician } from '@type/api/politicians';
 import AddNewStatement from '@module/AddNewStatement';
+import StatementsList from '@module/StatementsList';
 
 interface IPoliticianPage {
   politician: IPolitician;
@@ -24,7 +25,6 @@ const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
           {politician.party}
         </h2>
         <p>{politician.description}</p>
-
         <div className="my-12">
           <Button
             icon={<BsPlusLg />}
@@ -32,6 +32,9 @@ const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
           >
             Pridėti naują pareiškimą
           </Button>
+        </div>
+        <div className="my-6 md:my-12">
+          <StatementsList politician={politician.id} />
         </div>
       </div>
 

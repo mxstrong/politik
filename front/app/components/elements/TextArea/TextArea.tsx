@@ -27,6 +27,7 @@ const TextArea: React.FC<ITextarea> = ({
   name,
   value,
   placeholder,
+  maxLength = 250,
   onChange,
 }) => {
   return (
@@ -62,6 +63,7 @@ const TextArea: React.FC<ITextarea> = ({
         value={value}
         placeholder={placeholder}
         onChange={onChange}
+        maxLength={maxLength}
       />
       {error && (
         <p className="text-danger text-xs italic mt-1">{errorMessage}</p>

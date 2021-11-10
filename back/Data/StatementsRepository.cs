@@ -109,7 +109,9 @@ namespace Politics.Data
       {
         return null;
       }
+      var statementTags = await _context.StatementTags.Where(statementTag => statementTag.StatementId == id).ToListAsync();
       _context.Statements.Remove(statementToDelete);
+      _context.StatementTags.RemoveRange(statementTags);
       await _context.SaveChangesAsync();
       return _mapper.Map<Statement, StatementOutDto>(statementToDelete);
     }

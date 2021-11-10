@@ -73,7 +73,7 @@ namespace Politics.Controllers
     [HttpDelete("{id}")]
     public async Task<ActionResult<StatementOutDto>> DeleteStatement(string id)
     {
-      var deletedStatement =  await _statementsRepo.DeleteStatementById(id);
+      var deletedStatement = await _statementsRepo.DeleteStatementById(id);
       if (deletedStatement is null)
       {
         return ValidationProblem("Nurodytas pasisakymas nerastas");

@@ -15,6 +15,7 @@ import IconButton from '@element/IconButton';
 import Select from '@element/Select';
 import { ITag } from '@type/api/tags';
 import { ISelectOption } from '@type/elements/SelectOption';
+import Empty from '@element/Empty';
 
 const STATEMENTS_FETCH_COUNT = 10;
 
@@ -114,61 +115,67 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="w-full mb-8">
-        <Select
-          options={tagOptions}
-          label="Žyma"
-          value={filters?.tags}
-          onChange={(value: any) => setFilters({ ...filters, tags: value })}
-          isMulti
-          className="w-full"
-        />
-      </div>
-      {loading && !statements.data.length ? (
-        <Spin className="my-8" />
-      ) : (
-        <ul className="rounded shadow-lg divide-y mb-8 w-full">
-          {statements.data.map(
-            ({ statementId, description, politician }: IStatementListItem) => {
-              return (
-                <Link
-                  href={`statements/${statementId}`}
-                  key={`statement-${statementId}`}
-                >
-                  <li className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">
-                    <div className="flex justify-between">
-                      <a className="font-bold text-lg text-black hover:underline">
-                        {description}
+      {loading && !statements.data && <Spin className="my-8" />}
+      {!loading && !!statements.data?.length && (
+        <>
+          <div className="w-full mb-8">
+            <Select
+              options={tagOptions}
+              label="Žymos"
+              value={filters?.tags}
+              onChange={(value: any) => setFilters({ ...filters, tags: value })}
+              isMulti
+              className="w-full"
+            />
+          </div>
+          <ul className="rounded shadow-lg divide-y mb-8 w-full">
+            {statements.data?.map(
+              ({
+                statementId,
+                description,
+                politician,
+              }: IStatementListItem) => {
+                return (
+                  <li className="bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">
+                    <Link
+                      href={`statements/${statementId}`}
+                      key={`statement-${statementId}`}
+                    >
+                      <a title={`${politician} pareiškimas`}>
+                        <div className="flex justify-between">
+                          <span className="font-bold text-lg text-black hover:underline">
+                            {description}
+                          </span>
+                          <IconButton
+                            onClick={(e: React.MouseEvent<HTMLElement>) =>
+                              handleStatementDelete(e, statementId)
+                            }
+                          >
+                            <BsX className="w-6 h-6" />
+                          </IconButton>
+                        </div>
+                        <div className="font-normal text-sm text-coolGray-500 mt-2">
+                          {politician ? politician : 'Nepartinis'}
+                        </div>
                       </a>
-                      <IconButton
-                        onClick={(e: React.MouseEvent<HTMLElement>) =>
-                          handleStatementDelete(e, statementId)
-                        }
-                      >
-                        <BsX className="w-6 h-6" />
-                      </IconButton>{' '}
-                    </div>
-
-                    <div className="font-normal text-sm text-coolGray-500 mt-2">
-                      {politician ? politician : 'Nepartinis'}
-                    </div>
+                    </Link>
                   </li>
-                </Link>
-              );
-            }
+                );
+              }
+            )}
+          </ul>
+          {statements.HasNextPage && (
+            <Button
+              variant="outlined"
+              onClick={() => setPageNumber((pageNumber) => pageNumber + 1)}
+              loading={loading}
+            >
+              Daugiau...
+            </Button>
           )}
-        </ul>
+        </>
       )}
-
-      {statements.HasNextPage && (
-        <Button
-          variant="outlined"
-          onClick={() => setPageNumber((pageNumber) => pageNumber + 1)}
-          loading={loading}
-        >
-          Daugiau...
-        </Button>
-      )}
+      {!loading && statements.data?.length === 0 && <Empty />}
     </div>
   );
 };

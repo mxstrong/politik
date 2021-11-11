@@ -42,23 +42,26 @@ const PoliticiansList: React.FC = () => {
           {politicians.data.map(
             ({ id, fullName, party }: IPoliticiansListItem) => {
               return (
-                <Link href={`politicians/${id}`} key={`politician-${id}`}>
-                  <li className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">
-                    <a className="font-bold text-lg text-black hover:underline">
-                      {fullName}
-                    </a>
-                    <div className="flex justify-between font-semibold text-sm text-coolGray-500 mt-2">
-                      <div className="font-normal">
-                        {party ? party : 'Nepartinis'}
+                <li className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">
+                  <Link href={`politicians/${id}`} key={`politician-${id}`}>
+                    <a title={fullName}>
+                      <span className="font-bold text-lg text-black hover:underline">
+                        {fullName}
+                      </span>
+                      <div className="flex justify-between font-semibold text-sm text-coolGray-500 mt-2">
+                        <div className="font-normal">
+                          {party ? party : 'Nepartinis'}
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </Link>
+                    </a>
+                  </Link>
+                </li>
               );
             }
           )}
         </ul>
       )}
+
       {politicians.HasNextPage && (
         <Button
           variant="outlined"

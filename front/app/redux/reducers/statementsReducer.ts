@@ -7,7 +7,7 @@ import {
   FETCH_STATEMENTS_ERROR,
 } from 'constants/actions';
 
-const initialState = { loading: false, statements: { data: [] } };
+const initialState = { loading: false, statements: { data: null } };
 
 const statementsReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
@@ -19,7 +19,10 @@ const statementsReducer = (state = initialState, action: AnyAction) => {
       return {
         statements: {
           ...action.payload,
-          data: [...state.statements.data, ...action.payload.data],
+          data: [
+            ...(state.statements.data ? state.statements.data : []),
+            ...action.payload.data,
+          ],
         },
         loading: false,
       };

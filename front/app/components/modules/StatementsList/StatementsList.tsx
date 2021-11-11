@@ -27,7 +27,6 @@ interface IFilters {
 }
 
 const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
-  const router = useRouter();
   const dispatch = useDispatch();
 
   const [pageNumber, setPageNumber] = useState(1);
@@ -133,7 +132,7 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
             ({ statementId, description, politician }: IStatementListItem) => {
               return (
                 <Link
-                  href={`${router.pathname}${statementId}`}
+                  href={`statements/${statementId}`}
                   key={`statement-${statementId}`}
                 >
                   <li className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">

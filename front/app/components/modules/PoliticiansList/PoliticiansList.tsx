@@ -13,7 +13,6 @@ import Button from '@element/Button';
 export const POLITICIANS_FETCH_COUNT = 10;
 
 const PoliticiansList: React.FC = () => {
-  const router = useRouter();
   const dispatch = useDispatch();
 
   const [pageNumber, setPageNumber] = useState(1);
@@ -43,10 +42,7 @@ const PoliticiansList: React.FC = () => {
           {politicians.data.map(
             ({ id, fullName, party }: IPoliticiansListItem) => {
               return (
-                <Link
-                  href={`${router.pathname}/${id}`}
-                  key={`politician-${id}`}
-                >
+                <Link href={`politicians/${id}`} key={`politician-${id}`}>
                   <li className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">
                     <a className="font-bold text-lg text-black hover:underline">
                       {fullName}

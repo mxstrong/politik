@@ -24,7 +24,7 @@ namespace Politics.Controllers
     [HttpGet]
     public async Task<ActionResult<PaginatedList<StatementOutDto>>> GetAllStatements([FromQuery] StatementsParams parameters)
     {
-      var statements = await _statementsRepo.GetAllStatements(parameters.politician, parameters.tags, parameters.pageNumber, parameters.pageSize);
+      var statements = await _statementsRepo.GetAllStatements(parameters.politician, parameters.tags, parameters.PageNumber, parameters.PageSize);
       var paginationMetadata = new
       {
         statements.Count,

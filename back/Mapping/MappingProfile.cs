@@ -38,7 +38,7 @@ namespace Politics.Mapping
           PaginatedList<TDestination> destination,
           ResolutionContext context) => 
           new PaginatedList<TDestination>(
-              context.Mapper.Map<List<TSource>, List<TDestination>>(source), source.Count, source.PageIndex, source.PageSize);
+              context.Mapper.Map<List<TSource>, List<TDestination>>(source), source.TotalCount, source.PageIndex, source.PageSize);
     }
   }
 }

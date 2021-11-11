@@ -1,20 +1,33 @@
 import { Dispatch } from 'redux';
 
-import { _fetch } from '@api/RestClient';
+import { getPaginationHeaderData, _fetch } from '@util/fetch';
 import {
   FETCH_POLITICIANS_REQUEST,
   FETCH_POLITICIANS_SUCCESS,
+  FETCH_POLITICIANS_SUPPLEMENT_SUCCESS,
   FETCH_POLITICIANS_ERROR,
 } from 'constants/actions';
 
-export const fetchPoliticians = () => async (dispatch: Dispatch) => {
-  dispatch({ type: FETCH_POLITICIANS_REQUEST });
+interface IFetchPoliticiansParams {
+  pageNumber?: number;
+  pageSize?: number;
+}
 
-  const res = await _fetch({ url: 'Politicians' });
+export const fetchPoliticians =
+  (params: IFetchPoliticiansParams, supplement: boolean = false) =>
+  async (dispatch: Dispatch) => {
+    dispatch({ type: FETCH_POLITICIANS_REQUEST });
 
-  if (res.data) {
-    return dispatch({ type: FETCH_POLITICIANS_SUCCESS, payload: res.data });
-  }
+    const res = await _fetch({ url: 'Politicians', params });
 
-  return dispatch({ type: FETCH_POLITICIANS_ERROR, payload: res.error });
-};
+    if (res.data) {
+      return dispatch({
+        type: supplement
+          ? FETCH_POLITICIANS_SUPPLEMENT_SUCCESS
+          : FETCH_POLITICIANS_SUCCESS,
+        payload: { ...getPaginationHeaderData(res.headers), data: res.data },
+      });
+    }
+
+    return dispatch({ type: FETCH_POLITICIANS_ERROR, payload: res.error });
+  };

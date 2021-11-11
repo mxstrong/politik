@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import Head from 'next/head';
 
-import { _fetch } from '@api/RestClient';
+import { _fetch } from '@util/fetch';
 import DefaultLayout from '@layout/DefaultLayout';
 import PoliticiansPage from '@template/PoliticiansPage';
 import { NextPageWithLayout } from '@type/elements/app';

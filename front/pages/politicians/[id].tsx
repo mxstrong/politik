@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 
 import DefaultLayout from '@layout/DefaultLayout';
 import PoliticianPage from '@template/PoliticianPage';
-import { _fetch } from '@api/RestClient';
+import { _fetch } from '@util/fetch';
 import { IPolitician } from '@type/api/politicians';
 import { NextPageWithLayout } from '@type/elements/app';
 

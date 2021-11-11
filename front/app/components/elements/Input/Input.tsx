@@ -8,6 +8,7 @@ interface IInput extends React.HTMLAttributes<HTMLInputElement> {
   value?: string;
   error?: boolean;
   errorMessage?: string;
+  maxLength?: number;
 }
 
 const Input: React.FC<IInput> = ({
@@ -18,6 +19,7 @@ const Input: React.FC<IInput> = ({
   value,
   error,
   errorMessage,
+  maxLength = 255,
   ...rest
 }) => {
   return (
@@ -50,6 +52,7 @@ const Input: React.FC<IInput> = ({
         type={type}
         name={name}
         value={value}
+        maxLength={maxLength}
         {...rest}
       />
       {error && (

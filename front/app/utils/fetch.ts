@@ -1,4 +1,8 @@
-import axios, { AxiosRequestHeaders, AxiosResponse, AxiosStatic } from 'axios';
+import axios, {
+  AxiosRequestHeaders,
+  AxiosResponse,
+  AxiosResponseHeaders,
+} from 'axios';
 
 interface IParams extends AxiosRequestHeaders {
   url: string;
@@ -24,4 +28,8 @@ export const fetchAll = (
   requests: Promise<IAxiosResponse | { [key: string]: any }>[]
 ) => {
   return Promise.all(requests).then((response) => response);
+};
+
+export const getPaginationHeaderData = (headers: AxiosResponseHeaders) => {
+  return JSON.parse(headers['x-pagination']);
 };

@@ -27,20 +27,12 @@ const StatementPage: React.FC<IStatementPage> = ({ statement }) => {
       </div>
       <div className="flex space-x-2 flex-wrap">
         {statement.tags.map((tag) => (
-          <>
-            <div
-              key={`tag-${tag}`}
-              className="bg-primary-dark text-white rounded-full py-1 px-2 md:py-2 md:px-4"
-            >
-              {tag}
-            </div>{' '}
-            <div
-              key={`tag-${tag}`}
-              className="bg-primary-dark text-white rounded-full py-1 px-2 md:py-2 md:px-4"
-            >
-              {tag}
-            </div>
-          </>
+          <div
+            key={`tag-${tag}`}
+            className="bg-primary-dark text-white rounded-full py-1 px-2 md:py-2 md:px-4"
+          >
+            {tag}
+          </div>
         ))}
       </div>
     </div>

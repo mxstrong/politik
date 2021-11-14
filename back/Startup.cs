@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Politics.Data;
 using Politics.Mapping;
 using Politics.Model;
+using Politics.Services;
 
 namespace Politics
 {
@@ -37,6 +38,8 @@ namespace Politics
       services.AddScoped<IPartiesRepository, PartiesRepository>();
       services.AddScoped<IStatementsRepository, StatementsRepository>();
       services.AddScoped<ITagsRepository, TagsRepository>();
+      services.AddScoped<IAuthService, AuthService>();
+      services.AddTransient<IEmailSender, EmailSender>();
 
       services.AddCors(options => options.AddPolicy(
         "PoliticsCORSPolicy",

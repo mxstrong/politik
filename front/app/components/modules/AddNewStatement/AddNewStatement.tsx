@@ -7,7 +7,7 @@ import Button from '@element/Button';
 import Input from '@element/Input';
 import Modal from '@element/Modal';
 import TextArea from '@element/TextArea';
-import { fetchAll, _fetch } from '@api/RestClient';
+import { fetchAll, _fetch } from '@util/fetch';
 import Select from '@element/Select';
 import { ISelectOption } from '@type/elements/SelectOption';
 import { IPolitician } from '@type/api/politicians';

@@ -4,33 +4,33 @@ import { GetStaticProps } from 'next';
 import { ReactElement } from 'react';
 
 import DefaultLayout from '@layout/DefaultLayout';
-import PoliticianPage from '@template/PoliticianPage';
 import { _fetch } from '@util/fetch';
-import { IPolitician } from '@type/api/politicians';
 import { NextPageWithLayout } from '@type/elements/app';
+import { IStatement } from '@type/api/statements';
+import StatementsPage from '@template/StatementPage';
 
-interface IPoliticianProps {
-  politician: IPolitician;
+interface IStatementsProps {
+  statement: IStatement;
 }
 
-const Politician: NextPageWithLayout<IPoliticianProps> = ({ politician }) => {
+const Statement: NextPageWithLayout<IStatementsProps> = ({ statement }) => {
   return (
     <div>
       <Head>
-        <title>{politician.fullName}</title>
+        <title>{statement.description}</title>
       </Head>
 
-      <PoliticianPage politician={politician} />
+      <StatementsPage statement={statement} />
     </div>
   );
 };
 
-Politician.getLayout = (page: ReactElement) => {
+Statement.getLayout = (page: ReactElement) => {
   return <DefaultLayout>{page}</DefaultLayout>;
 };
 
 export async function getStaticPaths() {
-  const res = await _fetch({ url: 'Politicians' });
+  const res = await _fetch({ url: 'Statements' });
 
   if (!res.data) {
     return {
@@ -38,8 +38,8 @@ export async function getStaticPaths() {
     };
   }
 
-  const paths = res.data.map((item: IPolitician) => {
-    return { params: { id: item.id } };
+  const paths = res.data.map((item: IStatement) => {
+    return { params: { id: item.statementId } };
   });
 
   return {
@@ -49,7 +49,7 @@ export async function getStaticPaths() {
 }
 
 interface IProps {
-  politician: IPolitician;
+  statement: IStatement;
 }
 
 interface IParams extends ParsedUrlQuery {
@@ -59,7 +59,7 @@ interface IParams extends ParsedUrlQuery {
 export const getStaticProps: GetStaticProps<IProps, IParams> = async ({
   params,
 }) => {
-  const res = await _fetch({ url: `Politicians/${params?.id}` });
+  const res = await _fetch({ url: `Statements/${params?.id}` });
 
   if (!res.data) {
     return {
@@ -69,10 +69,10 @@ export const getStaticProps: GetStaticProps<IProps, IParams> = async ({
 
   return {
     props: {
-      politician: res.data,
+      statement: res.data,
       revalidate: 60,
     },
   };
 };
 
-export default Politician;
+export default Statement;

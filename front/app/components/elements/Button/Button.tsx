@@ -1,12 +1,15 @@
 import { ReactNode } from 'react';
 import cx from 'classnames';
 
+import Spin from '@element/Spin';
+
 interface IButton extends React.HTMLAttributes<HTMLElement> {
   icon?: ReactNode;
   variant?: 'contained' | 'outlined';
   type?: 'submit' | 'button';
   form?: string;
   disabled?: boolean;
+  loading?: boolean;
 }
 
 const Button: React.FC<IButton> = ({
@@ -15,6 +18,7 @@ const Button: React.FC<IButton> = ({
   children,
   type = 'button',
   disabled,
+  loading = false,
   ...rest
 }) => {
   const classNames = cx(
@@ -46,6 +50,7 @@ const Button: React.FC<IButton> = ({
 
   return (
     <button className={classNames} type={type} disabled={disabled} {...rest}>
+      {loading && <Spin size="small" className="mr-2" />}
       {!!icon && <span className="mr-2">{icon}</span>}
       {children}
     </button>

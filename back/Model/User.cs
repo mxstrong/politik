@@ -12,12 +12,14 @@ namespace Politics.Model
     [Required]
     public string DisplayName { get; set; }
     [Required]
-    public string PasswordHash { get; set; }
+    public byte[] PasswordHash { get; set; }
     [Required]
-    public string PasswordSalt { get; set; }
+    public byte[] PasswordSalt { get; set; }
     [Required]
     public string RoleId { get; set; }
     public Role Role { get; set; }
+    [Required]
+    public bool Activated { get; set; }
     [Required]
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }

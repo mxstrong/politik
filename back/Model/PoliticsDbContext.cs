@@ -15,6 +15,7 @@ namespace Politics.Model
     public DbSet<Tag> Tags { get; set; }
     public DbSet<Statement> Statements { get; set; }
     public DbSet<StatementTag> StatementTags { get; set; }
+    public DbSet<ActivationToken> ActivationTokens { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

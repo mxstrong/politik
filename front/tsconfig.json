@@ -8,8 +8,8 @@
       "@element/*": ["components/elements/*"],
       "@template/*": ["components/templates/*"],
       "@type/*": ["types/*"],
-      "@api/*": ["api/*"],
-      "@redux/*": ["redux/*"]
+      "@redux/*": ["redux/*"],
+      "@util/*": ["utils/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

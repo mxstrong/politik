@@ -8,16 +8,17 @@ import Button from '@element/Button';
 import Input from '@element/Input';
 import Modal from '@element/Modal';
 import TextArea from '@element/TextArea';
-import { _fetch } from '@api/RestClient';
+import { _fetch } from '@util/fetch';
 import Select from '@element/Select';
 import { ISelectOption } from '@type/elements/SelectOption';
 import { IParty } from '@type/api/parties';
 import { fetchPoliticians } from '@redux/actions/politicians';
+import { POLITICIANS_FETCH_COUNT } from '@module/PoliticiansList/PoliticiansList';
 
 const VALIDATION_SCHEMA = yup.object({
   firstName: yup.string().min(1).required(),
   lastName: yup.string().min(1).required(),
-  party: yup.object({ value: yup.string().nullable() }).nullable(),
+  party: yup.object({ value: yup.string().nullable() }),
   description: yup.string().min(1).required(),
 });
 
@@ -77,7 +78,9 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
 
     if (!res.error) {
       toast.success('Informacija išsiųsta.');
-      dispatch(fetchPoliticians());
+      dispatch(
+        fetchPoliticians({ pageNumber: 1, pageSize: POLITICIANS_FETCH_COUNT })
+      );
       onClose();
 
       return;
@@ -106,6 +109,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
                   value={values.firstName}
                   onChange={handleChange}
                   error={!!errors.firstName}
+                  maxLength={50}
                 />
                 <Input
                   label="Pavardė"
@@ -114,6 +118,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
                   value={values.lastName}
                   onChange={handleChange}
                   error={!!errors.lastName}
+                  maxLength={50}
                 />
               </div>
               <Select

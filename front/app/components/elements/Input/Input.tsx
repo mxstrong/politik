@@ -9,6 +9,7 @@ interface IInput extends React.HTMLAttributes<HTMLInputElement> {
   error?: boolean;
   errorMessage?: string;
   maxLength?: number;
+  disabled?: boolean;
 }
 
 const Input: React.FC<IInput> = ({
@@ -34,7 +35,9 @@ const Input: React.FC<IInput> = ({
           'appearance-none',
           'block',
           'w-full',
-          'bg-gray-200',
+          'bg-white',
+          'disabled:bg-gray-200',
+          'disabled:cursor-not-allowed',
           'text-gray-700',
           'border',
           'rounded py-3',

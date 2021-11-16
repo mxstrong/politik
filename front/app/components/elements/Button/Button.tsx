@@ -19,6 +19,7 @@ const Button: React.FC<IButton> = ({
   type = 'button',
   disabled,
   loading = false,
+  className,
   ...rest
 }) => {
   const classNames = cx(
@@ -45,7 +46,8 @@ const Button: React.FC<IButton> = ({
       'bg-primary-light': disabled,
       'hover:bg-primary-light': disabled,
       'cursor-not-allowed': disabled,
-    }
+    },
+    className
   );
 
   return (

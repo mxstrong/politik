@@ -136,11 +136,11 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
                 politician,
               }: IStatementListItem) => {
                 return (
-                  <li className="bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">
-                    <Link
-                      href={`statements/${statementId}`}
-                      key={`statement-${statementId}`}
-                    >
+                  <li
+                    className="bg-white p-4 first:rounded-t last:rounded-b cursor-pointer"
+                    key={`statement-${statementId}`}
+                  >
+                    <Link href={`statements/${statementId}`}>
                       <a title={`${politician} pareiškimas`}>
                         <div className="flex justify-between">
                           <span className="font-bold text-lg text-black hover:underline">

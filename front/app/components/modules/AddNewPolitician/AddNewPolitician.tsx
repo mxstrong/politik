@@ -15,17 +15,17 @@ import { IParty } from '@type/api/parties';
 import { fetchPoliticians } from '@redux/actions/politicians';
 import { POLITICIANS_FETCH_COUNT } from '@module/PoliticiansList/PoliticiansList';
 
+interface IAddNewPolitician {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
 const VALIDATION_SCHEMA = yup.object({
   firstName: yup.string().min(1).required(),
   lastName: yup.string().min(1).required(),
   party: yup.object({ value: yup.string().nullable() }),
   description: yup.string().min(1).required(),
 });
-
-interface IAddNewPolitician {
-  isOpen: boolean;
-  onClose: () => void;
-}
 
 const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
   const [partyOptions, setPartyOptions] = useState<ISelectOption[]>([]);

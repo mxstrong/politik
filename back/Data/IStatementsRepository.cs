@@ -1,5 +1,6 @@
 ﻿using Politics.Dtos;
 using Politics.Helpers;
+using Politics.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -9,7 +10,8 @@ namespace Politics.Data
   {
     Task<PaginatedList<StatementOutDto>> GetAllStatements(string? politicianId, List<string>? tagIds, int? pageNumber, int? pageSize);
     Task<StatementOutDto> GetStatementById(string id);
-    Task<StatementOutDto> AddStatement(StatementDto statementDto);
+    Task<StatementOutDto> AddStatement(StatementDto statementDto, string userId);
     Task<StatementOutDto> DeleteStatementById(string id);
+    Task<Statement> GetStatementEntityById(string id);
   }
 }

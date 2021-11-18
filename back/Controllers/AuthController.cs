@@ -95,7 +95,7 @@ namespace Politics.Controllers
       HttpContext.Response.Cookies.Append("JWT", tokenString, new CookieOptions { HttpOnly = true, Expires = DateTime.Now.AddDays(7) });
       return Ok();
     }
-
+    [Authorize]
     [HttpPost]
     public IActionResult Logout()
     {

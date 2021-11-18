@@ -22,12 +22,12 @@ namespace Politics.Data
       _mapper = mapper;
       _tagsRepo = tagsRepo;
     }
-    public async Task<StatementOutDto> AddStatement(StatementDto statementDto)
+    public async Task<StatementOutDto> AddStatement(StatementDto statementDto, string userId)
     {
       var statement = _mapper.Map<StatementDto, Statement>(statementDto);
       statement.StatementId = Guid.NewGuid().ToString();
       statement.CreatedAt = DateTime.Now;
-      statement.CreatedById = "test";
+      statement.CreatedById = userId;
       
       await _context.Statements.AddAsync(statement);
       
@@ -37,7 +37,7 @@ namespace Politics.Data
         if (tag.TagId is null)
         {
           var newTag = _mapper.Map<TagOutDto, TagDto>(tag);
-          var addTagTask = Task.Run<TagOutDto>(async () => await _tagsRepo.AddTag(newTag));
+          var addTagTask = Task.Run<TagOutDto>(async () => await _tagsRepo.AddTag(newTag, userId));
           var addedTag = addTagTask.Result;
           statementTags.Add(new StatementTag()
           {
@@ -100,6 +100,18 @@ namespace Politics.Data
         .SingleAsync(statement => statement.StatementId == id);
 
       return _mapper.Map<Statement, StatementOutDto>(statement);
+    }
+
+    public async Task<Statement> GetStatementEntityById(string id)
+    {
+      var statement = await _context.Statements
+        .Include(statement => statement.CreatedBy)
+        .Include(statement => statement.Politician)
+        .Include(statement => statement.StatementTags)
+        .ThenInclude(statementTag => statementTag.Tag)
+        .SingleAsync(statement => statement.StatementId == id);
+
+      return statement;
     }
 
     public async Task<StatementOutDto> DeleteStatementById(string id)

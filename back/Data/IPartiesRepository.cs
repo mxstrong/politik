@@ -8,7 +8,7 @@ namespace Politics.Data
   {
     Task<List<PartyOutDto>> GetAllParties();
     Task<PartyOutDto> GetPartyById(string id);
-    Task<PartyOutDto> AddParty(PartyDto partyDto);
+    Task<PartyOutDto> AddParty(PartyDto partyDto, string userId);
     Task<PartyOutDto> DeleteParty(string id);
   }
 }

@@ -5,6 +5,8 @@ using System;
 using System.Threading.Tasks;
 using Politics.Dtos;
 using Politics.Helpers;
+using System.Linq;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace Politics.Data
 {
@@ -19,10 +21,15 @@ namespace Politics.Data
       _mapper = mapper;
     }
 
-    public async Task<PaginatedList<PoliticianOutDto>> GetAllPoliticians(int? pageNumber, int? pageSize)
+    public async Task<PaginatedList<PoliticianOutDto>> GetAllPoliticians(int? pageNumber, int? pageSize, string? partyId)
     {
-      var politicians = await PaginatedList<Politician>.CreateAsync(_context.Politicians.Include(politician => politician.Party), pageNumber ?? 1, pageSize ?? 10);
-      return _mapper.Map<PaginatedList<Politician>, PaginatedList<PoliticianOutDto>>(politicians);
+      var politicians = _context.Politicians.Include(politician => politician.Party);
+      if (partyId is not null)
+      {
+        politicians = politicians.Where(politician => politician.PartyId == partyId).Include(politician => politician.Party);
+      }
+      var paginatedPoliticians = await PaginatedList<Politician>.CreateAsync(politicians, pageNumber ?? 1, pageSize ?? 10);
+      return _mapper.Map<PaginatedList<Politician>, PaginatedList<PoliticianOutDto>>(paginatedPoliticians);
     }
 
     public async Task<PoliticianOutDto> GetPoliticianById(string id)
@@ -31,12 +38,12 @@ namespace Politics.Data
       return _mapper.Map<Politician, PoliticianOutDto>(politician);
     }
 
-    public async Task<PoliticianOutDto> AddPolitician(PoliticianDto politicianDto)
+    public async Task<PoliticianOutDto> AddPolitician(PoliticianDto politicianDto, string userId)
     {
       var politician = _mapper.Map<PoliticianDto, Politician>(politicianDto);
       politician.PoliticianId = Guid.NewGuid().ToString();
       politician.CreatedAt = DateTime.Now;
-      politician.CreatedById = "test";
+      politician.CreatedById = userId;
       if (politician.PartyId is not null)
       {
         var party = await _context.Parties.FindAsync(politician.PartyId);

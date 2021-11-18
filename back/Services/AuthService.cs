@@ -105,7 +105,7 @@ namespace Politics.Services
 
     public async Task<User> GetUserById(string userId)
     {
-      return await _context.Users.FindAsync(userId);
+      return await _context.Users.Include(user => user.Role).FirstOrDefaultAsync(user => user.UserId == userId);
     }
 
     public async Task<User> GetUserByEmail(string email)

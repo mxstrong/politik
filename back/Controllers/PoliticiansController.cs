@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Politics.Dtos;
 using Politics.Helpers;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace Politics.Controllers
 {
@@ -20,7 +22,7 @@ namespace Politics.Controllers
     [HttpGet]
     public async Task<ActionResult<PaginatedList<PoliticianOutDto>>> GetAllPoliticians([FromQuery] PoliticiansParams parameters)
     {
-      var politicians = await _repo.GetAllPoliticians(parameters.PageNumber, parameters.PageSize);
+      var politicians = await _repo.GetAllPoliticians(parameters.PageNumber, parameters.PageSize, parameters.PartyId);
       var paginationMetadata = new
       {
         politicians.Count,
@@ -39,6 +41,7 @@ namespace Politics.Controllers
     {
       return await _repo.GetPoliticianById(id);
     }
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult> AddPolitician(PoliticianDto politicianDto)
     {
@@ -67,16 +70,23 @@ namespace Politics.Controllers
         return ValidationProblem("Nurodytas politiko aprašymas per ilgas (maksimalus ilgis 250 simbolių)");
       }
 
-      var createdPolitician = await _repo.AddPolitician(politicianDto);
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var createdPolitician = await _repo.AddPolitician(politicianDto, userId);
       if (createdPolitician is null)
       {
         return ValidationProblem("Politiko pridėti nepavyko");
       }
       return Ok(createdPolitician);
     }
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePolitician(string id)
     {
+      var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
+      if (role != "Admin")
+      {
+        return Unauthorized();
+      }
       var politician = await _repo.DeletePolitician(id);
       if (politician is null)
       {
@@ -86,5 +96,7 @@ namespace Politics.Controllers
     }
   }
 
-  public class PoliticiansParams : PaginationParams { }
+  public class PoliticiansParams : PaginationParams { 
+    public string? PartyId { get; set; }
+  }
 }

@@ -5,6 +5,8 @@ using Politics.Helpers;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace Politics.Controllers
 {
@@ -43,6 +45,7 @@ namespace Politics.Controllers
     {
       return Ok(await _statementsRepo.GetStatementById(id));
     }
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult<StatementOutDto>> AddStatement(StatementDto statementDto)
     {
@@ -67,12 +70,21 @@ namespace Politics.Controllers
       {
         return ValidationProblem("Nurodytas politikas neegzistuoja");
       }
-      var createdStatement = await _statementsRepo.AddStatement(statementDto);
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var createdStatement = await _statementsRepo.AddStatement(statementDto, userId);
       return CreatedAtAction(nameof(GetStatetementById), new { id = createdStatement.StatementId }, createdStatement);
     }
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<ActionResult<StatementOutDto>> DeleteStatement(string id)
     {
+      var statementToDelete = await _statementsRepo.GetStatementEntityById(id);
+      var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      if (role != "Admin" && userId != statementToDelete.CreatedById)
+      {
+        return Unauthorized();
+      }
       var deletedStatement = await _statementsRepo.DeleteStatementById(id);
       if (deletedStatement is null)
       {

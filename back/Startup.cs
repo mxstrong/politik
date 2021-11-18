@@ -1,14 +1,18 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Politics.Data;
 using Politics.Mapping;
 using Politics.Model;
 using Politics.Services;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Politics
 {
@@ -40,6 +44,27 @@ namespace Politics
       services.AddScoped<ITagsRepository, TagsRepository>();
       services.AddScoped<IAuthService, AuthService>();
       services.AddTransient<IEmailSender, EmailSender>();
+
+      var key = Encoding.ASCII.GetBytes(Configuration["JWTSecret"]);
+      services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+          options.Events = new JwtBearerEvents
+          {
+            OnMessageReceived = context =>
+            {
+              context.Token = context.Request.Cookies["JWT"];
+              return Task.CompletedTask;
+            }
+          };
+          options.TokenValidationParameters = new TokenValidationParameters
+          {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false
+          };
+        });
 
       services.AddCors(options => options.AddPolicy(
         "PoliticsCORSPolicy",

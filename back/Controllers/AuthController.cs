@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -23,12 +24,14 @@ namespace Politics.Controllers
     private readonly IAuthService _authService;
     private readonly IConfiguration _config;
     private readonly IEmailSender _sender;
+    private readonly IMapper _mapper;
 
-    public AuthController(IAuthService authService, IConfiguration config, IEmailSender sender)
+    public AuthController(IAuthService authService, IConfiguration config, IEmailSender sender, IMapper mapper)
     {
       _authService = authService;
       _config = config;
       _sender = sender;
+      _mapper = mapper;
     }
 
     [HttpPost]
@@ -40,16 +43,11 @@ namespace Politics.Controllers
       }
       var existingUser = await _authService.GetUserByEmail(registerDto.Email);
       if (existingUser is not null)
-      { 
+      {
         return ValidationProblem("Vartotojas su šiuo elektroniniu paštu jau egzistuoja");
       }
-
-      var userToCreate = new User
-      {
-        Email = registerDto.Email,
-        DisplayName = registerDto.DisplayName,
-        Activated = false
-      };
+      var userToCreate = _mapper.Map<RegisterDto, User>(registerDto);
+      userToCreate.Activated = false;
 
       var createdUser = await _authService.Register(userToCreate, registerDto.Password);
 
@@ -61,9 +59,9 @@ namespace Politics.Controllers
     }
 
     [HttpPost]
-    public async Task<IActionResult> Login([FromBody] LoginDto registerUserDto)
+    public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
     {
-      var userFromRepo = await _authService.Login(registerUserDto.Email, registerUserDto.Password);
+      var userFromRepo = await _authService.Login(loginDto.Email, loginDto.Password);
 
       if (userFromRepo is null)
       {
@@ -125,21 +123,63 @@ namespace Politics.Controllers
     }
     [Authorize]
     [HttpGet]
-    public async Task<IActionResult> CurrentUser()
+    public async Task<ActionResult<UserProfileDto>> CurrentUser()
     {
       var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var profile = await _authService.GetUserById(userId);
+      if (profile is null)
+      {
+        return BadRequest();
+      }
+      return Ok(profile);
+    }
+    [Authorize]
+    [HttpPost("{id}")]
+    public async Task<ActionResult> ChangeEmail(string userId, [FromBody] string email)
+    {
+      var token = await _authService.GenerateEmailChangeToken(userId, email);
       var user = await _authService.GetUserById(userId);
+
+      await _sender.SendEmailConfirmation(user, email, token);
+
+      return Ok("Patvirtinimo laiškas išsiųstas");
+    }
+    [HttpPost("{id}")]
+    public async Task<ActionResult> ConfirmEmailChange(string tokenId)
+    {
+      var user = await _authService.UpdateEmail(tokenId);
       if (user is null)
       {
         return BadRequest();
       }
-      var profile = new UserProfileDto
+      return Redirect("https://politik-rust.vercel.app");
+    }
+    [Authorize]
+    [HttpPost("{id}")]
+    public async Task<ActionResult<UserProfileDto>> ChangePassword(string userId, [FromBody] ChangePasswordDto changePassword)
+    {
+      if (changePassword.NewPassword.Length < 8)
       {
-        UserId = user.UserId,
-        DisplayName = user.DisplayName,
-        Email = user.Email,
-        Role = user.Role.Name,
-      };
+        return ValidationProblem("Naujas slaptažodis per trumpas");
+      }
+      if (changePassword.NewPassword.Length > 20)
+      {
+        return ValidationProblem("Naujas slaptažodis per ilgas");
+      }
+      var user = await _authService.GetUserById(userId);
+      var passwordsMatch = _authService.Login(user.Email, changePassword.OldPassword);
+      if (passwordsMatch is null)
+      {
+        return ValidationProblem("Senas slaptažodis blogas");
+      }
+      var profile = await _authService.ChangePassword(userId, changePassword.NewPassword);
+      return Ok(profile);
+    }
+    [Authorize]
+    [HttpPost("{id}")]
+    public async Task<ActionResult<UserProfileDto>> ChangeDisplayName(string userId, [FromBody] string newDisplayName)
+    {
+      var profile = await _authService.ChangeDisplayName(userId, newDisplayName);
       return Ok(profile);
     }
   }

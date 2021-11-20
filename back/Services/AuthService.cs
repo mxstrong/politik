@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Politics.Dtos;
 using Politics.Model;
 using System;
 using System.Collections.Generic;
@@ -10,10 +12,12 @@ namespace Politics.Services
   public class AuthService : IAuthService
   {
     private readonly PoliticsDbContext _context;
+    private readonly IMapper _mapper;
 
-    public AuthService(PoliticsDbContext context)
+    public AuthService(PoliticsDbContext context, IMapper mapper)
     {
       _context = context;
+      _mapper = mapper;
     }
 
     public async Task<User> Login(string email, string password)
@@ -52,15 +56,6 @@ namespace Politics.Services
     public async Task<User> Register(User user, string password)
     {
       var role = await _context.Roles.SingleOrDefaultAsync(role => role.Name == "User");
-      if (role is null)
-      {
-        role = new Role
-        {
-          RoleId = Guid.NewGuid().ToString(),
-          Name = "User"
-        };
-        await _context.Roles.AddAsync(role);
-      }
       CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
       user.RoleId = role.RoleId;
       user.UserId = Guid.NewGuid().ToString();
@@ -103,14 +98,78 @@ namespace Politics.Services
       return user;
     }
 
-    public async Task<User> GetUserById(string userId)
+    public async Task<UserProfileDto> GetUserById(string userId)
     {
-      return await _context.Users.Include(user => user.Role).FirstOrDefaultAsync(user => user.UserId == userId);
+      var user = await _context.Users.Include(user => user.Role).FirstOrDefaultAsync(user => user.UserId == userId);
+      return _mapper.Map<User, UserProfileDto>(user);
     }
 
-    public async Task<User> GetUserByEmail(string email)
+    public async Task<UserProfileDto> GetUserByEmail(string email)
     {
-      return await _context.Users.FirstOrDefaultAsync(user => user.Email == email && user.Activated);
+      var user = await _context.Users.Include(user => user.Role).FirstOrDefaultAsync(user => user.Email == email && user.Activated);
+      return _mapper.Map<User, UserProfileDto>(user);
+    }
+
+    public async Task<EmailChangeToken> GenerateEmailChangeToken(string userId, string newEmail)
+    {
+      var token = new EmailChangeToken()
+      {
+        Id = Guid.NewGuid().ToString(),
+        UserId = userId,
+        NewEmail = newEmail,
+        CreatedAt = DateTime.Now
+      };
+
+      await _context.EmailChangeTokens.AddAsync(token);
+      await _context.SaveChangesAsync();
+      return token;
+    }
+
+    public async Task<User> UpdateEmail(string tokenId)
+    {
+      var token = await _context.EmailChangeTokens.FirstOrDefaultAsync(token => token.Id == tokenId);
+      if (token is null)
+      {
+        return null;
+      }
+      var user = await _context.Users.FirstOrDefaultAsync(user => user.UserId == token.UserId);
+      if (user is null)
+      {
+        return null;
+      }
+      if (token.CreatedAt.AddDays(7) > DateTime.Now)
+      {
+        user.Email = token.NewEmail;
+        _context.EmailChangeTokens.Remove(token);
+        await _context.SaveChangesAsync();
+      }
+      return user;
+    }
+
+    public async Task<UserProfileDto> ChangePassword(string userId, string newPassword)
+    {
+      var user = await _context.Users.FirstOrDefaultAsync(user => user.UserId == userId);
+      if (user is null)
+      {
+        return null;
+      }
+      CreatePasswordHash(newPassword, out byte[] passwordHash, out byte[] passwordSalt);
+      user.PasswordHash = passwordHash;
+      user.PasswordSalt = passwordSalt;
+      await _context.SaveChangesAsync();
+      return _mapper.Map<User, UserProfileDto>(user);
+    }
+
+    public async Task<UserProfileDto> ChangeDisplayName(string userId, string newDisplayName)
+    {
+      var user = await _context.Users.FirstOrDefaultAsync(user => user.UserId == userId);
+      if (user is null)
+      {
+        return null;
+      }
+      user.DisplayName = newDisplayName;
+      await _context.SaveChangesAsync();
+      return _mapper.Map<User, UserProfileDto>(user);
     }
   }
 }

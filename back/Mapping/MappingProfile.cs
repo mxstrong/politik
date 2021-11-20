@@ -29,6 +29,10 @@ namespace Politics.Mapping
         .ForMember(dest => dest.Politician, opt => opt.MapFrom(src => src.Politician.FirstName + ' ' + src.Politician.LastName))
         .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.Tags));
       CreateMap(typeof(PaginatedList<>), typeof(PaginatedList<>)).ConvertUsing(typeof(Converter<,>));
+      CreateMap<User, UserProfileDto>()
+        .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.Name));
+      CreateMap<LoginDto, User>();
+      CreateMap<RegisterDto, User>();
     }
     private class Converter<TSource, TDestination>
     : ITypeConverter<PaginatedList<TSource>, PaginatedList<TDestination>>

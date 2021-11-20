@@ -31,6 +31,14 @@ namespace Politics
       services.AddDbContext<PoliticsDbContext>(options =>
               options.UseNpgsql(Configuration.GetConnectionString("PoliticsDatabase")));
 
+      services.AddCors(options => options.AddPolicy(
+        "PoliticsCORSPolicy",
+        builder =>
+        {
+          builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("X-Pagination");
+        }
+      ));
+
       var mapperConfig = new MapperConfiguration(config =>
       {
         config.AddProfile(new MappingProfile());
@@ -38,6 +46,7 @@ namespace Politics
 
       IMapper mapper = mapperConfig.CreateMapper();
       services.AddSingleton(mapper);
+      services.AddControllers();
       services.AddScoped<IPoliticiansRepository, PoliticiansRepository>();
       services.AddScoped<IPartiesRepository, PartiesRepository>();
       services.AddScoped<IStatementsRepository, StatementsRepository>();
@@ -65,16 +74,6 @@ namespace Politics
             ValidateAudience = false
           };
         });
-
-      services.AddCors(options => options.AddPolicy(
-        "PoliticsCORSPolicy",
-        builder =>
-        {
-          builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("X-Pagination");
-        }
-      ));
-
-      services.AddControllers();
       services.AddSwaggerGen();
     }
 
@@ -99,6 +98,7 @@ namespace Politics
 
       app.UseRouting();
 
+      app.UseAuthentication();
       app.UseAuthorization();
 
       app.UseSwagger();

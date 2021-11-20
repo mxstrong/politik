@@ -23,4 +23,9 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.14.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\NewFolder1\" />
+    <Folder Include="Dtos\NewFolder\NewFolder\" />
+  </ItemGroup>
+
 </Project>

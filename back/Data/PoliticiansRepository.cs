@@ -34,7 +34,11 @@ namespace Politics.Data
 
     public async Task<PoliticianOutDto> GetPoliticianById(string id)
     {
-      var politician = await _context.Politicians.Include(politician => politician.Party).SingleAsync(p => p.PoliticianId == id);
+      var politician = await _context.Politicians.Include(politician => politician.Party).FirstOrDefaultAsync(p => p.PoliticianId == id);
+      if (politician is null)
+      {
+        return null;
+      }
       return _mapper.Map<Politician, PoliticianOutDto>(politician);
     }
 
@@ -62,6 +66,17 @@ namespace Politics.Data
         return null;
       }
       return _mapper.Map<Politician, PoliticianOutDto>(createdPolitician);
+    }
+
+    public async Task<PoliticianOutDto> UpdatePolitician(string politicianId, UpdatePoliticianDto politicianDto, string userId)
+    {
+      var politician = await _context.Politicians.Include(politician => politician.Party).FirstOrDefaultAsync(politician => politician.PoliticianId == politicianId);
+      politician.PartyId = politicianDto.PartyId;
+      politician.Description = politicianDto.Description;
+      politician.UpdatedById = userId;
+      politician.UpdatedAt = DateTime.Now;
+      await _context.SaveChangesAsync();
+      return _mapper.Map<Politician, PoliticianOutDto>(politician);
     }
 
     public async Task<PoliticianOutDto> DeletePolitician(string id)

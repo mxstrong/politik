@@ -79,6 +79,18 @@ namespace Politics.Controllers
       return Ok(createdPolitician);
     }
     [Authorize]
+    [HttpPut("{id}")]
+    public async Task<ActionResult<PoliticianOutDto>> UpdatePolitician(string id, [FromBody] UpdatePoliticianDto politician)
+    {
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      if (await _repo.GetPoliticianById(id) is null) 
+      {
+        return ValidationProblem("Politikas su tokiu ID nerastas");
+      }
+      var updatedPolitician = await _repo.UpdatePolitician(id, politician, userId);
+      return Ok(updatedPolitician);
+    }
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePolitician(string id)
     {

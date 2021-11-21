@@ -35,7 +35,7 @@ namespace Politics
         "PoliticsCORSPolicy",
         builder =>
         {
-          builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("X-Pagination");
+          builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithExposedHeaders("X-Pagination");
         }
       ));
 

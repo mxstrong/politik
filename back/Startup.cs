@@ -35,7 +35,7 @@ namespace Politics
         "PoliticsCORSPolicy",
         builder =>
         {
-          builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithExposedHeaders("X-Pagination");
+          builder.WithOrigins("https://localhost:3000", "politik-rust.vercel.app").AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithExposedHeaders("X-Pagination");
         }
       ));
 

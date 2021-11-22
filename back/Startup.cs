@@ -35,9 +35,9 @@ namespace Politics
         "PoliticsCORSPolicy",
         builder =>
         {
-          builder.AllowAnyMethod()
+          builder.WithOrigins("http://localhost:3000", "https://politik-rust.vercel.app")
+                .AllowAnyMethod()
                 .AllowAnyHeader()
-                .SetIsOriginAllowed(origin => true)
                 .AllowCredentials()
                 .WithExposedHeaders("X-Pagination");
         }
@@ -62,14 +62,14 @@ namespace Politics
       services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options =>
         {
-          options.Events = new JwtBearerEvents
-          {
-            OnMessageReceived = context =>
-            {
-              context.Token = context.Request.Cookies["JWT"];
-              return Task.CompletedTask;
-            }
-          };
+          //options.Events = new JwtBearerEvents
+          //{
+          //  OnMessageReceived = context =>
+          //  {
+          //    context.Token = context.Request.Cookies["JWT"];
+          //    return Task.CompletedTask;
+          //  }
+          //};
           options.TokenValidationParameters = new TokenValidationParameters
           {
             ValidateIssuerSigningKey = true,

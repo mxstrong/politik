@@ -6,6 +6,8 @@ import Modal from '@element/Modal';
 import Button from '@element/Button';
 import Input from '@element/Input';
 import { _fetch } from '@util/fetch';
+import { fetchUser } from '@util/fetches';
+import { setLocalStorageItem } from '@util/storage';
 
 interface ILogin {
   isOpen: boolean;
@@ -31,10 +33,13 @@ const Login: React.FC<ILogin> = ({ isOpen, onClose }) => {
     const res = await _fetch({ url: 'Auth/Login', method: 'POST', data });
 
     if (!res.error) {
-      toast.success('Prisijungimas sėkmingas.');
-      onClose();
-
-      return;
+      setLocalStorageItem('jwt', `${res.data.jwt}`);
+      const userRes = await fetchUser();
+      if (!userRes.error) {
+        toast.success('Prisijungimas sėkmingas.');
+        onClose();
+        return;
+      }
     }
 
     toast.error('Įvyko klaida.');

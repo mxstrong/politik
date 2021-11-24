@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -42,8 +41,11 @@ const PoliticiansList: React.FC = () => {
           {politicians.data.map(
             ({ id, fullName, party }: IPoliticiansListItem) => {
               return (
-                <li className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer">
-                  <Link href={`politicians/${id}`} key={`politician-${id}`}>
+                <li
+                  className=" bg-white p-4 first:rounded-t last:rounded-b cursor-pointer"
+                  key={`politician-${id}`}
+                >
+                  <Link href={`politicians/${id}`}>
                     <a title={fullName}>
                       <span className="font-bold text-lg text-black hover:underline">
                         {fullName}

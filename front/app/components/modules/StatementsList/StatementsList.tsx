@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BsX } from 'react-icons/bs';
@@ -16,6 +15,7 @@ import Select from '@element/Select';
 import { ITag } from '@type/api/tags';
 import { ISelectOption } from '@type/elements/SelectOption';
 import Empty from '@element/Empty';
+import { isMod } from '@util/general';
 
 const STATEMENTS_FETCH_COUNT = 10;
 
@@ -115,19 +115,20 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
 
   return (
     <div className="flex flex-col items-center">
+      {' '}
+      <div className="w-full mb-8">
+        <Select
+          options={tagOptions}
+          label="Žymos"
+          value={filters?.tags}
+          onChange={(value: any) => setFilters({ ...filters, tags: value })}
+          isMulti
+          className="w-full"
+        />
+      </div>
       {loading && !statements.data && <Spin className="my-8" />}
       {!loading && !!statements.data?.length && (
         <>
-          <div className="w-full mb-8">
-            <Select
-              options={tagOptions}
-              label="Žymos"
-              value={filters?.tags}
-              onChange={(value: any) => setFilters({ ...filters, tags: value })}
-              isMulti
-              className="w-full"
-            />
-          </div>
           <ul className="rounded shadow-lg divide-y mb-8 w-full">
             {statements.data?.map(
               ({
@@ -146,13 +147,15 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
                           <span className="font-bold text-lg text-black hover:underline">
                             {description}
                           </span>
-                          <IconButton
-                            onClick={(e: React.MouseEvent<HTMLElement>) =>
-                              handleStatementDelete(e, statementId)
-                            }
-                          >
-                            <BsX className="w-6 h-6" />
-                          </IconButton>
+                          {isMod() && (
+                            <IconButton
+                              onClick={(e: React.MouseEvent<HTMLElement>) =>
+                                handleStatementDelete(e, statementId)
+                              }
+                            >
+                              <BsX className="w-6 h-6" />
+                            </IconButton>
+                          )}
                         </div>
                         <div className="font-normal text-sm text-coolGray-500 mt-2">
                           {politician ? politician : 'Nepartinis'}

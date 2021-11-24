@@ -129,7 +129,7 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
       >
         {({ values, handleChange, errors, isSubmitting, setFieldValue }) => {
           return (
-            <Form className="space-y-6" id="add-politician-form">
+            <Form className="space-y-6" id="add-statement-form">
               <Select
                 options={politicianOptions}
                 label="Politikas"

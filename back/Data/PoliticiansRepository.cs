@@ -21,12 +21,20 @@ namespace Politics.Data
       _mapper = mapper;
     }
 
-    public async Task<PaginatedList<PoliticianOutDto>> GetAllPoliticians(int? pageNumber, int? pageSize, string? partyId)
+    public async Task<PaginatedList<PoliticianOutDto>> GetAllPoliticians(int? pageNumber, int? pageSize, string? partyId, string? search)
     {
       var politicians = _context.Politicians.Include(politician => politician.Party);
       if (partyId is not null)
       {
         politicians = politicians.Where(politician => politician.PartyId == partyId).Include(politician => politician.Party);
+      }
+      if (search is not null)
+      {
+        politicians = politicians.Where(politician => (
+          politician.FirstName.Contains(search) || 
+          politician.LastName.Contains(search) || 
+          politician.Description.Contains(search)
+        )).Include(politician => politician.Party);
       }
       var paginatedPoliticians = await PaginatedList<Politician>.CreateAsync(politicians, pageNumber ?? 1, pageSize ?? 10);
       return _mapper.Map<PaginatedList<Politician>, PaginatedList<PoliticianOutDto>>(paginatedPoliticians);

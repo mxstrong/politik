@@ -22,7 +22,7 @@ namespace Politics.Controllers
     [HttpGet]
     public async Task<ActionResult<PaginatedList<PoliticianOutDto>>> GetAllPoliticians([FromQuery] PoliticiansParams parameters)
     {
-      var politicians = await _repo.GetAllPoliticians(parameters.PageNumber, parameters.PageSize, parameters.PartyId);
+      var politicians = await _repo.GetAllPoliticians(parameters.PageNumber, parameters.PageSize, parameters.PartyId, parameters.Search);
       var paginationMetadata = new
       {
         politicians.Count,
@@ -110,5 +110,6 @@ namespace Politics.Controllers
 
   public class PoliticiansParams : PaginationParams { 
     public string? PartyId { get; set; }
+    public string? Search { get; set; }
   }
 }

@@ -24,6 +24,8 @@ module.exports = {
     extend: {
       borderRadius: ['first', 'last'],
       borderWidth: ['first', 'last'],
+      backgroundColor: ['disabled'],
+      cursor: ['disabled'],
     },
   },
   plugins: [],

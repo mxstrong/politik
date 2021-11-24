@@ -9,8 +9,10 @@ import {
 } from 'constants/actions';
 
 interface IFetchPoliticiansParams {
-  pageNumber?: number;
-  pageSize?: number;
+  PageNumber?: number;
+  PageSize?: number;
+  PartyId?: string;
+  Search?: string;
 }
 
 export const fetchPoliticians =

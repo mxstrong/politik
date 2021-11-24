@@ -14,6 +14,16 @@ import { IPolitician } from '@type/api/politicians';
 import { ITag } from '@type/api/tags';
 import CreatableSelect from '@element/CreatableSelect';
 
+interface IDefaultValues {
+  politician?: ISelectOption;
+}
+
+interface IAddNewStatement {
+  isOpen: boolean;
+  onClose: () => void;
+  defaultValues?: IDefaultValues;
+}
+
 const VALIDATION_SCHEMA = yup.object({
   politician: yup.object({ value: yup.string() }).required(),
   link: yup.string().min(1).required(),
@@ -24,16 +34,6 @@ const VALIDATION_SCHEMA = yup.object({
     .of(yup.object({ value: yup.string().nullable() }))
     .required(),
 });
-
-interface IDefaultValues {
-  politician?: ISelectOption;
-}
-
-interface IAddNewStatement {
-  isOpen: boolean;
-  onClose: () => void;
-  defaultValues?: IDefaultValues;
-}
 
 const AddNewStatement: React.FC<IAddNewStatement> = ({
   isOpen,
@@ -129,7 +129,7 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
       >
         {({ values, handleChange, errors, isSubmitting, setFieldValue }) => {
           return (
-            <Form className="space-y-6" id="add-politician-form">
+            <Form className="space-y-6" id="add-statement-form">
               <Select
                 options={politicianOptions}
                 label="Politikas"

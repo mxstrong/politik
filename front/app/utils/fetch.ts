@@ -3,9 +3,9 @@ import axios, {
   AxiosResponse,
   AxiosResponseHeaders,
 } from 'axios';
+import { getLocalStorageItem } from './storage';
 
 interface IParams extends AxiosRequestHeaders {
-  url: string;
   [key: string]: any;
 }
 
@@ -18,7 +18,13 @@ export const _fetch = async (
 ): Promise<IAxiosResponse | { [key: string]: any }> => {
   return await axios({
     ...params,
+    withCredentials: true,
     url: `${process.env.NEXT_PUBLIC_API_URL}/${params.url}`,
+    headers: {
+      Authorization: getLocalStorageItem('jwt')
+        ? `Bearer ${getLocalStorageItem('jwt')}`
+        : '',
+    },
   }).catch((error) => {
     return { error };
   });

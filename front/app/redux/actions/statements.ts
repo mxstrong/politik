@@ -6,14 +6,13 @@ import {
   FETCH_STATEMENTS_SUCCESS,
   FETCH_STATEMENTS_SUPPLEMENT_SUCCESS,
   FETCH_STATEMENTS_ERROR,
-  FETCH_STATEMENTS_CLEAR,
 } from 'constants/actions';
 
 interface IFetchStatementsParams {
-  pageNumber?: number;
-  pageSize?: number;
-  politician?: string;
-  tags?: string;
+  PageNumber?: number;
+  PageSize?: number;
+  Politician?: string;
+  Tags?: string;
 }
 
 export const fetchStatements =

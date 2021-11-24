@@ -135,12 +135,12 @@ namespace Politics.Controllers
     }
     [Authorize]
     [HttpPost("{id}")]
-    public async Task<ActionResult> ChangeEmail(string userId, [FromBody] string email)
+    public async Task<ActionResult> ChangeEmail(string userId, [FromBody] ChangeEmailDto changeEmail)
     {
-      var token = await _authService.GenerateEmailChangeToken(userId, email);
+      var token = await _authService.GenerateEmailChangeToken(userId, changeEmail.NewEmail);
       var user = await _authService.GetUserById(userId);
 
-      await _sender.SendEmailConfirmation(user, email, token);
+      await _sender.SendEmailConfirmation(user, changeEmail.NewEmail, token);
 
       return Ok("Patvirtinimo laiškas išsiųstas");
     }
@@ -155,7 +155,7 @@ namespace Politics.Controllers
       return Redirect("https://politik-rust.vercel.app");
     }
     [Authorize]
-    [HttpPost("{id}")]
+    [HttpPost("{userId}")]
     public async Task<ActionResult<UserProfileDto>> ChangePassword(string userId, [FromBody] ChangePasswordDto changePassword)
     {
       if (changePassword.NewPassword.Length < 8)
@@ -167,7 +167,7 @@ namespace Politics.Controllers
         return ValidationProblem("Naujas slaptažodis per ilgas");
       }
       var user = await _authService.GetUserById(userId);
-      var passwordsMatch = _authService.Login(user.Email, changePassword.OldPassword);
+      var passwordsMatch = await _authService.Login(user.Email, changePassword.OldPassword);
       if (passwordsMatch is null)
       {
         return ValidationProblem("Senas slaptažodis blogas");
@@ -177,9 +177,9 @@ namespace Politics.Controllers
     }
     [Authorize]
     [HttpPost("{id}")]
-    public async Task<ActionResult<UserProfileDto>> ChangeDisplayName(string userId, [FromBody] string newDisplayName)
+    public async Task<ActionResult<UserProfileDto>> ChangeDisplayName(string userId, [FromBody] ChangeDisplayNameDto changeDisplayName)
     {
-      var profile = await _authService.ChangeDisplayName(userId, newDisplayName);
+      var profile = await _authService.ChangeDisplayName(userId, changeDisplayName.NewDisplayName);
       return Ok(profile);
     }
   }

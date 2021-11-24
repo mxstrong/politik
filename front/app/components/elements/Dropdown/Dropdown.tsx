@@ -23,7 +23,7 @@ const Dropdown: React.FC<IDropdown> = ({ children, options = [] }) => {
     <div className="inline-block relative" onClick={toggleFocus}>
       {children}
       <ul
-        className={cx('absolute', 'text-gray-700', 'pt-6', {
+        className={cx('absolute', 'text-gray-700', 'pt-2', {
           hidden: !clicked,
           block: clicked,
         })}

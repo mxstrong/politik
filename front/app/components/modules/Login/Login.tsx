@@ -35,7 +35,7 @@ const Login: React.FC<ILogin> = ({ isOpen, onClose }) => {
     if (!res.error) {
       setLocalStorageItem('jwt', `${res.data.jwt}`);
       const userRes = await fetchUser();
-      if (!userRes.error) {
+      if (!userRes?.error) {
         toast.success('Prisijungimas sėkmingas.');
         onClose();
         return;

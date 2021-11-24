@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 
 import DefaultLayout from '@layout/DefaultLayout';
 import UserPage from '@template/UserPage';
+import { getLocalStorageItem } from '@util/storage';
 
 const PAGE_TITLE = 'Vartotojo profilis';
 
@@ -13,7 +14,7 @@ const User = () => {
         <title>{PAGE_TITLE}</title>
       </Head>
 
-      <UserPage />
+      {getLocalStorageItem('currentUser') && <UserPage />}
     </div>
   );
 };

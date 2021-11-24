@@ -48,7 +48,7 @@ const Header = () => {
         <Dropdown options={AUTHORIZED_MENU_ITEMS}>
           <div
             title={currentUser.displayName}
-            className="font-bold text-black hover:underline flex items-center space-x-2 cursor-pointer"
+            className="font-bold text-black hover:underline flex items-center space-x-2 cursor-pointer pl-6 pt-4 md:pt-0"
           >
             <span> {currentUser.displayName}</span>
             <BsCaretDownFill />

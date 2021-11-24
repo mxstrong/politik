@@ -50,7 +50,7 @@ const UserProfile = () => {
       const nicknameRes = await _fetch({
         url: `Auth/ChangeDisplayName/${initialUserData.userId}`,
         method: 'POST',
-        data: nickname,
+        data: { newDisplayName: nickname },
       });
 
       if (!nicknameRes.error) {
@@ -64,7 +64,7 @@ const UserProfile = () => {
       const nicknameRes = await _fetch({
         url: `Auth/ChangeEmailName/${initialUserData.userId}`,
         method: 'POST',
-        data: email,
+        data: { newEmail: email },
       });
 
       if (!nicknameRes.error) {

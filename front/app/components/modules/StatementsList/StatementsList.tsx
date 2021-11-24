@@ -58,11 +58,11 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
     if (filters) {
       dispatch(
         fetchStatements({
-          pageNumber: 1,
-          pageSize: STATEMENTS_FETCH_COUNT,
-          politician,
+          PageNumber: 1,
+          PageSize: STATEMENTS_FETCH_COUNT,
+          Politician: politician,
           ...(filters?.tags.length && {
-            tags: filters.tags
+            Tags: filters.tags
               .map(({ value }: ISelectOption) => value)
               .join(','),
           }),
@@ -75,9 +75,9 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
     dispatch(
       fetchStatements(
         {
-          pageNumber,
-          pageSize: STATEMENTS_FETCH_COUNT,
-          politician,
+          PageNumber: pageNumber,
+          PageSize: STATEMENTS_FETCH_COUNT,
+          Politician: politician,
         },
         true
       )
@@ -102,9 +102,9 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
         toast.success('Pareiškimas ištrintas.');
         dispatch(
           fetchStatements({
-            pageNumber: 1,
-            pageSize: STATEMENTS_FETCH_COUNT * pageNumber,
-            politician,
+            PageNumber: 1,
+            PageSize: STATEMENTS_FETCH_COUNT * pageNumber,
+            Politician: politician,
           })
         );
         return;

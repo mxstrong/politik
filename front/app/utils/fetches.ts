@@ -1,5 +1,6 @@
 import { _fetch } from './fetch';
-import { isClientSide, setLocalStorageItem } from './storage';
+import { setLocalStorageItem } from './storage';
+import { isClientSide } from './general';
 
 export const fetchUser = async () => {
   if (isClientSide) {

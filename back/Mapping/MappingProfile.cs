@@ -12,8 +12,6 @@ namespace Politics.Mapping
     {
       CreateMap<Politician, PoliticianOutDto>()
         .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.PoliticianId))
-        .ForMember(dest => dest.Party, opt => opt.MapFrom(src => src.Party.LongName))
-        .ForMember(dest => dest.PartyShort, opt => opt.MapFrom(src => src.Party.ShortName))
         .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FirstName + ' ' + src.LastName));
       CreateMap<PoliticianDto, Politician>();
       CreateMap<Party, PartyOutDto>()

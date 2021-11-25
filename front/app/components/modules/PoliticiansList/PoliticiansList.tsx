@@ -40,7 +40,7 @@ const PoliticiansList: React.FC = () => {
           value: id,
           label: longName,
         }));
-        const withoutPartyOption = { label: '— (nepartinis)', value: null };
+        const withoutPartyOption = { label: '— (nepartinis)', value: 'null' };
 
         setPartyOptions([withoutPartyOption, ...newPartyOptions]);
       }
@@ -114,7 +114,7 @@ const PoliticiansList: React.FC = () => {
                       </span>
                       <div className="flex justify-between font-semibold text-sm text-coolGray-500 mt-2">
                         <div className="font-normal">
-                          {party ? party : 'Nepartinis'}
+                          {party ? party.shortName : 'Nepartinis'}
                         </div>
                       </div>
                     </a>

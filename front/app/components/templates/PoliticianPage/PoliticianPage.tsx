@@ -6,7 +6,8 @@ import Button from '@element/Button';
 import { IPolitician } from '@type/api/politicians';
 import AddNewStatement from '@module/AddNewStatement';
 import StatementsList from '@module/StatementsList';
-import AddNewPolitician from '@module/AddNewPolitician';
+import PoliticianForm from '@module/PoliticianForm';
+import { isMod } from '@util/general';
 
 interface IPoliticianPage {
   politician: IPolitician;
@@ -16,6 +17,8 @@ const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
   const [isAddNewStatementOpen, setIsAddNewStatementOpen] = useState(false);
   const [isEditPolititianOpen, setIsEditPoliticianOpen] = useState(false);
 
+  console.log(politician);
+
   return (
     <>
       <div>
@@ -24,18 +27,20 @@ const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
           {politician.fullName}
         </h1>
         <h3 className="text-base md:text-lg font-medium mb-4 md:mb-8 text-gray-500">
-          {politician.party}
+          {politician.party?.longName}
         </h3>
         <p>{politician.description}</p>
         <div className="my-12 flex flex-col space-y-2">
-          <Button
-            icon={<BsFillPencilFill />}
-            variant="outlined"
-            className="w-max"
-            onClick={() => setIsEditPoliticianOpen(true)}
-          >
-            Redaguoti
-          </Button>
+          {isMod() && (
+            <Button
+              icon={<BsFillPencilFill />}
+              variant="outlined"
+              className="w-max"
+              onClick={() => setIsEditPoliticianOpen(true)}
+            >
+              Redaguoti
+            </Button>
+          )}
           <Button
             icon={<BsPlusLg />}
             onClick={() => setIsAddNewStatementOpen(true)}
@@ -60,7 +65,7 @@ const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
         }}
       />
 
-      <AddNewPolitician
+      <PoliticianForm
         isOpen={isEditPolititianOpen}
         onClose={() => setIsEditPoliticianOpen(false)}
         initialValues={politician}

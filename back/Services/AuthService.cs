@@ -162,7 +162,7 @@ namespace Politics.Services
 
     public async Task<UserProfileDto> ChangeDisplayName(string userId, string newDisplayName)
     {
-      var user = await _context.Users.FirstOrDefaultAsync(user => user.UserId == userId);
+      var user = await _context.Users.Include(user => user.Role).FirstOrDefaultAsync(user => user.UserId == userId);
       if (user is null)
       {
         return null;

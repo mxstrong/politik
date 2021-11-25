@@ -26,14 +26,20 @@ namespace Politics.Data
       var politicians = _context.Politicians.Include(politician => politician.Party);
       if (partyId is not null)
       {
-        politicians = politicians.Where(politician => politician.PartyId == partyId).Include(politician => politician.Party);
+        if (partyId != "null")
+        {
+          politicians = politicians.Where(politician => politician.PartyId == partyId).Include(politician => politician.Party);
+        } else
+        {
+          politicians = politicians.Where(politician => politician.PartyId == null).Include(politician => politician.Party); ;
+        }
       }
       if (search is not null)
       {
+        var lowercaseSearch = search.ToLower();
         politicians = politicians.Where(politician => (
-          politician.FirstName.Contains(search) || 
-          politician.LastName.Contains(search) || 
-          politician.Description.Contains(search)
+          (politician.FirstName.ToLower() + ' ' +politician.LastName.ToLower()).Contains(lowercaseSearch) ||
+          politician.Description.ToLower().Contains(lowercaseSearch)
         )).Include(politician => politician.Party);
       }
       var paginatedPoliticians = await PaginatedList<Politician>.CreateAsync(politicians, pageNumber ?? 1, pageSize ?? 10);

@@ -42,7 +42,7 @@ const TextArea: React.FC<ITextarea> = ({
           'appearance-none',
           'block',
           'w-full',
-          'bg-gray-200',
+          'bg-white',
           'text-gray-700',
           'border',
           'rounded py-3',

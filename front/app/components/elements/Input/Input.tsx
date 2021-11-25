@@ -9,6 +9,8 @@ interface IInput extends React.HTMLAttributes<HTMLInputElement> {
   error?: boolean;
   errorMessage?: string;
   maxLength?: number;
+  disabled?: boolean;
+  onEnter?: (value: string) => void;
 }
 
 const Input: React.FC<IInput> = ({
@@ -20,8 +22,17 @@ const Input: React.FC<IInput> = ({
   error,
   errorMessage,
   maxLength = 255,
+  onEnter,
   ...rest
 }) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      if (onEnter) {
+        onEnter((event.target as HTMLInputElement).value);
+      }
+    }
+  };
+
   return (
     <div className="flex-1">
       {label && (
@@ -34,7 +45,9 @@ const Input: React.FC<IInput> = ({
           'appearance-none',
           'block',
           'w-full',
-          'bg-gray-200',
+          'bg-white',
+          'disabled:bg-gray-200',
+          'disabled:cursor-not-allowed',
           'text-gray-700',
           'border',
           'rounded py-3',
@@ -53,6 +66,7 @@ const Input: React.FC<IInput> = ({
         name={name}
         value={value}
         maxLength={maxLength}
+        onKeyDown={handleKeyDown}
         {...rest}
       />
       {error && (

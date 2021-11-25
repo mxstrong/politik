@@ -134,17 +134,22 @@ namespace Politics.Controllers
       return Ok(profile);
     }
     [Authorize]
-    [HttpPost("{id}")]
-    public async Task<ActionResult> ChangeEmail(string userId, [FromBody] ChangeEmailDto changeEmail)
+    [HttpPost]
+    public async Task<ActionResult> ChangeEmail([FromBody] ChangeEmailDto changeEmail)
     {
-      var token = await _authService.GenerateEmailChangeToken(userId, changeEmail.NewEmail);
-      var user = await _authService.GetUserById(userId);
+      var userIdFromAuth = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      if (userIdFromAuth != changeEmail.UserId)
+      {
+        return Unauthorized();
+      }
+      var token = await _authService.GenerateEmailChangeToken(changeEmail.UserId, changeEmail.NewEmail);
+      var user = await _authService.GetUserById(changeEmail.UserId);
 
       await _sender.SendEmailConfirmation(user, changeEmail.NewEmail, token);
 
       return Ok("Patvirtinimo laiškas išsiųstas");
     }
-    [HttpPost("{id}")]
+    [HttpPost("{tokenId}")]
     public async Task<ActionResult> ConfirmEmailChange(string tokenId)
     {
       var user = await _authService.UpdateEmail(tokenId);
@@ -155,9 +160,14 @@ namespace Politics.Controllers
       return Redirect("https://politik-rust.vercel.app");
     }
     [Authorize]
-    [HttpPost("{userId}")]
-    public async Task<ActionResult<UserProfileDto>> ChangePassword(string userId, [FromBody] ChangePasswordDto changePassword)
+    [HttpPost]
+    public async Task<ActionResult<UserProfileDto>> ChangePassword([FromBody] ChangePasswordDto changePassword)
     {
+      var userIdFromAuth = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      if (userIdFromAuth != changePassword.UserId)
+      {
+        return Unauthorized();
+      }
       if (changePassword.NewPassword.Length < 8)
       {
         return ValidationProblem("Naujas slaptažodis per trumpas");
@@ -166,20 +176,29 @@ namespace Politics.Controllers
       {
         return ValidationProblem("Naujas slaptažodis per ilgas");
       }
-      var user = await _authService.GetUserById(userId);
+      var user = await _authService.GetUserById(changePassword.UserId);
       var passwordsMatch = await _authService.Login(user.Email, changePassword.OldPassword);
       if (passwordsMatch is null)
       {
         return ValidationProblem("Senas slaptažodis blogas");
       }
-      var profile = await _authService.ChangePassword(userId, changePassword.NewPassword);
+      var profile = await _authService.ChangePassword(changePassword.UserId, changePassword.NewPassword);
       return Ok(profile);
     }
     [Authorize]
-    [HttpPost("{id}")]
-    public async Task<ActionResult<UserProfileDto>> ChangeDisplayName(string userId, [FromBody] ChangeDisplayNameDto changeDisplayName)
+    [HttpPost]
+    public async Task<ActionResult<UserProfileDto>> ChangeDisplayName([FromBody] ChangeDisplayNameDto changeDisplayName)
     {
-      var profile = await _authService.ChangeDisplayName(userId, changeDisplayName.NewDisplayName);
+      var userIdFromAuth = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      if (changeDisplayName.UserId != userIdFromAuth)
+      {
+        return Unauthorized();
+      }
+      var profile = await _authService.ChangeDisplayName(changeDisplayName.UserId, changeDisplayName.NewDisplayName);
+      if (profile is null)
+      {
+        return ValidationProblem("Vartotojas su tokiu ID nerastas");
+      }
       return Ok(profile);
     }
   }

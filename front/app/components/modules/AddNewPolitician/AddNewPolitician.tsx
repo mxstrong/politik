@@ -14,6 +14,13 @@ import { ISelectOption } from '@type/elements/SelectOption';
 import { IParty } from '@type/api/parties';
 import { fetchPoliticians } from '@redux/actions/politicians';
 import { POLITICIANS_FETCH_COUNT } from '@module/PoliticiansList/PoliticiansList';
+import { IPolitician } from '@type/api/politicians';
+
+interface IAddNewPolitician {
+  isOpen: boolean;
+  onClose: () => void;
+  initialValues?: IPolitician;
+}
 
 const VALIDATION_SCHEMA = yup.object({
   firstName: yup.string().min(1).required(),
@@ -22,12 +29,11 @@ const VALIDATION_SCHEMA = yup.object({
   description: yup.string().min(1).required(),
 });
 
-interface IAddNewPolitician {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
+const AddNewPolitician: React.FC<IAddNewPolitician> = ({
+  isOpen,
+  onClose,
+  initialValues = null,
+}) => {
   const [partyOptions, setPartyOptions] = useState<ISelectOption[]>([]);
 
   const dispatch = useDispatch();
@@ -53,6 +59,15 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   const getInitialValues = () => {
+    if (initialValues) {
+      return {
+        firstName: initialValues.fullName.split(' ')[0],
+        lastName: initialValues.fullName.split(' ')[1],
+        party: initialValues.party,
+        description: initialValues.description,
+      };
+    }
+
     return {
       firstName: '',
       lastName: '',
@@ -67,19 +82,26 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
     party,
     description,
   }: FormikValues) => {
-    const data = {
-      firstName,
-      lastName,
+    const data: any = {
       partyId: party?.value || null,
       description,
     };
 
-    const res = await _fetch({ url: 'Politicians', method: 'POST', data });
+    if (!initialValues) {
+      data.firstName = firstName;
+      data.lastName = lastName;
+    }
+
+    const res = await _fetch({
+      url: `Politicians${initialValues?.id ? `/${initialValues.id}` : ''}`,
+      method: initialValues ? 'PUT' : 'POST',
+      data,
+    });
 
     if (!res.error) {
       toast.success('Informacija išsiųsta.');
       dispatch(
-        fetchPoliticians({ pageNumber: 1, pageSize: POLITICIANS_FETCH_COUNT })
+        fetchPoliticians({ PageNumber: 1, PageSize: POLITICIANS_FETCH_COUNT })
       );
       onClose();
 
@@ -90,7 +112,13 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title="Naujo politiko pridėjimas">
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      title={
+        initialValues ? 'Politiko redagavimas' : 'Naujo politiko pridėjimas'
+      }
+    >
       <Formik
         initialValues={getInitialValues()}
         validationSchema={VALIDATION_SCHEMA}
@@ -110,6 +138,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   error={!!errors.firstName}
                   maxLength={50}
+                  disabled={!!initialValues}
                 />
                 <Input
                   label="Pavardė"
@@ -119,6 +148,7 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   error={!!errors.lastName}
                   maxLength={50}
+                  disabled={!!initialValues}
                 />
               </div>
               <Select

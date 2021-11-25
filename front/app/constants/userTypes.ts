@@ -1,0 +1,7 @@
+export const USER_TYPES = {
+  USER: 'User',
+  MODERATOR: 'Mod',
+  ADMINISTRATOR: 'Admin',
+};
+
+export const MOD_ROLES = [USER_TYPES.ADMINISTRATOR, USER_TYPES.MODERATOR];

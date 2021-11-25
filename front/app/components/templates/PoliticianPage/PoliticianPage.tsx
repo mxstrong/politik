@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { BsPlusLg } from 'react-icons/bs';
+import { BsPlusLg, BsFillPencilFill } from 'react-icons/bs';
 
 import BackButton from '@element/BackButton';
 import Button from '@element/Button';
 import { IPolitician } from '@type/api/politicians';
 import AddNewStatement from '@module/AddNewStatement';
 import StatementsList from '@module/StatementsList';
+import AddNewPolitician from '@module/AddNewPolitician';
 
 interface IPoliticianPage {
   politician: IPolitician;
@@ -13,6 +14,7 @@ interface IPoliticianPage {
 
 const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
   const [isAddNewStatementOpen, setIsAddNewStatementOpen] = useState(false);
+  const [isEditPolititianOpen, setIsEditPoliticianOpen] = useState(false);
 
   return (
     <>
@@ -25,10 +27,19 @@ const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
           {politician.party}
         </h3>
         <p>{politician.description}</p>
-        <div className="my-12">
+        <div className="my-12 flex flex-col space-y-2">
+          <Button
+            icon={<BsFillPencilFill />}
+            variant="outlined"
+            className="w-max"
+            onClick={() => setIsEditPoliticianOpen(true)}
+          >
+            Redaguoti
+          </Button>
           <Button
             icon={<BsPlusLg />}
             onClick={() => setIsAddNewStatementOpen(true)}
+            className="w-max"
           >
             Pridėti naują pareiškimą
           </Button>
@@ -47,6 +58,12 @@ const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
         defaultValues={{
           politician: { label: politician.fullName, value: politician.id },
         }}
+      />
+
+      <AddNewPolitician
+        isOpen={isEditPolititianOpen}
+        onClose={() => setIsEditPoliticianOpen(false)}
+        initialValues={politician}
       />
     </>
   );

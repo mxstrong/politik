@@ -3,7 +3,7 @@ import { BsPlusLg } from 'react-icons/bs';
 
 import Button from '@element/Button';
 import PoliticiansList from '@module/PoliticiansList';
-import AddNewPolitician from '@module/AddNewPolitician.tsx/AddNewPolitician';
+import AddNewPolitician from '@module/AddNewPolitician/AddNewPolitician';
 
 const PoliticiansPage: React.FC = () => {
   const [isAddPoliticianOpen, setIsAddPoliticianOpen] = useState(false);

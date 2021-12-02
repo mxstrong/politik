@@ -12,7 +12,6 @@ using Politics.Mapping;
 using Politics.Model;
 using Politics.Services;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Politics
 {

@@ -1,9 +1,6 @@
 ﻿using Politics.Dtos;
 using Politics.Model;
 using SendGrid;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Politics.Services

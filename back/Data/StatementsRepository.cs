@@ -97,7 +97,7 @@ namespace Politics.Data
         .Include(statement => statement.Politician)
         .Include(statement => statement.StatementTags)
         .ThenInclude(statementTag => statementTag.Tag)
-        .SingleAsync(statement => statement.StatementId == id);
+        .SingleOrDefaultAsync(statement => statement.StatementId == id);
 
       return _mapper.Map<Statement, StatementOutDto>(statement);
     }
@@ -109,7 +109,7 @@ namespace Politics.Data
         .Include(statement => statement.Politician)
         .Include(statement => statement.StatementTags)
         .ThenInclude(statementTag => statementTag.Tag)
-        .SingleAsync(statement => statement.StatementId == id);
+        .SingleOrDefaultAsync(statement => statement.StatementId == id);
 
       return statement;
     }
@@ -126,6 +126,35 @@ namespace Politics.Data
       _context.StatementTags.RemoveRange(statementTags);
       await _context.SaveChangesAsync();
       return _mapper.Map<Statement, StatementOutDto>(statementToDelete);
+    }
+
+    public async Task<bool> LikeStatement(string statementId, string userId)
+    {
+      var like = await _context.Likes.FirstOrDefaultAsync(like => (like.StatementId == statementId && like.UserId == userId));
+      if (like is not null)
+      {
+        return false;
+      }
+      await _context.Likes.AddAsync(new Like
+      {
+        LikeId = Guid.NewGuid().ToString(),
+        StatementId = statementId,
+        UserId = userId
+      });
+      await _context.SaveChangesAsync();
+      return true;
+    }
+
+    public async Task<bool> UnlikeStatement(string statementId, string userId)
+    {
+      var like = await _context.Likes.FirstOrDefaultAsync(like => (like.StatementId == statementId && like.UserId == userId));
+      if (like is null)
+      {
+        return false;
+      }
+      _context.Likes.Remove(like);
+      await _context.SaveChangesAsync();
+      return true;
     }
   }
 }

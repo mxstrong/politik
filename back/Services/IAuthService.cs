@@ -1,8 +1,5 @@
 ﻿using Politics.Dtos;
 using Politics.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Politics.Services
@@ -20,5 +17,6 @@ namespace Politics.Services
     Task<EmailChangeToken> GenerateEmailChangeToken(string userId, string newEmail);
     Task<UserProfileDto> ChangePassword(string userId, string newPassword);
     Task<UserProfileDto> ChangeDisplayName(string userId, string newDisplayName);
+    Task<bool> MakeModerator(string id);
   }
 }

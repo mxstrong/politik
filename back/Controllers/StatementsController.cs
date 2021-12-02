@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Politics.Services;
 
 namespace Politics.Controllers
 {
@@ -16,11 +17,13 @@ namespace Politics.Controllers
   {
     private readonly IStatementsRepository _statementsRepo;
     private readonly IPoliticiansRepository _politiciansRepo;
+    private readonly IAuthService _authService;
 
-    public StatementsController(IStatementsRepository statementsRepo, IPoliticiansRepository politiciansRepo)
+    public StatementsController(IStatementsRepository statementsRepo, IPoliticiansRepository politiciansRepo, IAuthService authService)
     {
       _statementsRepo = statementsRepo;
       _politiciansRepo = politiciansRepo;
+      _authService = authService;
     }
 
     [HttpGet]
@@ -91,6 +94,45 @@ namespace Politics.Controllers
         return ValidationProblem("Nurodytas pasisakymas nerastas");
       }
       return deletedStatement;
+    }
+
+    [Authorize]
+    [HttpPost("like/{id}")]
+    public async Task<ActionResult> LikeStatement(string id)
+    {
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var user = _authService.GetUserById(userId);
+      if (user is null)
+      {
+        return Unauthorized();
+      }
+      if (_statementsRepo.GetStatementById(id) is null)
+      {
+        return ValidationProblem("Pareiškimas neegzistuoja");
+      }
+      var result = await _statementsRepo.LikeStatement(id, userId);
+      if (result)
+      {
+        return Ok();
+      }
+      return ValidationProblem("Vartotojas jau yra paspaudęs like ant šio pasisakymo");
+    }
+    [Authorize]
+    [HttpPost("unlike/{id}")]
+    public async Task<ActionResult> UnlikeStatement(string id)
+    {
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var user = _authService.GetUserById(userId);
+      if (user is null)
+      {
+        return Unauthorized();
+      }
+      var result = await _statementsRepo.UnlikeStatement(id, userId);
+      if (result)
+      {
+        return Ok();
+      }
+      return ValidationProblem("Vartotojas nėra paspaudęs like ant šio pasisakymo");
     }
   }
 

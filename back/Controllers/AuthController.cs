@@ -8,9 +8,7 @@ using Politics.Dtos;
 using Politics.Model;
 using Politics.Services;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -92,13 +90,6 @@ namespace Politics.Controllers
 
       //HttpContext.Response.Cookies.Append("JWT", tokenString, new CookieOptions { HttpOnly = true, Expires = DateTime.Now.AddDays(7) });
       return Ok(new { JWT = tokenString });
-    }
-    [Authorize]
-    [HttpPost]
-    public IActionResult Logout()
-    {
-      HttpContext.Response.Cookies.Delete("JWT");
-      return Ok();
     }
 
     [HttpGet("{tokenId}")]
@@ -200,6 +191,22 @@ namespace Politics.Controllers
         return ValidationProblem("Vartotojas su tokiu ID nerastas");
       }
       return Ok(profile);
+    }
+    [Authorize]
+    [HttpPost("addModerator/{id}")]
+    public async Task<ActionResult> AddModerator(string id)
+    {
+      var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
+      if (role != "Admin")
+      {
+        return Unauthorized();
+      }
+      var result = await _authService.MakeModerator(id);
+      if (result)
+      {
+        return Ok();
+      }
+      return BadRequest("Operacija nepavyko");
     }
   }
 }

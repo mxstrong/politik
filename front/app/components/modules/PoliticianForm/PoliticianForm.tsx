@@ -16,7 +16,7 @@ import { fetchPoliticians } from '@redux/actions/politicians';
 import { POLITICIANS_FETCH_COUNT } from '@module/PoliticiansList/PoliticiansList';
 import { IPolitician } from '@type/api/politicians';
 
-interface IAddNewPolitician {
+interface IPoliticianForm {
   isOpen: boolean;
   onClose: () => void;
   initialValues?: IPolitician;
@@ -29,7 +29,7 @@ const VALIDATION_SCHEMA = yup.object({
   description: yup.string().min(1).required(),
 });
 
-const AddNewPolitician: React.FC<IAddNewPolitician> = ({
+const PoliticianForm: React.FC<IPoliticianForm> = ({
   isOpen,
   onClose,
   initialValues = null,
@@ -184,4 +184,4 @@ const AddNewPolitician: React.FC<IAddNewPolitician> = ({
   );
 };
 
-export default AddNewPolitician;
+export default PoliticianForm;

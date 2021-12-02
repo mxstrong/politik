@@ -48,9 +48,9 @@ const UserProfile = () => {
 
     if (nickname && nickname !== initialUserData.displayName) {
       const nicknameRes = await _fetch({
-        url: `Auth/ChangeDisplayName/${initialUserData.userId}`,
+        url: 'Auth/ChangeDisplayName',
         method: 'POST',
-        data: { newDisplayName: nickname },
+        data: { userId: initialUserData.userId, newDisplayName: nickname },
       });
 
       if (!nicknameRes.error) {
@@ -62,9 +62,9 @@ const UserProfile = () => {
 
     if (email && email !== initialUserData.email) {
       const nicknameRes = await _fetch({
-        url: `Auth/ChangeEmailName/${initialUserData.userId}`,
+        url: 'Auth/ChangeEmailName',
         method: 'POST',
-        data: { newEmail: email },
+        data: { userId: initialUserData.userId, newEmail: email },
       });
 
       if (!nicknameRes.error) {
@@ -76,9 +76,9 @@ const UserProfile = () => {
 
     if (oldPassword && newPassword) {
       const passwordRes = await _fetch({
-        url: `Auth/ChangePassword/${initialUserData.userId}`,
+        url: 'Auth/ChangePassword',
         method: 'POST',
-        data: { oldPassword, newPassword },
+        data: { userId: initialUserData.userId, oldPassword, newPassword },
       });
 
       if (!passwordRes.error) {

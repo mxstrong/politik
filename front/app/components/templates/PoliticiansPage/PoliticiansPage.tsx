@@ -3,7 +3,7 @@ import { BsPlusLg } from 'react-icons/bs';
 
 import Button from '@element/Button';
 import PoliticiansList from '@module/PoliticiansList';
-import AddNewPolitician from '@module/AddNewPolitician/AddNewPolitician';
+import PoliticianForm from '@module/PoliticianForm/PoliticianForm';
 
 const PoliticiansPage: React.FC = () => {
   const [isAddPoliticianOpen, setIsAddPoliticianOpen] = useState(false);
@@ -23,7 +23,7 @@ const PoliticiansPage: React.FC = () => {
         </div>
       </div>
 
-      <AddNewPolitician
+      <PoliticianForm
         isOpen={isAddPoliticianOpen}
         onClose={() => setIsAddPoliticianOpen(false)}
       />

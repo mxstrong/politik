@@ -1,6 +1,8 @@
+import { IParty } from './parties';
+
 export interface IPoliticiansListItem {
   id: string;
-  party: string;
+  party: IParty;
   fullName: string;
   description: string;
 }
@@ -11,8 +13,7 @@ export interface IPoliticians {
 
 export interface IPolitician {
   id: string;
-  party: string;
-  partyShort: string;
+  party: IParty;
   fullName: string;
   description: string;
 }

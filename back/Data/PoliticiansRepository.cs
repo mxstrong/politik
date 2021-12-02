@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Politics.Dtos;
 using Politics.Helpers;
 using System.Linq;
-using Microsoft.EntityFrameworkCore.Query;
 
 namespace Politics.Data
 {

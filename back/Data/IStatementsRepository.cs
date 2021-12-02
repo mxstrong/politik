@@ -13,5 +13,7 @@ namespace Politics.Data
     Task<StatementOutDto> AddStatement(StatementDto statementDto, string userId);
     Task<StatementOutDto> DeleteStatementById(string id);
     Task<Statement> GetStatementEntityById(string id);
+    Task<bool> LikeStatement(string statementId, string userId);
+    Task<bool> UnlikeStatement(string statementId, string userId);
   }
 }

@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Politics.Dtos;
 using Politics.Model;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -170,6 +169,22 @@ namespace Politics.Services
       user.DisplayName = newDisplayName;
       await _context.SaveChangesAsync();
       return _mapper.Map<User, UserProfileDto>(user);
+    }
+    public async Task<bool> MakeModerator(string id)
+    {
+      var user = await _context.Users.SingleOrDefaultAsync(user => user.UserId == id);
+      if (user is null)
+      {
+        return false;
+      }
+      var role = await _context.Roles.FirstOrDefaultAsync(role => role.Name == "Mod");
+      if (role is null)
+      {
+        return false;
+      }
+      user.Role = role;
+      await _context.SaveChangesAsync();
+      return true;
     }
   }
 }

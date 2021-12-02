@@ -31,6 +31,8 @@ namespace Politics.Mapping
         .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.Name));
       CreateMap<LoginDto, User>();
       CreateMap<RegisterDto, User>();
+      CreateMap<Report, ReportOutDto>();
+      CreateMap<ReportOutDto, Report>();
     }
     private class Converter<TSource, TDestination>
     : ITypeConverter<PaginatedList<TSource>, PaginatedList<TDestination>>

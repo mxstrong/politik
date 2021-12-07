@@ -10,6 +10,7 @@ import Login from '@module/Login';
 import AuthButtons from './AuthButtons';
 import { parseLocalStorageItem, removeLocalStorageItem } from '@util/storage';
 import Dropdown from '@element/Dropdown';
+import { USER_TYPES } from 'constants/userTypes';
 
 export const HEADER_PRIMARY_MENU_ITEMS = [
   { path: '/', label: 'Naujausi pareiškimai' },
@@ -36,16 +37,32 @@ const Header = () => {
   };
 
   const AUTHORIZED_MENU_ITEMS = [
-    { label: 'Profilis', href: '/user' },
-    { label: 'Atsijungti', onClick: logout },
+    {
+      label: 'Profilis',
+      href: '/user',
+    },
+    {
+      label: 'Sukurti moderatorių',
+      href: '/create-moderator',
+      permissions: [USER_TYPES.ADMINISTRATOR],
+    },
+    {
+      label: 'Atsijungti',
+      onClick: logout,
+    },
   ];
 
   const getAuthComponent = () => {
     const currentUser = parseLocalStorageItem('currentUser');
 
     if (currentUser) {
+      const permittedMenuOptions = AUTHORIZED_MENU_ITEMS.filter(
+        ({ permissions }) =>
+          !permissions || permissions.includes(currentUser.role)
+      );
+
       return (
-        <Dropdown options={AUTHORIZED_MENU_ITEMS}>
+        <Dropdown options={permittedMenuOptions}>
           <div
             title={currentUser.displayName}
             className="font-bold text-black hover:underline flex items-center space-x-2 cursor-pointer pl-6 pt-4 md:pt-0"

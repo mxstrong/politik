@@ -2,25 +2,24 @@ import Head from 'next/head';
 import { GetStaticProps, NextPage } from 'next';
 
 import DefaultLayout from '@layout/DefaultLayout';
-import UserPage from '@template/UserPage';
-import { getLocalStorageItem } from '@util/storage';
 import { USER_TYPES } from 'constants/userTypes';
+import CreateModeratorPage from '@template/CreateModeratorPage';
 
-const PAGE_TITLE = 'Vartotojo profilis';
+const PAGE_TITLE = 'Sukurti moderatorių';
 
-const User = () => {
+const CreateModerator = () => {
   return (
     <div>
       <Head>
         <title>{PAGE_TITLE}</title>
       </Head>
 
-      <UserPage />
+      <CreateModeratorPage />
     </div>
   );
 };
 
-User.getLayout = (page: NextPage) => {
+CreateModerator.getLayout = (page: NextPage) => {
   return <DefaultLayout title={PAGE_TITLE}>{page}</DefaultLayout>;
 };
 
@@ -31,13 +30,9 @@ interface IProps {
 export const getStaticProps: GetStaticProps<IProps> = async () => {
   return {
     props: {
-      permissions: [
-        USER_TYPES.USER,
-        USER_TYPES.MODERATOR,
-        USER_TYPES.ADMINISTRATOR,
-      ],
+      permissions: [USER_TYPES.ADMINISTRATOR],
     },
   };
 };
 
-export default User;
+export default CreateModerator;

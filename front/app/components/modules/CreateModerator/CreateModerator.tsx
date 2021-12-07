@@ -30,7 +30,7 @@ const CreateModerator = () => {
     >
       {({ values, errors, isSubmitting, dirty, setFieldValue }) => {
         return (
-          <Form className="space-y-6" id="add-politician-form">
+          <Form className="space-y-6">
             <Select
               options={userOptions}
               label="Vartotojas, kuriam suteiksite moderatoriaus teises"

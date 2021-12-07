@@ -128,7 +128,7 @@ const PoliticianForm: React.FC<IPoliticianForm> = ({
       >
         {({ values, handleChange, errors, isSubmitting, setFieldValue }) => {
           return (
-            <Form className="space-y-6" id="add-politician-form">
+            <Form className="space-y-6">
               <div className="flex flex-wrap space-y-6 md:space-y-0 flex-col md:space-x-4 md:flex-row justify-between">
                 <Input
                   label="Vardas"

@@ -56,7 +56,7 @@ const Login: React.FC<ILogin> = ({ isOpen, onClose }) => {
       >
         {({ values, handleChange, errors, isSubmitting, setFieldValue }) => {
           return (
-            <Form className="space-y-6" id="add-politician-form">
+            <Form className="space-y-6">
               <Input
                 label="El. paštas"
                 placeholder="El. paštas..."

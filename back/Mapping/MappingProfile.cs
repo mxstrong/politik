@@ -31,6 +31,7 @@ namespace Politics.Mapping
         .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.Name));
       CreateMap<LoginDto, User>();
       CreateMap<RegisterDto, User>();
+      CreateMap<ReportDto, Report>();
       CreateMap<Report, ReportOutDto>();
       CreateMap<ReportOutDto, Report>();
     }

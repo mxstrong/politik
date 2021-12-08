@@ -154,12 +154,12 @@ namespace Politics.Controllers
     public async Task<ActionResult<bool>> CheckIfCurrentUserHasLiked(string statementId)
     {
       var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-      var user = _authService.GetUserById(userId);
+      var user = await _authService.GetUserById(userId);
       if (user is null)
       {
         return Unauthorized();
       }
-      var statement = _statementsRepo.GetStatementEntityById(statementId);
+      var statement = await _statementsRepo.GetStatementEntityById(statementId);
       if (statement is null)
       {
         return ValidationProblem("Pasisakymas su šiuo ID neegzistuoja");

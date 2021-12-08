@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import Spin from '@element/Spin';
 
-interface IButton extends React.HTMLAttributes<HTMLElement> {
+interface IButton extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: ReactNode;
   variant?: 'contained' | 'outlined';
   type?: 'submit' | 'button';

@@ -156,5 +156,15 @@ namespace Politics.Data
       await _context.SaveChangesAsync();
       return true;
     }
+
+    public int GetLikeCount(string statementId)
+    {
+      return _context.Likes.Where(like => like.StatementId == statementId).Count();
+    }
+
+    public async Task<bool> CheckIfUserHasLiked(string statementId, string userId)
+    {
+      return await _context.Likes.AnyAsync(like => (like.StatementId == statementId && like.UserId == userId));
+    }
   }
 }

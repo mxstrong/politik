@@ -55,6 +55,7 @@ namespace Politics
       services.AddScoped<IStatementsRepository, StatementsRepository>();
       services.AddScoped<ITagsRepository, TagsRepository>();
       services.AddScoped<IAuthService, AuthService>();
+      services.AddScoped<IReportsRepository, ReportsRepository>();
       services.AddTransient<IEmailSender, EmailSender>();
 
       var key = Encoding.ASCII.GetBytes(Configuration["JWTSecret"]);

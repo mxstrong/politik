@@ -50,7 +50,7 @@ namespace Politics.Controllers
     public async Task<ActionResult> DeleteParty(string id)
     {
       var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
-      if (role != "Admin")
+      if (role != "Admin" &&  role != "Mod")
       {
         return Unauthorized();
       }

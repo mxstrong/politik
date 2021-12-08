@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Politics.Dtos;
+using Politics.Helpers;
 using Politics.Model;
 using System;
 using System.Linq;
@@ -185,6 +186,20 @@ namespace Politics.Services
       user.Role = role;
       await _context.SaveChangesAsync();
       return true;
+    }
+    public async Task<PaginatedList<UserProfileDto>> GetUsers(int? pageNumber, int? pageSize, string? search)
+    {
+      var users = _context.Users.Include(user => user.Role);
+      if (search is not null)
+      {
+        var lowercaseSearch = search.ToLower();
+        users = users.Where(user => (
+          (user.DisplayName.ToLower()).Contains(lowercaseSearch) ||
+          user.Email.ToLower().Contains(lowercaseSearch)
+        )).Include(user => user.Role);
+      }
+      var paginatedUsers = await PaginatedList<User>.CreateAsync(users, pageNumber ?? 1, pageSize ?? 10);
+      return _mapper.Map<PaginatedList<User>, PaginatedList<UserProfileDto>>(paginatedUsers);
     }
   }
 }

@@ -1,4 +1,5 @@
 ﻿using Politics.Dtos;
+using Politics.Helpers;
 using Politics.Model;
 using System.Threading.Tasks;
 
@@ -18,5 +19,6 @@ namespace Politics.Services
     Task<UserProfileDto> ChangePassword(string userId, string newPassword);
     Task<UserProfileDto> ChangeDisplayName(string userId, string newDisplayName);
     Task<bool> MakeModerator(string id);
+    Task<PaginatedList<UserProfileDto>> GetUsers(int? pageNumber, int? pageSize, string? search);
   }
 }

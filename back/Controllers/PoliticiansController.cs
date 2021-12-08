@@ -95,7 +95,7 @@ namespace Politics.Controllers
     public async Task<IActionResult> DeletePolitician(string id)
     {
       var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
-      if (role != "Admin")
+      if (role != "Admin" && role != "Mod")
       {
         return Unauthorized();
       }

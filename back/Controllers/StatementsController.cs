@@ -106,7 +106,7 @@ namespace Politics.Controllers
       {
         return Unauthorized();
       }
-      if (_statementsRepo.GetStatementById(id) is null)
+      if ((await _statementsRepo.GetStatementById(id)) is null)
       {
         return ValidationProblem("Pareiškimas neegzistuoja");
       }
@@ -126,6 +126,10 @@ namespace Politics.Controllers
       if (user is null)
       {
         return Unauthorized();
+      }
+      if ((await _statementsRepo.GetStatementById(id)) is null)
+      {
+        return ValidationProblem("Pareiškimas neegzistuoja");
       }
       var result = await _statementsRepo.UnlikeStatement(id, userId);
       if (result)

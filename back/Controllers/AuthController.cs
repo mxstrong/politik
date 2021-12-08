@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Politics.Dtos;
+using Politics.Helpers;
 using Politics.Model;
 using Politics.Services;
 using System;
@@ -193,7 +194,7 @@ namespace Politics.Controllers
       return Ok(profile);
     }
     [Authorize]
-    [HttpPost("addModerator/{id}")]
+    [HttpPost("{id}")]
     public async Task<ActionResult> AddModerator(string id)
     {
       var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
@@ -207,6 +208,22 @@ namespace Politics.Controllers
         return Ok();
       }
       return BadRequest("Operacija nepavyko");
+    }
+    [Authorize]
+    [HttpGet]
+    public async Task<ActionResult<PaginatedList<UserProfileDto>>> GetUsers([FromQuery] UsersParams parameters)
+    {
+      var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
+      if (role != "Admin")
+      {
+        return Unauthorized();
+      }
+      var users = await _authService.GetUsers(parameters.PageNumber, parameters.PageSize, parameters.Search);
+      return Ok(users);
+    }
+    public class UsersParams : PaginationParams
+    {
+      public string? Search { get; set; }
     }
   }
 }

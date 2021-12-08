@@ -22,7 +22,7 @@ namespace Politics.Data
 
     public async Task<List<ReportOutDto>> GetReports(int? pageNumber, int? pageSize, bool? isReviewed)
     {
-      var reports = _context.Reports;
+      var reports = _context.Reports.Include(report => report.CreatedBy).Include(report => report.ReviewedBy);
       var paginatedReports = await PaginatedList<Report>.CreateAsync(reports, pageNumber ?? 1, pageSize ?? 10);
       return _mapper.Map<PaginatedList<Report>, PaginatedList<ReportOutDto>>(paginatedReports);
     }
@@ -35,7 +35,8 @@ namespace Politics.Data
       report.CreatedById = userId;
       await _context.Reports.AddAsync(report);
       await _context.SaveChangesAsync();
-      return _mapper.Map<Report, ReportOutDto>(report);
+      var generatedReport = await _context.Reports.Include(report => report.CreatedBy).SingleOrDefaultAsync(rep => rep.ReportId == report.ReportId);
+      return _mapper.Map<Report, ReportOutDto>(generatedReport);
     }
     public async Task<bool> ReviewReport(string reportId, string userId)
     {

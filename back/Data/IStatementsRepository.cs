@@ -15,5 +15,7 @@ namespace Politics.Data
     Task<Statement> GetStatementEntityById(string id);
     Task<bool> LikeStatement(string statementId, string userId);
     Task<bool> UnlikeStatement(string statementId, string userId);
+    Task<bool> CheckIfUserHasLiked(string statementId, string userId);
+    int GetLikeCount(string statementId);
   }
 }

@@ -24,7 +24,7 @@ namespace Politics.Controllers
     public async Task<ActionResult<PaginatedList<ReportOutDto>>> GetReports(ReportsParams parameters)
     {
       var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
-      if (role != "Admin")
+      if (role != "Admin" && role != "Mod")
       {
         return Unauthorized();
       }
@@ -44,7 +44,7 @@ namespace Politics.Controllers
     {
       var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
       var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
-      if (role != "Admin")
+      if (role != "Admin" && role != "Mod")
       {
         return Unauthorized();
       }

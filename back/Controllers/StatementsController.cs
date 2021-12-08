@@ -84,7 +84,7 @@ namespace Politics.Controllers
       var statementToDelete = await _statementsRepo.GetStatementEntityById(id);
       var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
       var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-      if (role != "Admin" && userId != statementToDelete.CreatedById)
+      if (role != "Admin" && role != "Mod" && userId != statementToDelete.CreatedById)
       {
         return Unauthorized();
       }
@@ -101,7 +101,7 @@ namespace Politics.Controllers
     public async Task<ActionResult> LikeStatement(string id)
     {
       var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-      var user = _authService.GetUserById(userId);
+      var user = await _authService.GetUserById(userId);
       if (user is null)
       {
         return Unauthorized();
@@ -122,7 +122,7 @@ namespace Politics.Controllers
     public async Task<ActionResult> UnlikeStatement(string id)
     {
       var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-      var user = _authService.GetUserById(userId);
+      var user = await _authService.GetUserById(userId);
       if (user is null)
       {
         return Unauthorized();
@@ -133,6 +133,35 @@ namespace Politics.Controllers
         return Ok();
       }
       return ValidationProblem("Vartotojas nėra paspaudęs like ant šio pasisakymo");
+    }
+    [HttpGet("likeCount/{statementId}")]
+    public async Task<ActionResult<int>> GetStatementLikeCount(string statementId)
+    {
+      var statement = await _statementsRepo.GetStatementEntityById(statementId);
+      if (statement is null)
+      {
+        return ValidationProblem("Pasisakymas su šiuo ID neegzistuoja");
+      }
+      var count = _statementsRepo.GetLikeCount(statementId);
+
+      return Ok(count);
+    }
+    [HttpGet("hasLiked/{statementId}")]
+    public async Task<ActionResult<bool>> CheckIfCurrentUserHasLiked(string statementId)
+    {
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var user = _authService.GetUserById(userId);
+      if (user is null)
+      {
+        return Unauthorized();
+      }
+      var statement = _statementsRepo.GetStatementEntityById(statementId);
+      if (statement is null)
+      {
+        return ValidationProblem("Pasisakymas su šiuo ID neegzistuoja");
+      }
+      var hasLiked = await _statementsRepo.CheckIfUserHasLiked(statementId, userId);
+      return Ok(hasLiked);
     }
   }
 

@@ -38,7 +38,7 @@ namespace Politics.Controllers
       var tagToDelete = await _repo.GetTagEntityById(id);
       var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
       var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-      if (role != "Admin" && userId != tagToDelete.CreatedById)
+      if (role != "Admin" && role != "Mod" && userId != tagToDelete.CreatedById)
       {
         return Unauthorized();
       }

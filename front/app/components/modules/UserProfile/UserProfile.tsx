@@ -101,7 +101,7 @@ const UserProfile = () => {
     >
       {({ values, handleChange, errors, isSubmitting, dirty }) => {
         return (
-          <Form className="space-y-6" id="add-politician-form">
+          <Form className="space-y-6">
             <Input
               label="Vartotojo vardas"
               placeholder="Vartotojo vardas..."

@@ -70,8 +70,8 @@ export const getStaticProps: GetStaticProps<IProps, IParams> = async ({
   return {
     props: {
       statement: res.data,
-      revalidate: 60,
     },
+    revalidate: 60,
   };
 };
 

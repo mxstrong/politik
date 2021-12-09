@@ -3,6 +3,7 @@ import { BsFillPersonFill, BsLink45Deg } from 'react-icons/bs';
 import { IStatement } from '@type/api/statements';
 import BackButton from '@element/BackButton';
 import Tag from '@element/Tag';
+import StatementLikes from '@module/StatementLikes';
 
 interface IStatementPage {
   statement: IStatement;
@@ -37,6 +38,9 @@ const StatementPage: React.FC<IStatementPage> = ({ statement }) => {
         {statement.tags.map((tag) => (
           <Tag key={`tag-${tag}`}>{tag}</Tag>
         ))}
+      </div>
+      <div className="mt-4">
+        <StatementLikes statementId={statement.statementId} />
       </div>
     </div>
   );

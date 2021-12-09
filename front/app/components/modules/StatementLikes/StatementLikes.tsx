@@ -12,7 +12,6 @@ const StatementLikes: React.FC<IStatementLikesProps> = ({ statementId }) => {
   const currentUser = parseLocalStorageItem('currentUser');
   const [hasLiked, setHasLiked] = useState(false);
   const [likeCount, setLikeCount] = useState();
-  const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
     const [likeCountRes, hasLikedRes] = await fetchAll([
@@ -34,12 +33,10 @@ const StatementLikes: React.FC<IStatementLikesProps> = ({ statementId }) => {
   }, []);
 
   const handleLike = async () => {
-    setLoading(true);
     const likeRes = await _fetch({
       url: `Statements/${hasLiked ? 'unlike' : 'like'}/${statementId}`,
       method: 'POST',
     });
-    setLoading(false);
 
     if (!likeRes.error) {
       fetchData();
@@ -53,7 +50,7 @@ const StatementLikes: React.FC<IStatementLikesProps> = ({ statementId }) => {
           {hasLiked ? 'Pažymėti, kad nepatinka' : 'Pažymėti, kad patinka'}
         </TextButton>
       )}
-      {likeCount && (
+      {typeof likeCount === 'number' && (
         <div>
           Teigiamų įvertinimų: <strong>{likeCount}</strong>
         </div>

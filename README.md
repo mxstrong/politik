@@ -5,24 +5,24 @@
 ### Frontend
 
 1. Move to `frontend` directory:
+
    `cd frontend`
 2. Add your environmental variables in `.env` file as shown in `.env.example` file.
 3. Install dependencies:
-   `npm install`
-   or
-   `yarn install`
-4. Run development server:
-   `npm run dev`
-   or
-   `yarn dev`
 
-**Additional scripts:**
+   `npm install` or `yarn install`
+4. Run development server:
+
+   `npm install` or `yarn install`
+
+Application is running on `http://localhost:3000` in your internet browser.
+
+**Additional scripts**
+
 Build application:
-`npm run build`
-or
-`yarn build`
+
+`npm install` or `yarn install`
 
 Start built application:
-`npm run start`
-or
-`yarn start`
+
+`npm install` or `yarn install`

@@ -13,6 +13,7 @@ import { ISelectOption } from '@type/elements/SelectOption';
 import { IPolitician } from '@type/api/politicians';
 import { ITag } from '@type/api/tags';
 import CreatableSelect from '@element/CreatableSelect';
+import { toastResponseErrorMessages } from '@util/errors';
 
 interface IDefaultValues {
   politician?: ISelectOption;
@@ -111,7 +112,7 @@ const AddNewStatement: React.FC<IAddNewStatement> = ({
       return;
     }
 
-    toast.error('Įvyko klaida.');
+    toastResponseErrorMessages(res);
   };
 
   return (

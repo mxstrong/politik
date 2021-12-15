@@ -15,6 +15,7 @@ import { IParty } from '@type/api/parties';
 import { fetchPoliticians } from '@redux/actions/politicians';
 import { POLITICIANS_FETCH_COUNT } from '@module/PoliticiansList/PoliticiansList';
 import { IPolitician } from '@type/api/politicians';
+import { toastResponseErrorMessages } from '@util/errors';
 
 interface IPoliticianForm {
   isOpen: boolean;
@@ -108,7 +109,7 @@ const PoliticianForm: React.FC<IPoliticianForm> = ({
       return;
     }
 
-    toast.error('Įvyko klaida.');
+    toastResponseErrorMessages(res);
   };
 
   return (

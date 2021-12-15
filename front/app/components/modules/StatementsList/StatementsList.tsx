@@ -20,6 +20,7 @@ import { isMod } from '@util/general';
 import { USER_TYPES } from 'constants/userTypes';
 import { parseLocalStorageItem } from '@util/storage';
 import Report from '@module/ReportStatement';
+import { toastResponseErrorMessages } from '@util/errors';
 
 const STATEMENTS_FETCH_COUNT = 10;
 
@@ -116,7 +117,8 @@ const StatementsList: React.FC<IStatementsList> = ({ politician }) => {
         );
         return;
       }
-      toast.error('Įvyko klaida.');
+
+      toastResponseErrorMessages(res);
     }
   };
 

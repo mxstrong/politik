@@ -6,6 +6,7 @@ import Modal from '@element/Modal';
 import Button from '@element/Button';
 import Input from '@element/Input';
 import { _fetch } from '@util/fetch';
+import { toastResponseErrorMessages } from '@util/errors';
 
 interface IRegister {
   isOpen: boolean;
@@ -39,7 +40,7 @@ const Register: React.FC<IRegister> = ({ isOpen, onClose }) => {
       return;
     }
 
-    toast.error('Įvyko klaida.');
+    toastResponseErrorMessages(res);
   };
 
   return (

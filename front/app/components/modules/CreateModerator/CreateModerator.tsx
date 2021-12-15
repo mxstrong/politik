@@ -8,6 +8,7 @@ import AsyncSelect from '@element/AsyncSelect';
 import { _fetch } from '@util/fetch';
 import { IUser } from '@type/api/user';
 import { MOD_ROLES } from 'constants/userTypes';
+import { toastResponseErrorMessages } from '@util/errors';
 
 const VALIDATION_SCHEMA = yup.object({
   user: yup
@@ -26,11 +27,12 @@ const CreateModerator = () => {
       method: 'POST',
     });
 
-    if (res.error) {
-      toast.error('Įvyko klaida.');
-    } else {
+    if (!res.error) {
       toast.success('Vartotojas sėkmingai paskirtas moderatoriumi.');
+      return;
     }
+
+    toastResponseErrorMessages(res);
   };
 
   const loadUserOptions = (

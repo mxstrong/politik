@@ -7,6 +7,7 @@ import Button from '@element/Button';
 import TextArea from '@element/TextArea';
 import { IStatement } from '@type/api/statements';
 import { _fetch } from '@util/fetch';
+import { toastResponseErrorMessages } from '@util/errors';
 
 interface IReport {
   statement: IStatement | undefined;
@@ -33,9 +34,10 @@ const Report: React.FC<IReport> = ({ statement, onClose }) => {
     if (!reportRes.error) {
       toast.success('Pranešimas išsiųstas sėkmingai.');
       onClose();
-    } else {
-      toast.error('Įvyko klaida.');
+      return;
     }
+
+    toastResponseErrorMessages(reportRes);
   };
 
   return (

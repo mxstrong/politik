@@ -15,6 +15,10 @@ namespace Politics.Model
     public DbSet<Tag> Tags { get; set; }
     public DbSet<Statement> Statements { get; set; }
     public DbSet<StatementTag> StatementTags { get; set; }
+    public DbSet<ActivationToken> ActivationTokens { get; set; }
+    public DbSet<EmailChangeToken> EmailChangeTokens { get; set; }
+    public DbSet<Like> Likes { get; set; }
+    public DbSet<Report> Reports { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -56,6 +60,15 @@ namespace Politics.Model
         .HasOne(t => t.UpdatedBy)
         .WithMany()
         .HasForeignKey(nameof(Statement.UpdatedById));
+
+      modelBuilder.Entity<Report>()
+        .HasOne(t => t.CreatedBy)
+        .WithMany()
+        .HasForeignKey(nameof(Report.CreatedById));
+      modelBuilder.Entity<Report>()
+        .HasOne(t => t.ReviewedBy)
+        .WithMany()
+        .HasForeignKey(nameof(Report.ReviewedById));
     }
   }
 }

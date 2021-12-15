@@ -12,8 +12,6 @@ namespace Politics.Mapping
     {
       CreateMap<Politician, PoliticianOutDto>()
         .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.PoliticianId))
-        .ForMember(dest => dest.Party, opt => opt.MapFrom(src => src.Party.LongName))
-        .ForMember(dest => dest.PartyShort, opt => opt.MapFrom(src => src.Party.ShortName))
         .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FirstName + ' ' + src.LastName));
       CreateMap<PoliticianDto, Politician>();
       CreateMap<Party, PartyOutDto>()
@@ -29,6 +27,13 @@ namespace Politics.Mapping
         .ForMember(dest => dest.Politician, opt => opt.MapFrom(src => src.Politician.FirstName + ' ' + src.Politician.LastName))
         .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.Tags));
       CreateMap(typeof(PaginatedList<>), typeof(PaginatedList<>)).ConvertUsing(typeof(Converter<,>));
+      CreateMap<User, UserProfileDto>()
+        .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.Name));
+      CreateMap<LoginDto, User>();
+      CreateMap<RegisterDto, User>();
+      CreateMap<ReportDto, Report>();
+      CreateMap<Report, ReportOutDto>();
+      CreateMap<ReportOutDto, Report>();
     }
     private class Converter<TSource, TDestination>
     : ITypeConverter<PaginatedList<TSource>, PaginatedList<TDestination>>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 interface IDropdownOption {
   label: string;
   href?: string;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void | Promise<void>;
 }
 
 interface IDropdown {
@@ -28,18 +28,28 @@ const Dropdown: React.FC<IDropdown> = ({ children, options = [] }) => {
           block: clicked,
         })}
       >
-        {options.map(({ label, href = '', ...rest }) => {
+        {options.map(({ label, href, ...rest }) => {
+          const classNames =
+            'bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap cursor-pointer';
+          const key = `authorized-menu-item-${label}`;
+          if (href) {
+            return (
+              <Link href={href} key={key}>
+                <li>
+                  <a className={classNames} {...rest}>
+                    {label}
+                  </a>
+                </li>
+              </Link>
+            );
+          }
+
           return (
-            <Link href={href} key={`authorized-menu-item-${label}`}>
-              <li>
-                <a
-                  className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap cursor-pointer"
-                  {...rest}
-                >
-                  {label}
-                </a>
-              </li>
-            </Link>
+            <li key={key}>
+              <div className={classNames} {...rest}>
+                {label}
+              </div>
+            </li>
           );
         })}
       </ul>

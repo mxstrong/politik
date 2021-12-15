@@ -1,8 +1,10 @@
 import { BsFillPersonFill, BsLink45Deg } from 'react-icons/bs';
+import { LinkPreview } from '@dhaiwat10/react-link-preview';
 
 import { IStatement } from '@type/api/statements';
 import BackButton from '@element/BackButton';
 import Tag from '@element/Tag';
+import StatementLikes from '@module/StatementLikes';
 
 interface IStatementPage {
   statement: IStatement;
@@ -22,21 +24,15 @@ const StatementPage: React.FC<IStatementPage> = ({ statement }) => {
         <span className="font-bold">{statement.politician}</span>
       </div>
       <div className="flex items-center space-x-2 mb-5">
-        <span className="w-6">
-          <BsLink45Deg className="w-6 h-6" />
-        </span>
-        <a
-          className="text-blue-500 truncate"
-          href={statement.link}
-          title={`${statement.politician} pareiškimas`}
-        >
-          {statement.link}
-        </a>
+        <LinkPreview url={statement.link} width="400px" />
       </div>
       <div className="flex flex-wrap">
         {statement.tags.map((tag) => (
           <Tag key={`tag-${tag}`}>{tag}</Tag>
         ))}
+      </div>
+      <div className="mt-4">
+        <StatementLikes statementId={statement.statementId} />
       </div>
     </div>
   );

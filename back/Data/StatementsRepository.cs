@@ -22,12 +22,12 @@ namespace Politics.Data
       _mapper = mapper;
       _tagsRepo = tagsRepo;
     }
-    public async Task<StatementOutDto> AddStatement(StatementDto statementDto)
+    public async Task<StatementOutDto> AddStatement(StatementDto statementDto, string userId)
     {
       var statement = _mapper.Map<StatementDto, Statement>(statementDto);
       statement.StatementId = Guid.NewGuid().ToString();
       statement.CreatedAt = DateTime.Now;
-      statement.CreatedById = "test";
+      statement.CreatedById = userId;
       
       await _context.Statements.AddAsync(statement);
       
@@ -37,7 +37,7 @@ namespace Politics.Data
         if (tag.TagId is null)
         {
           var newTag = _mapper.Map<TagOutDto, TagDto>(tag);
-          var addTagTask = Task.Run<TagOutDto>(async () => await _tagsRepo.AddTag(newTag));
+          var addTagTask = Task.Run<TagOutDto>(async () => await _tagsRepo.AddTag(newTag, userId));
           var addedTag = addTagTask.Result;
           statementTags.Add(new StatementTag()
           {
@@ -97,9 +97,21 @@ namespace Politics.Data
         .Include(statement => statement.Politician)
         .Include(statement => statement.StatementTags)
         .ThenInclude(statementTag => statementTag.Tag)
-        .SingleAsync(statement => statement.StatementId == id);
+        .SingleOrDefaultAsync(statement => statement.StatementId == id);
 
       return _mapper.Map<Statement, StatementOutDto>(statement);
+    }
+
+    public async Task<Statement> GetStatementEntityById(string id)
+    {
+      var statement = await _context.Statements
+        .Include(statement => statement.CreatedBy)
+        .Include(statement => statement.Politician)
+        .Include(statement => statement.StatementTags)
+        .ThenInclude(statementTag => statementTag.Tag)
+        .SingleOrDefaultAsync(statement => statement.StatementId == id);
+
+      return statement;
     }
 
     public async Task<StatementOutDto> DeleteStatementById(string id)
@@ -114,6 +126,45 @@ namespace Politics.Data
       _context.StatementTags.RemoveRange(statementTags);
       await _context.SaveChangesAsync();
       return _mapper.Map<Statement, StatementOutDto>(statementToDelete);
+    }
+
+    public async Task<bool> LikeStatement(string statementId, string userId)
+    {
+      var like = await _context.Likes.FirstOrDefaultAsync(like => (like.StatementId == statementId && like.UserId == userId));
+      if (like is not null)
+      {
+        return false;
+      }
+      await _context.Likes.AddAsync(new Like
+      {
+        LikeId = Guid.NewGuid().ToString(),
+        StatementId = statementId,
+        UserId = userId
+      });
+      await _context.SaveChangesAsync();
+      return true;
+    }
+
+    public async Task<bool> UnlikeStatement(string statementId, string userId)
+    {
+      var like = await _context.Likes.FirstOrDefaultAsync(like => (like.StatementId == statementId && like.UserId == userId));
+      if (like is null)
+      {
+        return false;
+      }
+      _context.Likes.Remove(like);
+      await _context.SaveChangesAsync();
+      return true;
+    }
+
+    public int GetLikeCount(string statementId)
+    {
+      return _context.Likes.Where(like => like.StatementId == statementId).Count();
+    }
+
+    public async Task<bool> CheckIfUserHasLiked(string statementId, string userId)
+    {
+      return await _context.Likes.AnyAsync(like => (like.StatementId == statementId && like.UserId == userId));
     }
   }
 }

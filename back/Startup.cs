@@ -1,13 +1,17 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Politics.Data;
 using Politics.Mapping;
 using Politics.Model;
+using Politics.Services;
+using System.Text;
 
 namespace Politics
 {
@@ -26,6 +30,18 @@ namespace Politics
       services.AddDbContext<PoliticsDbContext>(options =>
               options.UseNpgsql(Configuration.GetConnectionString("PoliticsDatabase")));
 
+      services.AddCors(options => options.AddPolicy(
+        "PoliticsCORSPolicy",
+        builder =>
+        {
+          builder.WithOrigins("http://localhost:3000", "https://politik-rust.vercel.app")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+                .WithExposedHeaders("X-Pagination");
+        }
+      ));
+
       var mapperConfig = new MapperConfiguration(config =>
       {
         config.AddProfile(new MappingProfile());
@@ -33,20 +49,35 @@ namespace Politics
 
       IMapper mapper = mapperConfig.CreateMapper();
       services.AddSingleton(mapper);
+      services.AddControllers();
       services.AddScoped<IPoliticiansRepository, PoliticiansRepository>();
       services.AddScoped<IPartiesRepository, PartiesRepository>();
       services.AddScoped<IStatementsRepository, StatementsRepository>();
       services.AddScoped<ITagsRepository, TagsRepository>();
+      services.AddScoped<IAuthService, AuthService>();
+      services.AddScoped<IReportsRepository, ReportsRepository>();
+      services.AddTransient<IEmailSender, EmailSender>();
 
-      services.AddCors(options => options.AddPolicy(
-        "PoliticsCORSPolicy",
-        builder =>
+      var key = Encoding.ASCII.GetBytes(Configuration["JWTSecret"]);
+      services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
         {
-          builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("X-Pagination");
-        }
-      ));
-
-      services.AddControllers();
+          //options.Events = new JwtBearerEvents
+          //{
+          //  OnMessageReceived = context =>
+          //  {
+          //    context.Token = context.Request.Cookies["JWT"];
+          //    return Task.CompletedTask;
+          //  }
+          //};
+          options.TokenValidationParameters = new TokenValidationParameters
+          {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false
+          };
+        });
       services.AddSwaggerGen();
     }
 
@@ -71,6 +102,7 @@ namespace Politics
 
       app.UseRouting();
 
+      app.UseAuthentication();
       app.UseAuthorization();
 
       app.UseSwagger();

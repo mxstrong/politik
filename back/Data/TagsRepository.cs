@@ -19,7 +19,7 @@ namespace Politics.Data
       _mapper = mapper;
     }
 
-    public async Task<TagOutDto> AddTag(TagDto tagDto)
+    public async Task<TagOutDto> AddTag(TagDto tagDto, string userId)
     {
       var existingTag = await _context.Tags.FirstOrDefaultAsync(tag => tag.Name == tagDto.Name);
       if (existingTag is not null)
@@ -29,7 +29,7 @@ namespace Politics.Data
       var tag = _mapper.Map<TagDto, Tag>(tagDto);
       tag.TagId = Guid.NewGuid().ToString();
       tag.CreatedAt = DateTime.Now;
-      tag.CreatedById = "test";
+      tag.CreatedById = userId;
       await _context.AddAsync(tag);
       await _context.SaveChangesAsync();
       return _mapper.Map<Tag, TagOutDto>(tag);
@@ -46,6 +46,11 @@ namespace Politics.Data
     {
       var tags = await _context.Tags.ToListAsync();
       return _mapper.Map<List<Tag>, List<TagOutDto>>(tags);
+    }
+
+    public async Task<Tag> GetTagEntityById(string id)
+    {
+      return await _context.Tags.FindAsync(id);
     }
   }
 }

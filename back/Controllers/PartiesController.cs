@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Politics.Data;
 using Politics.Dtos;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Politics.Controllers
@@ -31,19 +33,27 @@ namespace Politics.Controllers
       }
       return Ok(party);
     }
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult<PartyOutDto>> AddParty(PartyDto partyDto)
     {
-      var party = await _repo.AddParty(partyDto);
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var party = await _repo.AddParty(partyDto, userId);
       if (party is null)
       {
         return ValidationProblem("Partijos pridėti nepavyko");
       }
       return Ok(party);
     }
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteParty(string id)
     {
+      var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
+      if (role != "Admin" &&  role != "Mod")
+      {
+        return Unauthorized();
+      }
       var party = await _repo.DeleteParty(id);
       if (party is null)
       {

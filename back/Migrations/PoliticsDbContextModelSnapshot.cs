@@ -19,6 +19,62 @@ namespace Politics.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+            modelBuilder.Entity("Politics.Model.ActivationToken", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ActivationTokens");
+                });
+
+            modelBuilder.Entity("Politics.Model.EmailChangeToken", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("NewEmail")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmailChangeTokens");
+                });
+
+            modelBuilder.Entity("Politics.Model.Like", b =>
+                {
+                    b.Property<string>("LikeId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("StatementId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("LikeId");
+
+                    b.ToTable("Likes");
+                });
+
             modelBuilder.Entity("Politics.Model.Party", b =>
                 {
                     b.Property<string>("PartyId")
@@ -96,6 +152,38 @@ namespace Politics.Migrations
                     b.HasIndex("UpdatedById");
 
                     b.ToTable("Politicians");
+                });
+
+            modelBuilder.Entity("Politics.Model.Report", b =>
+                {
+                    b.Property<string>("ReportId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CreatedById")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsReviewed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("ReviewedById")
+                        .HasColumnType("text");
+
+                    b.Property<string>("StatementId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("ReportId");
+
+                    b.HasIndex("CreatedById");
+
+                    b.HasIndex("ReviewedById");
+
+                    b.ToTable("Reports");
                 });
 
             modelBuilder.Entity("Politics.Model.Role", b =>
@@ -199,6 +287,9 @@ namespace Politics.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("text");
 
+                    b.Property<bool>("Activated")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp without time zone");
 
@@ -210,13 +301,13 @@ namespace Politics.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("PasswordHash")
+                    b.Property<byte[]>("PasswordHash")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("bytea");
 
-                    b.Property<string>("PasswordSalt")
+                    b.Property<byte[]>("PasswordSalt")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("bytea");
 
                     b.Property<string>("RoleId")
                         .IsRequired()
@@ -270,6 +361,23 @@ namespace Politics.Migrations
                     b.Navigation("Party");
 
                     b.Navigation("UpdatedBy");
+                });
+
+            modelBuilder.Entity("Politics.Model.Report", b =>
+                {
+                    b.HasOne("Politics.Model.User", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Politics.Model.User", "ReviewedBy")
+                        .WithMany()
+                        .HasForeignKey("ReviewedById");
+
+                    b.Navigation("CreatedBy");
+
+                    b.Navigation("ReviewedBy");
                 });
 
             modelBuilder.Entity("Politics.Model.Statement", b =>

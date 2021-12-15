@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { NextPageWithLayout } from '@type/elements/app';
 import '../app/styles/app.scss';
 import configureStore from '@redux/store';
+import { parseLocalStorageItem } from '@util/storage';
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
@@ -15,22 +16,31 @@ type AppPropsWithLayout = AppProps & {
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
-  return getLayout(
-    <>
-      <Provider store={configureStore()}>
-        <Component {...pageProps} />
-      </Provider>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-    </>
-  );
+  const currentUser = parseLocalStorageItem('currentUser');
+
+  const isPermitted =
+    !pageProps.permissions || pageProps.permissions.includes(currentUser?.role);
+
+  if (isPermitted) {
+    return getLayout(
+      <>
+        <Provider store={configureStore()}>
+          <Component {...pageProps} />
+        </Provider>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </>
+    );
+  }
+
+  return null;
 }

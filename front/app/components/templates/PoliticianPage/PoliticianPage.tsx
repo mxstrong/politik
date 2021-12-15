@@ -17,8 +17,6 @@ const PoliticianPage: React.FC<IPoliticianPage> = ({ politician }) => {
   const [isAddNewStatementOpen, setIsAddNewStatementOpen] = useState(false);
   const [isEditPolititianOpen, setIsEditPoliticianOpen] = useState(false);
 
-  console.log(politician);
-
   return (
     <>
       <div>

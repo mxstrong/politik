@@ -1,4 +1,4 @@
-import ReactSelect, { GroupBase, Props as SelectProps } from 'react-select';
+import ReactSelect, { Props as SelectProps } from 'react-select';
 
 interface ISelect extends SelectProps {
   label?: string;

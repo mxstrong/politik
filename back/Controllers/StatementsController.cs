@@ -5,6 +5,9 @@ using Politics.Helpers;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Politics.Services;
 
 namespace Politics.Controllers
 {
@@ -14,17 +17,19 @@ namespace Politics.Controllers
   {
     private readonly IStatementsRepository _statementsRepo;
     private readonly IPoliticiansRepository _politiciansRepo;
+    private readonly IAuthService _authService;
 
-    public StatementsController(IStatementsRepository statementsRepo, IPoliticiansRepository politiciansRepo)
+    public StatementsController(IStatementsRepository statementsRepo, IPoliticiansRepository politiciansRepo, IAuthService authService)
     {
       _statementsRepo = statementsRepo;
       _politiciansRepo = politiciansRepo;
+      _authService = authService;
     }
 
     [HttpGet]
     public async Task<ActionResult<PaginatedList<StatementOutDto>>> GetAllStatements([FromQuery] StatementsParams parameters)
     {
-      var statements = await _statementsRepo.GetAllStatements(parameters.politician, parameters.tags, parameters.PageNumber, parameters.PageSize);
+      var statements = await _statementsRepo.GetAllStatements(parameters.Politician, parameters.Tags, parameters.PageNumber, parameters.PageSize);
       var paginationMetadata = new
       {
         statements.Count,
@@ -43,6 +48,7 @@ namespace Politics.Controllers
     {
       return Ok(await _statementsRepo.GetStatementById(id));
     }
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult<StatementOutDto>> AddStatement(StatementDto statementDto)
     {
@@ -67,12 +73,21 @@ namespace Politics.Controllers
       {
         return ValidationProblem("Nurodytas politikas neegzistuoja");
       }
-      var createdStatement = await _statementsRepo.AddStatement(statementDto);
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var createdStatement = await _statementsRepo.AddStatement(statementDto, userId);
       return CreatedAtAction(nameof(GetStatetementById), new { id = createdStatement.StatementId }, createdStatement);
     }
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<ActionResult<StatementOutDto>> DeleteStatement(string id)
     {
+      var statementToDelete = await _statementsRepo.GetStatementEntityById(id);
+      var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      if (role != "Admin" && role != "Mod" && userId != statementToDelete.CreatedById)
+      {
+        return Unauthorized();
+      }
       var deletedStatement = await _statementsRepo.DeleteStatementById(id);
       if (deletedStatement is null)
       {
@@ -80,11 +95,83 @@ namespace Politics.Controllers
       }
       return deletedStatement;
     }
+
+    [Authorize]
+    [HttpPost("like/{id}")]
+    public async Task<ActionResult> LikeStatement(string id)
+    {
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var user = await _authService.GetUserById(userId);
+      if (user is null)
+      {
+        return Unauthorized();
+      }
+      if ((await _statementsRepo.GetStatementById(id)) is null)
+      {
+        return ValidationProblem("Pareiškimas neegzistuoja");
+      }
+      var result = await _statementsRepo.LikeStatement(id, userId);
+      if (result)
+      {
+        return Ok();
+      }
+      return ValidationProblem("Vartotojas jau yra paspaudęs like ant šio pasisakymo");
+    }
+    [Authorize]
+    [HttpPost("unlike/{id}")]
+    public async Task<ActionResult> UnlikeStatement(string id)
+    {
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var user = await _authService.GetUserById(userId);
+      if (user is null)
+      {
+        return Unauthorized();
+      }
+      if ((await _statementsRepo.GetStatementById(id)) is null)
+      {
+        return ValidationProblem("Pareiškimas neegzistuoja");
+      }
+      var result = await _statementsRepo.UnlikeStatement(id, userId);
+      if (result)
+      {
+        return Ok();
+      }
+      return ValidationProblem("Vartotojas nėra paspaudęs like ant šio pasisakymo");
+    }
+    [HttpGet("likeCount/{statementId}")]
+    public async Task<ActionResult<int>> GetStatementLikeCount(string statementId)
+    {
+      var statement = await _statementsRepo.GetStatementEntityById(statementId);
+      if (statement is null)
+      {
+        return ValidationProblem("Pasisakymas su šiuo ID neegzistuoja");
+      }
+      var count = _statementsRepo.GetLikeCount(statementId);
+
+      return Ok(count);
+    }
+    [HttpGet("hasLiked/{statementId}")]
+    public async Task<ActionResult<bool>> CheckIfCurrentUserHasLiked(string statementId)
+    {
+      var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var user = await _authService.GetUserById(userId);
+      if (user is null)
+      {
+        return Unauthorized();
+      }
+      var statement = await _statementsRepo.GetStatementEntityById(statementId);
+      if (statement is null)
+      {
+        return ValidationProblem("Pasisakymas su šiuo ID neegzistuoja");
+      }
+      var hasLiked = await _statementsRepo.CheckIfUserHasLiked(statementId, userId);
+      return Ok(hasLiked);
+    }
   }
 
   public class StatementsParams : PaginationParams
   {
-    public string? politician { get; set; }
-    public List<string>? tags { get; set; }
+    public string? Politician { get; set; }
+    public List<string>? Tags { get; set; }
   }
 }

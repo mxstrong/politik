@@ -8,6 +8,7 @@ import Input from '@element/Input';
 import { _fetch } from '@util/fetch';
 import { fetchUser } from '@util/fetches';
 import { setLocalStorageItem } from '@util/storage';
+import { toastResponseErrorMessages } from '@util/errors';
 
 interface ILogin {
   isOpen: boolean;
@@ -42,7 +43,7 @@ const Login: React.FC<ILogin> = ({ isOpen, onClose }) => {
       }
     }
 
-    toast.error('Įvyko klaida.');
+    toastResponseErrorMessages(res);
   };
 
   return (

@@ -11,11 +11,14 @@ interface IParams extends AxiosRequestHeaders {
 
 interface IAxiosResponse extends AxiosResponse {
   error: any;
+  [key: string]: any;
 }
+
+export type IFetchReponse = IAxiosResponse | { [key: string]: any };
 
 export const _fetch = async (
   params: IParams = { url: '' }
-): Promise<IAxiosResponse | { [key: string]: any }> => {
+): Promise<IFetchReponse> => {
   return await axios({
     ...params,
     withCredentials: true,
@@ -30,9 +33,7 @@ export const _fetch = async (
   });
 };
 
-export const fetchAll = (
-  requests: Promise<IAxiosResponse | { [key: string]: any }>[]
-) => {
+export const fetchAll = (requests: Promise<IFetchReponse>[]) => {
   return Promise.all(requests).then((response) => response);
 };
 

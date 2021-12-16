@@ -4,7 +4,7 @@
 
 ### Frontend
 
-1. Move to `frontend` directory:
+1. Move to `front` directory:
 
    `cd frontend`
 2. Add your environmental variables in `.env` file as shown in `.env.example` file.
@@ -13,7 +13,7 @@
    `npm install` or `yarn install`
 4. Run development server:
 
-   `npm install` or `yarn install`
+   `npm run dev` or `yarn dev`
 
 Application is running on `http://localhost:3000` in your internet browser.
 
@@ -21,11 +21,11 @@ Application is running on `http://localhost:3000` in your internet browser.
 
 Build application:
 
-`npm install` or `yarn install`
+`npm run build` or `yarn build`
 
 Start built application:
 
-`npm install` or `yarn install`
+`npm run start` or `yarn start`
 
 ### Backend
 1. Move to `back` directory:

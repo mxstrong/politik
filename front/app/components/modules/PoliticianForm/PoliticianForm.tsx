@@ -65,8 +65,8 @@ const PoliticianForm: React.FC<IPoliticianForm> = ({
         firstName: initialValues.fullName.split(' ')[0],
         lastName: initialValues.fullName.split(' ')[1],
         party: {
-          label: initialValues.party.longName,
-          value: initialValues.party.id,
+          label: initialValues.party?.longName,
+          value: initialValues.party?.id,
         },
         description: initialValues.description,
       };
@@ -132,6 +132,7 @@ const PoliticianForm: React.FC<IPoliticianForm> = ({
         validateOnChange={false}
       >
         {({ values, handleChange, errors, isSubmitting, setFieldValue }) => {
+          console.log(values);
           return (
             <Form className="space-y-6">
               <div className="flex flex-wrap space-y-6 md:space-y-0 flex-col md:space-x-4 md:flex-row justify-between">

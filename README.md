@@ -6,7 +6,7 @@
 
 1. Move to `front` directory:
 
-   `cd frontend`
+   `cd front`
 2. Add your environmental variables in `.env` file as shown in `.env.example` file.
 3. Install dependencies:
 

@@ -34,3 +34,5 @@ Start built application:
 2. Run application in development mode:
 
    `dotnet run`
+   
+Server will automatically launch browser window that shows API documentation for further usage.

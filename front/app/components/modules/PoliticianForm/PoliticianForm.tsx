@@ -64,7 +64,10 @@ const PoliticianForm: React.FC<IPoliticianForm> = ({
       return {
         firstName: initialValues.fullName.split(' ')[0],
         lastName: initialValues.fullName.split(' ')[1],
-        party: initialValues.party,
+        party: {
+          label: initialValues.party.longName,
+          value: initialValues.party.id,
+        },
         description: initialValues.description,
       };
     }
@@ -105,6 +108,7 @@ const PoliticianForm: React.FC<IPoliticianForm> = ({
         fetchPoliticians({ PageNumber: 1, PageSize: POLITICIANS_FETCH_COUNT })
       );
       onClose();
+      window.location.reload();
 
       return;
     }

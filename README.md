@@ -26,3 +26,11 @@ Build application:
 Start built application:
 
 `npm install` or `yarn install`
+
+### Backend
+1. Move to `back` directory:
+   
+   `cd back`
+2. Run application in development mode:
+
+   `dotnet run`

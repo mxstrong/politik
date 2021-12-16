@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { BsList, BsX, BsCaretDownFill } from 'react-icons/bs';
@@ -34,6 +34,7 @@ const Header = () => {
   const logout = () => {
     removeLocalStorageItem('currentUser');
     removeLocalStorageItem('jwt');
+    window.location.reload();
   };
 
   const AUTHORIZED_MENU_ITEMS = [

@@ -2,23 +2,23 @@
 
 namespace Politics.Model
 {
-  public class PoliticsDbContext : DbContext
+  public interface IPoliticsDbContext
   {
-    public PoliticsDbContext(DbContextOptions<PoliticsDbContext> options)
-        : base(options)
-    {
-    }
-    public DbSet<User> Users { get; set; }
-    public DbSet<Role> Roles { get; set; }
-    public DbSet<Party> Parties { get; set; }
-    public DbSet<Politician> Politicians { get; set; }
-    public DbSet<Tag> Tags { get; set; }
-    public DbSet<Statement> Statements { get; set; }
-    public DbSet<StatementTag> StatementTags { get; set; }
-    public DbSet<ActivationToken> ActivationTokens { get; set; }
-    public DbSet<EmailChangeToken> EmailChangeTokens { get; set; }
-    public DbSet<Like> Likes { get; set; }
-    public DbSet<Report> Reports { get; set; }
+  }
+
+  public class PoliticsDbContext : DbContext, IPoliticsDbContext
+  {
+    public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<Role> Roles { get; set; }
+    public virtual DbSet<Party> Parties { get; set; }
+    public virtual DbSet<Politician> Politicians { get; set; }
+    public virtual DbSet<Tag> Tags { get; set; }
+    public virtual DbSet<Statement> Statements { get; set; }
+    public virtual DbSet<StatementTag> StatementTags { get; set; }
+    public virtual DbSet<ActivationToken> ActivationTokens { get; set; }
+    public virtual DbSet<EmailChangeToken> EmailChangeTokens { get; set; }
+    public virtual DbSet<Like> Likes { get; set; }
+    public virtual DbSet<Report> Reports { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -24,13 +24,15 @@ namespace Politics.Controllers
     private readonly IConfiguration _config;
     private readonly IEmailSender _sender;
     private readonly IMapper _mapper;
+    private readonly HttpContext _context;
 
-    public AuthController(IAuthService authService, IConfiguration config, IEmailSender sender, IMapper mapper)
+    public AuthController(IAuthService authService, IConfiguration config, IEmailSender sender, IMapper mapper, HttpContext context)
     {
       _authService = authService;
       _config = config;
       _sender = sender;
       _mapper = mapper;
+      _context = context;
     }
 
     [HttpPost]
@@ -155,7 +157,7 @@ namespace Politics.Controllers
     [HttpPost]
     public async Task<ActionResult<UserProfileDto>> ChangePassword([FromBody] ChangePasswordDto changePassword)
     {
-      var userIdFromAuth = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+      var userIdFromAuth = _context.User.FindFirstValue(ClaimTypes.NameIdentifier);
       if (userIdFromAuth != changePassword.UserId)
       {
         return Unauthorized();

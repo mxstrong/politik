@@ -1,0 +1,144 @@
+
+=Politics.Data.ReportsRepository.GetReports(int?, int?, bool?)A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs* (4"0*ž
+0A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs
+ (XÉ
+Æ
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs (&
+%3 Politics.Model.PoliticsDbContext"__id*S*Q!
+Politics.Data.ReportsRepository",
+_context Politics.Model.PoliticsDbContextÒ
+Ï
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs ($2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>",Politics.Model.PoliticsDbContext.Reports.get*(
+&
+%3 Politics.Model.PoliticsDbContextã
+à
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs (HR
+%5LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"ÂMicrosoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""ƒ
+€
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs (mR
+%6LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"ÂMicrosoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*T
+R
+%5LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""û
+ø
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs
+ (mW
+reportsLMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"__id*T
+R
+%6LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>^
+\
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.csN (X	
+%1int"__id*
+""c
+a
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.csN (X	
+%0int"__id*
+	
+%1int*
+1
+2*Ž
+1A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs\ (]\
+Z
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs\ (]	
+%2int"__id*2c
+a
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs\ (]	
+%0int"__id*
+	
+%2int*
+2*“
+2A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs_ (g^
+\
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs_ (g	
+%8int"__id*
+""c
+a
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs_ (g	
+%7int"__id*
+	
+%8int*
+3
+4*Ž
+3A
+7D:\Programavimas\politik\back\Data\ReportsRepository.csk (m\
+Z
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.csk (m	
+%9int"__id*2
+c
+a
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.csk (m	
+%7int"__id*
+	
+%9int*
+4*…	
+4A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs
+ (]ã
+à
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs# (n+
+%10$System.Threading.Tasks.Task<TResult>"RPolitics.Helpers.PaginatedList<T>.CreateAsync(System.Linq.IQueryable<T>, int, int)*%"#
+!Politics.Helpers.PaginatedList<T>*Y
+W
+reportsLMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+	
+%0int*
+	
+%7int‹
+ˆ
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs
+ (n5
+paginatedReports!Politics.Helpers.PaginatedList<T>"__id*
+""­
+ª
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs (
+%11AutoMapper.IMapper"__id*D*B!
+Politics.Data.ReportsRepository"
+_mapperAutoMapper.IMapper§¤
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs (^(
+%12!Politics.Helpers.PaginatedList<T>":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%11AutoMapper.IMapper*7
+5
+paginatedReports!Politics.Helpers.PaginatedList<T>2#Map<TSource, TDestination>(TSource)"o
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs (_*
+(
+%12!Politics.Helpers.PaginatedList<T>* 
+5A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs ("X
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs (
+implicit return: 
+
+pageNumberSystem.Nullable<T>:
+pageSizeSystem.Nullable<T>: 
+
+isReviewedSystem.Nullable<T>B#!
+Politics.Data.ReportsRepository

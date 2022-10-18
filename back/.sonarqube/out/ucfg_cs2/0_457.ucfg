@@ -1,0 +1,153 @@
+
+OPolitics.Data.ReportsRepository.GenerateReport(Politics.Dtos.ReportDto, string)A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs$ (2"0*Ö&
+0A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs 
+ '(>¨
+©
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs   (
+%0AutoMapper.IMapper"__id*D*B!
+Politics.Data.ReportsRepository"
+_mapperAutoMapper.IMapperàÖ
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs   (<
+%1Politics.Model.Report":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%0AutoMapper.IMapper*&
+$
+	reportDtoPolitics.Dtos.ReportDto2#Map<TSource, TDestination>(TSource)å
+â
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs 
+  (<
+reportPolitics.Model.Report"__id*
+
+%1Politics.Model.ReportÄ
+~
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs! !(&
+%2System.Guid"System.Guid.NewGuid()*"
+System.GuidÄ
+~
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs! !(1
+%3string"System.Guid.ToString()*
+
+%2System.Guid´
+®
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs! !(1
+%4string""Politics.Model.Report.ReportId.set*!
+
+reportPolitics.Model.Report*
+
+%3string£
+†
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs" "(
+
+%5bool"$Politics.Model.Report.IsReviewed.set*!
+
+reportPolitics.Model.Report*
+""≤
+Ø
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs# #(!
+%6string"%Politics.Model.Report.CreatedById.set*!
+
+reportPolitics.Model.Report*
+
+userIdstring…
+∆
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs$ $(&
+%7 Politics.Model.PoliticsDbContext"__id*S*Q!
+Politics.Data.ReportsRepository",
+_context Politics.Model.PoliticsDbContext“
+œ
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs$ $(2
+%8,Microsoft.EntityFrameworkCore.DbSet<TEntity>",Politics.Model.PoliticsDbContext.Reports.get*(
+&
+%7 Politics.Model.PoliticsDbContextÛ
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs$ $(-/
+%9)System.Threading.Tasks.ValueTask<TResult>"bMicrosoft.EntityFrameworkCore.DbSet<TEntity>.AddAsync(TEntity, System.Threading.CancellationToken)*4
+2
+%8,Microsoft.EntityFrameworkCore.DbSet<TEntity>*!
+
+reportPolitics.Model.Report*
+""25AddAsync(TEntity, System.Threading.CancellationToken) 
+«
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs% %('
+%10 Politics.Model.PoliticsDbContext"__id*S*Q!
+Politics.Data.ReportsRepository",
+_context Politics.Model.PoliticsDbContext∫∑
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs% %('+
+%11$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*)
+'
+%10 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken) 
+«
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs&" &(*'
+%12 Politics.Model.PoliticsDbContext"__id*S*Q!
+Politics.Data.ReportsRepository",
+_context Politics.Model.PoliticsDbContext‘
+—
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs&" &(23
+%13,Microsoft.EntityFrameworkCore.DbSet<TEntity>",Politics.Model.PoliticsDbContext.Reports.get*)
+'
+%12 Politics.Model.PoliticsDbContextÂ
+‚
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs&" &(VS
+%14LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"¬Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*5
+3
+%13,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""á
+Ñ
+B
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs&" &(ì+
+%15$System.Threading.Tasks.Task<TResult>"„Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.SingleOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*U
+S
+%14LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""*
+""~
+|
+B
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs&
+ &(ì(
+generatedReportPolitics.Model.Report"__id*
+""≠
+™
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs' '(
+%16AutoMapper.IMapper"__id*D*B!
+Politics.Data.ReportsRepository"
+_mapperAutoMapper.IMapperìê
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs' '(?!
+%17Politics.Dtos.ReportOutDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%16AutoMapper.IMapper**
+(
+generatedReportPolitics.Model.Report2#Map<TSource, TDestination>(TSource)"h
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs' '(@#
+!
+%17Politics.Dtos.ReportOutDto*†
+1A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs( (("X
+A
+7D:\Programavimas\politik\back\Data\ReportsRepository.cs( ((
+implicit return:$
+	reportDtoPolitics.Dtos.ReportDto:
+userIdstringB#!
+Politics.Data.ReportsRepository

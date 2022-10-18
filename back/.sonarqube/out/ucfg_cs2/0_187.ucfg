@@ -1,0 +1,128 @@
+
+GPolitics.Controllers.PartiesController.AddParty(Politics.Dtos.PartyDto)H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs&1 &(9"4*Ê
+0H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs(
+ *(à
+Ý
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs( ((+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÚ
+×
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs( ((#,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext`
+^
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs(3 ((L
+%2"__id*
+""®
+«
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs( ((M
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2t
+r
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs(
+ ((M
+userIdstring"__id*
+
+%3stringÔ
+Ñ
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs) )(&
+%4 Politics.Data.IPartiesRepository"__id*W*U(
+&Politics.Controllers.PartiesController")
+_repo Politics.Data.IPartiesRepositoryÒÏ
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs) )(8*
+%5$System.Threading.Tasks.Task<TResult>"IPolitics.Data.IPartiesRepository.AddParty(Politics.Dtos.PartyDto, string)*(
+&
+%4 Politics.Data.IPartiesRepository*$
+"
+partyDtoPolitics.Dtos.PartyDto*
+
+userIdstring2(AddParty(Politics.Dtos.PartyDto, string)~
+|
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs)
+ )(8"
+partyPolitics.Dtos.PartyOutDto"__id*
+""*
+1
+2*Í
+1H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs, ,(<‚ÿ
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs, ,(=+
+%6%Microsoft.AspNetCore.Mvc.ActionResult"›Microsoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Partijos pridÄ—ti nepavyko*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"y
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs, ,(>-
++
+%6%Microsoft.AspNetCore.Mvc.ActionResult*Ü
+2H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs. .(Œ
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs. .(-
+%7'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*$
+"
+partyPolitics.Dtos.PartyOutDto2
+Ok(object)"{
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs. .(/
+-
+%7'Microsoft.AspNetCore.Mvc.OkObjectResult*®
+3H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs/ /("_
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs/ /(
+implicit return*¸
+4H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs&L &(L§
+¤
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs&1 &(9J
+"
+partyDtoPolitics.Dtos.PartyDto"$
+<ShortName>k__BackingFieldstring"__entrypoint–
+“
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs&1 &(99
+"
+partyDtoPolitics.Dtos.PartyDto"
+	ShortNamestring"__entrypoint¦
+£
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs&1 &(9I
+"
+partyDtoPolitics.Dtos.PartyDto"#
+<LongName>k__BackingFieldstring"__entrypoint•
+’
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs&1 &(98
+"
+partyDtoPolitics.Dtos.PartyDto"
+LongNamestring"__entrypoint`
+^
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs&1 &(9
+%8"__entrypoint*
+0:"
+partyDtoPolitics.Dtos.PartyDtoB*(
+&Politics.Controllers.PartiesController

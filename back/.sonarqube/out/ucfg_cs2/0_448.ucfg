@@ -1,0 +1,109 @@
+
+3Politics.Services.AuthService.MakeModerator(string)A
+5D:\Programavimas\politik\back\Services\AuthService.cs® ®()"0*Ä
+0A
+5D:\Programavimas\politik\back\Services\AuthService.cs°
+ ±(Ç
+Ä
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs° °(&
+%0 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextÐ
+Í
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs° °(%2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Users.get*(
+&
+%0 Politics.Model.PoliticsDbContextä
+á
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs° °(U*
+%2$System.Threading.Tasks.Task<TResult>"ãMicrosoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.SingleOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""*
+""p
+n
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs°
+ °(U
+userPolitics.Model.User"__id*
+""*
+1
+2*“
+1A
+5D:\Programavimas\politik\back\Services\AuthService.cs³ ³("K
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs³ ³(
+""*Ã
+2A
+5D:\Programavimas\politik\back\Services\AuthService.csµ
+ ¶(Ç
+Ä
+A
+5D:\Programavimas\politik\back\Services\AuthService.csµ µ(&
+%3 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextÐ
+Í
+A
+5D:\Programavimas\politik\back\Services\AuthService.csµ µ(%2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Roles.get*(
+&
+%3 Politics.Model.PoliticsDbContextã
+à
+A
+5D:\Programavimas\politik\back\Services\AuthService.csµ µ(U*
+%5$System.Threading.Tasks.Task<TResult>"âMicrosoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""*
+""p
+n
+A
+5D:\Programavimas\politik\back\Services\AuthService.csµ
+ µ(U
+rolePolitics.Model.Role"__id*
+""*
+3
+4*“
+3A
+5D:\Programavimas\politik\back\Services\AuthService.cs¸ ¸("K
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs¸ ¸(
+""*Ø
+4A
+5D:\Programavimas\politik\back\Services\AuthService.csº ¼(½
+º
+A
+5D:\Programavimas\politik\back\Services\AuthService.csº º(
+%6Politics.Model.Role"Politics.Model.User.Role.set*
+
+userPolitics.Model.User*
+
+rolePolitics.Model.RoleÇ
+Ä
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs» »(&
+%7 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContext¸µ
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs» »('*
+%8$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*(
+&
+%7 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)"K
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs¼ ¼(
+""* 
+5A
+5D:\Programavimas\politik\back\Services\AuthService.cs½ ½("X
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs½ ½(
+implicit return:
+idstringB!
+Politics.Services.AuthService

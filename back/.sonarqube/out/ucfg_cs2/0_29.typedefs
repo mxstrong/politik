@@ -1,0 +1,7 @@
+‘
+Politics.Dtos.TagOutDtoobject2
+TagOutDto()#Politics.Dtos.TagOutDto.TagOutDto().
+	TagId.get!Politics.Dtos.TagOutDto.TagId.get.
+	TagId.set!Politics.Dtos.TagOutDto.TagId.set,
+Name.get Politics.Dtos.TagOutDto.Name.get,
+Name.set Politics.Dtos.TagOutDto.Name.set

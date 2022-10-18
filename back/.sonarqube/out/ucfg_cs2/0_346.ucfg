@@ -1,0 +1,194 @@
+
+;Politics.Controllers.ReportsController.ReviewReport(string)H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs+$ +(0"7*Ž
+0H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs-
+ /(à
+Ý
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs- -(+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÚ
+×
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs- -(#,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext`
+^
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs-3 -(L
+%2"__id*
+""®
+«
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs- -(M
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2t
+r
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs-
+ -(M
+userIdstring"__id*
+
+%3stringà
+Ý
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs. .(+
+%4%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÚ
+×
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs. .(!,
+%5&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%4%Microsoft.AspNetCore.Http.HttpContext`
+^
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs.1 .(@
+%6"__id*
+""®
+«
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs. .(A
+%7string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%5&System.Security.Claims.ClaimsPrincipal*
+
+%6r
+p
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs.
+ .(A
+rolestring"__id*
+
+%7string¦
+£
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs/
+ /(
+
+%8bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*	
+Admin*
+1
+2*ü
+1H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs/ /(*¤
+¡
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs/ /(*
+
+%9bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*
+Mod*
+3
+2*É
+3H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs1 1(öó
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs1 1(2
+%10+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"€
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs1 1(4
+2
+%10+Microsoft.AspNetCore.Mvc.UnauthorizedResult*Ï
+2H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs3
+ 4(Ü
+Ù
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs3 3(%'
+%11 Politics.Data.IReportsRepository"__id*^*\(
+&Politics.Controllers.ReportsController"0
+_reportsRepo Politics.Data.IReportsRepository¬©
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs3 3(D+
+%12$System.Threading.Tasks.Task<TResult>"=Politics.Data.IReportsRepository.ReviewReport(string, string)*)
+'
+%11 Politics.Data.IReportsRepository*
+
+reportIdstring*
+
+userIdstring2ReviewReport(string, string)j
+h
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs3
+ 3(D
+resultbool"__id*
+""*
+4
+5* 
+4H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs6 6(ØÕ
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs6 6((
+%13!Microsoft.AspNetCore.Mvc.OkResult",Microsoft.AspNetCore.Mvc.ControllerBase.Ok()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Ok()"v
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs6 6(*
+(
+%13!Microsoft.AspNetCore.Mvc.OkResult*ú
+5H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs8 8(5£ 
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs8 8(66
+%14/Microsoft.AspNetCore.Mvc.BadRequestObjectResult":Microsoft.AspNetCore.Mvc.ControllerBase.BadRequest(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Operacijos atlikti nepavyko2BadRequest(object)"„
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs8 8(78
+6
+%14/Microsoft.AspNetCore.Mvc.BadRequestObjectResult*®
+6H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs9 9("_
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs9 9(
+implicit return*Ú
+7H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs+A +(Aw
+u
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs+$ +(0
+%15"__entrypoint*
+
+reportIdstringÆ
+Ã
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs) )(
+%16"
+__annotate*NL
+JMicrosoft.AspNetCore.Authorization.AuthorizeAttribute.AuthorizeAttribute()*
+
+reportIdstringÀ
+½
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs* *("
+%17"
+__annotate*HF
+DMicrosoft.AspNetCore.Mvc.HttpPostAttribute.HttpPostAttribute(string)*
+
+reportIdstring€
+~
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs+1 +(@
+reportIdstring"__annotation*
+
+%16*
+
+%17*
+0:
+reportIdstringB*(
+&Politics.Controllers.ReportsController

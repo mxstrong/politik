@@ -1,0 +1,55 @@
+
+dPolitics.Migrations.AddLikesAndReports.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs  (""0*Ô
+0W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs	 :(&ÔÏ
+W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs	 (_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>"µMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*	
+Likes*
+""*
+""*
+""*
+""2˚CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)ÒÓ
+W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs 0(_
+%1YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>"µMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*	
+Reports*
+""*
+""*
+""*
+""2˚CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)êç
+W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs2 5(&_
+%2YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"sMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateIndex(string, string, string, string, bool, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Reports_CreatedById*	
+Reports*
+CreatedById*
+""*
+""*
+""29CreateIndex(string, string, string, string, bool, string)íè
+W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs7 :('_
+%3YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"sMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateIndex(string, string, string, string, bool, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Reports_ReviewedById*	
+Reports*
+ReviewedById*
+""*
+""*
+""29CreateIndex(string, string, string, string, bool, string)*
+1*Ã
+1W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs;	 ;(	"n
+W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs; ;(	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB*(
+&Politics.Migrations.AddLikesAndReports

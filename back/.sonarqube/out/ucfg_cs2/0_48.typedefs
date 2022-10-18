@@ -1,0 +1,6 @@
+‡
+2Politics.Migrations.UpdatePoliticianAndPartyTables2Microsoft.EntityFrameworkCore.Migrations.Migrationobject±
+=Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)pPolitics.Migrations.UpdatePoliticianAndPartyTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)µ
+?Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)rPolitics.Migrations.UpdatePoliticianAndPartyTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)¯
+<BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)oPolitics.Migrations.UpdatePoliticianAndPartyTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)w
+ UpdatePoliticianAndPartyTables()SPolitics.Migrations.UpdatePoliticianAndPartyTables.UpdatePoliticianAndPartyTables()

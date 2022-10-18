@@ -1,0 +1,221 @@
+
+\Politics.Model.PoliticsDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs (+"0*¥Ü
+0B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs G(2®•
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs (&P
+%0JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()ÚÔ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs (j
+%1dMicrosoft.EntityFrameworkCore.Metadata.Builders.CollectionNavigationBuilder<TEntity, TRelatedEntity>"‘Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasMany<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, System.Collections.Generic.IEnumerable<TRelatedEntity>>>)*R
+P
+%0JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2âHasMany<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, System.Collections.Generic.IEnumerable<TRelatedEntity>>>)âÜ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs (&l
+%2fMicrosoft.EntityFrameworkCore.Metadata.Builders.CollectionCollectionBuilder<TLeftEntity, TRightEntity>"ﬂMicrosoft.EntityFrameworkCore.Metadata.Builders.CollectionNavigationBuilder<TEntity, TRelatedEntity>.WithMany(System.Linq.Expressions.Expression<System.Func<TRelatedEntity, System.Collections.Generic.IEnumerable<TEntity>>>)*l
+j
+%1dMicrosoft.EntityFrameworkCore.Metadata.Builders.CollectionNavigationBuilder<TEntity, TRelatedEntity>*
+""2zWithMany(System.Linq.Expressions.Expression<System.Func<TRelatedEntity, System.Collections.Generic.IEnumerable<TEntity>>>)ƒ	¡	
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs $(7P
+%3JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"ÜMicrosoft.EntityFrameworkCore.Metadata.Builders.CollectionCollectionBuilder<TLeftEntity, TRightEntity>.UsingEntity<TJoinEntity>(System.Func<Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TJoinEntity>, Microsoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TLeftEntity, TJoinEntity>>, System.Func<Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TJoinEntity>, Microsoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TRightEntity, TJoinEntity>>)*n
+l
+%2fMicrosoft.EntityFrameworkCore.Metadata.Builders.CollectionCollectionBuilder<TLeftEntity, TRightEntity>*
+""*
+""2üUsingEntity<TJoinEntity>(System.Func<Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TJoinEntity>, Microsoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TLeftEntity, TJoinEntity>>, System.Func<Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TJoinEntity>, Microsoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TRightEntity, TJoinEntity>>)®•
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs% %("P
+%4JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()ûõ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs% &(!i
+%5cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>"´Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)*R
+P
+%4JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2`HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)∫∑
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs% '(t
+%6nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"tMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>.WithMany(string)*k
+i
+%5cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>*
+""2WithMany(string)ÌÍ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs% ((1t
+%7nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"çMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>.HasForeignKey(params string[])*v
+t
+%6nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>*
+""2HasForeignKey(params string[])®•
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs) )("P
+%8JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()ûõ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs) *(!i
+%9cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>"´Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)*R
+P
+%8JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2`HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)ª∏
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs) +(u
+%10nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"tMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>.WithMany(string)*k
+i
+%9cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>*
+""2WithMany(string)ÔÏ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs) ,(1u
+%11nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"çMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>.HasForeignKey(params string[])*w
+u
+%10nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>*
+""2HasForeignKey(params string[])©¶
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs. .('Q
+%12JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()†ù
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs. /(!j
+%13cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>"´Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)*S
+Q
+%12JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2`HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)ºπ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs. 0(u
+%14nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"tMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>.WithMany(string)*l
+j
+%13cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>*
+""2WithMany(string)ÔÏ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs. 1(6u
+%15nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"çMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>.HasForeignKey(params string[])*w
+u
+%14nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>*
+""2HasForeignKey(params string[])©¶
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs2 2('Q
+%16JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()†ù
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs2 3(!j
+%17cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>"´Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)*S
+Q
+%16JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2`HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)ºπ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs2 4(u
+%18nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"tMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>.WithMany(string)*l
+j
+%17cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>*
+""2WithMany(string)ÔÏ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs2 5(6u
+%19nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"çMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>.HasForeignKey(params string[])*w
+u
+%18nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>*
+""2HasForeignKey(params string[])©¶
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs7 7(&Q
+%20JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()†ù
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs7 8(!j
+%21cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>"´Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)*S
+Q
+%20JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2`HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)ºπ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs7 9(u
+%22nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"tMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>.WithMany(string)*l
+j
+%21cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>*
+""2WithMany(string)ÔÏ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs7 :(5u
+%23nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"çMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>.HasForeignKey(params string[])*w
+u
+%22nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>*
+""2HasForeignKey(params string[])©¶
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs; ;(&Q
+%24JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()†ù
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs; <(!j
+%25cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>"´Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)*S
+Q
+%24JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2`HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)ºπ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs; =(u
+%26nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"tMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>.WithMany(string)*l
+j
+%25cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>*
+""2WithMany(string)ÔÏ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs; >(5u
+%27nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"çMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>.HasForeignKey(params string[])*w
+u
+%26nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>*
+""2HasForeignKey(params string[])©¶
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs@ @(#Q
+%28JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()†ù
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs@ A(!j
+%29cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>"´Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)*S
+Q
+%28JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2`HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)ºπ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs@ B(u
+%30nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"tMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>.WithMany(string)*l
+j
+%29cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>*
+""2WithMany(string)ÔÏ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs@ C(2u
+%31nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"çMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>.HasForeignKey(params string[])*w
+u
+%30nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>*
+""2HasForeignKey(params string[])©¶
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.csD D(#Q
+%32JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>"<Microsoft.EntityFrameworkCore.ModelBuilder.Entity<TEntity>()*<
+:
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilder2Entity<TEntity>()†ù
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.csD E("j
+%33cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>"´Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>.HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)*S
+Q
+%32JMicrosoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<TEntity>*
+""2`HasOne<TRelatedEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, TRelatedEntity>>)ºπ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.csD F(u
+%34nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"tMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>.WithMany(string)*l
+j
+%33cMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceNavigationBuilder<TEntity, TRelatedEntity>*
+""2WithMany(string)ÔÏ
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.csD G(3u
+%35nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>"çMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>.HasForeignKey(params string[])*w
+u
+%34nMicrosoft.EntityFrameworkCore.Metadata.Builders.ReferenceCollectionBuilder<TPrincipalEntity, TDependentEntity>*
+""2HasForeignKey(params string[])*
+1*¢
+1B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.csH H("Y
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.csH H(
+implicit return::
+modelBuilder*Microsoft.EntityFrameworkCore.ModelBuilderB$"
+ Politics.Model.PoliticsDbContext

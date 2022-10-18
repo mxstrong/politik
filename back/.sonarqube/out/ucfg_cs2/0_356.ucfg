@@ -1,0 +1,41 @@
+
+Politics.Program.Main(string[])2
+(D:\Programavimas\politik\back\Program.cs ("0*ð
+02
+(D:\Programavimas\politik\back\Program.cs
+ 
+(À
+½
+2
+(D:\Programavimas\politik\back\Program.cs
+ 
+(/
+%0)Microsoft.Extensions.Hosting.IHostBuilder",Politics.Program.CreateHostBuilder(string[])*"
+Politics.Program*
+
+argsstring[]ÐÍ
+2
+(D:\Programavimas\politik\back\Program.cs
+ 
+(%(
+%1"Microsoft.Extensions.Hosting.IHost"1Microsoft.Extensions.Hosting.IHostBuilder.Build()*1
+/
+%0)Microsoft.Extensions.Hosting.IHostBuilder2Build()›
+˜
+2
+(D:\Programavimas\politik\back\Program.cs
+ 
+(+
+
+%2void"fMicrosoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(Microsoft.Extensions.Hosting.IHost)*B"@
+>Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions**
+(
+%1"Microsoft.Extensions.Hosting.IHost*
+1*‚
+12
+(D:\Programavimas\politik\back\Program.cs ("I
+2
+(D:\Programavimas\politik\back\Program.cs (
+implicit return:
+argsstring[]B"
+Politics.Program

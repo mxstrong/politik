@@ -1,0 +1,107 @@
+
+<Politics.Services.AuthService.ChangePassword(string, string)A
+5D:\Programavimas\politik\back\Services\AuthService.csï& ï(4"0*√
+0A
+5D:\Programavimas\politik\back\Services\AuthService.csó
+ ò(«
+ƒ
+A
+5D:\Programavimas\politik\back\Services\AuthService.csó ó(&
+%0 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContext–
+Õ
+A
+5D:\Programavimas\politik\back\Services\AuthService.csó ó(%2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Users.get*(
+&
+%0 Politics.Model.PoliticsDbContext„
+‡
+A
+5D:\Programavimas\politik\back\Services\AuthService.csó ó(X*
+%2$System.Threading.Tasks.Task<TResult>"‚Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""*
+""p
+n
+A
+5D:\Programavimas\politik\back\Services\AuthService.csó
+ ó(X
+userPolitics.Model.User"__id*
+""*
+1
+2*ì
+1A
+5D:\Programavimas\politik\back\Services\AuthService.csö ö("K
+A
+5D:\Programavimas\politik\back\Services\AuthService.csö ö(
+""*Ô
+2A
+5D:\Programavimas\politik\back\Services\AuthService.csú †(3î
+ë
+A
+5D:\Programavimas\politik\back\Services\AuthService.csú ú(W
+
+%3void"PPolitics.Services.AuthService.CreatePasswordHash(string, out byte[], out byte[])*!"
+Politics.Services.AuthService*
+
+newPasswordstring*
+
+passwordHashbyte[]*
+
+passwordSaltbyte[]≥
+∞
+A
+5D:\Programavimas\politik\back\Services\AuthService.csù ù(&
+%4byte[]"$Politics.Model.User.PasswordHash.set*
+
+userPolitics.Model.User*
+
+passwordHashbyte[]≥
+∞
+A
+5D:\Programavimas\politik\back\Services\AuthService.csû û(&
+%5byte[]"$Politics.Model.User.PasswordSalt.set*
+
+userPolitics.Model.User*
+
+passwordSaltbyte[]«
+ƒ
+A
+5D:\Programavimas\politik\back\Services\AuthService.csü ü(&
+%6 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContext∏µ
+A
+5D:\Programavimas\politik\back\Services\AuthService.csü ü('*
+%7$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*(
+&
+%6 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)™
+ß
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs† †(
+%8AutoMapper.IMapper"__id*B*@
+Politics.Services.AuthService"
+_mapperAutoMapper.IMapperÜÉ
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs† †(4"
+%9Politics.Dtos.UserProfileDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%8AutoMapper.IMapper*
+
+userPolitics.Model.User2#Map<TSource, TDestination>(TSource)"i
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs† †(5$
+"
+%9Politics.Dtos.UserProfileDto*†
+3A
+5D:\Programavimas\politik\back\Services\AuthService.cs° °("X
+A
+5D:\Programavimas\politik\back\Services\AuthService.cs° °(
+implicit return:
+userIdstring:
+newPasswordstringB!
+Politics.Services.AuthService

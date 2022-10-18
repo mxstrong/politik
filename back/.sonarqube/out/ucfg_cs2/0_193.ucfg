@@ -1,0 +1,55 @@
+
+)Politics.Data.TagsRepository.GetAllTags()>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs-' -(1"0*›
+0>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs/
+ 0(9Ã
+À
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs/ /(&
+%0 Politics.Model.PoliticsDbContext"__id*P*N
+Politics.Data.TagsRepository",
+_context Politics.Model.PoliticsDbContextÌ
+É
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs/ /($2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>")Politics.Model.PoliticsDbContext.Tags.get*(
+&
+%0 Politics.Model.PoliticsDbContext
+
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs/ /(2*
+%2$System.Threading.Tasks.Task<TResult>"šMicrosoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync<TSource>(System.Linq.IQueryable<TSource>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""|
+z
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs/
+ /(2*
+tags"System.Collections.Generic.List<T>"__id*
+""¦
+£
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs0 0(
+%3AutoMapper.IMapper"__id*A*?
+Politics.Data.TagsRepository"
+_mapperAutoMapper.IMapper˜•
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs0 0(:(
+%4"System.Collections.Generic.List<T>":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%3AutoMapper.IMapper*,
+*
+tags"System.Collections.Generic.List<T>2#Map<TSource, TDestination>(TSource)"l
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs0 0(;*
+(
+%4"System.Collections.Generic.List<T>*š
+1>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs1 1("U
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs1 1(
+implicit returnB 
+Politics.Data.TagsRepository

@@ -1,0 +1,115 @@
+
+FPolitics.Services.AuthService.GenerateEmailChangeToken(string, string)?
+5D:\Programavimas\politik\back\Services\AuthService.csq( q(@"0*Ã
+0?
+5D:\Programavimas\politik\back\Services\AuthService.css
+ }(åâ
+?
+5D:\Programavimas\politik\back\Services\AuthService.css y(%
+%0Politics.Model.EmailChangeToken"Politics.Model.EmailChangeToken≠
+™
+?
+5D:\Programavimas\politik\back\Services\AuthService.css s(&
+
+%1void"2Politics.Model.EmailChangeToken.EmailChangeToken()*'
+%
+%0Politics.Model.EmailChangeToken~
+|
+?
+5D:\Programavimas\politik\back\Services\AuthService.csu u(
+%2System.Guid"System.Guid.NewGuid()*"
+System.Guid~
+|
+?
+5D:\Programavimas\politik\back\Services\AuthService.csu u(&
+%3string"System.Guid.ToString()*
+
+%2System.Guid≥
+∞
+?
+5D:\Programavimas\politik\back\Services\AuthService.csu u(&
+%4string"&Politics.Model.EmailChangeToken.Id.set*'
+%
+%0Politics.Model.EmailChangeToken*
+
+%3stringª
+∏
+?
+5D:\Programavimas\politik\back\Services\AuthService.csv v(
+%5string"*Politics.Model.EmailChangeToken.UserId.set*'
+%
+%0Politics.Model.EmailChangeToken*
+
+userIdstringø
+º
+?
+5D:\Programavimas\politik\back\Services\AuthService.csw w(
+%6string",Politics.Model.EmailChangeToken.NewEmail.set*'
+%
+%0Politics.Model.EmailChangeToken*
+
+newEmailstringâ
+Ü
+?
+5D:\Programavimas\politik\back\Services\AuthService.csx x( 
+%7System.DateTime"System.DateTime.Now.get*"
+System.DateTimeÃ
+…
+?
+5D:\Programavimas\politik\back\Services\AuthService.csx x( 
+%8System.DateTime"-Politics.Model.EmailChangeToken.CreatedAt.set*'
+%
+%0Politics.Model.EmailChangeToken*
+
+%7System.DateTimeù
+ö
+?
+5D:\Programavimas\politik\back\Services\AuthService.css
+ y((
+tokenPolitics.Model.EmailChangeToken"__id*'
+%
+%0Politics.Model.EmailChangeToken≈
+¬
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs{ {(&
+%9 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContext€
+ÿ
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs{ {(&3
+%10,Microsoft.EntityFrameworkCore.DbSet<TEntity>"6Politics.Model.PoliticsDbContext.EmailChangeTokens.get*(
+&
+%9 Politics.Model.PoliticsDbContext¸˘
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs{ {(60
+%11)System.Threading.Tasks.ValueTask<TResult>"bMicrosoft.EntityFrameworkCore.DbSet<TEntity>.AddAsync(TEntity, System.Threading.CancellationToken)*5
+3
+%10,Microsoft.EntityFrameworkCore.DbSet<TEntity>**
+(
+tokenPolitics.Model.EmailChangeToken*
+""25AddAsync(TEntity, System.Threading.CancellationToken)∆
+√
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs| |('
+%12 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContext∏µ
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs| |('+
+%13$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*)
+'
+%12 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)"m
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs} }(*
+(
+tokenPolitics.Model.EmailChangeToken*ú
+1?
+5D:\Programavimas\politik\back\Services\AuthService.cs~ ~("V
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs~ ~(
+implicit return:
+userIdstring:
+newEmailstringB!
+Politics.Services.AuthService

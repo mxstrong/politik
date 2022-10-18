@@ -1,0 +1,11 @@
+Á
+Politics.Model.ActivationTokenobjectE
+ActivationToken()0Politics.Model.ActivationToken.ActivationToken()/
+Id.get%Politics.Model.ActivationToken.Id.get/
+Id.set%Politics.Model.ActivationToken.Id.set7
+
+UserId.get)Politics.Model.ActivationToken.UserId.get7
+
+UserId.set)Politics.Model.ActivationToken.UserId.set=
+CreatedAt.get,Politics.Model.ActivationToken.CreatedAt.get=
+CreatedAt.set,Politics.Model.ActivationToken.CreatedAt.set

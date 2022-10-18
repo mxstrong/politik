@@ -1,0 +1,6 @@
+Ë
+#Politics.Controllers.TagsController'Microsoft.AspNetCore.Mvc.ControllerBaseobject‚
+-TagsController(Politics.Data.ITagsRepository)QPolitics.Controllers.TagsController.TagsController(Politics.Data.ITagsRepository)@
+GetAllTags()0Politics.Controllers.TagsController.GetAllTags()`
+AddTag(Politics.Dtos.TagDto)@Politics.Controllers.TagsController.AddTag(Politics.Dtos.TagDto)J
+RemoveTag(string)5Politics.Controllers.TagsController.RemoveTag(string)

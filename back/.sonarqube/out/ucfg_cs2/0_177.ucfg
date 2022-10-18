@@ -1,0 +1,47 @@
+
+6Politics.Controllers.PartiesController.GetAllParties()H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs7 (D"2*´
+0H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs
+ (Ô
+Ñ
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs (&
+%0 Politics.Data.IPartiesRepository"__id*W*U(
+&Politics.Controllers.PartiesController")
+_repo Politics.Data.IPartiesRepositoryæã
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs (/*
+%1$System.Threading.Tasks.Task<TResult>"0Politics.Data.IPartiesRepository.GetAllParties()*(
+&
+%0 Politics.Data.IPartiesRepository2GetAllParties()Š
+‡
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs
+ (/-
+parties"System.Collections.Generic.List<T>"__id*
+""š—
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs (-
+%2'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*/
+-
+parties"System.Collections.Generic.List<T>2
+Ok(object)"{
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs (/
+-
+%2'Microsoft.AspNetCore.Mvc.OkObjectResult*®
+1H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs ("_
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs (
+implicit return*´
+2H
+>D:\Programavimas\politik\back\Controllers\PartiesController.csF (F`
+^
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs7 (D
+%3"__entrypoint*
+0B*(
+&Politics.Controllers.PartiesController

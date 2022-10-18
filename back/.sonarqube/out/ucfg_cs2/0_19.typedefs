@@ -1,0 +1,7 @@
+Å
+Politics.Dtos.ReportDtoobject2
+ReportDto()#Politics.Dtos.ReportDto.ReportDto():
+StatementId.get'Politics.Dtos.ReportDto.StatementId.get:
+StatementId.set'Politics.Dtos.ReportDto.StatementId.set:
+Description.get'Politics.Dtos.ReportDto.Description.get:
+Description.set'Politics.Dtos.ReportDto.Description.set

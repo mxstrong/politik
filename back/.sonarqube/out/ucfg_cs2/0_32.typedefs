@@ -1,0 +1,12 @@
+ƒ
+
+)Politics.Controllers.StatementsController'Microsoft.AspNetCore.Mvc.ControllerBaseobject­
+StatementsController(Politics.Data.IStatementsRepository, Politics.Data.IPoliticiansRepository, Politics.Services.IAuthService)©Politics.Controllers.StatementsController.StatementsController(Politics.Data.IStatementsRepository, Politics.Data.IPoliticiansRepository, Politics.Services.IAuthService)œ
+7GetAllStatements(Politics.Controllers.StatementsParams)aPolitics.Controllers.StatementsController.GetAllStatements(Politics.Controllers.StatementsParams)b
+GetStatetementById(string)DPolitics.Controllers.StatementsController.GetStatetementById(string)~
+(AddStatement(Politics.Dtos.StatementDto)RPolitics.Controllers.StatementsController.AddStatement(Politics.Dtos.StatementDto)\
+DeleteStatement(string)APolitics.Controllers.StatementsController.DeleteStatement(string)X
+LikeStatement(string)?Politics.Controllers.StatementsController.LikeStatement(string)\
+UnlikeStatement(string)APolitics.Controllers.StatementsController.UnlikeStatement(string)h
+GetStatementLikeCount(string)GPolitics.Controllers.StatementsController.GetStatementLikeCount(string)r
+"CheckIfCurrentUserHasLiked(string)LPolitics.Controllers.StatementsController.CheckIfCurrentUserHasLiked(string)

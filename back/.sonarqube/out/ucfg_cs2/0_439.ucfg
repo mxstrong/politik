@@ -1,0 +1,149 @@
+
+>Politics.Data.StatementsRepository.DeleteStatementById(string)D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csu' u(:"0*Ø
+0D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csw
+ x(#œ
+Ã
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csw$ w(,&
+%0 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextÿ
+’
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csw$ w(72
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"/Politics.Model.PoliticsDbContext.Statements.get*(
+&
+%0 Politics.Model.PoliticsDbContext•¢
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csw$ w(E/
+%2)System.Threading.Tasks.ValueTask<TResult>"GMicrosoft.EntityFrameworkCore.DbSet<TEntity>.FindAsync(params object[])*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+idstring2FindAsync(params object[])Ü
+É
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csw
+ w(E-
+statementToDeletePolitics.Model.Statement"__id*
+""*
+1
+2*ô
+1D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csz z("N
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csz z(
+""*ÿ
+2E
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs|
+ Ä(Fœ
+Ã
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs|  |((&
+%3 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContext€
+ÿ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs|  |(62
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>"2Politics.Model.PoliticsDbContext.StatementTags.get*(
+&
+%3 Politics.Model.PoliticsDbContextÀ
+»
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs|  |(l
+%5System.Linq.IQueryable<T>"ÖSystem.Linq.Queryable.Where<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>)*"
+System.Linq.Queryable*4
+2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""É
+Ä
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs|  |(z*
+%6$System.Threading.Tasks.Task<TResult>"öMicrosoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync<TSource>(System.Linq.IQueryable<TSource>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*!
+
+%5System.Linq.IQueryable<T>*
+""å
+â
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs|
+ |(z3
+statementTags"System.Collections.Generic.List<T>"__id*
+""œ
+Ã
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs} }(&
+%7 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextÿ
+’
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs} }(2
+%8,Microsoft.EntityFrameworkCore.DbSet<TEntity>"/Politics.Model.PoliticsDbContext.Statements.get*(
+&
+%7 Politics.Model.PoliticsDbContext»≈
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs} }(3G
+%9AMicrosoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>"<Microsoft.EntityFrameworkCore.DbSet<TEntity>.Remove(TEntity)*4
+2
+%8,Microsoft.EntityFrameworkCore.DbSet<TEntity>*/
+-
+statementToDeletePolitics.Model.Statement2Remove(TEntity)–
+Õ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs~ ~('
+%10 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContext›
+⁄
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs~ ~(3
+%11,Microsoft.EntityFrameworkCore.DbSet<TEntity>"2Politics.Model.PoliticsDbContext.StatementTags.get*)
+'
+%10 Politics.Model.PoliticsDbContextÌÍ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs~ ~(7
+%12void"iMicrosoft.EntityFrameworkCore.DbSet<TEntity>.RemoveRange(System.Collections.Generic.IEnumerable<TEntity>)*5
+3
+%11,Microsoft.EntityFrameworkCore.DbSet<TEntity>*5
+3
+statementTags"System.Collections.Generic.List<T>2<RemoveRange(System.Collections.Generic.IEnumerable<TEntity>)–
+Õ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs ('
+%13 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextΩ∫
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs ('+
+%14$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*)
+'
+%13 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)µ
+≤
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csÄ Ä(
+%15AutoMapper.IMapper"__id*G*E$
+"Politics.Data.StatementsRepository"
+_mapperAutoMapper.IMapper†ù
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csÄ Ä(G$
+%16Politics.Dtos.StatementOutDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%15AutoMapper.IMapper*/
+-
+statementToDeletePolitics.Model.Statement2#Map<TSource, TDestination>(TSource)"p
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csÄ Ä(H&
+$
+%16Politics.Dtos.StatementOutDto*™
+3F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csÅ Å("]
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csÅ Å(
+implicit return:
+idstringB&$
+"Politics.Data.StatementsRepository

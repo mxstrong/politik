@@ -1,0 +1,89 @@
+
+3Politics.Data.PartiesRepository.DeleteParty(string)A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs$# $(."0*ˆ
+0A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs&
+ '(É
+Æ
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs& &( &
+%0 Politics.Model.PoliticsDbContext"__id*S*Q!
+Politics.Data.PartiesRepository",
+_context Politics.Model.PoliticsDbContextÒ
+Ï
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs& &((2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>",Politics.Model.PoliticsDbContext.Parties.get*(
+&
+%0 Politics.Model.PoliticsDbContext¢Ÿ
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs& &(6/
+%2)System.Threading.Tasks.ValueTask<TResult>"GMicrosoft.EntityFrameworkCore.DbSet<TEntity>.FindAsync(params object[])*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+idstring2FindAsync(params object[])r
+p
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs&
+ &(6
+partyPolitics.Model.Party"__id*
+""*
+1
+2*“
+1A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs) )("K
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs) )(
+""*ñ
+2A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs+ -(2É
+Æ
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs+ +(&
+%3 Politics.Model.PoliticsDbContext"__id*S*Q!
+Politics.Data.PartiesRepository",
+_context Politics.Model.PoliticsDbContext¶³
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs+ +(G
+%4AMicrosoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>"@Microsoft.EntityFrameworkCore.DbContext.Remove<TEntity>(TEntity)*(
+&
+%3 Politics.Model.PoliticsDbContext*
+
+partyPolitics.Model.Party2Remove<TEntity>(TEntity)É
+Æ
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs, ,(&
+%5 Politics.Model.PoliticsDbContext"__id*S*Q!
+Politics.Data.PartiesRepository",
+_context Politics.Model.PoliticsDbContext¸µ
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs, ,('*
+%6$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*(
+&
+%5 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)¬
+©
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs- -(
+%7AutoMapper.IMapper"__id*D*B!
+Politics.Data.PartiesRepository"
+_mapperAutoMapper.IMapper…‚
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs- -(3
+%8Politics.Dtos.PartyOutDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%7AutoMapper.IMapper*
+
+partyPolitics.Model.Party2#Map<TSource, TDestination>(TSource)"f
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs- -(4!
+
+%8Politics.Dtos.PartyOutDto* 
+3A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs. .("X
+A
+7D:\Programavimas\politik\back\Data\PartiesRepository.cs. .(
+implicit return:
+idstringB#!
+Politics.Data.PartiesRepository

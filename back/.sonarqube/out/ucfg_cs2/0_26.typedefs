@@ -1,0 +1,7 @@
+Ô
+Politics.Data.PartiesRepositoryobject Politics.Data.IPartiesRepository²
+GPartiesRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)gPolitics.Data.PartiesRepository.PartiesRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)t
+(AddParty(Politics.Dtos.PartyDto, string)HPolitics.Data.PartiesRepository.AddParty(Politics.Dtos.PartyDto, string)J
+DeleteParty(string)3Politics.Data.PartiesRepository.DeleteParty(string)B
+GetAllParties()/Politics.Data.PartiesRepository.GetAllParties()L
+GetPartyById(string)4Politics.Data.PartiesRepository.GetPartyById(string)

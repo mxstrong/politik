@@ -1,0 +1,207 @@
+
+5Politics.Controllers.TagsController.RemoveTag(string)E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs$$ $(-"6*´
+0E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs&
+ )(È
+Å
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs& &(##
+%0Politics.Data.ITagsRepository"__id*Q*O%
+#Politics.Controllers.TagsController"&
+_repoPolitics.Data.ITagsRepositoryÿü
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs& &(8*
+%1$System.Threading.Tasks.Task<TResult>"6Politics.Data.ITagsRepository.GetTagEntityById(string)*%
+#
+%0Politics.Data.ITagsRepository*
+
+idstring2GetTagEntityById(string)z
+x
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs&
+ &(8!
+tagToDeletePolitics.Model.Tag"__id*
+""Ý
+Ú
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs' '(+
+%2%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase×
+Ô
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs' '(!,
+%3&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%2%Microsoft.AspNetCore.Http.HttpContext]
+[
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs'1 '(@
+%4"__id*
+""«
+¨
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs' '(A
+%5string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%3&System.Security.Claims.ClaimsPrincipal*
+
+%4o
+m
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs'
+ '(A
+rolestring"__id*
+
+%5stringÝ
+Ú
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs( ((+
+%6%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase×
+Ô
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs( ((#,
+%7&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%6%Microsoft.AspNetCore.Http.HttpContext]
+[
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs(3 ((L
+%8"__id*
+""«
+¨
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs( ((M
+%9string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%7&System.Security.Claims.ClaimsPrincipal*
+
+%8q
+o
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs(
+ ((M
+userIdstring"__id*
+
+%9string¤
+¡
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs)
+ )(
+%10bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*	
+Admin*
+1
+2*÷
+1E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs) )(*¢
+Ÿ
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs) )(*
+%11bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*
+Mod*
+3
+2*¦
+3E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs). )(O¢
+Ÿ
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs)8 )(O
+%12string""Politics.Model.Tag.CreatedById.get*#
+!
+tagToDeletePolitics.Model.Tag¬
+©
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs). )(O
+%13bool""string.operator !=(string, string)*
+"
+string*
+
+userIdstring*
+
+%12string*
+4
+2*¿
+4E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs+ +(óð
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs+ +(2
+%14+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"}
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs+ +(4
+2
+%14+Microsoft.AspNetCore.Mvc.UnauthorizedResult*ì
+2E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs- .(É
+Æ
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs- -($
+%15Politics.Data.ITagsRepository"__id*Q*O%
+#Politics.Controllers.TagsController"&
+_repoPolitics.Data.ITagsRepositoryêç
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs- -("
+%16System.Threading.Tasks.Task"/Politics.Data.ITagsRepository.DeleteTag(string)*&
+$
+%15Politics.Data.ITagsRepository*
+
+idstring2DeleteTag(string)êç
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs. .(/
+%17(Microsoft.AspNetCore.Mvc.NoContentResult"3Microsoft.AspNetCore.Mvc.ControllerBase.NoContent()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2NoContent()"z
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs. .(1
+/
+%17(Microsoft.AspNetCore.Mvc.NoContentResult*¨
+5E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs/ /("\
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs/ /(
+implicit return*¶
+6E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs$8 $(8n
+l
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs$$ $(-
+%18"__entrypoint*
+
+idstring½
+º
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs" "(
+%19"
+__annotate*NL
+JMicrosoft.AspNetCore.Authorization.AuthorizeAttribute.AuthorizeAttribute()*
+
+idstring»
+¸
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs# #(
+%20"
+__annotate*LJ
+HMicrosoft.AspNetCore.Mvc.HttpDeleteAttribute.HttpDeleteAttribute(string)*
+
+idstringw
+u
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs$. $(7
+idstring"__annotation*
+
+%19*
+
+%20*
+0:
+idstringB'%
+#Politics.Controllers.TagsController

@@ -1,0 +1,7 @@
+¯
+Politics.Data.TagsRepositoryobjectPolitics.Data.ITagsRepository©
+DTagsRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)aPolitics.Data.TagsRepository.TagsRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)i
+$AddTag(Politics.Dtos.TagDto, string)APolitics.Data.TagsRepository.AddTag(Politics.Dtos.TagDto, string)C
+DeleteTag(string).Politics.Data.TagsRepository.DeleteTag(string)9
+GetAllTags())Politics.Data.TagsRepository.GetAllTags()Q
+GetTagEntityById(string)5Politics.Data.TagsRepository.GetTagEntityById(string)

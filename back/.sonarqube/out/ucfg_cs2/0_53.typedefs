@@ -1,0 +1,7 @@
+¾
+Politics.Startupobject‰
+:Startup(Microsoft.Extensions.Configuration.IConfiguration)KPolitics.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)±
+NConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)_Politics.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)ï
+mConfigure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)~Politics.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)7
+Configuration.get"Politics.Startup.Configuration.get7
+Configuration.set"Politics.Startup.Configuration.set

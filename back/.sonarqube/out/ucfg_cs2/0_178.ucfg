@@ -1,0 +1,79 @@
+
+RPolitics.Helpers.PaginatedList<T>.CreateAsync(System.Linq.IQueryable<T>, int, int)@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs*/ *(:"0*Ü
+0@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs,
+ .(C‚
+ÿ
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs, ,(+*
+%0$System.Threading.Tasks.Task<TResult>"™Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync<TSource>(System.Linq.IQueryable<TSource>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*%
+#
+sourceSystem.Linq.IQueryable<T>*
+""`
+^
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs,
+ ,(+
+countint"__id*
+""û
+ø
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs- -(?
+%1System.Linq.IQueryable<T>"ISystem.Linq.Queryable.Skip<TSource>(System.Linq.IQueryable<TSource>, int)*"
+System.Linq.Queryable*%
+#
+sourceSystem.Linq.IQueryable<T>*
+""÷
+ô
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs- -(N
+%2System.Linq.IQueryable<T>"ISystem.Linq.Queryable.Take<TSource>(System.Linq.IQueryable<TSource>, int)*"
+System.Linq.Queryable*!
+
+%1System.Linq.IQueryable<T>*
+""ÿ
+ü
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs- -(\*
+%3$System.Threading.Tasks.Task<TResult>"šMicrosoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync<TSource>(System.Linq.IQueryable<TSource>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*!
+
+%2System.Linq.IQueryable<T>*
+""
+}
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs-
+ -(\+
+items"System.Collections.Generic.List<T>"__id*
+""‘Ž
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs. .(D'
+%4!Politics.Helpers.PaginatedList<T>"!Politics.Helpers.PaginatedList<T>¯
+¬
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs. .(!
+
+%5void"bPolitics.Helpers.PaginatedList<T>.PaginatedList(System.Collections.Generic.List<T>, int, int, int)*)
+'
+%4!Politics.Helpers.PaginatedList<T>*-
++
+items"System.Collections.Generic.List<T>*
+
+countint*
+""*
+"""m
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs. .(E)
+'
+%4!Politics.Helpers.PaginatedList<T>*ž
+1@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs/ /("W
+@
+6D:\Programavimas\politik\back\Helpers\PaginatedList.cs/ /(
+implicit return:#
+sourceSystem.Linq.IQueryable<T>:
+	pageIndexint:
+pageSizeintB%"#
+!Politics.Helpers.PaginatedList<T>

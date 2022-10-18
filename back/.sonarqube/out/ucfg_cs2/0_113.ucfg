@@ -1,0 +1,39 @@
+
+0Politics.Controllers.TagsController.GetAllTags()E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs5 (?"2*Ú
+0E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs ((È
+Å
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs (#
+%0Politics.Data.ITagsRepository"__id*Q*O%
+#Politics.Controllers.TagsController"&
+_repoPolitics.Data.ITagsRepository×Ô
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs ((*
+%1$System.Threading.Tasks.Task<TResult>"*Politics.Data.ITagsRepository.GetAllTags()*%
+#
+%0Politics.Data.ITagsRepository2GetAllTags()îë
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs ()-
+%2'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+""2
+Ok(object)"x
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs (*/
+-
+%2'Microsoft.AspNetCore.Mvc.OkObjectResult*¨
+1E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs ("\
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs (
+implicit return*®
+2E
+;D:\Programavimas\politik\back\Controllers\TagsController.csA (A]
+[
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs5 (?
+%3"__entrypoint*
+0B'%
+#Politics.Controllers.TagsController

@@ -1,0 +1,192 @@
+
+aPolitics.Controllers.StatementsController.GetAllStatements(Politics.Controllers.StatementsParams)K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csD (T"2*‹$
+0K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs 
+ ,(Í
+Á
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs   (,)
+%0#Politics.Data.IStatementsRepository"__id*g*e+
+)Politics.Controllers.StatementsController"6
+_statementsRepo#Politics.Data.IStatementsRepositoryÀ
+»
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs >  (S
+%1string"4Politics.Controllers.StatementsParams.Politician.get*5
+3
+
+parameters%Politics.Controllers.StatementsParams·
+ﬁ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs U  (d(
+%2"System.Collections.Generic.List<T>".Politics.Controllers.StatementsParams.Tags.get*5
+3
+
+parameters%Politics.Controllers.StatementsParams”
+–
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs f  ({
+%3System.Nullable<T>"0Politics.Helpers.PaginationParams.PageNumber.get*5
+3
+
+parameters%Politics.Controllers.StatementsParams“
+œ
+L
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs }  (ê
+%4System.Nullable<T>".Politics.Helpers.PaginationParams.PageSize.get*5
+3
+
+parameters%Politics.Controllers.StatementsParams‰·
+L
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs   (ë*
+%5$System.Threading.Tasks.Task<TResult>"sPolitics.Data.IStatementsRepository.GetAllStatements(string?, System.Collections.Generic.List<string>?, int?, int?)*+
+)
+%0#Politics.Data.IStatementsRepository*
+
+%1string**
+(
+%2"System.Collections.Generic.List<T>*
+
+%3System.Nullable<T>*
+
+%4System.Nullable<T>2OGetAllStatements(string?, System.Collections.Generic.List<string>?, int?, int?)ê
+ç
+L
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs 
+  (ë/
+
+statements!Politics.Helpers.PaginatedList<T>"__id*
+""º
+π
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs# #(	
+%6int",System.Collections.Generic.List<T>.Count.get*1
+/
+
+statements!Politics.Helpers.PaginatedList<T>æ
+ª
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs$ $(	
+%7int".Politics.Helpers.PaginatedList<T>.PageSize.get*1
+/
+
+statements!Politics.Helpers.PaginatedList<T>ø
+º
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs% %(	
+%8int"/Politics.Helpers.PaginatedList<T>.PageIndex.get*1
+/
+
+statements!Politics.Helpers.PaginatedList<T>¿
+Ω
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs& &(	
+%9int"0Politics.Helpers.PaginatedList<T>.TotalPages.get*1
+/
+
+statements!Politics.Helpers.PaginatedList<T>√
+¿
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs' '(
+%10bool"1Politics.Helpers.PaginatedList<T>.HasNextPage.get*1
+/
+
+statements!Politics.Helpers.PaginatedList<T>«
+ƒ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs( (("
+%11bool"5Politics.Helpers.PaginatedList<T>.HasPreviousPage.get*1
+/
+
+statements!Politics.Helpers.PaginatedList<T>Á
+‰
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs!
+ )(Ü
+paginationMetadatap<anonymous type: int Count, int PageSize, int PageIndex, int TotalPages, bool HasNextPage, bool HasPreviousPage>"__id*
+""‚
+ﬂ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs* *(-
+%12&Microsoft.AspNetCore.Http.HttpResponse"4Microsoft.AspNetCore.Mvc.ControllerBase.Response.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÈ
+Ê
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs* *(2
+%13+Microsoft.AspNetCore.Http.IHeaderDictionary"2Microsoft.AspNetCore.Http.HttpResponse.Headers.get*/
+-
+%12&Microsoft.AspNetCore.Http.HttpResponse¸
+˘
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs*+ *(W
+%14string"bSystem.Text.Json.JsonSerializer.Serialize<TValue>(TValue, System.Text.Json.JsonSerializerOptions?)*#"!
+System.Text.Json.JsonSerializer*â
+Ü
+paginationMetadatap<anonymous type: int Count, int PageSize, int PageIndex, int TotalPages, bool HasNextPage, bool HasPreviousPage>*
+""“
+œ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs* *(X
+%15void"__mapSet_IHeaderDictionary*4
+2
+%13+Microsoft.AspNetCore.Http.IHeaderDictionary*
+X-Pagination*
+
+%14string†ù
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs, ,(.
+%16'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*1
+/
+
+statements!Politics.Helpers.PaginatedList<T>2
+Ok(object)"
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs, ,(0
+.
+%16'Microsoft.AspNetCore.Mvc.OkObjectResult*¥
+1K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs- -("b
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs- -(
+implicit return*¡
+2K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs} (}º
+π
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csD (T\
+3
+
+parameters%Politics.Controllers.StatementsParams"%
+<Politician>k__BackingFieldstring"__entrypoint´
+®
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csD (TK
+3
+
+parameters%Politics.Controllers.StatementsParams"
+
+Politicianstring"__entrypoint“
+œ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csD (Tr
+3
+
+parameters%Politics.Controllers.StatementsParams";
+<Tags>k__BackingField"System.Collections.Generic.List<T>"__entrypoint¡
+æ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csD (Ta
+3
+
+parameters%Politics.Controllers.StatementsParams"*
+Tags"System.Collections.Generic.List<T>"__entrypointd
+b
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csD (T
+%17"__entrypoint*
+0:3
+
+parameters%Politics.Controllers.StatementsParamsB-+
+)Politics.Controllers.StatementsController

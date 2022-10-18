@@ -1,0 +1,171 @@
+
+zPolitics.Services.EmailSender.SendEmailConfirmation(Politics.Dtos.UserProfileDto, string, Politics.Model.EmailChangeToken)?
+5D:\Programavimas\politik\back\Services\EmailSender.cs    (5"0*Ã
+0?
+5D:\Programavimas\politik\back\Services\EmailSender.cs"
+ +(F¡
+
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs"
+ "(R
+subjectstring"__id*B@
+>Patvirtinkite savo Politik paskyros el. paÅ¡to adreso keitimÄ…’
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs# #()(
+%0"SendGrid.Helpers.Mail.EmailAddress""SendGrid.Helpers.Mail.EmailAddressÛ
+Ø
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs# #(
+
+%1void"?SendGrid.Helpers.Mail.EmailAddress.EmailAddress(string, string)**
+(
+%0"SendGrid.Helpers.Mail.EmailAddress*
+
+newEmailstring*
+"" 
+
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs#
+ #()(
+to"SendGrid.Helpers.Mail.EmailAddress"__id**
+(
+%0"SendGrid.Helpers.Mail.EmailAddress­
+ª
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs$( $(=
+%2string",Politics.Dtos.UserProfileDto.DisplayName.get*+
+)
+	recipientPolitics.Dtos.UserProfileDtoy
+w
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs$ $(@
+%3string"__concat*
+
+Sveiki, *
+
+%2stringr
+p
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs$ $(@
+%4string"__concat*
+
+%3string*
+,µ
+²
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs$ %(K
+%5string"__concat*
+
+%4string*GE
+C NorÄ—dami pakeisti Politik el. paÅ¡to adresÄ… paspauskite Å¾emiau.İ
+Ú
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs$ &(r
+%6string"__concat*
+
+%5string*om
+k Jei nenorÄ—jote pakeisti savo el. paÅ¡to praneÅ¡kite administracijai ir pasikeiskite Politik slaptaÅ¾odÄ¯.u
+s
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs$
+ &(r
+plainTextContentstring"__id*
+
+%6string­
+ª
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs'K '(`
+%7string",Politics.Dtos.UserProfileDto.DisplayName.get*+
+)
+	recipientPolitics.Dtos.UserProfileDto 
+
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs' '(l
+%8string"__concat*20
+.<html><body><h2 style="font-size: 36">Sveiki, *
+
+%7string{
+y
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs' '(l
+%9string"__concat*
+
+%8string*
+
+,</h2><br>¶
+³
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs' ((N
+%10string"__concat*
+
+%9string*GE
+C<div style="font-size: 20;">NorÄ—dami uÅ¾baigti savo registracijÄ… §
+¤
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs)n )(v
+%11string"&Politics.Model.EmailChangeToken.Id.get**
+(
+tokenPolitics.Model.EmailChangeTokenÓ
+Ğ
+@
+5D:\Programavimas\politik\back\Services\EmailSender.cs)
+ )(–
+%12string"__concat*b`
+^<a style="color: blue" href="https://politikapi.azurewebsites.net/api/auth/confirmEmailChange/*
+
+%11string“
+
+@
+5D:\Programavimas\politik\back\Services\EmailSender.cs)
+ )(–
+%13string"__concat*
+
+%12string*" 
+">paspauskite Äia</a><br><br>
+}
+@
+5D:\Programavimas\politik\back\Services\EmailSender.cs' )(–
+%14string"__concat*
+
+%10string*
+
+%13stringÃ
+À
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs' *(U
+%15string"__concat*
+
+%14string*SQ
+OJei nekÅ«rÄ—te Politik paskyros, ignoruokite Å¡Ä¯ laiÅ¡kÄ….</div></body></html>q
+o
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs'
+ *(U
+htmlContentstring"__id*
+
+%15stringğ
+í
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs+ +(G+
+%16$System.Threading.Tasks.Task<TResult>"bPolitics.Services.EmailSender.SendMail(string, SendGrid.Helpers.Mail.EmailAddress, string, string)*!
+Politics.Services.EmailSender*
+
+subjectstring**
+(
+to"SendGrid.Helpers.Mail.EmailAddress*
+
+plainTextContentstring*
+
+htmlContentstring"I
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs+ +(H
+""*œ
+1?
+5D:\Programavimas\politik\back\Services\EmailSender.cs, ,("V
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs, ,(
+implicit return:)
+	recipientPolitics.Dtos.UserProfileDto:
+newEmailstring:(
+tokenPolitics.Model.EmailChangeTokenB!
+Politics.Services.EmailSender

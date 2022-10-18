@@ -1,0 +1,8 @@
+›
+*Politics.Controllers.PoliticiansController'Microsoft.AspNetCore.Mvc.ControllerBaseobject¥
+;PoliticiansController(Politics.Data.IPoliticiansRepository)fPolitics.Controllers.PoliticiansController.PoliticiansController(Politics.Data.IPoliticiansRepository)¡
+9GetAllPoliticians(Politics.Controllers.PoliticiansParams)dPolitics.Controllers.PoliticiansController.GetAllPoliticians(Politics.Controllers.PoliticiansParams)a
+GetPoliticianById(string)DPolitics.Controllers.PoliticiansController.GetPoliticianById(string)ƒ
+*AddPolitician(Politics.Dtos.PoliticianDto)UPolitics.Controllers.PoliticiansController.AddPolitician(Politics.Dtos.PoliticianDto)¥
+;UpdatePolitician(string, Politics.Dtos.UpdatePoliticianDto)fPolitics.Controllers.PoliticiansController.UpdatePolitician(string, Politics.Dtos.UpdatePoliticianDto)_
+DeletePolitician(string)CPolitics.Controllers.PoliticiansController.DeletePolitician(string)

@@ -1,0 +1,13 @@
+¯
+Politics.Model.StatementTagobject<
+StatementTag()*Politics.Model.StatementTag.StatementTag()D
+StatementTagId.get.Politics.Model.StatementTag.StatementTagId.getD
+StatementTagId.set.Politics.Model.StatementTag.StatementTagId.set>
+StatementId.get+Politics.Model.StatementTag.StatementId.get>
+StatementId.set+Politics.Model.StatementTag.StatementId.set2
+	TagId.get%Politics.Model.StatementTag.TagId.get2
+	TagId.set%Politics.Model.StatementTag.TagId.set:
+Statement.get)Politics.Model.StatementTag.Statement.get:
+Statement.set)Politics.Model.StatementTag.Statement.set.
+Tag.get#Politics.Model.StatementTag.Tag.get.
+Tag.set#Politics.Model.StatementTag.Tag.set

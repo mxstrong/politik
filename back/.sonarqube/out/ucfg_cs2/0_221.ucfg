@@ -1,0 +1,203 @@
+
+SPolitics.Data.StatementsRepository.AddStatement(Politics.Dtos.StatementDto, string)D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs' (3"0*÷2
+0D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs
+ >(E≤
+Ø
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs (
+%0AutoMapper.IMapper"__id*G*E$
+"Politics.Data.StatementsRepository"
+_mapperAutoMapper.IMapperîë
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs (H
+%1Politics.Model.Statement":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%0AutoMapper.IMapper*,
+*
+statementDtoPolitics.Dtos.StatementDto2#Map<TSource, TDestination>(TSource)ò
+ï
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs
+ (H%
+	statementPolitics.Model.Statement"__id* 
+
+%1Politics.Model.StatementÑ
+Å
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs (,
+%2System.Guid"System.Guid.NewGuid()*"
+System.GuidÑ
+Å
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs (7
+%3string"System.Guid.ToString()*
+
+%2System.Guid∫
+∑
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs (7
+%4string"(Politics.Model.Statement.StatementId.set*'
+%
+	statementPolitics.Model.Statement*
+
+%3stringé
+ã
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs ((
+%5System.DateTime"System.DateTime.Now.get*"
+System.DateTime 
+«
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs ((
+%6System.DateTime"&Politics.Model.Statement.CreatedAt.set*'
+%
+	statementPolitics.Model.Statement*
+
+%5System.DateTimeæ
+ª
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs ($
+%7string"(Politics.Model.Statement.CreatedById.set*'
+%
+	statementPolitics.Model.Statement*
+
+userIdstringœ
+Ã
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs   (&
+%8 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextÿ
+’
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs   (2
+%9,Microsoft.EntityFrameworkCore.DbSet<TEntity>"/Politics.Model.PoliticsDbContext.Statements.get*(
+&
+%8 Politics.Model.PoliticsDbContext˝˙
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs   (30
+%10)System.Threading.Tasks.ValueTask<TResult>"bMicrosoft.EntityFrameworkCore.DbSet<TEntity>.AddAsync(TEntity, System.Threading.CancellationToken)*4
+2
+%9,Microsoft.EntityFrameworkCore.DbSet<TEntity>*'
+%
+	statementPolitics.Model.Statement*
+""25AddAsync(TEntity, System.Threading.CancellationToken)òï
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs" "(2)
+%11"System.Collections.Generic.List<T>""System.Collections.Generic.List<T>Æ
+´
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs" "(0
+%12void")System.Collections.Generic.List<T>.List()*+
+)
+%11"System.Collections.Generic.List<T>±
+Æ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs"
+ "(23
+statementTags"System.Collections.Generic.List<T>"__id*+
+)
+%11"System.Collections.Generic.List<T>«
+ƒ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs# #()
+%13"System.Collections.Generic.List<T>"#Politics.Dtos.StatementDto.Tags.get*,
+*
+statementDtoPolitics.Dtos.StatementDto…
+∆
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs# 9(
+%14void"<System.Collections.Generic.List<T>.ForEach(System.Action<T>)*+
+)
+%13"System.Collections.Generic.List<T>*
+""–
+Õ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs; ;('
+%15 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContext›
+⁄
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs; ;("3
+%16,Microsoft.EntityFrameworkCore.DbSet<TEntity>"2Politics.Model.PoliticsDbContext.StatementTags.get*)
+'
+%15 Politics.Model.PoliticsDbContextŸ÷
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs; ;(?"
+%17System.Threading.Tasks.Task"èMicrosoft.EntityFrameworkCore.DbSet<TEntity>.AddRangeAsync(System.Collections.Generic.IEnumerable<TEntity>, System.Threading.CancellationToken)*5
+3
+%16,Microsoft.EntityFrameworkCore.DbSet<TEntity>*5
+3
+statementTags"System.Collections.Generic.List<T>*
+""2bAddRangeAsync(System.Collections.Generic.IEnumerable<TEntity>, System.Threading.CancellationToken)–
+Õ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs< <('
+%18 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextΩ∫
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs< <('+
+%19$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*)
+'
+%18 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)–
+Õ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs=# =(+'
+%20 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContext⁄
+◊
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs=# =(63
+%21,Microsoft.EntityFrameworkCore.DbSet<TEntity>"/Politics.Model.PoliticsDbContext.Statements.get*)
+'
+%20 Politics.Model.PoliticsDbContext´
+®
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs=A =(V
+%22string"(Politics.Model.Statement.StatementId.get*'
+%
+	statementPolitics.Model.Statement®•
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs=# =(W0
+%23)System.Threading.Tasks.ValueTask<TResult>"GMicrosoft.EntityFrameworkCore.DbSet<TEntity>.FindAsync(params object[])*5
+3
+%21,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+%22string2FindAsync(params object[])Ö
+Ç
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs=
+ =(W,
+createdStatementPolitics.Model.Statement"__id*
+""≥
+∞
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs> >(
+%24AutoMapper.IMapper"__id*G*E$
+"Politics.Data.StatementsRepository"
+_mapperAutoMapper.IMapperùö
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs> >(F$
+%25Politics.Dtos.StatementOutDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%24AutoMapper.IMapper*.
+,
+createdStatementPolitics.Model.Statement2#Map<TSource, TDestination>(TSource)"n
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs> >(G&
+$
+%25Politics.Dtos.StatementOutDto*¶
+1D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs? ?("[
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs? ?(
+implicit return:*
+statementDtoPolitics.Dtos.StatementDto:
+userIdstringB&$
+"Politics.Data.StatementsRepository

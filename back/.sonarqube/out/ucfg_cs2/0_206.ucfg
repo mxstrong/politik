@@ -1,0 +1,230 @@
+
+APolitics.Controllers.StatementsController.DeleteStatement(string)K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csR5 R(D"8*–
+0K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csT
+ W(Í
+Á
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csT$ T(3)
+%0#Politics.Data.IStatementsRepository"__id*g*e+
+)Politics.Controllers.StatementsController"6
+_statementsRepo#Politics.Data.IStatementsRepositoryùö
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csT$ T(N*
+%1$System.Threading.Tasks.Task<TResult>"BPolitics.Data.IStatementsRepository.GetStatementEntityById(string)*+
+)
+%0#Politics.Data.IStatementsRepository*
+
+idstring2GetStatementEntityById(string)ç
+ä
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csT
+ T(N-
+statementToDeletePolitics.Model.Statement"__id*
+""„
+‡
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csU U(+
+%2%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase›
+⁄
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csU U(!,
+%3&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%2%Microsoft.AspNetCore.Http.HttpContextc
+a
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csU1 U(@
+%4"__id*
+""±
+Æ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csU U(A
+%5string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%3&System.Security.Claims.ClaimsPrincipal*
+
+%4u
+s
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csU
+ U(A
+rolestring"__id*
+
+%5string„
+‡
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csV V(+
+%6%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase›
+⁄
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csV V(#,
+%7&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%6%Microsoft.AspNetCore.Http.HttpContextc
+a
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csV3 V(L
+%8"__id*
+""±
+Æ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csV V(M
+%9string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%7&System.Security.Claims.ClaimsPrincipal*
+
+%8w
+u
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csV
+ V(M
+userIdstring"__id*
+
+%9string™
+ß
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csW
+ W(
+%10bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*	
+Admin*
+1
+2*É
+1K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csW W(*®
+•
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csW W(*
+%11bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*
+Mod*
+3
+2* 
+3K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csW. W(U∫
+∑
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csW8 W(U
+%12string"(Politics.Model.Statement.CreatedById.get*/
+-
+statementToDeletePolitics.Model.Statement≤
+Ø
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csW. W(U
+%13bool""string.operator !=(string, string)*
+"
+string*
+
+userIdstring*
+
+%12string*
+4
+2*“
+4K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csY Y(˘ˆ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csY Y(2
+%14+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"É
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csY Y(4
+2
+%14+Microsoft.AspNetCore.Mvc.UnauthorizedResult*ˆ
+2K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs[
+ \("Î
+Ë
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs[# [(2*
+%15#Politics.Data.IStatementsRepository"__id*g*e+
+)Politics.Controllers.StatementsController"6
+_statementsRepo#Politics.Data.IStatementsRepositoryôñ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs[# [(J+
+%16$System.Threading.Tasks.Task<TResult>"?Politics.Data.IStatementsRepository.DeleteStatementById(string)*,
+*
+%15#Politics.Data.IStatementsRepository*
+
+idstring2DeleteStatementById(string)ë
+é
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs[
+ [(J1
+deletedStatementPolitics.Dtos.StatementOutDto"__id*
+""*
+5
+6*‹
+5K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs^ ^(Aäá
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs^ ^(B,
+%17%Microsoft.AspNetCore.Mvc.ActionResult"õMicrosoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*" 
+Nurodytas pasisakymas nerastas*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"}
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs^ ^(C.
+,
+%17%Microsoft.AspNetCore.Mvc.ActionResult*’
+6K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs` `("Ç
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs` `(3
+1
+deletedStatementPolitics.Dtos.StatementOutDto*¥
+7K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csa a("b
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csa a(
+implicit return*‘
+8K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csRO R(Ot
+r
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csR5 R(D
+%18"__entrypoint*
+
+idstring√
+¿
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csP P(
+%19"
+__annotate*NL
+JMicrosoft.AspNetCore.Authorization.AuthorizeAttribute.AuthorizeAttribute()*
+
+idstring¡
+æ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csQ Q(
+%20"
+__annotate*LJ
+HMicrosoft.AspNetCore.Mvc.HttpDeleteAttribute.HttpDeleteAttribute(string)*
+
+idstring}
+{
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csRE R(N
+idstring"__annotation*
+
+%19*
+
+%20*
+0:
+idstringB-+
+)Politics.Controllers.StatementsController

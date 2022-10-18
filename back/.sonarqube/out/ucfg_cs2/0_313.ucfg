@@ -1,0 +1,30 @@
+
+„Politics.Model.PoliticsDbContext.PoliticsDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<Politics.Model.PoliticsDbContext>)B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs ("1*L
+1B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs
+ 
+(*
+0*ù
+0B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs (ª
+§
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs (
+
+%0void"aMicrosoft.EntityFrameworkCore.DbContext.DbContext(Microsoft.EntityFrameworkCore.DbContextOptions)*+)
+'Microsoft.EntityFrameworkCore.DbContext*E
+C
+options8Microsoft.EntityFrameworkCore.DbContextOptions<TContext>*
+2*¢
+2B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs
+ 
+("Y
+B
+8D:\Programavimas\politik\back\Model\PoliticsDbContext.cs
+ 
+(
+implicit return:C
+options8Microsoft.EntityFrameworkCore.DbContextOptions<TContext>B$"
+ Politics.Model.PoliticsDbContext

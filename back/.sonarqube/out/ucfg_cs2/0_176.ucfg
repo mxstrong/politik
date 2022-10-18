@@ -1,0 +1,89 @@
+
+@Politics.Controllers.TagsController.AddTag(Politics.Dtos.TagDto)E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs/ (5"2*ú
+0E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs
+  (1Ý
+Ú
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs (+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase×
+Ô
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs (#,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext]
+[
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs3 (L
+%2"__id*
+""«
+¨
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs (M
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2q
+o
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs
+ (M
+userIdstring"__id*
+
+%3stringÈ
+Å
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs   (#
+%4Politics.Data.ITagsRepository"__id*Q*O%
+#Politics.Controllers.TagsController"&
+_repoPolitics.Data.ITagsRepository½º
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs   (2*
+%5$System.Threading.Tasks.Task<TResult>"BPolitics.Data.ITagsRepository.AddTag(Politics.Dtos.TagDto, string)*%
+#
+%4Politics.Data.ITagsRepository* 
+
+tagDtoPolitics.Dtos.TagDto*
+
+userIdstring2$AddTag(Politics.Dtos.TagDto, string)îë
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs   (3-
+%6'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+""2
+Ok(object)"x
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs   (4/
+-
+%6'Microsoft.AspNetCore.Mvc.OkObjectResult*¨
+1E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs! !("\
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs! !(
+implicit return*Ù
+2E
+;D:\Programavimas\politik\back\Controllers\TagsController.csD (D›
+˜
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs/ (5A
+
+tagDtoPolitics.Dtos.TagDto"
+<Name>k__BackingFieldstring"__entrypointŠ
+‡
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs/ (50
+
+tagDtoPolitics.Dtos.TagDto"
+Namestring"__entrypoint]
+[
+E
+;D:\Programavimas\politik\back\Controllers\TagsController.cs/ (5
+%7"__entrypoint*
+0:
+tagDtoPolitics.Dtos.TagDtoB'%
+#Politics.Controllers.TagsController

@@ -1,0 +1,13 @@
+ë
+Politics.Model.Likeobject$
+Like()Politics.Model.Like.Like(),
+
+LikeId.getPolitics.Model.Like.LikeId.get,
+
+LikeId.setPolitics.Model.Like.LikeId.set,
+
+UserId.getPolitics.Model.Like.UserId.get,
+
+UserId.setPolitics.Model.Like.UserId.set6
+StatementId.get#Politics.Model.Like.StatementId.get6
+StatementId.set#Politics.Model.Like.StatementId.set

@@ -1,0 +1,70 @@
+
+ΩPolitics.Mapping.MappingProfile.Converter<TSource, TDestination>.Convert(Politics.Helpers.PaginatedList<TSource>, Politics.Helpers.PaginatedList<TDestination>, AutoMapper.ResolutionContext)A
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs)) )(0"0*Ü
+0B
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs-
+ .(Åª
+∏
+A
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs. .(
+%0AutoMapper.IRuntimeMapper"'AutoMapper.ResolutionContext.Mapper.get*)
+'
+contextAutoMapper.ResolutionContext£†
+A
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs. .(K(
+%1"System.Collections.Generic.List<T>":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*!
+
+%0AutoMapper.IRuntimeMapper*-
++
+source!Politics.Helpers.PaginatedList<T>2#Map<TSource, TDestination>(TSource)≤
+Ø
+A
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs.M .(^	
+%2int"0Politics.Helpers.PaginatedList<T>.TotalCount.get*-
++
+source!Politics.Helpers.PaginatedList<T>±
+Æ
+A
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs.` .(p	
+%3int"/Politics.Helpers.PaginatedList<T>.PageIndex.get*-
++
+source!Politics.Helpers.PaginatedList<T>±
+Æ
+B
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs.r .(Å	
+%4int".Politics.Helpers.PaginatedList<T>.PageSize.get*-
++
+source!Politics.Helpers.PaginatedList<T>ìê
+B
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs-
+ .(Ç'
+%5!Politics.Helpers.PaginatedList<T>"!Politics.Helpers.PaginatedList<T>¥
+±
+A
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs- -()
+
+%6void"bPolitics.Helpers.PaginatedList<T>.PaginatedList(System.Collections.Generic.List<T>, int, int, int)*)
+'
+%5!Politics.Helpers.PaginatedList<T>**
+(
+%1"System.Collections.Generic.List<T>*
+	
+%2int*
+	
+%3int*
+	
+%4int"o
+B
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs-
+ .(Ç)
+'
+%5!Politics.Helpers.PaginatedList<T>*§
+1C
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs.É .(É"Z
+C
+7D:\Programavimas\politik\back\Mapping\MappingProfile.cs.Ç .(É
+implicit return:+
+source!Politics.Helpers.PaginatedList<T>:0
+destination!Politics.Helpers.PaginatedList<T>:'
+contextAutoMapper.ResolutionContextBDB
+@Politics.Mapping.MappingProfile.Converter<TSource, TDestination>

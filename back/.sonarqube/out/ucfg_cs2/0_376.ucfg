@@ -1,0 +1,166 @@
+
+CPolitics.Controllers.PoliticiansController.DeletePolitician(string)L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs_% _(5"7*·	
+0L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csa
+ b(‰
+·
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csa a(+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseﬁ
+€
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csa a(!,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContextd
+b
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csa1 a(@
+%2"__id*
+""≤
+Ø
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csa a(A
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2v
+t
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csa
+ a(A
+rolestring"__id*
+
+%3string™
+ß
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csb
+ b(
+
+%4bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*	
+Admin*
+1
+2*Ñ
+1L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csb b(*®
+•
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csb b(*
+
+%5bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*
+Mod*
+3
+2*”
+3L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csd d(˘ˆ
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csd d(1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"É
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csd d(3
+1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult*Á
+2L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csf
+ g(‰
+·
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csf f("*
+%7$Politics.Data.IPoliticiansRepository"__id*_*],
+*Politics.Controllers.PoliticiansController"-
+_repo$Politics.Data.IPoliticiansRepositoryîë
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csf f(7*
+%8$System.Threading.Tasks.Task<TResult>"=Politics.Data.IPoliticiansRepository.DeletePolitician(string)*,
+*
+%7$Politics.Data.IPoliticiansRepository*
+
+idstring2DeletePolitician(string)ç
+ä
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csf
+ f(7,
+
+politicianPolitics.Dtos.PoliticianOutDto"__id*
+""*
+4
+5*—
+4L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csi i(5˛˚
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csi i(6+
+%9%Microsoft.AspNetCore.Mvc.ActionResult"õMicrosoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Politikas nerastas*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"}
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csi i(7-
++
+%9%Microsoft.AspNetCore.Mvc.ActionResult*…
+5L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csk k(ÒÓ
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csk k(/
+%10(Microsoft.AspNetCore.Mvc.NoContentResult"3Microsoft.AspNetCore.Mvc.ControllerBase.NoContent()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2NoContent()"Å
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csk k(1
+/
+%10(Microsoft.AspNetCore.Mvc.NoContentResult*∂
+6L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csl l("c
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csl l(
+implicit return*Ÿ
+7L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs_@ _(@u
+s
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs_% _(5
+%11"__entrypoint*
+
+idstringƒ
+¡
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs] ](
+%12"
+__annotate*NL
+JMicrosoft.AspNetCore.Authorization.AuthorizeAttribute.AuthorizeAttribute()*
+
+idstring¬
+ø
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs^ ^(
+%13"
+__annotate*LJ
+HMicrosoft.AspNetCore.Mvc.HttpDeleteAttribute.HttpDeleteAttribute(string)*
+
+idstring~
+|
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs_6 _(?
+idstring"__annotation*
+
+%12*
+
+%13*
+0:
+idstringB.,
+*Politics.Controllers.PoliticiansController

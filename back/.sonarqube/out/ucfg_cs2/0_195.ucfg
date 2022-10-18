@@ -1,0 +1,34 @@
+
+5Politics.Data.TagsRepository.GetTagEntityById(string)>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs3 3(+"0*Ä
+0>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs5 5(-Ã
+À
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs5 5(&
+%0 Politics.Model.PoliticsDbContext"__id*P*N
+Politics.Data.TagsRepository",
+_context Politics.Model.PoliticsDbContextÌ
+É
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs5 5( 2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>")Politics.Model.PoliticsDbContext.Tags.get*(
+&
+%0 Politics.Model.PoliticsDbContextŸœ
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs5 5(./
+%2)System.Threading.Tasks.ValueTask<TResult>"GMicrosoft.EntityFrameworkCore.DbSet<TEntity>.FindAsync(params object[])*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+idstring2FindAsync(params object[])"H
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs5 5(/
+""*š
+1>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs6 6("U
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs6 6(
+implicit return:
+idstringB 
+Politics.Data.TagsRepository

@@ -1,0 +1,107 @@
+
+3Politics.Services.AuthService.Login(string, string)?
+5D:\Programavimas\politik\back\Services\AuthService.cs (!"0*Á
+0?
+5D:\Programavimas\politik\back\Services\AuthService.cs
+ (≈
+¬
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs (&
+%0 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextŒ
+À
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs (%2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Users.get*(
+&
+%0 Politics.Model.PoliticsDbContext·
+ﬁ
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs (@R
+%2LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"¬Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""Å
+˛
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs (k*
+%3$System.Threading.Tasks.Task<TResult>"‚Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*T
+R
+%2LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""*
+""n
+l
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs
+ (k
+userPolitics.Model.User"__id*
+""ß
+§
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs
+ (
+
+%4bool""object.operator ==(object, object)*
+"
+object*
+
+userPolitics.Model.User*
+""*
+1
+2*è
+1?
+5D:\Programavimas\politik\back\Services\AuthService.cs ("I
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs (
+""*Ú
+2?
+5D:\Programavimas\politik\back\Services\AuthService.cs
+ (Hó
+î
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs$ (5
+%5byte[]"$Politics.Model.User.PasswordHash.get*
+
+userPolitics.Model.Useró
+î
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs7 (H
+%6byte[]"$Politics.Model.User.PasswordSalt.get*
+
+userPolitics.Model.UserÔ
+Ï
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs (I
+
+%7bool"DPolitics.Services.AuthService.VerifyPassword(string, byte[], byte[])*!"
+Politics.Services.AuthService*
+
+passwordstring*
+
+%5byte[]*
+
+%6byte[]*
+3
+4*è
+3?
+5D:\Programavimas\politik\back\Services\AuthService.cs! !("I
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs! !(
+""*¶
+4?
+5D:\Programavimas\politik\back\Services\AuthService.cs$ $("`
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs$ $(
+
+userPolitics.Model.User*ú
+5?
+5D:\Programavimas\politik\back\Services\AuthService.cs% %("V
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs% %(
+implicit return:
+emailstring:
+passwordstringB!
+Politics.Services.AuthService

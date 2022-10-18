@@ -1,0 +1,183 @@
+
+dPolitics.Controllers.PoliticiansController.GetAllPoliticians(Politics.Controllers.PoliticiansParams)L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csE (V"2*Ç$
+0L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs
+ %(‰
+·
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs (#*
+%0$Politics.Data.IPoliticiansRepository"__id*_*],
+*Politics.Controllers.PoliticiansController"-
+_repo$Politics.Data.IPoliticiansRepository’
+“
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs6 (K
+%1System.Nullable<T>"0Politics.Helpers.PaginationParams.PageNumber.get*6
+4
+
+parameters&Politics.Controllers.PoliticiansParams”
+–
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csM (`
+%2System.Nullable<T>".Politics.Helpers.PaginationParams.PageSize.get*6
+4
+
+parameters&Politics.Controllers.PoliticiansParamsÀ
+»
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csb (t
+%3string"2Politics.Controllers.PoliticiansParams.PartyId.get*6
+4
+
+parameters&Politics.Controllers.PoliticiansParamsÀ
+»
+M
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csv (á
+%4string"1Politics.Controllers.PoliticiansParams.Search.get*6
+4
+
+parameters&Politics.Controllers.PoliticiansParamsãà
+M
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs (à*
+%5$System.Threading.Tasks.Task<TResult>"TPolitics.Data.IPoliticiansRepository.GetAllPoliticians(int?, int?, string?, string?)*,
+*
+%0$Politics.Data.IPoliticiansRepository*
+
+%1System.Nullable<T>*
+
+%2System.Nullable<T>*
+
+%3string*
+
+%4string2/GetAllPoliticians(int?, int?, string?, string?)í
+è
+M
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs
+ (à0
+politicians!Politics.Helpers.PaginatedList<T>"__id*
+""æ
+ª
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs (	
+%6int",System.Collections.Generic.List<T>.Count.get*2
+0
+politicians!Politics.Helpers.PaginatedList<T>¿
+Ω
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs (	
+%7int".Politics.Helpers.PaginatedList<T>.PageSize.get*2
+0
+politicians!Politics.Helpers.PaginatedList<T>¡
+æ
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs (	
+%8int"/Politics.Helpers.PaginatedList<T>.PageIndex.get*2
+0
+politicians!Politics.Helpers.PaginatedList<T>¬
+ø
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs (	
+%9int"0Politics.Helpers.PaginatedList<T>.TotalPages.get*2
+0
+politicians!Politics.Helpers.PaginatedList<T>≈
+¬
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs   (
+%10bool"1Politics.Helpers.PaginatedList<T>.HasNextPage.get*2
+0
+politicians!Politics.Helpers.PaginatedList<T>…
+∆
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs! !(#
+%11bool"5Politics.Helpers.PaginatedList<T>.HasPreviousPage.get*2
+0
+politicians!Politics.Helpers.PaginatedList<T>Ë
+Â
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs
+ "(Ü
+paginationMetadatap<anonymous type: int Count, int PageSize, int PageIndex, int TotalPages, bool HasNextPage, bool HasPreviousPage>"__id*
+""„
+‡
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs# #(-
+%12&Microsoft.AspNetCore.Http.HttpResponse"4Microsoft.AspNetCore.Mvc.ControllerBase.Response.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÍ
+Á
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs# #(2
+%13+Microsoft.AspNetCore.Http.IHeaderDictionary"2Microsoft.AspNetCore.Http.HttpResponse.Headers.get*/
+-
+%12&Microsoft.AspNetCore.Http.HttpResponse˝
+˙
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs#+ #(W
+%14string"bSystem.Text.Json.JsonSerializer.Serialize<TValue>(TValue, System.Text.Json.JsonSerializerOptions?)*#"!
+System.Text.Json.JsonSerializer*â
+Ü
+paginationMetadatap<anonymous type: int Count, int PageSize, int PageIndex, int TotalPages, bool HasNextPage, bool HasPreviousPage>*
+""”
+–
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs# #(X
+%15void"__mapSet_IHeaderDictionary*4
+2
+%13+Microsoft.AspNetCore.Http.IHeaderDictionary*
+X-Pagination*
+
+%14string¢ü
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs% %(.
+%16'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*2
+0
+politicians!Politics.Helpers.PaginatedList<T>2
+Ok(object)"Ä
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs% %(0
+.
+%16'Microsoft.AspNetCore.Mvc.OkObjectResult*∂
+1L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs& &("c
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs& &(
+implicit return*ì
+2N
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csÄ (Äª
+∏
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csE (VZ
+4
+
+parameters&Politics.Controllers.PoliticiansParams""
+<PartyId>k__BackingFieldstring"__entrypoint™
+ß
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csE (VI
+4
+
+parameters&Politics.Controllers.PoliticiansParams"
+PartyIdstring"__entrypoint∫
+∑
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csE (VY
+4
+
+parameters&Politics.Controllers.PoliticiansParams"!
+<Search>k__BackingFieldstring"__entrypoint©
+¶
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csE (VH
+4
+
+parameters&Politics.Controllers.PoliticiansParams"
+Searchstring"__entrypointe
+c
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.csE (V
+%17"__entrypoint*
+0:4
+
+parameters&Politics.Controllers.PoliticiansParamsB.,
+*Politics.Controllers.PoliticiansController

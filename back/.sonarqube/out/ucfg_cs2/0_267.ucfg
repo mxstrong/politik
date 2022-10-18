@@ -1,0 +1,120 @@
+
+bPolitics.Services.EmailSender.SendMail(string, SendGrid.Helpers.Mail.EmailAddress, string, string)?
+5D:\Programavimas\politik\back\Services\EmailSender.cs.! .()"0*Ô
+0?
+5D:\Programavimas\politik\back\Services\EmailSender.cs0
+ 5(Ê
+„
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs0 0(7
+%01Microsoft.Extensions.Configuration.IConfiguration"__id*a*_
+Politics.Services.EmailSender"<
+_config1Microsoft.Extensions.Configuration.IConfiguration‹
+Ÿ
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs0 0(=
+%1string"}Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue<T>(Microsoft.Extensions.Configuration.IConfiguration, string)*:"8
+6Microsoft.Extensions.Configuration.ConfigurationBinder*9
+7
+%01Microsoft.Extensions.Configuration.IConfiguration*
+SendGridApiKeyk
+i
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs0
+ 0(=
+apiKeystring"__id*
+
+%1string{y
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs1 1(-
+%2SendGrid.SendGridClient"SendGrid.SendGridClient§
+°
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs1 1(%
+
+%3void"}SendGrid.SendGridClient.SendGridClient(string, string, System.Collections.Generic.Dictionary<string, string>, string, string)*
+
+%2SendGrid.SendGridClient*
+
+apiKeystring*
+""*
+""*
+""*
+""é
+ã
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs1
+ 1(-!
+clientSendGrid.SendGridClient"__id*
+
+%2SendGrid.SendGridClientíè
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs2 2(P(
+%4"SendGrid.Helpers.Mail.EmailAddress""SendGrid.Helpers.Mail.EmailAddress
+Ì
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs2 2(!
+
+%5void"?SendGrid.Helpers.Mail.EmailAddress.EmailAddress(string, string)**
+(
+%4"SendGrid.Helpers.Mail.EmailAddress*$"
+ mantas.ptakauskas@mif.stud.vu.lt*	
+Politik¢
+ü
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs2
+ 2(P*
+from"SendGrid.Helpers.Mail.EmailAddress"__id**
+(
+%4"SendGrid.Helpers.Mail.EmailAddress“
+œ
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs3 3(^+
+%6%SendGrid.Helpers.Mail.SendGridMessage"íSendGrid.Helpers.Mail.MailHelper.CreateSingleEmail(SendGrid.Helpers.Mail.EmailAddress, SendGrid.Helpers.Mail.EmailAddress, string, string, string)*$""
+ SendGrid.Helpers.Mail.MailHelper*,
+*
+from"SendGrid.Helpers.Mail.EmailAddress**
+(
+to"SendGrid.Helpers.Mail.EmailAddress*
+
+subjectstring*
+
+plainTextContentstring*
+
+htmlContentstringß
+§
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs3
+ 3(^,
+msg%SendGrid.Helpers.Mail.SendGridMessage"__id*-
++
+%6%SendGrid.Helpers.Mail.SendGridMessageº
+π
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs4 4(5*
+%7$System.Threading.Tasks.Task<TResult>"mSendGrid.BaseClient.SendEmailAsync(SendGrid.Helpers.Mail.SendGridMessage, System.Threading.CancellationToken)*#
+!
+clientSendGrid.SendGridClient*.
+,
+msg%SendGrid.Helpers.Mail.SendGridMessage*
+""p
+n
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs4
+ 4(5
+responseSendGrid.Response"__id*
+"""b
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs5 5(
+
+responseSendGrid.Response*ú
+1?
+5D:\Programavimas\politik\back\Services\EmailSender.cs6 6("V
+?
+5D:\Programavimas\politik\back\Services\EmailSender.cs6 6(
+implicit return:
+subjectstring:(
+to"SendGrid.Helpers.Mail.EmailAddress:
+plainTextContentstring:
+htmlContentstringB!
+Politics.Services.EmailSender

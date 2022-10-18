@@ -1,0 +1,89 @@
+
+;Politics.Data.StatementsRepository.GetStatementById(string)D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs]' ](7"0*º
+0D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_
+ f(>œ
+Ã
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_ _($&
+%0 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextÿ
+’
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_ _(/2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"/Politics.Model.PoliticsDbContext.Statements.get*(
+&
+%0 Politics.Model.PoliticsDbContextÊ
+„
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_ `(2R
+%2LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"¬Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""Ü
+É
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_ a(3R
+%3LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"¬Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*T
+R
+%2LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""Ü
+É
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_ b(6R
+%4LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"¬Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*T
+R
+%3LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""Ñ
+Å
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_ c(6R
+%5LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"¿Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ThenInclude<TEntity, TPreviousProperty, TProperty>(Microsoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, System.Collections.Generic.IEnumerable<TPreviousProperty>>, System.Linq.Expressions.Expression<System.Func<TPreviousProperty, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*T
+R
+%4LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""á
+Ñ
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_ d(G*
+%6$System.Threading.Tasks.Task<TResult>"„Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.SingleOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*T
+R
+%5LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""*
+""}
+{
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs_
+ d(G%
+	statementPolitics.Model.Statement"__id*
+""≤
+Ø
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csf f(
+%7AutoMapper.IMapper"__id*G*E$
+"Politics.Data.StatementsRepository"
+_mapperAutoMapper.IMapperîë
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csf f(?#
+%8Politics.Dtos.StatementOutDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%7AutoMapper.IMapper*'
+%
+	statementPolitics.Model.Statement2#Map<TSource, TDestination>(TSource)"m
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csf f(@%
+#
+%8Politics.Dtos.StatementOutDto*¶
+1D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csg g("[
+D
+:D:\Programavimas\politik\back\Data\StatementsRepository.csg g(
+implicit return:
+idstringB&$
+"Politics.Data.StatementsRepository

@@ -1,0 +1,14 @@
+Ä
+#Politics.Controllers.AuthController'Microsoft.AspNetCore.Mvc.ControllerBaseobjectÔ
+•AuthController(Politics.Services.IAuthService, Microsoft.Extensions.Configuration.IConfiguration, Politics.Services.IEmailSender, AutoMapper.IMapper)¹Politics.Controllers.AuthController.AuthController(Politics.Services.IAuthService, Microsoft.Extensions.Configuration.IConfiguration, Politics.Services.IEmailSender, AutoMapper.IMapper)n
+#Register(Politics.Dtos.RegisterDto)GPolitics.Controllers.AuthController.Register(Politics.Dtos.RegisterDto)b
+Login(Politics.Dtos.LoginDto)APolitics.Controllers.AuthController.Login(Politics.Dtos.LoginDto)H
+Activate(string)4Politics.Controllers.AuthController.Activate(string)L
+EmailTaken(string)6Politics.Controllers.AuthController.EmailTaken(string)B
+CurrentUser()1Politics.Controllers.AuthController.CurrentUser()z
+)ChangeEmail(Politics.Dtos.ChangeEmailDto)MPolitics.Controllers.AuthController.ChangeEmail(Politics.Dtos.ChangeEmailDto)\
+ConfirmEmailChange(string)>Politics.Controllers.AuthController.ConfirmEmailChange(string)†
+/ChangePassword(Politics.Dtos.ChangePasswordDto)SPolitics.Controllers.AuthController.ChangePassword(Politics.Dtos.ChangePasswordDto)’
+5ChangeDisplayName(Politics.Dtos.ChangeDisplayNameDto)YPolitics.Controllers.AuthController.ChangeDisplayName(Politics.Dtos.ChangeDisplayNameDto)P
+AddModerator(string)8Politics.Controllers.AuthController.AddModerator(string)š
+9GetUsers(Politics.Controllers.AuthController.UsersParams)]Politics.Controllers.AuthController.GetUsers(Politics.Controllers.AuthController.UsersParams)

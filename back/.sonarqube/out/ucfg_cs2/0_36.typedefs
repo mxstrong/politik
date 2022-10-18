@@ -1,0 +1,13 @@
+Ç
+Politics.Model.EmailChangeTokenobjectH
+EmailChangeToken()2Politics.Model.EmailChangeToken.EmailChangeToken()0
+Id.get&Politics.Model.EmailChangeToken.Id.get0
+Id.set&Politics.Model.EmailChangeToken.Id.set8
+
+UserId.get*Politics.Model.EmailChangeToken.UserId.get8
+
+UserId.set*Politics.Model.EmailChangeToken.UserId.set<
+NewEmail.get,Politics.Model.EmailChangeToken.NewEmail.get<
+NewEmail.set,Politics.Model.EmailChangeToken.NewEmail.set>
+CreatedAt.get-Politics.Model.EmailChangeToken.CreatedAt.get>
+CreatedAt.set-Politics.Model.EmailChangeToken.CreatedAt.set

@@ -1,0 +1,36 @@
+
+hPolitics.Migrations.AddStatementsAndTags.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.csz  z($"0*µ
+
+0Z
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs| ƒ(›˜
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs| }(&_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+StatementTags*
+""2DropTable(string, string)™–
+Z
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs €(#_
+%1YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+
+Statements*
+""2DropTable(string, string)”‘
+[
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs‚ ƒ(_
+%2YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+Tags*
+""2DropTable(string, string)*
+1*Ô
+1[
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs„	 „(	"r
+[
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs„ „(	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB,*
+(Politics.Migrations.AddStatementsAndTags

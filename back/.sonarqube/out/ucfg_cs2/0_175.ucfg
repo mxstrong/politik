@@ -1,0 +1,62 @@
+
+¹Politics.Controllers.AuthController.AuthController(Politics.Services.IAuthService, Microsoft.Extensions.Configuration.IConfiguration, Politics.Services.IEmailSender, AutoMapper.IMapper)E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs ("3*Æ
+1E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs" "(u
+s
+
+%0void"8Microsoft.AspNetCore.Mvc.ControllerBase.ControllerBase()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+0*³
+0E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs !(Ú
+×
+E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs ( W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthService"__id*/
+-
+authServicePolitics.Services.IAuthServiceö
+ó
+E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs (e%
+#Politics.Controllers.AuthController"<
+_config1Microsoft.Extensions.Configuration.IConfiguration"__id*=
+;
+config1Microsoft.Extensions.Configuration.IConfigurationÐ
+Í
+E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs   (R%
+#Politics.Controllers.AuthController")
+_senderPolitics.Services.IEmailSender"__id**
+(
+senderPolitics.Services.IEmailSender¸
+µ
+E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs! !(F%
+#Politics.Controllers.AuthController"
+_mapperAutoMapper.IMapper"__id*
+
+mapperAutoMapper.IMapper*
+2*¨
+2E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs" "("\
+E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs" "(
+implicit return*
+3E
+;D:\Programavimas\politik\back\Controllers\AuthController.cso (o½
+º
+E
+;D:\Programavimas\politik\back\Controllers\AuthController.cs (
+%1"__entrypoint*=
+;
+config1Microsoft.Extensions.Configuration.IConfiguration*
+
+mapperAutoMapper.IMapper*
+1:-
+authServicePolitics.Services.IAuthService:;
+config1Microsoft.Extensions.Configuration.IConfiguration:(
+senderPolitics.Services.IEmailSender:
+mapperAutoMapper.IMapperB'%
+#Politics.Controllers.AuthController

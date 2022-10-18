@@ -1,0 +1,96 @@
+
+rPolitics.Migrations.UpdatePoliticianAndPartyTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.cs1  1($"0*‹
+0c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.cs3 P(ÄÁ
+c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.cs3 5(%_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"\Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropColumn(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+	FirstName*
+Politicians*
+""2"DropColumn(string, string, string)¿¼
+c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.cs7 9(!_
+%1YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"\Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropColumn(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+
+LongName*	
+Parties*
+""2"DropColumn(string, string, string)åâ
+c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.cs; >($_
+%2YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"fMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.RenameColumn(string, string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+
+LastName*
+Politicians*
+
+FullName*
+""2,RenameColumn(string, string, string, string)ßÜ
+c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.cs@ C(#_
+%3YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"fMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.RenameColumn(string, string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*	
+PartyId*	
+Parties*	
+Partyid*
+""2,RenameColumn(string, string, string, string)ÞÛ
+c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.csE H( _
+%4YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"fMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.RenameColumn(string, string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+	ShortName*	
+Parties*
+Name*
+""2,RenameColumn(string, string, string, string)çä
+c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.csJ P( d
+%5^Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.AlterOperationBuilder<TOperation>"³Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.AlterColumn<T>(string, string, string, bool?, int?, bool, string, bool, object, string, string, System.Type, string, bool?, int?, bool, bool, object, string, string, bool?, bool?, string, string, string, string, int?, int?, int?, int?, bool?, bool?)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+Description*
+Politicians*
+text*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+text*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""2ùAlterColumn<T>(string, string, string, bool?, int?, bool, string, bool, object, string, string, System.Type, string, bool?, int?, bool, bool, object, string, string, bool?, bool?, string, string, string, string, int?, int?, int?, int?, bool?, bool?)*
+1*ä
+1c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.csQ	 Q(	"z
+c
+YD:\Programavimas\politik\back\Migrations\20211023152735_UpdatePoliticianAndPartyTables.csQ Q(	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB64
+2Politics.Migrations.UpdatePoliticianAndPartyTables

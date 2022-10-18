@@ -1,0 +1,37 @@
+
+FPolitics.Data.StatementsRepository.CheckIfUserHasLiked(string, string)F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¥ ¥(/"0*©
+0F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs§ §(mÑ
+Î
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs§ §(&
+%0 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextÕ
+Ò
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs§ §(!2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Likes.get*(
+&
+%0 Politics.Model.PoliticsDbContextÝ
+Ú
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs§ §(n*
+%2$System.Threading.Tasks.Task<TResult>"×Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""*
+"""P
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs§ §(o
+""*ª
+1F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¨ ¨("]
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¨ ¨(
+implicit return:
+statementIdstring:
+userIdstringB&$
+"Politics.Data.StatementsRepository

@@ -1,0 +1,13 @@
+Ç
+
+"Politics.Data.StatementsRepositoryobject#Politics.Data.IStatementsRepositoryú
+iStatementsRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper, Politics.Data.ITagsRepository)ŒPolitics.Data.StatementsRepository.StatementsRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper, Politics.Data.ITagsRepository)‡
+0AddStatement(Politics.Dtos.StatementDto, string)SPolitics.Data.StatementsRepository.AddStatement(Politics.Dtos.StatementDto, string)Å
+OGetAllStatements(string?, System.Collections.Generic.List<string>?, int?, int?)rPolitics.Data.StatementsRepository.GetAllStatements(string?, System.Collections.Generic.List<string>?, int?, int?)W
+GetStatementById(string);Politics.Data.StatementsRepository.GetStatementById(string)c
+GetStatementEntityById(string)APolitics.Data.StatementsRepository.GetStatementEntityById(string)]
+DeleteStatementById(string)>Politics.Data.StatementsRepository.DeleteStatementById(string)a
+LikeStatement(string, string)@Politics.Data.StatementsRepository.LikeStatement(string, string)e
+UnlikeStatement(string, string)BPolitics.Data.StatementsRepository.UnlikeStatement(string, string)O
+GetLikeCount(string)7Politics.Data.StatementsRepository.GetLikeCount(string)m
+#CheckIfUserHasLiked(string, string)FPolitics.Data.StatementsRepository.CheckIfUserHasLiked(string, string)

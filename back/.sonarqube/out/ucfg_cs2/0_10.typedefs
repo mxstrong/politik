@@ -1,0 +1,9 @@
+™
+Politics.Dtos.PartyOutDtoobject8
+PartyOutDto()'Politics.Dtos.PartyOutDto.PartyOutDto()*
+Id.get Politics.Dtos.PartyOutDto.Id.get*
+Id.set Politics.Dtos.PartyOutDto.Id.set8
+ShortName.get'Politics.Dtos.PartyOutDto.ShortName.get8
+ShortName.set'Politics.Dtos.PartyOutDto.ShortName.set6
+LongName.get&Politics.Dtos.PartyOutDto.LongName.get6
+LongName.set&Politics.Dtos.PartyOutDto.LongName.set

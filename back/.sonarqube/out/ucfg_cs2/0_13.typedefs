@@ -1,0 +1,7 @@
+Í
+&Politics.Controllers.PartiesController'Microsoft.AspNetCore.Mvc.ControllerBaseobject‘
+3PartiesController(Politics.Data.IPartiesRepository)ZPolitics.Controllers.PartiesController.PartiesController(Politics.Data.IPartiesRepository)I
+GetAllParties()6Politics.Controllers.PartiesController.GetAllParties()S
+GetPartyById(string);Politics.Controllers.PartiesController.GetPartyById(string)k
+ AddParty(Politics.Dtos.PartyDto)GPolitics.Controllers.PartiesController.AddParty(Politics.Dtos.PartyDto)Q
+DeleteParty(string):Politics.Controllers.PartiesController.DeleteParty(string)

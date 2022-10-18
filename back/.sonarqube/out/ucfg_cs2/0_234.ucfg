@@ -1,0 +1,195 @@
+
+APolitics.Controllers.StatementsController.UnlikeStatement(string)K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csz$ z(3"8*õ
+0K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs|
+ ~(„
+‡
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs| |(+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase›
+⁄
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs| |(#,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContextc
+a
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs|3 |(L
+%2"__id*
+""±
+Æ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs| |(M
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2w
+u
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs|
+ |(M
+userIdstring"__id*
+
+%3string›
+⁄
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs} }(#$
+%4Politics.Services.IAuthService"__id*_*]+
+)Politics.Controllers.StatementsController".
+_authServicePolitics.Services.IAuthServiceÅ˛
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs} }(7*
+%5$System.Threading.Tasks.Task<TResult>"2Politics.Services.IAuthService.GetUserById(string)*&
+$
+%4Politics.Services.IAuthService*
+
+userIdstring2GetUserById(string)Ñ
+Å
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs}
+ }(7$
+userPolitics.Dtos.UserProfileDto"__id*
+""*
+1
+2*÷
+1M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÄ Ä(˙˜
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÄ Ä(1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"Ñ
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÄ Ä(3
+1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult*ﬂ
+2M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÇ
+ Ç(>Ï
+È
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÇ Ç( )
+%7#Politics.Data.IStatementsRepository"__id*g*e+
+)Politics.Controllers.StatementsController"6
+_statementsRepo#Politics.Data.IStatementsRepositoryìê
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÇ Ç(5*
+%8$System.Threading.Tasks.Task<TResult>"<Politics.Data.IStatementsRepository.GetStatementById(string)*+
+)
+%7#Politics.Data.IStatementsRepository*
+
+idstring2GetStatementById(string)*
+3
+4*€
+3M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÑ Ñ(;ÜÉ
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÑ Ñ(<+
+%9%Microsoft.AspNetCore.Mvc.ActionResult"õMicrosoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Parei≈°kimas neegzistuoja*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"~
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÑ Ñ(=-
++
+%9%Microsoft.AspNetCore.Mvc.ActionResult*ı
+4M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÜ
+ á(Ì
+Í
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÜ Ü((*
+%10#Politics.Data.IStatementsRepository"__id*g*e+
+)Politics.Controllers.StatementsController"6
+_statementsRepo#Politics.Data.IStatementsRepository∑¥
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÜ Ü(D+
+%11$System.Threading.Tasks.Task<TResult>"CPolitics.Data.IStatementsRepository.UnlikeStatement(string, string)*,
+*
+%10#Politics.Data.IStatementsRepository*
+
+idstring*
+
+userIdstring2UnlikeStatement(string, string)o
+m
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csÜ
+ Ü(D
+resultbool"__id*
+""*
+5
+6*Ø
+5M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csâ â(›⁄
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csâ â((
+%12!Microsoft.AspNetCore.Mvc.OkResult",Microsoft.AspNetCore.Mvc.ControllerBase.Ok()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Ok()"{
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csâ â(*
+(
+%12!Microsoft.AspNetCore.Mvc.OkResult*¯
+6M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csã ã(R¢ü
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csã ã(S,
+%13%Microsoft.AspNetCore.Mvc.ActionResult"õMicrosoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*86
+4Vartotojas nƒóra paspaudƒôs like ant ≈°io pasisakymo*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.csã ã(T.
+,
+%13%Microsoft.AspNetCore.Mvc.ActionResult*∏
+7M
+AD:\Programavimas\politik\back\Controllers\StatementsController.cså å("d
+M
+AD:\Programavimas\politik\back\Controllers\StatementsController.cså å(
+implicit return*–
+8K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csz> z(>t
+r
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csz$ z(3
+%14"__entrypoint*
+
+idstring√
+¿
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csx x(
+%15"
+__annotate*NL
+JMicrosoft.AspNetCore.Authorization.AuthorizeAttribute.AuthorizeAttribute()*
+
+idstringΩ
+∫
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csy y(
+%16"
+__annotate*HF
+DMicrosoft.AspNetCore.Mvc.HttpPostAttribute.HttpPostAttribute(string)*
+
+idstring}
+{
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csz4 z(=
+idstring"__annotation*
+
+%15*
+
+%16*
+0:
+idstringB-+
+)Politics.Controllers.StatementsController

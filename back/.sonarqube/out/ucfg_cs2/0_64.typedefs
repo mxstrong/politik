@@ -1,0 +1,15 @@
+´
+!Politics.Helpers.PaginatedList<T>"System.Collections.Generic.List<T>object¦
+@PaginatedList(System.Collections.Generic.List<T>, int, int, int)bPolitics.Helpers.PaginatedList<T>.PaginatedList(System.Collections.Generic.List<T>, int, int, int)@
+PageIndex.get/Politics.Helpers.PaginatedList<T>.PageIndex.get@
+PageIndex.set/Politics.Helpers.PaginatedList<T>.PageIndex.set>
+PageSize.get.Politics.Helpers.PaginatedList<T>.PageSize.get>
+PageSize.set.Politics.Helpers.PaginatedList<T>.PageSize.setB
+TotalPages.get0Politics.Helpers.PaginatedList<T>.TotalPages.getB
+TotalPages.set0Politics.Helpers.PaginatedList<T>.TotalPages.setB
+TotalCount.get0Politics.Helpers.PaginatedList<T>.TotalCount.getB
+TotalCount.set0Politics.Helpers.PaginatedList<T>.TotalCount.setL
+HasPreviousPage.get5Politics.Helpers.PaginatedList<T>.HasPreviousPage.getL
+HasPreviousPage.set5Politics.Helpers.PaginatedList<T>.HasPreviousPage.setD
+HasNextPage.get1Politics.Helpers.PaginatedList<T>.HasNextPage.getD
+HasNextPage.set1Politics.Helpers.PaginatedList<T>.HasNextPage.set

@@ -1,0 +1,165 @@
+
+:Politics.Controllers.PartiesController.DeleteParty(string)H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs2$ 2(/"7*Å	
+0H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs4
+ 5(à
+Ý
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs4 4(+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÚ
+×
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs4 4(!,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext`
+^
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs41 4(@
+%2"__id*
+""®
+«
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs4 4(A
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2r
+p
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs4
+ 4(A
+rolestring"__id*
+
+%3string¦
+£
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs5
+ 5(
+
+%4bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*	
+Admin*
+1
+2*ü
+1H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs5 5(+¤
+¡
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs5 5(+
+
+%5bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*
+Mod*
+3
+2*Æ
+3H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs7 7(õò
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs7 7(1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs7 7(3
+1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult*­
+2H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs9
+ :(Ô
+Ñ
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs9 9(&
+%7 Politics.Data.IPartiesRepository"__id*W*U(
+&Politics.Controllers.PartiesController")
+_repo Politics.Data.IPartiesRepositoryþû
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs9 9(-*
+%8$System.Threading.Tasks.Task<TResult>"4Politics.Data.IPartiesRepository.DeleteParty(string)*(
+&
+%7 Politics.Data.IPartiesRepository*
+
+idstring2DeleteParty(string)~
+|
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs9
+ 9(-"
+partyPolitics.Dtos.PartyOutDto"__id*
+""*
+4
+5*Â
+4H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs< <(2÷ô
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs< <(3+
+%9%Microsoft.AspNetCore.Mvc.ActionResult"›Microsoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Partija nerasta*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"y
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs< <(4-
++
+%9%Microsoft.AspNetCore.Mvc.ActionResult*¼
+5H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs> >(íê
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs> >(/
+%10(Microsoft.AspNetCore.Mvc.NoContentResult"3Microsoft.AspNetCore.Mvc.ControllerBase.NoContent()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2NoContent()"}
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs> >(1
+/
+%10(Microsoft.AspNetCore.Mvc.NoContentResult*®
+6H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs? ?("_
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs? ?(
+implicit return*Å
+7H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs2: 2(:q
+o
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs2$ 2(/
+%11"__entrypoint*
+
+idstringÀ
+½
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs0 0(
+%12"
+__annotate*NL
+JMicrosoft.AspNetCore.Authorization.AuthorizeAttribute.AuthorizeAttribute()*
+
+idstring¾
+»
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs1 1(
+%13"
+__annotate*LJ
+HMicrosoft.AspNetCore.Mvc.HttpDeleteAttribute.HttpDeleteAttribute(string)*
+
+idstringz
+x
+H
+>D:\Programavimas\politik\back\Controllers\PartiesController.cs20 2(9
+idstring"__annotation*
+
+%12*
+
+%13*
+0:
+idstringB*(
+&Politics.Controllers.PartiesController

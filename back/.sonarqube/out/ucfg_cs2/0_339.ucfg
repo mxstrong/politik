@@ -1,0 +1,41 @@
+
+aPolitics.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)R
+HD:\Programavimas\politik\back\Migrations\20211013182223_InitialCreate.csa  a($"0*†
+0R
+HD:\Programavimas\politik\back\Migrations\20211013182223_InitialCreate.csc m(íè
+R
+HD:\Programavimas\politik\back\Migrations\20211013182223_InitialCreate.csc d($_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+Politicians*
+""2DropTable(string, string)åâ
+R
+HD:\Programavimas\politik\back\Migrations\20211013182223_InitialCreate.csf g(_
+%1YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*	
+Users*
+""2DropTable(string, string)éã
+R
+HD:\Programavimas\politik\back\Migrations\20211013182223_InitialCreate.csi j( _
+%2YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*	
+Parties*
+""2DropTable(string, string)åâ
+R
+HD:\Programavimas\politik\back\Migrations\20211013182223_InitialCreate.csl m(_
+%3YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*	
+Roles*
+""2DropTable(string, string)*
+1*¬
+1R
+HD:\Programavimas\politik\back\Migrations\20211013182223_InitialCreate.csn	 n(	"i
+R
+HD:\Programavimas\politik\back\Migrations\20211013182223_InitialCreate.csn n(	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB%#
+!Politics.Migrations.InitialCreate

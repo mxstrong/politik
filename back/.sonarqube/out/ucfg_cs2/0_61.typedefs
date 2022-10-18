@@ -1,0 +1,6 @@
+§
+Politics.Services.EmailSenderobjectPolitics.Services.IEmailSenderž
+>EmailSender(Microsoft.Extensions.Configuration.IConfiguration)\Politics.Services.EmailSender.EmailSender(Microsoft.Extensions.Configuration.IConfiguration)²
+HSendActivationEmail(Politics.Model.User, Politics.Model.ActivationToken)fPolitics.Services.EmailSender.SendActivationEmail(Politics.Model.User, Politics.Model.ActivationToken)Ú
+\SendEmailConfirmation(Politics.Dtos.UserProfileDto, string, Politics.Model.EmailChangeToken)zPolitics.Services.EmailSender.SendEmailConfirmation(Politics.Dtos.UserProfileDto, string, Politics.Model.EmailChangeToken)ª
+DSendMail(string, SendGrid.Helpers.Mail.EmailAddress, string, string)bPolitics.Services.EmailSender.SendMail(string, SendGrid.Helpers.Mail.EmailAddress, string, string)

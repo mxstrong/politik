@@ -1,0 +1,21 @@
+…
+Politics.Model.Partyobject'
+Party()Politics.Model.Party.Party()/
+PartyId.get Politics.Model.Party.PartyId.get/
+PartyId.set Politics.Model.Party.PartyId.set1
+LongName.get!Politics.Model.Party.LongName.get1
+LongName.set!Politics.Model.Party.LongName.set3
+ShortName.get"Politics.Model.Party.ShortName.get3
+ShortName.set"Politics.Model.Party.ShortName.set3
+CreatedAt.get"Politics.Model.Party.CreatedAt.get3
+CreatedAt.set"Politics.Model.Party.CreatedAt.set3
+UpdatedAt.get"Politics.Model.Party.UpdatedAt.get3
+UpdatedAt.set"Politics.Model.Party.UpdatedAt.set7
+CreatedById.get$Politics.Model.Party.CreatedById.get7
+CreatedById.set$Politics.Model.Party.CreatedById.set7
+UpdatedById.get$Politics.Model.Party.UpdatedById.get7
+UpdatedById.set$Politics.Model.Party.UpdatedById.set3
+CreatedBy.get"Politics.Model.Party.CreatedBy.get3
+CreatedBy.set"Politics.Model.Party.CreatedBy.set3
+UpdatedBy.get"Politics.Model.Party.UpdatedBy.get3
+UpdatedBy.set"Politics.Model.Party.UpdatedBy.set

@@ -1,0 +1,13 @@
+©
+Politics.Dtos.UserProfileDtoobjectA
+UserProfileDto()-Politics.Dtos.UserProfileDto.UserProfileDto()5
+
+UserId.get'Politics.Dtos.UserProfileDto.UserId.get5
+
+UserId.set'Politics.Dtos.UserProfileDto.UserId.set?
+DisplayName.get,Politics.Dtos.UserProfileDto.DisplayName.get?
+DisplayName.set,Politics.Dtos.UserProfileDto.DisplayName.set3
+	Email.get&Politics.Dtos.UserProfileDto.Email.get3
+	Email.set&Politics.Dtos.UserProfileDto.Email.set1
+Role.get%Politics.Dtos.UserProfileDto.Role.get1
+Role.set%Politics.Dtos.UserProfileDto.Role.set

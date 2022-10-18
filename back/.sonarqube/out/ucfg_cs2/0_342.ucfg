@@ -1,0 +1,140 @@
+
+gPolitics.Controllers.ReportsController.GetReports(Politics.Controllers.ReportsController.ReportsParams)H
+>D:\Programavimas\politik\back\Controllers\ReportsController.csA (K"5*Å	
+0H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs
+ (à
+Ý
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÚ
+×
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (!,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext`
+^
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs1 (@
+%2"__id*
+""®
+«
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (A
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2r
+p
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs
+ (A
+rolestring"__id*
+
+%3string¦
+£
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs
+ (
+
+%4bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*	
+Admin*
+1
+2*ü
+1H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (*¤
+¡
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (*
+
+%5bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*
+Mod*
+3
+2*Æ
+3H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (õò
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (3
+1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult*•
+2H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (oÛ
+Ø
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs ("&
+%7 Politics.Data.IReportsRepository"__id*^*\(
+&Politics.Controllers.ReportsController"0
+_reportsRepo Politics.Data.IReportsRepositoryß
+Ü
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs. (C
+%8System.Nullable<T>"0Politics.Helpers.PaginationParams.PageNumber.get*D
+B
+
+parameters4Politics.Controllers.ReportsController.ReportsParamsÝ
+Ú
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.csE (X
+%9System.Nullable<T>".Politics.Helpers.PaginationParams.PageSize.get*D
+B
+
+parameters4Politics.Controllers.ReportsController.ReportsParamså
+â
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.csZ (o
+%10bool"CPolitics.Controllers.ReportsController.ReportsParams.IsReviewed.get*D
+B
+
+parameters4Politics.Controllers.ReportsController.ReportsParamsÊÇ
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (p+
+%11$System.Threading.Tasks.Task<TResult>">Politics.Data.IReportsRepository.GetReports(int?, int?, bool?)*(
+&
+%7 Politics.Data.IReportsRepository*
+
+%8System.Nullable<T>*
+
+%9System.Nullable<T>*
+
+%10bool2GetReports(int?, int?, bool?)òï
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (q.
+%12'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+""2
+Ok(object)"|
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs (r0
+.
+%12'Microsoft.AspNetCore.Mvc.OkObjectResult*®
+4H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs   ("_
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs   (
+implicit return*µ
+5H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cse (ea
+_
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.csA (K
+%13"__entrypoint*
+0:B
+
+parameters4Politics.Controllers.ReportsController.ReportsParamsB*(
+&Politics.Controllers.ReportsController

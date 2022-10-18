@@ -1,0 +1,31 @@
+
+,Politics.Program.CreateHostBuilder(string[])2
+(D:\Programavimas\politik\back\Program.cs (0"0*ª
+02
+(D:\Programavimas\politik\back\Program.cs (å
+â
+2
+(D:\Programavimas\politik\back\Program.cs ('/
+%0)Microsoft.Extensions.Hosting.IHostBuilder"@Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(string[])*%"#
+!Microsoft.Extensions.Hosting.Host*
+
+argsstring[]Ÿ
+œ
+2
+(D:\Programavimas\politik\back\Program.cs (/
+%1)Microsoft.Extensions.Hosting.IHostBuilder"ºMicrosoft.Extensions.Hosting.GenericHostBuilderExtensions.ConfigureWebHostDefaults(Microsoft.Extensions.Hosting.IHostBuilder, System.Action<Microsoft.AspNetCore.Hosting.IWebHostBuilder>)*=";
+9Microsoft.Extensions.Hosting.GenericHostBuilderExtensions*1
+/
+%0)Microsoft.Extensions.Hosting.IHostBuilder*
+"""g
+2
+(D:\Programavimas\politik\back\Program.cs (1
+/
+%1)Microsoft.Extensions.Hosting.IHostBuilder*‚
+12
+(D:\Programavimas\politik\back\Program.cs ("I
+2
+(D:\Programavimas\politik\back\Program.cs (
+implicit return:
+argsstring[]B"
+Politics.Program

@@ -1,0 +1,315 @@
+
+SPolitics.Controllers.AuthController.ChangePassword(Politics.Dtos.ChangePasswordDto)G
+;D:\Programavimas\politik\back\Controllers\AuthController.csú4 ú(B"10*ï
+0G
+;D:\Programavimas\politik\back\Controllers\AuthController.csû
+ ü(1ﬂ
+‹
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csû û(&+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseŸ
+÷
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csû û(+,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext_
+]
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csû; û(T
+%2"__id*
+""≠
+™
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csû û(U
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2{
+y
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csû
+ û(U
+userIdFromAuthstring"__id*
+
+%3stringª
+∏
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csü ü(1
+%4string"*Politics.Dtos.ChangePasswordDto.UserId.get*3
+1
+changePasswordPolitics.Dtos.ChangePasswordDto¥
+±
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csü
+ ü(1
+
+%5bool""string.operator !=(string, string)*
+"
+string*
+
+userIdFromAuthstring*
+
+%4string*
+1
+2*√
+1G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs° °(ÙÒ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs° °(1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"~
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs° °(3
+1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult*í
+2G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs£
+ £(/¿
+Ω
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs£
+ £($
+%7string"/Politics.Dtos.ChangePasswordDto.NewPassword.get*3
+1
+changePasswordPolitics.Dtos.ChangePasswordDtoy
+w
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs£
+ £(+	
+%8int"string.Length.get*
+
+%7string*
+3
+4*œ
+3G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs• •(AÜÉ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs• •(B+
+%9%Microsoft.AspNetCore.Mvc.ActionResult"õMicrosoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*#!
+Naujas slapta≈æodis per trumpas*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"x
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs• •(C-
++
+%9%Microsoft.AspNetCore.Mvc.ActionResult*ï
+4G
+;D:\Programavimas\politik\back\Controllers\AuthController.csß
+ ß(0¡
+æ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csß
+ ß($
+%10string"/Politics.Dtos.ChangePasswordDto.NewPassword.get*3
+1
+changePasswordPolitics.Dtos.ChangePasswordDto{
+y
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csß
+ ß(+
+
+%11int"string.Length.get*
+
+%10string*
+5
+6*œ
+5G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs© ©(?ÖÇ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs© ©(@,
+%12%Microsoft.AspNetCore.Mvc.ActionResult"õMicrosoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*!
+Naujas slapta≈æodis per ilgas*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"y
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs© ©(A.
+,
+%12%Microsoft.AspNetCore.Mvc.ActionResult* 
+6G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs´
+ ≠( ‘
+—
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs´ ´(#%
+%13Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthServiceº
+π
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs´0 ´(E
+%14string"*Politics.Dtos.ChangePasswordDto.UserId.get*3
+1
+changePasswordPolitics.Dtos.ChangePasswordDto¸˘
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs´ ´(F+
+%15$System.Threading.Tasks.Task<TResult>"2Politics.Services.IAuthService.GetUserById(string)*'
+%
+%13Politics.Services.IAuthService*
+
+%14string2GetUserById(string)
+}
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs´
+ ´(F$
+userPolitics.Dtos.UserProfileDto"__id*
+""‘
+—
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¨! ¨(-%
+%16Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthService´
+®
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¨4 ¨(>
+%17string"&Politics.Dtos.UserProfileDto.Email.get*&
+$
+userPolitics.Dtos.UserProfileDto¡
+æ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¨@ ¨(Z
+%18string"/Politics.Dtos.ChangePasswordDto.OldPassword.get*3
+1
+changePasswordPolitics.Dtos.ChangePasswordDtoëé
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¨! ¨([+
+%19$System.Threading.Tasks.Task<TResult>"4Politics.Services.IAuthService.Login(string, string)*'
+%
+%16Politics.Services.IAuthService*
+
+%17string*
+
+%18string2Login(string, string)Ä
+~
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¨
+ ¨([%
+passwordsMatchPolitics.Model.User"__id*
+""*
+7
+8*À
+7G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ Ø(;Å˛
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ Ø(<,
+%20%Microsoft.AspNetCore.Mvc.ActionResult"õMicrosoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Senas slapta≈æodis blogas*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"y
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ Ø(=.
+,
+%20%Microsoft.AspNetCore.Mvc.ActionResult*Ê
+8G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs±
+ ≤(‘
+—
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs± ±(&%
+%21Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthServiceº
+π
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs±6 ±(K
+%22string"*Politics.Dtos.ChangePasswordDto.UserId.get*3
+1
+changePasswordPolitics.Dtos.ChangePasswordDto¡
+æ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs±M ±(g
+%23string"/Politics.Dtos.ChangePasswordDto.NewPassword.get*3
+1
+changePasswordPolitics.Dtos.ChangePasswordDto£†
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs± ±(h+
+%24$System.Threading.Tasks.Task<TResult>"=Politics.Services.IAuthService.ChangePassword(string, string)*'
+%
+%21Politics.Services.IAuthService*
+
+%22string*
+
+%23string2ChangePassword(string, string)É
+Ä
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs±
+ ±(h'
+profilePolitics.Dtos.UserProfileDto"__id*
+""îë
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs≤ ≤(.
+%25'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*)
+'
+profilePolitics.Dtos.UserProfileDto2
+Ok(object)"{
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs≤ ≤(0
+.
+%25'Microsoft.AspNetCore.Mvc.OkObjectResult*¨
+9G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs≥ ≥("^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs≥ ≥(
+implicit return*”	
+10G
+;D:\Programavimas\politik\back\Controllers\AuthController.csúo ú(o≤
+Ø
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csú4 ú(BV
+1
+changePasswordPolitics.Dtos.ChangePasswordDto"!
+<UserId>k__BackingFieldstring"__entrypoint°
+û
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csú4 ú(BE
+1
+changePasswordPolitics.Dtos.ChangePasswordDto"
+UserIdstring"__entrypoint∑
+¥
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csú4 ú(B[
+1
+changePasswordPolitics.Dtos.ChangePasswordDto"&
+<OldPassword>k__BackingFieldstring"__entrypoint¶
+£
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csú4 ú(BJ
+1
+changePasswordPolitics.Dtos.ChangePasswordDto"
+OldPasswordstring"__entrypoint∑
+¥
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csú4 ú(B[
+1
+changePasswordPolitics.Dtos.ChangePasswordDto"&
+<NewPassword>k__BackingFieldstring"__entrypoint¶
+£
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csú4 ú(BJ
+1
+changePasswordPolitics.Dtos.ChangePasswordDto"
+NewPasswordstring"__entrypoint`
+^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csú4 ú(B
+%26"__entrypoint*
+0:1
+changePasswordPolitics.Dtos.ChangePasswordDtoB'%
+#Politics.Controllers.AuthController

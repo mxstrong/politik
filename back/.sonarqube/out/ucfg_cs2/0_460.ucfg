@@ -1,0 +1,98 @@
+
+<Politics.Data.PoliticiansRepository.DeletePolitician(string)E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs_( _(8"0*¯
+0E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csa
+ b(Ñ
+Î
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csa a(%&
+%0 Politics.Model.PoliticsDbContext"__id*W*U%
+#Politics.Data.PoliticiansRepository",
+_context Politics.Model.PoliticsDbContextÚ
+×
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csa a(12
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"0Politics.Model.PoliticsDbContext.Politicians.get*(
+&
+%0 Politics.Model.PoliticsDbContext¦£
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csa a(?/
+%2)System.Threading.Tasks.ValueTask<TResult>"GMicrosoft.EntityFrameworkCore.DbSet<TEntity>.FindAsync(params object[])*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+idstring2FindAsync(params object[])€
+~
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csa
+ a(?'
+
+politicianPolitics.Model.Politician"__id*
+""*
+1
+2*›
+1E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csd d("O
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csd d(
+""*—
+2E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csf h(AÑ
+Î
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csf f(&
+%3 Politics.Model.PoliticsDbContext"__id*W*U%
+#Politics.Data.PoliticiansRepository",
+_context Politics.Model.PoliticsDbContextÚ
+×
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csf f(2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>"0Politics.Model.PoliticsDbContext.Politicians.get*(
+&
+%3 Politics.Model.PoliticsDbContextÃÀ
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csf f(-G
+%5AMicrosoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>"<Microsoft.EntityFrameworkCore.DbSet<TEntity>.Remove(TEntity)*4
+2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>*)
+'
+
+politicianPolitics.Model.Politician2Remove(TEntity)Ñ
+Î
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csg g(&
+%6 Politics.Model.PoliticsDbContext"__id*W*U%
+#Politics.Data.PoliticiansRepository",
+_context Politics.Model.PoliticsDbContext¼¹
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csg g('*
+%7$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*(
+&
+%6 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)´
+±
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csh h(
+%8AutoMapper.IMapper"__id*H*F%
+#Politics.Data.PoliticiansRepository"
+_mapperAutoMapper.IMapper˜•
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csh h(B$
+%9Politics.Dtos.PoliticianOutDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%8AutoMapper.IMapper*)
+'
+
+politicianPolitics.Model.Politician2#Map<TSource, TDestination>(TSource)"o
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csh h(C&
+$
+%9Politics.Dtos.PoliticianOutDto*¨
+3E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csi i("\
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.csi i(
+implicit return:
+idstringB'%
+#Politics.Data.PoliticiansRepository

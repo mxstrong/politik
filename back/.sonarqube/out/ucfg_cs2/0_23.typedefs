@@ -1,0 +1,6 @@
+á
+&Politics.Controllers.ReportsController'Microsoft.AspNetCore.Mvc.ControllerBaseobject‘
+3ReportsController(Politics.Data.IReportsRepository)ZPolitics.Controllers.ReportsController.ReportsController(Politics.Data.IReportsRepository)«
+@GetReports(Politics.Controllers.ReportsController.ReportsParams)gPolitics.Controllers.ReportsController.GetReports(Politics.Controllers.ReportsController.ReportsParams)o
+"AddReport(Politics.Dtos.ReportDto)IPolitics.Controllers.ReportsController.AddReport(Politics.Dtos.ReportDto)S
+ReviewReport(string);Politics.Controllers.ReportsController.ReviewReport(string)

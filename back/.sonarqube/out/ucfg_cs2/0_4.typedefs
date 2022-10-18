@@ -1,0 +1,8 @@
+™
+Politics.Dtos.LoginDtoobject/
+
+LoginDto()!Politics.Dtos.LoginDto.LoginDto()-
+	Email.get Politics.Dtos.LoginDto.Email.get-
+	Email.set Politics.Dtos.LoginDto.Email.set3
+Password.get#Politics.Dtos.LoginDto.Password.get3
+Password.set#Politics.Dtos.LoginDto.Password.set

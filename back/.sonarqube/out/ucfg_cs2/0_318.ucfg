@@ -1,0 +1,148 @@
+
+]Politics.Controllers.AuthController.GetUsers(Politics.Controllers.AuthController.UsersParams)G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÖC Ö(K"4*¾	
+0G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ
+ Ù(ß
+Ü
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ Ø(+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÙ
+Ö
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ Ø(!,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext_
+]
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ1 Ø(@
+%2"__id*
+""­
+ª
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ Ø(A
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2q
+o
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csØ
+ Ø(A
+rolestring"__id*
+
+%3string¥
+¢
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÙ
+ Ù(
+
+%4bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*	
+Admin*
+1
+2*Ã
+1G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÛ Û(ôñ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÛ Û(1
+%5+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"~
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÛ Û(3
+1
+%5+Microsoft.AspNetCore.Mvc.UnauthorizedResult*›
+2G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÝ
+ Þ(Ó
+Ð
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÝ Ý($$
+%6Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthServiceÙ
+Ö
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÝ. Ý(C
+%7System.Nullable<T>"0Politics.Helpers.PaginationParams.PageNumber.get*?
+=
+
+parameters/Politics.Controllers.AuthController.UsersParams×
+Ô
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÝE Ý(X
+%8System.Nullable<T>".Politics.Helpers.PaginationParams.PageSize.get*?
+=
+
+parameters/Politics.Controllers.AuthController.UsersParams×
+Ô
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÝZ Ý(k
+%9string":Politics.Controllers.AuthController.UsersParams.Search.get*?
+=
+
+parameters/Politics.Controllers.AuthController.UsersParamsÆÃ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÝ Ý(l+
+%10$System.Threading.Tasks.Task<TResult>"<Politics.Services.IAuthService.GetUsers(int?, int?, string?)*&
+$
+%6Politics.Services.IAuthService*
+
+%7System.Nullable<T>*
+
+%8System.Nullable<T>*
+
+%9string2GetUsers(int?, int?, string?)†
+ƒ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÝ
+ Ý(l*
+users!Politics.Helpers.PaginatedList<T>"__id*
+""—”
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÞ Þ(.
+%11'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*,
+*
+users!Politics.Helpers.PaginatedList<T>2
+Ok(object)"{
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÞ Þ(0
+.
+%11'Microsoft.AspNetCore.Mvc.OkObjectResult*¬
+3G
+;D:\Programavimas\politik\back\Controllers\AuthController.csß ß("^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csß ß(
+implicit return*¤
+4G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÖo Ö(o¾
+»
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÖC Ö(Kb
+=
+
+parameters/Politics.Controllers.AuthController.UsersParams"!
+<Search>k__BackingFieldstring"__entrypoint­
+ª
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÖC Ö(KQ
+=
+
+parameters/Politics.Controllers.AuthController.UsersParams"
+Searchstring"__entrypoint`
+^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÖC Ö(K
+%12"__entrypoint*
+0:=
+
+parameters/Politics.Controllers.AuthController.UsersParamsB'%
+#Politics.Controllers.AuthController

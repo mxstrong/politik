@@ -1,0 +1,58 @@
+
+DPolitics.Controllers.StatementsController.GetStatetementById(string)K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs/5 /(G"2*È
+0K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs1 1(9ê
+ç
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs1 1(%)
+%0#Politics.Data.IStatementsRepository"__id*g*e+
+)Politics.Controllers.StatementsController"6
+_statementsRepo#Politics.Data.IStatementsRepository‘Ž
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs1 1(:*
+%1$System.Threading.Tasks.Task<TResult>"<Politics.Data.IStatementsRepository.GetStatementById(string)*+
+)
+%0#Politics.Data.IStatementsRepository*
+
+idstring2GetStatementById(string)ôñ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs1 1(;-
+%2'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+""2
+Ok(object)"~
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs1 1(</
+-
+%2'Microsoft.AspNetCore.Mvc.OkObjectResult*´
+1K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs2 2("b
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs2 2(
+implicit return*ü
+2K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs/R /(Rs
+q
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs/5 /(G
+%3"__entrypoint*
+
+idstringº
+·
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs. .(
+%4"
+__annotate*FD
+BMicrosoft.AspNetCore.Mvc.HttpGetAttribute.HttpGetAttribute(string)*
+
+idstrings
+q
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs/H /(Q
+idstring"__annotation*
+
+%4*
+0:
+idstringB-+
+)Politics.Controllers.StatementsController

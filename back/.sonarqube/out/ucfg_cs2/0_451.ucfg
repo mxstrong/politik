@@ -1,0 +1,43 @@
+
+7Politics.Data.StatementsRepository.GetLikeCount(string)F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs   ("0*ü
+0F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¢ ¢(IÑ
+Î
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¢ ¢(&
+%0 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextÕ
+Ò
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¢ ¢(2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Likes.get*(
+&
+%0 Politics.Model.PoliticsDbContextÍ
+Ê
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¢ ¢(J
+%2System.Linq.IQueryable<T>"…System.Linq.Queryable.Where<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>)*"
+System.Linq.Queryable*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""Û
+Ø
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¢ ¢(R	
+%3int"ESystem.Linq.Queryable.Count<TSource>(System.Linq.IQueryable<TSource>)*"
+System.Linq.Queryable*!
+
+%2System.Linq.IQueryable<T>"U
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs¢ ¢(S
+	
+%3int*ª
+1F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs£ £("]
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.cs£ £(
+implicit return:
+statementIdstringB&$
+"Politics.Data.StatementsRepository

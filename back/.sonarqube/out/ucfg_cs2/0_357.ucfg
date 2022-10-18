@@ -1,0 +1,27 @@
+
+fPolitics.Migrations.AddLikesAndReports.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs=  =($"0*ã
+0W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs? C(ëé
+W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.cs? @(_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*	
+Likes*
+""2DropTable(string, string)ìê
+W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.csB C( _
+%1YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*	
+Reports*
+""2DropTable(string, string)*
+1*Ã
+1W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.csD	 D(	"n
+W
+MD:\Programavimas\politik\back\Migrations\20211202171337_AddLikesAndReports.csD D(	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB*(
+&Politics.Migrations.AddLikesAndReports

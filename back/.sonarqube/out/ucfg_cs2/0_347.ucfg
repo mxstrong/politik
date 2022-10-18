@@ -1,0 +1,164 @@
+
+CPolitics.Services.AuthService.Register(Politics.Model.User, string)?
+5D:\Programavimas\politik\back\Services\AuthService.cs8 8($"0*ç#
+0?
+5D:\Programavimas\politik\back\Services\AuthService.cs:
+ F(≈
+¬
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs: :(&
+%0 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextŒ
+À
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs: :(%2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Roles.get*(
+&
+%0 Politics.Model.PoliticsDbContext‚
+ﬂ
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs: :(W*
+%2$System.Threading.Tasks.Task<TResult>"„Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.SingleOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""*
+""n
+l
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs:
+ :(W
+rolePolitics.Model.Role"__id*
+""è
+å
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs; ;(T
+
+%3void"PPolitics.Services.AuthService.CreatePasswordHash(string, out byte[], out byte[])*!"
+Politics.Services.AuthService*
+
+passwordstring*
+
+passwordHashbyte[]*
+
+passwordSaltbyte[]ë
+é
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs< <(
+%4string"Politics.Model.Role.RoleId.get*
+
+rolePolitics.Model.Role°
+û
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs< <(
+%5string"Politics.Model.User.RoleId.set*
+
+userPolitics.Model.User*
+
+%4string~
+|
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs= =("
+%6System.Guid"System.Guid.NewGuid()*"
+System.Guid~
+|
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs= =(-
+%7string"System.Guid.ToString()*
+
+%6System.Guid°
+û
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs= =(-
+%8string"Politics.Model.User.UserId.set*
+
+userPolitics.Model.User*
+
+%7string±
+Æ
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs> >(&
+%9byte[]"$Politics.Model.User.PasswordHash.set*
+
+userPolitics.Model.User*
+
+passwordHashbyte[]≤
+Ø
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs? ?(&
+%10byte[]"$Politics.Model.User.PasswordSalt.set*
+
+userPolitics.Model.User*
+
+passwordSaltbyte[]ä
+á
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs@ @(#
+%11System.DateTime"System.DateTime.Now.get*"
+System.DateTime∏
+µ
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs@ @(#
+%12System.DateTime"!Politics.Model.User.CreatedAt.set*
+
+userPolitics.Model.User*
+
+%11System.DateTimeä
+á
+?
+5D:\Programavimas\politik\back\Services\AuthService.csA A(#
+%13System.DateTime"System.DateTime.Now.get*"
+System.DateTime∏
+µ
+?
+5D:\Programavimas\politik\back\Services\AuthService.csA A(#
+%14System.DateTime"!Politics.Model.User.UpdatedAt.set*
+
+userPolitics.Model.User*
+
+%13System.DateTime∆
+√
+?
+5D:\Programavimas\politik\back\Services\AuthService.csC C('
+%15 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContext–
+Õ
+?
+5D:\Programavimas\politik\back\Services\AuthService.csC C(3
+%16,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Users.get*)
+'
+%15 Politics.Model.PoliticsDbContextÔÏ
+?
+5D:\Programavimas\politik\back\Services\AuthService.csC C()0
+%17)System.Threading.Tasks.ValueTask<TResult>"bMicrosoft.EntityFrameworkCore.DbSet<TEntity>.AddAsync(TEntity, System.Threading.CancellationToken)*5
+3
+%16,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+userPolitics.Model.User*
+""25AddAsync(TEntity, System.Threading.CancellationToken)∆
+√
+?
+5D:\Programavimas\politik\back\Services\AuthService.csD D('
+%18 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContext∏µ
+?
+5D:\Programavimas\politik\back\Services\AuthService.csD D('+
+%19$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*)
+'
+%18 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)"`
+?
+5D:\Programavimas\politik\back\Services\AuthService.csF F(
+
+userPolitics.Model.User*ú
+1?
+5D:\Programavimas\politik\back\Services\AuthService.csG G("V
+?
+5D:\Programavimas\politik\back\Services\AuthService.csG G(
+implicit return:
+userPolitics.Model.User:
+passwordstringB!
+Politics.Services.AuthService

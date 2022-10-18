@@ -1,0 +1,113 @@
+
+uPolitics.Migrations.UpdateCreatedAndUpdatedProperties.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csR  R($"0*í.
+0g
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csT Ü($ﬁ€
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csT V(!_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"`Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropForeignKey(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder* 
+FK_Parties_Users_CreatedById*	
+Parties*
+""2&DropForeignKey(string, string, string)ﬁ€
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csX Z(!_
+%1YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"`Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropForeignKey(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder* 
+FK_Parties_Users_UpdatedById*	
+Parties*
+""2&DropForeignKey(string, string, string)Ê„
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.cs\ ^(%_
+%2YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"`Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropForeignKey(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*$"
+ FK_Politicians_Users_CreatedById*
+Politicians*
+""2&DropForeignKey(string, string, string)Ê„
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.cs` b(%_
+%3YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"`Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropForeignKey(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*$"
+ FK_Politicians_Users_UpdatedById*
+Politicians*
+""2&DropForeignKey(string, string, string)÷”
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csd f(%_
+%4YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"[Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropIndex(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Politicians_CreatedById*
+Politicians*
+""2!DropIndex(string, string, string)÷”
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csh j(%_
+%5YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"[Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropIndex(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Politicians_UpdatedById*
+Politicians*
+""2!DropIndex(string, string, string)ŒÀ
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csl n(!_
+%6YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"[Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropIndex(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Parties_CreatedById*	
+Parties*
+""2!DropIndex(string, string, string)ŒÀ
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csp r(!_
+%7YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"[Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropIndex(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Parties_UpdatedById*	
+Parties*
+""2!DropIndex(string, string, string)ÏÈ
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.cst w(%_
+%8YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"fMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.RenameColumn(string, string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+UpdatedById*
+Politicians*
+	UpdatedBy*
+""2,RenameColumn(string, string, string, string)ÏÈ
+f
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csy |(%_
+%9YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"fMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.RenameColumn(string, string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+CreatedById*
+Politicians*
+	CreatedBy*
+""2,RenameColumn(string, string, string, string)ÍÁ
+g
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.cs~ Å(%`
+%10YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"fMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.RenameColumn(string, string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+UpdatedById*	
+Parties*
+	UpdatedBy*
+""2,RenameColumn(string, string, string, string)ÎË
+h
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csÉ Ü(%`
+%11YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"fMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.RenameColumn(string, string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+CreatedById*	
+Parties*
+	CreatedBy*
+""2,RenameColumn(string, string, string, string)*
+1*Ó
+1h
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csá	 á(	"
+h
+\D:\Programavimas\politik\back\Migrations\20211024074011_UpdateCreatedAndUpdatedProperties.csá á(	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB97
+5Politics.Migrations.UpdateCreatedAndUpdatedProperties

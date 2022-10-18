@@ -1,0 +1,11 @@
+Á
+Politics.Dtos.PoliticianDtoobject>
+PoliticianDto()+Politics.Dtos.PoliticianDto.PoliticianDto()6
+PartyId.get'Politics.Dtos.PoliticianDto.PartyId.get6
+PartyId.set'Politics.Dtos.PoliticianDto.PartyId.set:
+FirstName.get)Politics.Dtos.PoliticianDto.FirstName.get:
+FirstName.set)Politics.Dtos.PoliticianDto.FirstName.set8
+LastName.get(Politics.Dtos.PoliticianDto.LastName.get8
+LastName.set(Politics.Dtos.PoliticianDto.LastName.set>
+Description.get+Politics.Dtos.PoliticianDto.Description.get>
+Description.set+Politics.Dtos.PoliticianDto.Description.set

@@ -1,0 +1,200 @@
+
+MPolitics.Controllers.AuthController.ChangeEmail(Politics.Dtos.ChangeEmailDto)G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÇ$ Ç(/"4*å
+0G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÑ
+ Ö(.ﬂ
+‹
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÑ Ñ(&+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseŸ
+÷
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÑ Ñ(+,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext_
+]
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÑ; Ñ(T
+%2"__id*
+""≠
+™
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÑ Ñ(U
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2{
+y
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÑ
+ Ñ(U
+userIdFromAuthstring"__id*
+
+%3string≤
+Ø
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÖ Ö(.
+%4string"'Politics.Dtos.ChangeEmailDto.UserId.get*-
++
+changeEmailPolitics.Dtos.ChangeEmailDto¥
+±
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÖ
+ Ö(.
+
+%5bool""string.operator !=(string, string)*
+"
+string*
+
+userIdFromAuthstring*
+
+%4string*
+1
+2*√
+1G
+;D:\Programavimas\politik\back\Controllers\AuthController.csá á(ÙÒ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csá á(1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"~
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csá á(3
+1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult*ÿ
+2G
+;D:\Programavimas\politik\back\Controllers\AuthController.csâ
+ é(0”
+–
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csâ â($$
+%7Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthService≤
+Ø
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csâ> â(P
+%8string"'Politics.Dtos.ChangeEmailDto.UserId.get*-
++
+changeEmailPolitics.Dtos.ChangeEmailDto¥
+±
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csâR â(f
+%9string")Politics.Dtos.ChangeEmailDto.NewEmail.get*-
++
+changeEmailPolitics.Dtos.ChangeEmailDto¥±
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csâ â(g+
+%10$System.Threading.Tasks.Task<TResult>"GPolitics.Services.IAuthService.GenerateEmailChangeToken(string, string)*&
+$
+%7Politics.Services.IAuthService*
+
+%8string*
+
+%9string2(GenerateEmailChangeToken(string, string)Ñ
+Å
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csâ
+ â(g(
+tokenPolitics.Model.EmailChangeToken"__id*
+""‘
+—
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csä ä(#%
+%11Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthService≥
+∞
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csä0 ä(B
+%12string"'Politics.Dtos.ChangeEmailDto.UserId.get*-
++
+changeEmailPolitics.Dtos.ChangeEmailDto¸˘
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csä ä(C+
+%13$System.Threading.Tasks.Task<TResult>"2Politics.Services.IAuthService.GetUserById(string)*'
+%
+%11Politics.Services.IAuthService*
+
+%12string2GetUserById(string)
+}
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csä
+ ä(C$
+userPolitics.Dtos.UserProfileDto"__id*
+""œ
+Ã
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cså å(%
+%14Politics.Services.IEmailSender"__id*T*R%
+#Politics.Controllers.AuthController")
+_senderPolitics.Services.IEmailSenderµ
+≤
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cså0 å(D
+%15string")Politics.Dtos.ChangeEmailDto.NewEmail.get*-
++
+changeEmailPolitics.Dtos.ChangeEmailDto‚ﬂ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cså å(L+
+%16$System.Threading.Tasks.Task<TResult>"{Politics.Services.IEmailSender.SendEmailConfirmation(Politics.Dtos.UserProfileDto, string, Politics.Model.EmailChangeToken)*'
+%
+%14Politics.Services.IEmailSender*&
+$
+userPolitics.Dtos.UserProfileDto*
+
+%15string**
+(
+tokenPolitics.Model.EmailChangeToken2\SendEmailConfirmation(Politics.Dtos.UserProfileDto, string, Politics.Model.EmailChangeToken)êç
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csé é(1.
+%17'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*%#
+!Patvirtinimo lai≈°kas i≈°si≈≥stas2
+Ok(object)"{
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csé é(20
+.
+%17'Microsoft.AspNetCore.Mvc.OkObjectResult*¨
+3G
+;D:\Programavimas\politik\back\Controllers\AuthController.csè è("^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csè è(
+implicit return*—
+4G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÇV Ç(V¨
+©
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÇ$ Ç(/P
++
+changeEmailPolitics.Dtos.ChangeEmailDto"!
+<UserId>k__BackingFieldstring"__entrypointõ
+ò
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÇ$ Ç(/?
++
+changeEmailPolitics.Dtos.ChangeEmailDto"
+UserIdstring"__entrypointÆ
+´
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÇ$ Ç(/R
++
+changeEmailPolitics.Dtos.ChangeEmailDto"#
+<NewEmail>k__BackingFieldstring"__entrypointù
+ö
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÇ$ Ç(/A
++
+changeEmailPolitics.Dtos.ChangeEmailDto"
+NewEmailstring"__entrypoint`
+^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÇ$ Ç(/
+%18"__entrypoint*
+0:+
+changeEmailPolitics.Dtos.ChangeEmailDtoB'%
+#Politics.Controllers.AuthController

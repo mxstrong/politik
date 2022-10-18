@@ -1,0 +1,65 @@
+
+1Politics.Services.AuthService.GetUserById(string)?
+5D:\Programavimas\politik\back\Services\AuthService.cse& e(1"0*–
+0?
+5D:\Programavimas\politik\back\Services\AuthService.csg
+ h(3≈
+¬
+?
+5D:\Programavimas\politik\back\Services\AuthService.csg g(&
+%0 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextŒ
+À
+?
+5D:\Programavimas\politik\back\Services\AuthService.csg g(%2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Users.get*(
+&
+%0 Politics.Model.PoliticsDbContext·
+ﬁ
+?
+5D:\Programavimas\politik\back\Services\AuthService.csg g(@R
+%2LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"¬Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""Å
+˛
+?
+5D:\Programavimas\politik\back\Services\AuthService.csg g(s*
+%3$System.Threading.Tasks.Task<TResult>"‚Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*T
+R
+%2LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""*
+""n
+l
+?
+5D:\Programavimas\politik\back\Services\AuthService.csg
+ g(s
+userPolitics.Model.User"__id*
+""®
+•
+?
+5D:\Programavimas\politik\back\Services\AuthService.csh h(
+%4AutoMapper.IMapper"__id*B*@
+Politics.Services.AuthService"
+_mapperAutoMapper.IMapperÑÅ
+?
+5D:\Programavimas\politik\back\Services\AuthService.csh h(4"
+%5Politics.Dtos.UserProfileDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%4AutoMapper.IMapper*
+
+userPolitics.Model.User2#Map<TSource, TDestination>(TSource)"g
+?
+5D:\Programavimas\politik\back\Services\AuthService.csh h(5$
+"
+%5Politics.Dtos.UserProfileDto*ú
+1?
+5D:\Programavimas\politik\back\Services\AuthService.csi i("V
+?
+5D:\Programavimas\politik\back\Services\AuthService.csi i(
+implicit return:
+userIdstringB!
+Politics.Services.AuthService

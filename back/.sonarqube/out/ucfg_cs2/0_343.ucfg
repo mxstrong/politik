@@ -1,0 +1,94 @@
+
+IPolitics.Controllers.ReportsController.AddReport(Politics.Dtos.ReportDto)H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs#2 #(;"2*ª
+0H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs%
+ &(=à
+Ý
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs% %(+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÚ
+×
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs% %(#,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext`
+^
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs%3 %(L
+%2"__id*
+""®
+«
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs% %(M
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2t
+r
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs%
+ %(M
+userIdstring"__id*
+
+%3stringÛ
+Ø
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs& &(&
+%4 Politics.Data.IReportsRepository"__id*^*\(
+&Politics.Controllers.ReportsController"0
+_reportsRepo Politics.Data.IReportsRepositoryßÜ
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs& &(>*
+%5$System.Threading.Tasks.Task<TResult>"PPolitics.Data.IReportsRepository.GenerateReport(Politics.Dtos.ReportDto, string)*(
+&
+%4 Politics.Data.IReportsRepository*#
+!
+reportPolitics.Dtos.ReportDto*
+
+userIdstring2/GenerateReport(Politics.Dtos.ReportDto, string)"R
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs& &(?
+""*®
+1H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs' '("_
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs' '(
+implicit return*¾
+2H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs#M #(M¨
+¥
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs#2 #(;K
+!
+reportPolitics.Dtos.ReportDto"&
+<StatementId>k__BackingFieldstring"__entrypoint—
+”
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs#2 #(;:
+!
+reportPolitics.Dtos.ReportDto"
+StatementIdstring"__entrypoint¨
+¥
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs#2 #(;K
+!
+reportPolitics.Dtos.ReportDto"&
+<Description>k__BackingFieldstring"__entrypoint—
+”
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs#2 #(;:
+!
+reportPolitics.Dtos.ReportDto"
+Descriptionstring"__entrypoint`
+^
+H
+>D:\Programavimas\politik\back\Controllers\ReportsController.cs#2 #(;
+%6"__entrypoint*
+0:!
+reportPolitics.Dtos.ReportDtoB*(
+&Politics.Controllers.ReportsController

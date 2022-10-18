@@ -1,0 +1,146 @@
+
+8Politics.Controllers.AuthController.AddModerator(string)G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÆ$ Æ(0"6*¾	
+0G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÈ
+ É(ß
+Ü
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÈ È(+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseÙ
+Ö
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÈ È(!,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext_
+]
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÈ1 È(@
+%2"__id*
+""­
+ª
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÈ È(A
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2q
+o
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÈ
+ È(A
+rolestring"__id*
+
+%3string¥
+¢
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÉ
+ É(
+
+%4bool""string.operator !=(string, string)*
+"
+string*
+
+rolestring*	
+Admin*
+1
+2*Ã
+1G
+;D:\Programavimas\politik\back\Controllers\AuthController.csË Ë(ôñ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csË Ë(1
+%5+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"~
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csË Ë(3
+1
+%5+Microsoft.AspNetCore.Mvc.UnauthorizedResult*•
+2G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÍ
+ Î(Ó
+Ð
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÍ Í(%$
+%6Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthServiceýú
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÍ Í(7*
+%7$System.Threading.Tasks.Task<TResult>"4Politics.Services.IAuthService.MakeModerator(string)*&
+$
+%6Politics.Services.IAuthService*
+
+idstring2MakeModerator(string)i
+g
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÍ
+ Í(7
+resultbool"__id*
+""*
+3
+4*›
+3G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÐ Ð(ÖÓ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÐ Ð('
+%8!Microsoft.AspNetCore.Mvc.OkResult",Microsoft.AspNetCore.Mvc.ControllerBase.Ok()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Ok()"t
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÐ Ð()
+'
+%8!Microsoft.AspNetCore.Mvc.OkResult*ì
+4G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÒ Ò(,˜•
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÒ Ò(-5
+%9/Microsoft.AspNetCore.Mvc.BadRequestObjectResult":Microsoft.AspNetCore.Mvc.ControllerBase.BadRequest(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+Operacija nepavyko2BadRequest(object)"‚
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÒ Ò(.7
+5
+%9/Microsoft.AspNetCore.Mvc.BadRequestObjectResult*¬
+5G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÓ Ó("^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÓ Ó(
+implicit return*¼
+6G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÆ; Æ(;p
+n
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÆ$ Æ(0
+%10"__entrypoint*
+
+idstring¿
+¼
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÄ Ä(
+%11"
+__annotate*NL
+JMicrosoft.AspNetCore.Authorization.AuthorizeAttribute.AuthorizeAttribute()*
+
+idstring¹
+¶
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÅ Å(
+%12"
+__annotate*HF
+DMicrosoft.AspNetCore.Mvc.HttpPostAttribute.HttpPostAttribute(string)*
+
+idstringy
+w
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csÆ1 Æ(:
+idstring"__annotation*
+
+%11*
+
+%12*
+0:
+idstringB'%
+#Politics.Controllers.AuthController

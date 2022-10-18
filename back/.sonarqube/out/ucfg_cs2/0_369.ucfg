@@ -1,0 +1,114 @@
+
+2Politics.Services.AuthService.ActivateUser(string)?
+5D:\Programavimas\politik\back\Services\AuthService.cs[ [(("0*ÿ
+0?
+5D:\Programavimas\politik\back\Services\AuthService.cs]
+ b(Å
+Â
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs] ]( &
+%0 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextÙ
+Ö
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs] ](12
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"5Politics.Model.PoliticsDbContext.ActivationTokens.get*(
+&
+%0 Politics.Model.PoliticsDbContextÙ
+Ö
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs] ](S*
+%2$System.Threading.Tasks.Task<TResult>"ÚMicrosoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.SingleAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""*
+""z
+x
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs]
+ ](S'
+tokenPolitics.Model.ActivationToken"__id*
+""Å
+Â
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs^ ^(&
+%3 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextÎ
+Ë
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs^ ^(%2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Users.get*(
+&
+%3 Politics.Model.PoliticsDbContext¨
+¥
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs^0 ^(<
+%5string")Politics.Model.ActivationToken.UserId.get*)
+'
+tokenPolitics.Model.ActivationToken 
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs^ ^(=/
+%6)System.Threading.Tasks.ValueTask<TResult>"GMicrosoft.EntityFrameworkCore.DbSet<TEntity>.FindAsync(params object[])*4
+2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+%5string2FindAsync(params object[])n
+l
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs^
+ ^(=
+userPolitics.Model.User"__id*
+""š
+—
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs_ _(
+
+%7bool"!Politics.Model.User.Activated.set*
+
+userPolitics.Model.User*
+""Å
+Â
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs` `(&
+%8 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextÙ
+Ö
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs` `(2
+%9,Microsoft.EntityFrameworkCore.DbSet<TEntity>"5Politics.Model.PoliticsDbContext.ActivationTokens.get*(
+&
+%8 Politics.Model.PoliticsDbContext¾»
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs` `(-H
+%10AMicrosoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>"<Microsoft.EntityFrameworkCore.DbSet<TEntity>.Remove(TEntity)*4
+2
+%9,Microsoft.EntityFrameworkCore.DbSet<TEntity>*)
+'
+tokenPolitics.Model.ActivationToken2Remove(TEntity)Æ
+Ã
+?
+5D:\Programavimas\politik\back\Services\AuthService.csa a('
+%11 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContext¸µ
+?
+5D:\Programavimas\politik\back\Services\AuthService.csa a('+
+%12$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*)
+'
+%11 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)"`
+?
+5D:\Programavimas\politik\back\Services\AuthService.csb b(
+
+userPolitics.Model.User*œ
+1?
+5D:\Programavimas\politik\back\Services\AuthService.csc c("V
+?
+5D:\Programavimas\politik\back\Services\AuthService.csc c(
+implicit return:
+tokenIdstringB!
+Politics.Services.AuthService

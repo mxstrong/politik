@@ -1,0 +1,50 @@
+
+©Politics.Controllers.StatementsController.StatementsController(Politics.Data.IStatementsRepository, Politics.Data.IPoliticiansRepository, Politics.Services.IAuthService)K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs ("3*Ì
+1K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs (u
+s
+
+%0void"8Microsoft.AspNetCore.Mvc.ControllerBase.ControllerBase()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+0*´
+0K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs ( ö
+ó
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs (&e+
+)Politics.Controllers.StatementsController"6
+_statementsRepo#Politics.Data.IStatementsRepository"__id*7
+5
+statementsRepo#Politics.Data.IStatementsRepositoryú
+÷
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs ((g+
+)Politics.Controllers.StatementsController"8
+_politiciansRepo$Politics.Data.IPoliticiansRepository"__id*9
+7
+politiciansRepo$Politics.Data.IPoliticiansRepositoryæ
+ã
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs ( ]+
+)Politics.Controllers.StatementsController".
+_authServicePolitics.Services.IAuthService"__id*/
+-
+authServicePolitics.Services.IAuthService*
+2*´
+2K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs ("b
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs (
+implicit return*¼
+3M
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs‡ (‡c
+a
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs (
+%1"__entrypoint*
+1:5
+statementsRepo#Politics.Data.IStatementsRepository:7
+politiciansRepo$Politics.Data.IPoliticiansRepository:-
+authServicePolitics.Services.IAuthServiceB-+
+)Politics.Controllers.StatementsController

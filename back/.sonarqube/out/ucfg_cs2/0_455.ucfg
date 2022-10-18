@@ -1,0 +1,115 @@
+
+fPolitics.Migrations.AddStatementsAndTags.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs  (""0*„.
+0Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs
+ w(%ˆÛ
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs
+ ,(_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>"µMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+
+Statements*
+""*
+""*
+""*
+""2˚CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)Ì
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs. @(_
+%1YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>"µMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+Tags*
+""*
+""*
+""*
+""2˚CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)˘ˆ
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.csB Y(_
+%2YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>"µMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+StatementTags*
+""*
+""*
+""*
+""2˚CreateTable<TColumns>(string, System.Func<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.ColumnsBuilder, TColumns>, string, System.Action<Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.CreateTableBuilder<TColumns>>, string)òï
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs[ ^(&_
+%3YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"sMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateIndex(string, string, string, string, bool, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Statements_CreatedById*
+
+Statements*
+CreatedById*
+""*
+""*
+""29CreateIndex(string, string, string, string, bool, string)öó
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cs` c('_
+%4YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"sMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateIndex(string, string, string, string, bool, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Statements_PoliticianId*
+
+Statements*
+PoliticianId*
+""*
+""*
+""29CreateIndex(string, string, string, string, bool, string)òï
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cse h(&_
+%5YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"sMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateIndex(string, string, string, string, bool, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Statements_UpdatedById*
+
+Statements*
+UpdatedById*
+""*
+""*
+""29CreateIndex(string, string, string, string, bool, string)ûõ
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.csj m(&_
+%6YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"sMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateIndex(string, string, string, string, bool, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder* 
+IX_StatementTags_StatementId*
+StatementTags*
+StatementId*
+""*
+""*
+""29CreateIndex(string, string, string, string, bool, string)íè
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cso r( _
+%7YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"sMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateIndex(string, string, string, string, bool, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_StatementTags_TagId*
+StatementTags*	
+TagId*
+""*
+""*
+""29CreateIndex(string, string, string, string, bool, string)åâ
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.cst w(&_
+%8YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"sMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.CreateIndex(string, string, string, string, bool, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+IX_Tags_CreatedById*
+Tags*
+CreatedById*
+""*
+""*
+""29CreateIndex(string, string, string, string, bool, string)*
+1*–
+1Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.csx	 x(	"p
+Y
+OD:\Programavimas\politik\back\Migrations\20211024075732_AddStatementsAndTags.csx x(	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB,*
+(Politics.Migrations.AddStatementsAndTags

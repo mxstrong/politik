@@ -1,0 +1,84 @@
+
+BPolitics.Data.StatementsRepository.UnlikeStatement(string, string)F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csî î(+"0*·
+0F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csñ
+ ó(—
+Œ
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csñ ñ(&
+%0 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContext’
+“
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csñ ñ(%2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Likes.get*(
+&
+%0 Politics.Model.PoliticsDbContextË
+Â
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csñ ñ(}*
+%2$System.Threading.Tasks.Task<TResult>"‚Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""*
+""u
+s
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csñ
+ ñ(}
+likePolitics.Model.Like"__id*
+""*
+1
+2*ù
+1F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csô ô("P
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csô ô(
+""*ò
+2F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csõ ù(—
+Œ
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csõ õ(&
+%3 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContext’
+“
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csõ õ(2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Likes.get*(
+&
+%3 Politics.Model.PoliticsDbContext∏µ
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csõ õ(!G
+%5AMicrosoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>"<Microsoft.EntityFrameworkCore.DbSet<TEntity>.Remove(TEntity)*4
+2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+likePolitics.Model.Like2Remove(TEntity)—
+Œ
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csú ú(&
+%6 Politics.Model.PoliticsDbContext"__id*V*T$
+"Politics.Data.StatementsRepository",
+_context Politics.Model.PoliticsDbContextΩ∫
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csú ú('*
+%7$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*(
+&
+%6 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)"P
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csù ù(
+""*™
+3F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csû û("]
+F
+:D:\Programavimas\politik\back\Data\StatementsRepository.csû û(
+implicit return:
+statementIdstring:
+userIdstringB&$
+"Politics.Data.StatementsRepository

@@ -1,0 +1,17 @@
+ê
+
+Politics.Services.AuthServiceobjectPolitics.Services.IAuthService¤
+AAuthService(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)_Politics.Services.AuthService.AuthService(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)L
+Login(string, string)3Politics.Services.AuthService.Login(string, string)F
+UserExists(string)0Politics.Services.AuthService.UserExists(string)l
+%Register(Politics.Model.User, string)CPolitics.Services.AuthService.Register(Politics.Model.User, string)`
+GenerateActivationToken(string)=Politics.Services.AuthService.GenerateActivationToken(string)J
+ActivateUser(string)2Politics.Services.AuthService.ActivateUser(string)H
+GetUserById(string)1Politics.Services.AuthService.GetUserById(string)N
+GetUserByEmail(string)4Politics.Services.AuthService.GetUserByEmail(string)r
+(GenerateEmailChangeToken(string, string)FPolitics.Services.AuthService.GenerateEmailChangeToken(string, string)H
+UpdateEmail(string)1Politics.Services.AuthService.UpdateEmail(string)^
+ChangePassword(string, string)<Politics.Services.AuthService.ChangePassword(string, string)d
+!ChangeDisplayName(string, string)?Politics.Services.AuthService.ChangeDisplayName(string, string)L
+MakeModerator(string)3Politics.Services.AuthService.MakeModerator(string)\
+GetUsers(int?, int?, string?);Politics.Services.AuthService.GetUsers(int?, int?, string?)

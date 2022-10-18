@@ -1,0 +1,102 @@
+
+cPolitics.Migrations.UpdateUserTable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)T
+JD:\Programavimas\politik\back\Migrations\20211114131015_UpdateUserTable.cs3  3($"0*Ú
+0T
+JD:\Programavimas\politik\back\Migrations\20211114131015_UpdateUserTable.cs5 J( ™–
+T
+JD:\Programavimas\politik\back\Migrations\20211114131015_UpdateUserTable.cs5 6()_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+ActivationTokens*
+""2DropTable(string, string)¯¬
+T
+JD:\Programavimas\politik\back\Migrations\20211114131015_UpdateUserTable.cs8 :(_
+%1YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"\Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropColumn(string, string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+	Activated*	
+Users*
+""2"DropColumn(string, string, string)ÔÑ
+T
+JD:\Programavimas\politik\back\Migrations\20211114131015_UpdateUserTable.cs< B(!d
+%2^Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.AlterOperationBuilder<TOperation>"³Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.AlterColumn<T>(string, string, string, bool?, int?, bool, string, bool, object, string, string, System.Type, string, bool?, int?, bool, bool, object, string, string, bool?, bool?, string, string, string, string, int?, int?, int?, int?, bool?, bool?)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+PasswordSalt*	
+Users*
+text*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*	
+bytea*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""2ùAlterColumn<T>(string, string, string, bool?, int?, bool, string, bool, object, string, string, System.Type, string, bool?, int?, bool, bool, object, string, string, bool?, bool?, string, string, string, string, int?, int?, int?, int?, bool?, bool?)ÔÑ
+T
+JD:\Programavimas\politik\back\Migrations\20211114131015_UpdateUserTable.csD J(!d
+%3^Microsoft.EntityFrameworkCore.Migrations.Operations.Builders.AlterOperationBuilder<TOperation>"³Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder.AlterColumn<T>(string, string, string, bool?, int?, bool, string, bool, object, string, string, System.Type, string, bool?, int?, bool, bool, object, string, string, bool?, bool?, string, string, string, string, int?, int?, int?, int?, bool?, bool?)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+PasswordHash*	
+Users*
+text*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*	
+bytea*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""*
+""2ùAlterColumn<T>(string, string, string, bool?, int?, bool, string, bool, object, string, string, System.Type, string, bool?, int?, bool, bool, object, string, string, bool?, bool?, string, string, string, string, int?, int?, int?, int?, bool?, bool?)*
+1*Æ
+1T
+JD:\Programavimas\politik\back\Migrations\20211114131015_UpdateUserTable.csK	 K(	"k
+T
+JD:\Programavimas\politik\back\Migrations\20211114131015_UpdateUserTable.csK K(	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB'%
+#Politics.Migrations.UpdateUserTable

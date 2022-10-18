@@ -1,0 +1,15 @@
+¹
+Politics.Dtos.PoliticianOutDtoobjectG
+PoliticianOutDto()1Politics.Dtos.PoliticianOutDto.PoliticianOutDto()/
+Id.get%Politics.Dtos.PoliticianOutDto.Id.get/
+Id.set%Politics.Dtos.PoliticianOutDto.Id.set5
+	Party.get(Politics.Dtos.PoliticianOutDto.Party.get5
+	Party.set(Politics.Dtos.PoliticianOutDto.Party.set=
+FirstName.get,Politics.Dtos.PoliticianOutDto.FirstName.get=
+FirstName.set,Politics.Dtos.PoliticianOutDto.FirstName.set;
+LastName.get+Politics.Dtos.PoliticianOutDto.LastName.get;
+LastName.set+Politics.Dtos.PoliticianOutDto.LastName.set;
+FullName.get+Politics.Dtos.PoliticianOutDto.FullName.get;
+FullName.set+Politics.Dtos.PoliticianOutDto.FullName.setA
+Description.get.Politics.Dtos.PoliticianOutDto.Description.getA
+Description.set.Politics.Dtos.PoliticianOutDto.Description.set

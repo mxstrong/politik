@@ -1,0 +1,51 @@
+
+DPolitics.Controllers.PoliticiansController.GetPoliticianById(string)L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs(6 ((G"2*©
+0L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs* *(-ä
+á
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs* *(*
+%0$Politics.Data.IPoliticiansRepository"__id*_*],
+*Politics.Controllers.PoliticiansController"-
+_repo$Politics.Data.IPoliticiansRepository–“
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs* *(.*
+%1$System.Threading.Tasks.Task<TResult>">Politics.Data.IPoliticiansRepository.GetPoliticianById(string)*,
+*
+%0$Politics.Data.IPoliticiansRepository*
+
+idstring2GetPoliticianById(string)"V
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs* *(/
+""*¶
+1L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs+ +("c
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs+ +(
+implicit return*€
+2L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs(R ((Rt
+r
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs(6 ((G
+%2"__entrypoint*
+
+idstring»
+¸
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs' '(
+%3"
+__annotate*FD
+BMicrosoft.AspNetCore.Mvc.HttpGetAttribute.HttpGetAttribute(string)*
+
+idstringt
+r
+L
+BD:\Programavimas\politik\back\Controllers\PoliticiansController.cs(H ((Q
+idstring"__annotation*
+
+%3*
+0:
+idstringB.,
+*Politics.Controllers.PoliticiansController

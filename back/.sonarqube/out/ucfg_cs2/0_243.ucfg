@@ -1,0 +1,174 @@
+
+YPolitics.Controllers.AuthController.ChangeDisplayName(Politics.Dtos.ChangeDisplayNameDto)G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∂4 ∂(E"6*û
+0G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∏
+ π(4ﬂ
+‹
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∏ ∏(&+
+%0%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseŸ
+÷
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∏ ∏(+,
+%1&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*-
++
+%0%Microsoft.AspNetCore.Http.HttpContext_
+]
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∏; ∏(T
+%2"__id*
+""≠
+™
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∏ ∏(U
+%3string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*.
+,
+%1&System.Security.Claims.ClaimsPrincipal*
+
+%2{
+y
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∏
+ ∏(U
+userIdFromAuthstring"__id*
+
+%3stringƒ
+¡
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csπ
+ π("
+%4string"-Politics.Dtos.ChangeDisplayNameDto.UserId.get*9
+7
+changeDisplayName"Politics.Dtos.ChangeDisplayNameDto¥
+±
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csπ
+ π(4
+
+%5bool""string.operator !=(string, string)*
+"
+string*
+
+%4string*
+
+userIdFromAuthstring*
+1
+2*√
+1G
+;D:\Programavimas\politik\back\Controllers\AuthController.csª ª(ÙÒ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csª ª(1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult"6Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2Unauthorized()"~
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csª ª(3
+1
+%6+Microsoft.AspNetCore.Mvc.UnauthorizedResult*Ô
+2G
+;D:\Programavimas\politik\back\Controllers\AuthController.csΩ
+ æ(”
+–
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csΩ Ω(&$
+%7Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthServiceƒ
+¡
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csΩ9 Ω(Q
+%8string"-Politics.Dtos.ChangeDisplayNameDto.UserId.get*9
+7
+changeDisplayName"Politics.Dtos.ChangeDisplayNameDtoÃ
+…
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csΩS Ω(s
+%9string"5Politics.Dtos.ChangeDisplayNameDto.NewDisplayName.get*9
+7
+changeDisplayName"Politics.Dtos.ChangeDisplayNameDto¶£
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csΩ Ω(t+
+%10$System.Threading.Tasks.Task<TResult>"@Politics.Services.IAuthService.ChangeDisplayName(string, string)*&
+$
+%7Politics.Services.IAuthService*
+
+%8string*
+
+%9string2!ChangeDisplayName(string, string)É
+Ä
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csΩ
+ Ω(t'
+profilePolitics.Dtos.UserProfileDto"__id*
+""*
+3
+4*—
+3G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¿ ¿(BáÑ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¿ ¿(C,
+%11%Microsoft.AspNetCore.Mvc.ActionResult"õMicrosoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*#!
+Vartotojas su tokiu ID nerastas*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"y
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¿ ¿(D.
+,
+%11%Microsoft.AspNetCore.Mvc.ActionResult*‡
+4G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¬ ¬(îë
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¬ ¬(.
+%12'Microsoft.AspNetCore.Mvc.OkObjectResult"2Microsoft.AspNetCore.Mvc.ControllerBase.Ok(object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*)
+'
+profilePolitics.Dtos.UserProfileDto2
+Ok(object)"{
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs¬ ¬(0
+.
+%12'Microsoft.AspNetCore.Mvc.OkObjectResult*¨
+5G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs√ √("^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs√ √(
+implicit return*ç
+6G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∂x ∂(x∏
+µ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∂4 ∂(E\
+7
+changeDisplayName"Politics.Dtos.ChangeDisplayNameDto"!
+<UserId>k__BackingFieldstring"__entrypointß
+§
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∂4 ∂(EK
+7
+changeDisplayName"Politics.Dtos.ChangeDisplayNameDto"
+UserIdstring"__entrypoint¿
+Ω
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∂4 ∂(Ed
+7
+changeDisplayName"Politics.Dtos.ChangeDisplayNameDto")
+<NewDisplayName>k__BackingFieldstring"__entrypointØ
+¨
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∂4 ∂(ES
+7
+changeDisplayName"Politics.Dtos.ChangeDisplayNameDto"
+NewDisplayNamestring"__entrypoint`
+^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.cs∂4 ∂(E
+%13"__entrypoint*
+0:7
+changeDisplayName"Politics.Dtos.ChangeDisplayNameDtoB'%
+#Politics.Controllers.AuthController

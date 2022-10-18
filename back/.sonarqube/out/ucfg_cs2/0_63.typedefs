@@ -1,0 +1,6 @@
+³
+&Politics.Migrations.AddLikesAndReports2Microsoft.EntityFrameworkCore.Migrations.Migrationobject¥
+=Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)dPolitics.Migrations.AddLikesAndReports.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)©
+?Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)fPolitics.Migrations.AddLikesAndReports.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)£
+<BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)cPolitics.Migrations.AddLikesAndReports.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)S
+AddLikesAndReports();Politics.Migrations.AddLikesAndReports.AddLikesAndReports()

@@ -1,0 +1,9 @@
+­
+Politics.Dtos.RegisterDtoobject8
+RegisterDto()'Politics.Dtos.RegisterDto.RegisterDto()<
+DisplayName.get)Politics.Dtos.RegisterDto.DisplayName.get<
+DisplayName.set)Politics.Dtos.RegisterDto.DisplayName.set0
+	Email.get#Politics.Dtos.RegisterDto.Email.get0
+	Email.set#Politics.Dtos.RegisterDto.Email.set6
+Password.get&Politics.Dtos.RegisterDto.Password.get6
+Password.set&Politics.Dtos.RegisterDto.Password.set

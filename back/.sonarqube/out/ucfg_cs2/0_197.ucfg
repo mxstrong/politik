@@ -1,0 +1,187 @@
+
+_Politics.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)2
+(D:\Programavimas\politik\back\Startup.cs (!"0*ÁB
+02
+(D:\Programavimas\politik\back\Startup.cs Q(š
+—
+2
+(D:\Programavimas\politik\back\Startup.cs (WA
+%0;Microsoft.Extensions.DependencyInjection.IServiceCollection"áMicrosoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext<TContext>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Microsoft.EntityFrameworkCore.DbContextOptionsBuilder>, Microsoft.Extensions.DependencyInjection.ServiceLifetime, Microsoft.Extensions.DependencyInjection.ServiceLifetime)*W"U
+SMicrosoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+""*
+""*
+""ð
+í
+2
+(D:\Programavimas\politik\back\Startup.cs! +(A
+%1;Microsoft.Extensions.DependencyInjection.IServiceCollection"ÒMicrosoft.Extensions.DependencyInjection.CorsServiceCollectionExtensions.AddCors(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions>)*L"J
+HMicrosoft.Extensions.DependencyInjection.CorsServiceCollectionExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+""|z
+2
+(D:\Programavimas\politik\back\Startup.cs- 0($
+%2AutoMapper.MapperConfiguration"AutoMapper.MapperConfigurationá
+Þ
+2
+(D:\Programavimas\politik\back\Startup.cs- -(0
+
+%3void"lAutoMapper.MapperConfiguration.MapperConfiguration(System.Action<AutoMapper.IMapperConfigurationExpression>)*&
+$
+%2AutoMapper.MapperConfiguration*
+""•
+’
+2
+(D:\Programavimas\politik\back\Startup.cs-
+ 0(.
+mapperConfigAutoMapper.MapperConfiguration"__id*&
+$
+%2AutoMapper.MapperConfiguration²
+¯
+2
+(D:\Programavimas\politik\back\Startup.cs2 2(2
+%4AutoMapper.IMapper"-AutoMapper.MapperConfiguration.CreateMapper()*0
+.
+mapperConfigAutoMapper.MapperConfigurationv
+t
+2
+(D:\Programavimas\politik\back\Startup.cs2 2(2
+mapperAutoMapper.IMapper"__id*
+
+%4AutoMapper.IMapperâ
+ß
+2
+(D:\Programavimas\politik\back\Startup.cs3 3(#A
+%5;Microsoft.Extensions.DependencyInjection.IServiceCollection"©Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<TService>(Microsoft.Extensions.DependencyInjection.IServiceCollection, TService)*O"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+
+mapperAutoMapper.IMapper¡
+ž
+2
+(D:\Programavimas\politik\back\Startup.cs4 4(:
+%64Microsoft.Extensions.DependencyInjection.IMvcBuilder"“Microsoft.Extensions.DependencyInjection.MvcServiceCollectionExtensions.AddControllers(Microsoft.Extensions.DependencyInjection.IServiceCollection)*K"I
+GMicrosoft.Extensions.DependencyInjection.MvcServiceCollectionExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionÆ
+Ã
+2
+(D:\Programavimas\politik\back\Startup.cs5 5(IA
+%7;Microsoft.Extensions.DependencyInjection.IServiceCollection"­Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection)*O"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionÆ
+Ã
+2
+(D:\Programavimas\politik\back\Startup.cs6 6(AA
+%8;Microsoft.Extensions.DependencyInjection.IServiceCollection"­Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection)*O"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionÆ
+Ã
+2
+(D:\Programavimas\politik\back\Startup.cs7 7(GA
+%9;Microsoft.Extensions.DependencyInjection.IServiceCollection"­Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection)*O"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionÇ
+Ä
+2
+(D:\Programavimas\politik\back\Startup.cs8 8(;B
+%10;Microsoft.Extensions.DependencyInjection.IServiceCollection"­Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection)*O"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionÇ
+Ä
+2
+(D:\Programavimas\politik\back\Startup.cs9 9(5B
+%11;Microsoft.Extensions.DependencyInjection.IServiceCollection"­Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection)*O"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionÇ
+Ä
+2
+(D:\Programavimas\politik\back\Startup.cs: :(AB
+%12;Microsoft.Extensions.DependencyInjection.IServiceCollection"­Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection)*O"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionÊ
+Ç
+2
+(D:\Programavimas\politik\back\Startup.cs; ;(8B
+%13;Microsoft.Extensions.DependencyInjection.IServiceCollection"°Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection)*O"M
+KMicrosoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionŽ
+‹
+2
+(D:\Programavimas\politik\back\Startup.cs= =(
+%14System.Text.Encoding"System.Text.Encoding.ASCII.get*"
+System.Text.Encoding«
+¨
+2
+(D:\Programavimas\politik\back\Startup.cs=( =(58
+%151Microsoft.Extensions.Configuration.IConfiguration""Politics.Startup.Configuration.get*
+Politics.Startupçä
+2
+(D:\Programavimas\politik\back\Startup.cs=( =(B
+%16string"BMicrosoft.Extensions.Configuration.IConfiguration.this[string].get*:
+8
+%151Microsoft.Extensions.Configuration.IConfiguration*
+	JWTSecret2this[string].get¯¬
+2
+(D:\Programavimas\politik\back\Startup.cs= =(C
+%17byte[]"%System.Text.Encoding.GetBytes(string)*
+
+%14System.Text.Encoding*
+
+%16string2GetBytes(string)\
+Z
+2
+(D:\Programavimas\politik\back\Startup.cs=
+ =(C
+keybyte[]"__id*
+
+%17byte[]K
+I
+2
+(D:\Programavimas\politik\back\Startup.cs>! >(G
+%18"__id*
+""Ñ
+Î
+2
+(D:\Programavimas\politik\back\Startup.cs> >(H@
+%199Microsoft.AspNetCore.Authentication.AuthenticationBuilder"©Microsoft.Extensions.DependencyInjection.AuthenticationServiceCollectionExtensions.AddAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection, string)*V"T
+RMicrosoft.Extensions.DependencyInjection.AuthenticationServiceCollectionExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+
+%18Ý
+Ú
+2
+(D:\Programavimas\politik\back\Startup.cs> P(
+@
+%209Microsoft.AspNetCore.Authentication.AuthenticationBuilder"ÓMicrosoft.Extensions.DependencyInjection.JwtBearerExtensions.AddJwtBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder, System.Action<Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions>)*@">
+<Microsoft.Extensions.DependencyInjection.JwtBearerExtensions*B
+@
+%199Microsoft.AspNetCore.Authentication.AuthenticationBuilder*
+""‚
+ÿ
+2
+(D:\Programavimas\politik\back\Startup.csQ Q(B
+%21;Microsoft.Extensions.DependencyInjection.IServiceCollection"ÝMicrosoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.AddSwaggerGen(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions>)*R"P
+NMicrosoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions*I
+G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollection*
+""*
+1*‚
+12
+(D:\Programavimas\politik\back\Startup.csR R("I
+2
+(D:\Programavimas\politik\back\Startup.csR R(
+implicit return:G
+services;Microsoft.Extensions.DependencyInjection.IServiceCollectionB
+Politics.Startup

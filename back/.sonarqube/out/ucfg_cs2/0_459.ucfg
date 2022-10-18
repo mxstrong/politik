@@ -1,0 +1,76 @@
+
+=Politics.Data.PoliticiansRepository.GetPoliticianById(string)E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs0( 0(9"0*¸
+0E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs2
+ 3(—
+Œ
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs2 2(%&
+%0 Politics.Model.PoliticsDbContext"__id*W*U%
+#Politics.Data.PoliticiansRepository",
+_context Politics.Model.PoliticsDbContext⁄
+◊
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs2 2(12
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"0Politics.Model.PoliticsDbContext.Politicians.get*(
+&
+%0 Politics.Model.PoliticsDbContextÁ
+‰
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs2 2(YR
+%2LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>"¬Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include<TEntity, TProperty>(System.Linq.IQueryable<TEntity>, System.Linq.Expressions.Expression<System.Func<TEntity, TProperty>>)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""à
+Ö
+F
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs2 2(à*
+%3$System.Threading.Tasks.Task<TResult>"‚Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*T
+R
+%2LMicrosoft.EntityFrameworkCore.Query.IIncludableQueryable<TEntity, TProperty>*
+""*
+""Å
+
+F
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs2
+ 2(à'
+
+politicianPolitics.Model.Politician"__id*
+""*
+1
+2*õ
+1E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs5 5("O
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs5 5(
+""*ç
+2E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs7 7(A¥
+±
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs7 7(
+%4AutoMapper.IMapper"__id*H*F%
+#Politics.Data.PoliticiansRepository"
+_mapperAutoMapper.IMapperòï
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs7 7(B$
+%5Politics.Dtos.PoliticianOutDto":AutoMapper.IMapperBase.Map<TSource, TDestination>(TSource)*
+
+%4AutoMapper.IMapper*)
+'
+
+politicianPolitics.Model.Politician2#Map<TSource, TDestination>(TSource)"o
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs7 7(C&
+$
+%5Politics.Dtos.PoliticianOutDto*®
+3E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs8 8("\
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs8 8(
+implicit return:
+idstringB'%
+#Politics.Data.PoliticiansRepository

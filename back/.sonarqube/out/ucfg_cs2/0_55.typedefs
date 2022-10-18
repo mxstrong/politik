@@ -1,0 +1,26 @@
+ú
+ Politics.Model.PoliticsDbContext'Microsoft.EntityFrameworkCore.DbContextobjectì
+cPoliticsDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<Politics.Model.PoliticsDbContext>)„Politics.Model.PoliticsDbContext.PoliticsDbContext(Microsoft.EntityFrameworkCore.DbContextOptions<Politics.Model.PoliticsDbContext>)›
+;OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)\Politics.Model.PoliticsDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)7
+	Users.get*Politics.Model.PoliticsDbContext.Users.get7
+	Users.set*Politics.Model.PoliticsDbContext.Users.set7
+	Roles.get*Politics.Model.PoliticsDbContext.Roles.get7
+	Roles.set*Politics.Model.PoliticsDbContext.Roles.set;
+Parties.get,Politics.Model.PoliticsDbContext.Parties.get;
+Parties.set,Politics.Model.PoliticsDbContext.Parties.setC
+Politicians.get0Politics.Model.PoliticsDbContext.Politicians.getC
+Politicians.set0Politics.Model.PoliticsDbContext.Politicians.set5
+Tags.get)Politics.Model.PoliticsDbContext.Tags.get5
+Tags.set)Politics.Model.PoliticsDbContext.Tags.setA
+Statements.get/Politics.Model.PoliticsDbContext.Statements.getA
+Statements.set/Politics.Model.PoliticsDbContext.Statements.setG
+StatementTags.get2Politics.Model.PoliticsDbContext.StatementTags.getG
+StatementTags.set2Politics.Model.PoliticsDbContext.StatementTags.setM
+ActivationTokens.get5Politics.Model.PoliticsDbContext.ActivationTokens.getM
+ActivationTokens.set5Politics.Model.PoliticsDbContext.ActivationTokens.setO
+EmailChangeTokens.get6Politics.Model.PoliticsDbContext.EmailChangeTokens.getO
+EmailChangeTokens.set6Politics.Model.PoliticsDbContext.EmailChangeTokens.set7
+	Likes.get*Politics.Model.PoliticsDbContext.Likes.get7
+	Likes.set*Politics.Model.PoliticsDbContext.Likes.set;
+Reports.get,Politics.Model.PoliticsDbContext.Reports.get;
+Reports.set,Politics.Model.PoliticsDbContext.Reports.set

@@ -1,0 +1,78 @@
+
+>Politics.Controllers.AuthController.ConfirmEmailChange(string)G
+;D:\Programavimas\politik\back\Controllers\AuthController.csë$ ë(6"4*£
+0G
+;D:\Programavimas\politik\back\Controllers\AuthController.csì
+ î(”
+–
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csì ì(#$
+%0Politics.Services.IAuthService"__id*Y*W%
+#Politics.Controllers.AuthController".
+_authServicePolitics.Services.IAuthService˛˚
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csì ì(8*
+%1$System.Threading.Tasks.Task<TResult>"2Politics.Services.IAuthService.UpdateEmail(string)*&
+$
+%0Politics.Services.IAuthService*
+
+tokenIdstring2UpdateEmail(string)v
+t
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csì
+ ì(8
+userPolitics.Model.User"__id*
+""*
+1
+2*ª
+1G
+;D:\Programavimas\politik\back\Controllers\AuthController.csñ ñ(ÓÎ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csñ ñ(/
+%2)Microsoft.AspNetCore.Mvc.BadRequestResult"4Microsoft.AspNetCore.Mvc.ControllerBase.BadRequest()*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase2BadRequest()"|
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csñ ñ(1
+/
+%2)Microsoft.AspNetCore.Mvc.BadRequestResult*‰
+2G
+;D:\Programavimas\politik\back\Controllers\AuthController.csò ò(7ôñ
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csò ò(8-
+%3'Microsoft.AspNetCore.Mvc.RedirectResult"8Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(string)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*#!
+https://politik-rust.vercel.app2Redirect(string)"z
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csò ò(9/
+-
+%3'Microsoft.AspNetCore.Mvc.RedirectResult*¨
+3G
+;D:\Programavimas\politik\back\Controllers\AuthController.csô ô("^
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csô ô(
+implicit return*˝
+4G
+;D:\Programavimas\politik\back\Controllers\AuthController.csëF ë(Ft
+r
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csë$ ë(6
+%4"__entrypoint*
+
+tokenIdstringΩ
+∫
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csê ê(
+%5"
+__annotate*HF
+DMicrosoft.AspNetCore.Mvc.HttpPostAttribute.HttpPostAttribute(string)*
+
+tokenIdstringt
+r
+G
+;D:\Programavimas\politik\back\Controllers\AuthController.csë7 ë(E
+tokenIdstring"__annotation*
+
+%5*
+0:
+tokenIdstringB'%
+#Politics.Controllers.AuthController

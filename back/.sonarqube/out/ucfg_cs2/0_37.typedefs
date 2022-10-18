@@ -1,0 +1,8 @@
+“
+#Politics.Data.PoliticiansRepositoryobject$Politics.Data.IPoliticiansRepository¾
+KPoliticiansRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)oPolitics.Data.PoliticiansRepository.PoliticiansRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)†
+/GetAllPoliticians(int?, int?, string?, string?)SPolitics.Data.PoliticiansRepository.GetAllPoliticians(int?, int?, string?, string?)Z
+GetPoliticianById(string)=Politics.Data.PoliticiansRepository.GetPoliticianById(string)Œ
+2AddPolitician(Politics.Dtos.PoliticianDto, string)VPolitics.Data.PoliticiansRepository.AddPolitician(Politics.Dtos.PoliticianDto, string)®
+CUpdatePolitician(string, Politics.Dtos.UpdatePoliticianDto, string)gPolitics.Data.PoliticiansRepository.UpdatePolitician(string, Politics.Dtos.UpdatePoliticianDto, string)X
+DeletePolitician(string)<Politics.Data.PoliticiansRepository.DeletePolitician(string)

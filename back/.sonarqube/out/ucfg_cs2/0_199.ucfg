@@ -1,0 +1,337 @@
+
+RPolitics.Controllers.StatementsController.AddStatement(Politics.Dtos.StatementDto)K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(A"14*”
+0K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs7
+ 7(+¹
+¶
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs7
+ 7(#
+%0string"+Politics.Dtos.StatementDto.PoliticianId.get*,
+*
+statementDtoPolitics.Dtos.StatementDto*
+1
+2*ô
+1K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs9 9(W£ 
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs9 9(X+
+%1%Microsoft.AspNetCore.Mvc.ActionResult"›Microsoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*<:
+8NenurodÄ—te politiko kurio pasisakymÄ… bandÄ—te pridÄ—ti*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"|
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs9 9(Y-
++
+%1%Microsoft.AspNetCore.Mvc.ActionResult*Œ
+2K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs;
+ ;(#±
+®
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs;
+ ;(
+%2string"#Politics.Dtos.StatementDto.Link.get*,
+*
+statementDtoPolitics.Dtos.StatementDto*
+3
+4*‹
+4K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs;' ;(C±
+®
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs;' ;(8
+%3string"#Politics.Dtos.StatementDto.Link.get*,
+*
+statementDtoPolitics.Dtos.StatementDto}
+{
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs;' ;(?	
+%4int"string.Length.get*
+
+%3string*
+3
+5*Û
+3K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs= =(AŠ‡
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs= =(B+
+%5%Microsoft.AspNetCore.Mvc.ActionResult"›Microsoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*#!
+NenurodÄ—te pasisakymo nuorodos*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"|
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs= =(C-
++
+%5%Microsoft.AspNetCore.Mvc.ActionResult*‹
+5K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs?
+ ?((±
+®
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs?
+ ?(
+%6string"#Politics.Dtos.StatementDto.Link.get*,
+*
+statementDtoPolitics.Dtos.StatementDto}
+{
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs?
+ ?("	
+%7int"string.Length.get*
+
+%6string*
+6
+7*ö
+6K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csA A(\¥¢
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csA A(]+
+%8%Microsoft.AspNetCore.Mvc.ActionResult"›Microsoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*><
+:Nurodyta nuoroda per ilga (maksimalus ilgis 250 simboliÅ³)*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"|
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csA A(^-
++
+%8%Microsoft.AspNetCore.Mvc.ActionResult*¨
+7K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csC
+ C(#Í
+Ê
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csC
+ C((
+%9"System.Collections.Generic.List<T>"#Politics.Dtos.StatementDto.Tags.get*,
+*
+statementDtoPolitics.Dtos.StatementDto*
+8
+9*ä
+9K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csC' C(BÎ
+Ë
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csC' C(8)
+%10"System.Collections.Generic.List<T>"#Politics.Dtos.StatementDto.Tags.get*,
+*
+statementDtoPolitics.Dtos.StatementDto·
+´
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csC' C(>
+
+%11int",System.Collections.Generic.List<T>.Count.get*+
+)
+%10"System.Collections.Generic.List<T>*
+8
+10*ì
+8K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csE E(Nš—
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csE E(O,
+%12%Microsoft.AspNetCore.Mvc.ActionResult"›Microsoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*20
+.Reikia pasisakymui parinkti bent vienÄ… Å¾ymÄ…*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"}
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csE E(P.
+,
+%12%Microsoft.AspNetCore.Mvc.ActionResult*»
+10K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csG
+ H($î
+ë
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csG% G(5+
+%13$Politics.Data.IPoliticiansRepository"__id*i*g+
+)Politics.Controllers.StatementsController"8
+_politiciansRepo$Politics.Data.IPoliticiansRepositoryº
+·
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csGH G(a
+%14string"+Politics.Dtos.StatementDto.PoliticianId.get*,
+*
+statementDtoPolitics.Dtos.StatementDto˜•
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csG% G(b+
+%15$System.Threading.Tasks.Task<TResult>">Politics.Data.IPoliticiansRepository.GetPoliticianById(string)*-
++
+%13$Politics.Data.IPoliticiansRepository*
+
+%14string2GetPoliticianById(string)”
+‘
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csG
+ G(b4
+existingPoliticianPolitics.Dtos.PoliticianOutDto"__id*
+""*
+11
+12*ß
+11K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csJ J(CŒ‰
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csJ J(D,
+%16%Microsoft.AspNetCore.Mvc.ActionResult"›Microsoft.AspNetCore.Mvc.ControllerBase.ValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*$"
+ Nurodytas politikas neegzistuoja*
+""*
+""*
+""*
+""*
+""2sValidationProblem(string, string, int?, string, string, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)"}
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csJ J(E.
+,
+%16%Microsoft.AspNetCore.Mvc.ActionResult*ð
+12K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csL
+ N(tä
+á
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csL L(,
+%17%Microsoft.AspNetCore.Http.HttpContext"7Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext.get*+)
+'Microsoft.AspNetCore.Mvc.ControllerBaseß
+Ü
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csL L(#-
+%18&System.Security.Claims.ClaimsPrincipal".Microsoft.AspNetCore.Http.HttpContext.User.get*.
+,
+%17%Microsoft.AspNetCore.Http.HttpContextd
+b
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csL3 L(L
+%19"__id*
+""´
+±
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csL L(M
+%20string"iSystem.Security.Claims.PrincipalExtensions.FindFirstValue(System.Security.Claims.ClaimsPrincipal, string)*.",
+*System.Security.Claims.PrincipalExtensions*/
+-
+%18&System.Security.Claims.ClaimsPrincipal*
+
+%19x
+v
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csL
+ L(M
+userIdstring"__id*
+
+%20stringë
+è
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csM# M(2*
+%21#Politics.Data.IStatementsRepository"__id*g*e+
+)Politics.Controllers.StatementsController"6
+_statementsRepo#Politics.Data.IStatementsRepositoryõò
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csM# M(U+
+%22$System.Threading.Tasks.Task<TResult>"TPolitics.Data.IStatementsRepository.AddStatement(Politics.Dtos.StatementDto, string)*,
+*
+%21#Politics.Data.IStatementsRepository*,
+*
+statementDtoPolitics.Dtos.StatementDto*
+
+userIdstring20AddStatement(Politics.Dtos.StatementDto, string)‘
+Ž
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csM
+ M(U1
+createdStatementPolitics.Dtos.StatementOutDto"__id*
+""Ã
+À
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csND N(`
+%23string"-Politics.Dtos.StatementOutDto.StatementId.get*3
+1
+createdStatementPolitics.Dtos.StatementOutDtoóð
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csN N(u5
+%24.Microsoft.AspNetCore.Mvc.CreatedAtActionResult"OMicrosoft.AspNetCore.Mvc.ControllerBase.CreatedAtAction(string, object, object)*+)
+'Microsoft.AspNetCore.Mvc.ControllerBase*
+""*
+""*3
+1
+createdStatementPolitics.Dtos.StatementOutDto2'CreatedAtAction(string, object, object)"†
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csN N(v7
+5
+%24.Microsoft.AspNetCore.Mvc.CreatedAtActionResult*µ
+13K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csO O("b
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.csO O(
+implicit return*Î
+14K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs5\ 5(\µ
+²
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(AU
+*
+statementDtoPolitics.Dtos.StatementDto"'
+<PoliticianId>k__BackingFieldstring"__entrypoint¤
+¡
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(AD
+*
+statementDtoPolitics.Dtos.StatementDto"
+PoliticianIdstring"__entrypoint­
+ª
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(AM
+*
+statementDtoPolitics.Dtos.StatementDto"
+<Link>k__BackingFieldstring"__entrypointœ
+™
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(A<
+*
+statementDtoPolitics.Dtos.StatementDto"
+Linkstring"__entrypoint´
+±
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(AT
+*
+statementDtoPolitics.Dtos.StatementDto"&
+<Description>k__BackingFieldstring"__entrypoint£
+ 
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(AC
+*
+statementDtoPolitics.Dtos.StatementDto"
+Descriptionstring"__entrypointÉ
+Æ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(Ai
+*
+statementDtoPolitics.Dtos.StatementDto";
+<Tags>k__BackingField"System.Collections.Generic.List<T>"__entrypoint¸
+µ
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(AX
+*
+statementDtoPolitics.Dtos.StatementDto"*
+Tags"System.Collections.Generic.List<T>"__entrypointd
+b
+K
+AD:\Programavimas\politik\back\Controllers\StatementsController.cs55 5(A
+%25"__entrypoint*
+0:*
+statementDtoPolitics.Dtos.StatementDtoB-+
+)Politics.Controllers.StatementsController

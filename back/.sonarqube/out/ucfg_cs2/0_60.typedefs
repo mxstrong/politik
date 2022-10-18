@@ -1,0 +1,6 @@
+ž
+#Politics.Migrations.UpdateUserTable2Microsoft.EntityFrameworkCore.Migrations.Migrationobject¢
+=Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)aPolitics.Migrations.UpdateUserTable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)¦
+?Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)cPolitics.Migrations.UpdateUserTable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder) 
+<BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)`Politics.Migrations.UpdateUserTable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)J
+UpdateUserTable()5Politics.Migrations.UpdateUserTable.UpdateUserTable()

@@ -1,0 +1,27 @@
+Ó
+Politics.Model.Politicianobject6
+Politician()&Politics.Model.Politician.Politician()>
+PoliticianId.get*Politics.Model.Politician.PoliticianId.get>
+PoliticianId.set*Politics.Model.Politician.PoliticianId.set4
+PartyId.get%Politics.Model.Politician.PartyId.get4
+PartyId.set%Politics.Model.Politician.PartyId.set0
+	Party.get#Politics.Model.Politician.Party.get0
+	Party.set#Politics.Model.Politician.Party.set8
+FirstName.get'Politics.Model.Politician.FirstName.get8
+FirstName.set'Politics.Model.Politician.FirstName.set6
+LastName.get&Politics.Model.Politician.LastName.get6
+LastName.set&Politics.Model.Politician.LastName.set<
+Description.get)Politics.Model.Politician.Description.get<
+Description.set)Politics.Model.Politician.Description.set8
+CreatedAt.get'Politics.Model.Politician.CreatedAt.get8
+CreatedAt.set'Politics.Model.Politician.CreatedAt.set8
+UpdatedAt.get'Politics.Model.Politician.UpdatedAt.get8
+UpdatedAt.set'Politics.Model.Politician.UpdatedAt.set<
+CreatedById.get)Politics.Model.Politician.CreatedById.get<
+CreatedById.set)Politics.Model.Politician.CreatedById.set<
+UpdatedById.get)Politics.Model.Politician.UpdatedById.get<
+UpdatedById.set)Politics.Model.Politician.UpdatedById.set8
+CreatedBy.get'Politics.Model.Politician.CreatedBy.get8
+CreatedBy.set'Politics.Model.Politician.CreatedBy.set8
+UpdatedBy.get'Politics.Model.Politician.UpdatedBy.get8
+UpdatedBy.set'Politics.Model.Politician.UpdatedBy.set

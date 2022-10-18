@@ -1,0 +1,71 @@
+
+.Politics.Data.TagsRepository.DeleteTag(string)>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs& &("0*£
+0>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs(
+ *('Ã
+À
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs( ((&
+%0 Politics.Model.PoliticsDbContext"__id*P*N
+Politics.Data.TagsRepository",
+_context Politics.Model.PoliticsDbContextÌ
+É
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs( ((2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>")Politics.Model.PoliticsDbContext.Tags.get*(
+&
+%0 Politics.Model.PoliticsDbContextþû
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs( ((&
+%2Politics.Model.Tag"BMicrosoft.EntityFrameworkCore.DbSet<TEntity>.Find(params object[])*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+idstring2Find(params object[])
+}
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs(
+ ((&
+tagPolitics.Model.Tag"__id*
+
+%2Politics.Model.TagÃ
+À
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs) )(&
+%3 Politics.Model.PoliticsDbContext"__id*P*N
+Politics.Data.TagsRepository",
+_context Politics.Model.PoliticsDbContextÌ
+É
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs) )(2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>")Politics.Model.PoliticsDbContext.Tags.get*(
+&
+%3 Politics.Model.PoliticsDbContext®«
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs) )(G
+%5AMicrosoft.EntityFrameworkCore.ChangeTracking.EntityEntry<TEntity>"<Microsoft.EntityFrameworkCore.DbSet<TEntity>.Remove(TEntity)*4
+2
+%4,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+
+tagPolitics.Model.Tag2Remove(TEntity)Ã
+À
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs* *(&
+%6 Politics.Model.PoliticsDbContext"__id*P*N
+Politics.Data.TagsRepository",
+_context Politics.Model.PoliticsDbContextµ²
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs* *('*
+%7$System.Threading.Tasks.Task<TResult>"\Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)*(
+&
+%6 Politics.Model.PoliticsDbContext*
+""24SaveChangesAsync(System.Threading.CancellationToken)*
+1*š
+1>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs+ +("U
+>
+4D:\Programavimas\politik\back\Data\TagsRepository.cs+ +(
+implicit return:
+idstringB 
+Politics.Data.TagsRepository

@@ -1,0 +1,124 @@
+
+~Politics.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)2
+(D:\Programavimas\politik\back\Startup.csU U("0*÷
+02
+(D:\Programavimas\politik\back\Startup.csW
+ W(µ
+²
+2
+(D:\Programavimas\politik\back\Startup.csW
+ W(
+
+%0bool"vMicrosoft.Extensions.Hosting.HostEnvironmentEnvExtensions.IsDevelopment(Microsoft.Extensions.Hosting.IHostEnvironment)*=";
+9Microsoft.Extensions.Hosting.HostEnvironmentEnvExtensions*9
+7
+env0Microsoft.AspNetCore.Hosting.IWebHostEnvironment*
+1
+2*¸
+12
+(D:\Programavimas\politik\back\Startup.csY Y('ù
+ö
+2
+(D:\Programavimas\politik\back\Startup.csY Y('6
+%10Microsoft.AspNetCore.Builder.IApplicationBuilder"‰Microsoft.AspNetCore.Builder.DeveloperExceptionPageExtensions.UseDeveloperExceptionPage(Microsoft.AspNetCore.Builder.IApplicationBuilder)*A"?
+=Microsoft.AspNetCore.Builder.DeveloperExceptionPageExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+3*
+22
+(D:\Programavimas\politik\back\Startup.cs] _(û
+ø
+2
+(D:\Programavimas\politik\back\Startup.cs] ]()6
+%20Microsoft.AspNetCore.Builder.IApplicationBuilder"…Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder, string)*;"9
+7Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+
+/ErrorÐ
+Í
+2
+(D:\Programavimas\politik\back\Startup.cs_ _(6
+%30Microsoft.AspNetCore.Builder.IApplicationBuilder"lMicrosoft.AspNetCore.Builder.HstsBuilderExtensions.UseHsts(Microsoft.AspNetCore.Builder.IApplicationBuilder)*6"4
+2Microsoft.AspNetCore.Builder.HstsBuilderExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+3*ø
+32
+(D:\Programavimas\politik\back\Startup.csb w(ö
+ó
+2
+(D:\Programavimas\politik\back\Startup.csb b('6
+%40Microsoft.AspNetCore.Builder.IApplicationBuilder"wMicrosoft.AspNetCore.Builder.CorsMiddlewareExtensions.UseCors(Microsoft.AspNetCore.Builder.IApplicationBuilder, string)*9"7
+5Microsoft.AspNetCore.Builder.CorsMiddlewareExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+PoliticsCORSPolicyê
+ç
+2
+(D:\Programavimas\politik\back\Startup.csd d(6
+%50Microsoft.AspNetCore.Builder.IApplicationBuilder"Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection(Microsoft.AspNetCore.Builder.IApplicationBuilder)*=";
+9Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilderÕ
+Ò
+2
+(D:\Programavimas\politik\back\Startup.cse e(6
+%60Microsoft.AspNetCore.Builder.IApplicationBuilder"rMicrosoft.AspNetCore.Builder.StaticFileExtensions.UseStaticFiles(Microsoft.AspNetCore.Builder.IApplicationBuilder)*5"3
+1Microsoft.AspNetCore.Builder.StaticFileExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder€
+ý
+2
+(D:\Programavimas\politik\back\Startup.csg g(6
+%70Microsoft.AspNetCore.Builder.IApplicationBuilder"…Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseRouting(Microsoft.AspNetCore.Builder.IApplicationBuilder)*L"J
+HMicrosoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilderà
+Ý
+2
+(D:\Programavimas\politik\back\Startup.csi i(6
+%80Microsoft.AspNetCore.Builder.IApplicationBuilder"yMicrosoft.AspNetCore.Builder.AuthAppBuilderExtensions.UseAuthentication(Microsoft.AspNetCore.Builder.IApplicationBuilder)*9"7
+5Microsoft.AspNetCore.Builder.AuthAppBuilderExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilderò
+ï
+2
+(D:\Programavimas\politik\back\Startup.csj j(6
+%90Microsoft.AspNetCore.Builder.IApplicationBuilder"Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions.UseAuthorization(Microsoft.AspNetCore.Builder.IApplicationBuilder)*B"@
+>Microsoft.AspNetCore.Builder.AuthorizationAppBuilderExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder¡
+ž
+2
+(D:\Programavimas\politik\back\Startup.csl l(7
+%100Microsoft.AspNetCore.Builder.IApplicationBuilder"°Microsoft.AspNetCore.Builder.SwaggerBuilderExtensions.UseSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.Action<Swashbuckle.AspNetCore.Swagger.SwaggerOptions>)*9"7
+5Microsoft.AspNetCore.Builder.SwaggerBuilderExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+""«
+¨
+2
+(D:\Programavimas\politik\back\Startup.csn r(7
+%110Microsoft.AspNetCore.Builder.IApplicationBuilder"¸Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions.UseSwaggerUI(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.Action<Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions>)*;"9
+7Microsoft.AspNetCore.Builder.SwaggerUIBuilderExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+""Î
+Ë
+2
+(D:\Programavimas\politik\back\Startup.cst w(7
+%120Microsoft.AspNetCore.Builder.IApplicationBuilder"ÊMicrosoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.Action<Microsoft.AspNetCore.Routing.IEndpointRouteBuilder>)*L"J
+HMicrosoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions*9
+7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder*
+""*
+4*‚
+42
+(D:\Programavimas\politik\back\Startup.csx x("I
+2
+(D:\Programavimas\politik\back\Startup.csx x(
+implicit return:7
+app0Microsoft.AspNetCore.Builder.IApplicationBuilder:7
+env0Microsoft.AspNetCore.Hosting.IWebHostEnvironmentB
+Politics.Startup

@@ -1,0 +1,11 @@
+ù
+Politics.Dtos.ChangePasswordDtoobjectJ
+ChangePasswordDto()3Politics.Dtos.ChangePasswordDto.ChangePasswordDto()8
+
+UserId.get*Politics.Dtos.ChangePasswordDto.UserId.get8
+
+UserId.set*Politics.Dtos.ChangePasswordDto.UserId.setB
+OldPassword.get/Politics.Dtos.ChangePasswordDto.OldPassword.getB
+OldPassword.set/Politics.Dtos.ChangePasswordDto.OldPassword.setB
+NewPassword.get/Politics.Dtos.ChangePasswordDto.NewPassword.getB
+NewPassword.set/Politics.Dtos.ChangePasswordDto.NewPassword.set

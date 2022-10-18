@@ -1,0 +1,31 @@
+
+oPolitics.Data.PoliticiansRepository.PoliticiansRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs ( "1*O
+1E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs (*
+0*ã
+0E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs (Ö
+Ó
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs (U%
+#Politics.Data.PoliticiansRepository",
+_context Politics.Model.PoliticsDbContext"__id*-
++
+context Politics.Model.PoliticsDbContext¸
+µ
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs (F%
+#Politics.Data.PoliticiansRepository"
+_mapperAutoMapper.IMapper"__id*
+
+mapperAutoMapper.IMapper*
+2*¨
+2E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs ("\
+E
+;D:\Programavimas\politik\back\Data\PoliticiansRepository.cs (
+implicit return:+
+context Politics.Model.PoliticsDbContext:
+mapperAutoMapper.IMapperB'%
+#Politics.Data.PoliticiansRepository

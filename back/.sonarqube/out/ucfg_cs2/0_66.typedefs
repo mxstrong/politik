@@ -1,0 +1,4 @@
+š
+@Politics.Mapping.MappingProfile.Converter<TSource, TDestination>object0AutoMapper.ITypeConverter<TSource, TDestination>¾
+|Convert(Politics.Helpers.PaginatedList<TSource>, Politics.Helpers.PaginatedList<TDestination>, AutoMapper.ResolutionContext)½Politics.Mapping.MappingProfile.Converter<TSource, TDestination>.Convert(Politics.Helpers.PaginatedList<TSource>, Politics.Helpers.PaginatedList<TDestination>, AutoMapper.ResolutionContext)[
+Converter()LPolitics.Mapping.MappingProfile.Converter<TSource, TDestination>.Converter()

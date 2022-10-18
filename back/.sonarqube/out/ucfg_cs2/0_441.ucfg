@@ -1,0 +1,20 @@
+
+hPolitics.Migrations.AddEmailChangeTokens.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)Y
+OD:\Programavimas\politik\back\Migrations\20211120124455_AddEmailChangeTokens.cs  ($"0*…
+0Y
+OD:\Programavimas\politik\back\Migrations\20211120124455_AddEmailChangeTokens.cs ()Ÿœ
+Y
+OD:\Programavimas\politik\back\Migrations\20211120124455_AddEmailChangeTokens.cs (*_
+%0YMicrosoft.EntityFrameworkCore.Migrations.Operations.Builders.OperationBuilder<TOperation>"SMicrosoft.EntityFrameworkCore.Migrations.MigrationBuilder.DropTable(string, string)*O
+M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder*
+EmailChangeTokens*
+""2DropTable(string, string)*
+1*Ð
+1Y
+OD:\Programavimas\politik\back\Migrations\20211120124455_AddEmailChangeTokens.cs	 (	"p
+Y
+OD:\Programavimas\politik\back\Migrations\20211120124455_AddEmailChangeTokens.cs (	
+implicit return:M
+migrationBuilder9Microsoft.EntityFrameworkCore.Migrations.MigrationBuilderB,*
+(Politics.Migrations.AddEmailChangeTokens

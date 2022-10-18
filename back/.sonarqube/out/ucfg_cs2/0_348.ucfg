@@ -1,0 +1,68 @@
+
+PPolitics.Services.AuthService.CreatePasswordHash(string, out byte[], out byte[])?
+5D:\Programavimas\politik\back\Services\AuthService.csH H(*"0*¯
+0?
+5D:\Programavimas\politik\back\Services\AuthService.csJ L(Qœ™
+?
+5D:\Programavimas\politik\back\Services\AuthService.csJ J(D-
+%0'System.Security.Cryptography.HMACSHA512"'System.Security.Cryptography.HMACSHA512·
+´
+?
+5D:\Programavimas\politik\back\Services\AuthService.csJ J(B
+
+%1void"4System.Security.Cryptography.HMACSHA512.HMACSHA512()*/
+-
+%0'System.Security.Cryptography.HMACSHA512¬
+©
+?
+5D:\Programavimas\politik\back\Services\AuthService.csJ J(D/
+hmac'System.Security.Cryptography.HMACSHA512"__id*/
+-
+%0'System.Security.Cryptography.HMACSHA512¿¼
+?
+5D:\Programavimas\politik\back\Services\AuthService.csK K(
+%2byte[]"/System.Security.Cryptography.HMACSHA512.Key.get*1
+/
+hmac'System.Security.Cryptography.HMACSHA5122Key.getq
+o
+?
+5D:\Programavimas\politik\back\Services\AuthService.csK K(
+passwordSaltbyte[]"__id*
+
+%2byte[]™
+–
+?
+5D:\Programavimas\politik\back\Services\AuthService.csL& L(?
+%3System.Text.Encoding"System.Text.Encoding.UTF8.get*"
+System.Text.Encoding¿¼
+?
+5D:\Programavimas\politik\back\Services\AuthService.csL& L(R
+%4byte[]"%System.Text.Encoding.GetBytes(string)*
+
+%3System.Text.Encoding*
+
+passwordstring2GetBytes(string)Õ
+Ò
+?
+5D:\Programavimas\politik\back\Services\AuthService.csL L(S
+%5byte[]">System.Security.Cryptography.HashAlgorithm.ComputeHash(byte[])*1
+/
+hmac'System.Security.Cryptography.HMACSHA512*
+
+%4byte[]q
+o
+?
+5D:\Programavimas\politik\back\Services\AuthService.csL L(S
+passwordHashbyte[]"__id*
+
+%5byte[]*
+1*œ
+1?
+5D:\Programavimas\politik\back\Services\AuthService.csM M("V
+?
+5D:\Programavimas\politik\back\Services\AuthService.csM M(
+implicit return:
+passwordstring:
+passwordHashbyte[]:
+passwordSaltbyte[]B!"
+Politics.Services.AuthService

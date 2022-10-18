@@ -1,0 +1,36 @@
+
+0Politics.Services.AuthService.UserExists(string)?
+5D:\Programavimas\politik\back\Services\AuthService.cs4 4(&"0*Å
+0?
+5D:\Programavimas\politik\back\Services\AuthService.cs6 6(O≈
+¬
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs6 6(&
+%0 Politics.Model.PoliticsDbContext"__id*Q*O
+Politics.Services.AuthService",
+_context Politics.Model.PoliticsDbContextŒ
+À
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs6 6(!2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>"*Politics.Model.PoliticsDbContext.Users.get*(
+&
+%0 Politics.Model.PoliticsDbContext÷
+”
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs6 6(P*
+%2$System.Threading.Tasks.Task<TResult>"◊Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync<TSource>(System.Linq.IQueryable<TSource>, System.Linq.Expressions.Expression<System.Func<TSource, bool>>, System.Threading.CancellationToken)*D"B
+@Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions*4
+2
+%1,Microsoft.EntityFrameworkCore.DbSet<TEntity>*
+""*
+"""I
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs6 6(Q
+""*ú
+1?
+5D:\Programavimas\politik\back\Services\AuthService.cs7 7("V
+?
+5D:\Programavimas\politik\back\Services\AuthService.cs7 7(
+implicit return:
+emailstringB!
+Politics.Services.AuthService

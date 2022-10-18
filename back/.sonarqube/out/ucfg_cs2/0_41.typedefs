@@ -1,0 +1,6 @@
+Ã
+Politics.Data.ReportsRepositoryobject Politics.Data.IReportsRepository²
+GReportsRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)gPolitics.Data.ReportsRepository.ReportsRepository(Politics.Model.PoliticsDbContext, AutoMapper.IMapper)^
+GetReports(int?, int?, bool?)=Politics.Data.ReportsRepository.GetReports(int?, int?, bool?)‚
+/GenerateReport(Politics.Dtos.ReportDto, string)OPolitics.Data.ReportsRepository.GenerateReport(Politics.Dtos.ReportDto, string)\
+ReviewReport(string, string)<Politics.Data.ReportsRepository.ReviewReport(string, string)

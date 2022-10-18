@@ -11,44 +11,6 @@ using Politics.Services;
 
 namespace PoliticsTests
 {
-    // public class AsyncEnumerable<T> : EnumerableQuery<T>, IAsyncEnumerable<T>, IQueryable<T>
-    // {
-    //     public AsyncEnumerable(Expression expression)
-    //         : base(expression) { }
-    //
-    //     public IAsyncEnumerator<T> GetEnumerator() =>
-    //         new AsyncEnumerator<T>(this.AsEnumerable().GetEnumerator());
-    //
-    //     public IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = new CancellationToken())
-    //     {
-    //         return new AsyncEnumerator<T>(this.AsEnumerable().GetEnumerator());
-    //     }
-    // }
-    //
-    // public class AsyncEnumerator<T> : IAsyncEnumerator<T>
-    // {
-    //     private readonly IEnumerator<T> enumerator;
-    //
-    //     public AsyncEnumerator(IEnumerator<T> enumerator) =>
-    //         this.enumerator = enumerator ?? throw new ArgumentNullException();
-    //
-    //     public ValueTask<bool> MoveNextAsync()
-    //     {
-    //         return ValueTask.FromResult(enumerator.MoveNext());
-    //     }
-    //
-    //     public T Current => enumerator.Current;
-    //
-    //     public void Dispose() { }
-    //
-    //     public Task<bool> MoveNext(CancellationToken cancellationToken) =>
-    //         Task.FromResult(enumerator.MoveNext());
-    //
-    //     public ValueTask DisposeAsync()
-    //     {
-    //         return ValueTask.CompletedTask;
-    //     }
-    // }
     public class AuthServiceTests
     {
         [Fact]

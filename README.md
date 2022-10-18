@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Politik
 
 ## Installation
@@ -38,6 +37,3 @@ Start built application:
    `dotnet run`
    
 Server will automatically launch browser window that shows API documentation for further usage.
-=======
-# politik
->>>>>>> fd3193db476f2586a03ffb14e4a276875a56627f
